@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1h Intro to ID | The History of Industrial Design</title>
+    <!-- script src="design_works_data.js"></script -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
 
@@ -600,7 +601,7 @@
             width: 100%;
             background-size: cover;
             background-position: center;
-            border-bottom: 4px solid var(--accent);
+            border-bottom: 1px solid #eee;
             position: relative;
         }
 
@@ -623,7 +624,13 @@
             align-items: center;
             gap: 3rem;
             margin-bottom: 3rem;
-            position: relative;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 100;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            /* Optional: adds separation when scrolling */
         }
 
         .v-portrait-large {
@@ -746,6 +753,67 @@
             padding: 5rem;
             border-radius: 25px;
             margin-top: 2rem;
+        }
+
+        /* ── MOVEMENT PATTERNS ── */
+        .pat-ac,
+        .pat-ctx-ac {
+            background: #8B4513 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-an,
+        .pat-ctx-an {
+            background: #2E8B57 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-bh,
+        .pat-ctx-bh {
+            background: #E6B800 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-ulm,
+        .pat-ctx-ulm {
+            background: #555555 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-sm,
+        .pat-ctx-sm {
+            background: #4682B4 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-mem,
+        .pat-ctx-mem {
+            background: #D9027D linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-pm,
+        .pat-ctx-pm {
+            background: #333333 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-ad,
+        .pat-ctx-ad {
+            background: #704214 linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .pat-modernism {
+            background: #A0CED9;
+        }
+
+        .pat-midcentury {
+            background: #008080;
+        }
+
+        .pat-wedge {
+            background: #E65100;
+        }
+
+        .pat-minimalism {
+            background: #1A1A1A;
+        }
+
+        .pat-biomorphism {
+            background: #228B22;
         }
 
         .v-principles-full h3 {
@@ -901,6 +969,21 @@
                 border-width: 4px;
             }
 
+            .v-bubble-label {
+                position: absolute;
+                bottom: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 120px;
+                text-align: center;
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: #333;
+                pointer-events: none;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
             .v-year-side {
                 font-size: 1.5rem;
                 padding-right: 20px;
@@ -994,7 +1077,7 @@
                 <div class="v-era-label">MEMPHIS</div>
                 <div class="v-era-icon" style="background-image: url('images/icon_memphis.png');"></div>
             </div>
-            <div class="v-era-layer v-era-dig" onclick="openFullModal('mod-pm', 'pat-pm')">
+            <div class="v-era-layer v-era-dig" onclick="openFullModal('mod-ive', 'pat-pm')">
                 <div class="v-era-label">DIGITAL</div>
                 <div class="v-era-icon" style="background-image: url('images/icon_digital_ux.png');"></div>
             </div>
@@ -1032,7 +1115,7 @@
             <!-- William Morris (1834-1896) -->
             <div class="v-designer-bubble y-1834"
                 style="left: calc(50% + 180px); background-image: url('images/morris/William_Morris.jpg');"
-                onclick="openFullModal('gal-morris', 'pat-ac')">
+                onclick="openFullModal('mod-morris', 'pat-ac')">
                 <div class="v-bubble-label">W. Morris</div>
             </div>
 
@@ -1083,14 +1166,14 @@
             <!-- Ettore Sottsass (1917-2007) -->
             <div class="v-designer-bubble y-1917"
                 style="left: calc(50% + 180px); background-image: url('images/sottsass/sottsass_and_fernanda_pivano_1969.jpg');"
-                onclick="openFullModal('gal-memphis', 'pat-mem')">
+                onclick="openFullModal('mod-sottsass', 'pat-mem')">
                 <div class="v-bubble-label">E. Sottsass</div>
             </div>
             <div class="v-demise-marker y-2007"></div>
 
             <!-- Jonathan Ive (1967-) -->
             <div class="v-designer-bubble y-1967" style="background-image: url('images/ive/Sir Jonathan Paul Ive.jpg');"
-                onclick="openFullModal('gal-ive', 'pat-pm')">
+                onclick="openFullModal('mod-ive', 'pat-pm')">
                 <div class="v-bubble-label">J. Ive</div>
             </div>
 
@@ -1240,26 +1323,7 @@
             </div>
         </div>
     </div>
-    <div id="gal-guimard" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-an"></div>
-            <div class="modal-scroll">
-                <h2>Hector Guimard</h2>
-                <div class="gallery-wrap">
-                    <div class="gal-cell"><img class="gal-img" src="images/guimard/guimard_metro.jpg">
-                        <div class="gal-cap">Metropolitain Entrance</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/guimard/guimard_iron1.jpg">
-                        <div class="gal-cap">Ironwork detail</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/guimard/guimard_iron2.jpg">
-                        <div class="gal-cap">Sinuous structure</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- 3. BAUHAUS -->
     <div id="mod-bh" class="modal">
@@ -1319,26 +1383,7 @@
             </div>
         </div>
     </div>
-    <div id="gal-breuer" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-bh"></div>
-            <div class="modal-scroll">
-                <h2>Marcel Breuer</h2>
-                <div class="gallery-wrap">
-                    <div class="gal-cell"><img class="gal-img" src="images/breuer/breuer_chair.jpg">
-                        <div class="gal-cap">Wassily Chair</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/breuer/breuer_breuer_house.jpg">
-                        <div class="gal-cap">Bauhaus Interior</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/breuer/breuer_marcel_datestone.jpg">
-                        <div class="gal-cap">The Designer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- 4. ULM -->
     <div id="mod-ulm" class="modal">
@@ -1399,142 +1444,11 @@
         </div>
     </div>
 
-    <div id="gal-ulm" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ulm"></div>
-            <div class="modal-scroll">
-                <h2>Ulm School Details</h2>
-                <div class="gallery-wrap">
-                    <div class="gal-cell"><img class="gal-img" src="images/bill/ulm_stool.jpg">
-                        <div class="gal-cap">Ulm Stool</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/rams/braun_razor.jpg">
-                        <div class="gal-cap">Braun Razor</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/bill/max_bill_ulm_stool.webp">
-                        <div class="gal-cap">The Designer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- 5. DIETER RAMS (ELABORATED) -->
     <!-- 5. DIETER RAMS (DRILL-DOWN) -->
-    <div id="mod-rams" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-sm" style="background-color:#fefefe"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1932 — PRESENT | GERMANY</span>
-                            <h2>Dieter Rams</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch"
-                            style="background: linear-gradient(to right, rgba(85,85,85,0.35), rgba(26,26,26,0.15));">
-                        </div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / WORK VOLUME</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Born in Wiesbaden, Germany, Rams was deeply influenced by his grandfather, a carpenter.
-                                After studying architecture and interior decoration, he joined Braun in 1955, eventually
-                                becoming Chief Design Officer. His tenure defined the "Golden Age" of German
-                                functionalism.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>Rams' philosophy is summarized as <strong>"Weniger, aber besser"</strong> (Less, but
-                                better). He
-                                believes design should be a service to the user, providing a quiet, orderly environment
-                                in a chaotic world through technological determinism and an ethic of ecological care.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Dieter Rams successfully integrated the rigorous academic logic of the HfG Ulm into a
-                            commercial powerhouse (Braun). His work bridge the gap between the scientific objectivity of
-                            post-war reconstruction and the emotional purity of modern tech. His "10 Principles" are now
-                            the global benchmark for ethical industrial design, influencing everything from Apple’s
-                            minimalist interfaces to sustainable furniture movements.</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-rams', 'sk4')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                SK4 RECORD PLAYER</div>
-                            <div class="gal-cap">Braun SK4 (1956)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-rams', 't3')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                T3 POCKET RADIO</div>
-                            <div class="gal-cap">Braun T3 (1958)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-rams', '606')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                606 SHELVING</div>
-                            <div class="gal-cap">Vitsœ 606 System (1960)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2: WORK DETAIL (DYNAMIC) -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-rams')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero" id="rams-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Historical & Philosophical Context</h3>
-                            <p>This work represents the transition from 'styling' to 'logic'. Designed during the
-                                reconstruction of West Germany, it embodies the HfG Ulm model of objective
-                                problem-solving over artistic expression.</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence in Culture</h3>
-                            <p>This object redefined its category. It transformed from a "piece of furniture" into a
-                                "technical instrument," establishing the visual vocabulary for modern consumer
-                                electronics and high-end minimalism.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-principles-full">
-                        <h3>Visual Analysis & Principles of Design</h3>
-                        <p><strong>Form:</strong> Absolute geometric purity. The use of a transparent lid (on the SK4)
-                            introduced the concept of visual honesty—revealing the mechanism rather than hiding it.</p>
-                        <p><strong>Balance:</strong> Asymmetrical but balanced control layouts that prioritize the
-                            ergonomics of operation over formal symmetry.</p>
-                        <p><strong>Rhythm:</strong> Repeating vents and buttons create a rhythmic logic that makes the
-                            complex interface understandable and approachable.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- 5. DIETER RAMS (Dynamically Generated) -->
 
     <div id="mod-func-ctx" class="modal">
         <div class="modal-wrap">
@@ -1560,40 +1474,7 @@
     </div>
 
     <!-- 6. MEMPHIS -->
-    <div id="mod-mem" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-mem"></div>
-            <div class="modal-scroll"><span class="section-tag">Origin: 1981 - 1987 | Milan, Italy</span>
-                <h2>Memphis Group</h2>
-                <div class="modal-grid">
-                    <div class="body">
-                        <h3>The Postmodern Rebellion</h3>
-                        <p>Named after a Bob Dylan song, the **Memphis Group** was a collective of designers who were
-                            bored by the "rational" gray boxes of the 70s. Led by **Ettore Sottsass**, they believed
-                            that **Form follows Emotion**, not just function.</p>
-                        <p>They used inexpensive "kitsch" materials like plastic laminate and neon colors to create
-                            objects that were more like **living sculptures** than tools. Their debut in 1981 sent
-                            shockwaves through the design world, appearing both ugly and exciting to the establishment.
-                        </p>
-                    </div>
-                    <div class="body">
-                        <h3>Key Features</h3>
-                        <ul>
-                            <li><strong>Geometric Maximalism:</strong> Bold, clashing patterns (like the "Bacterio"
-                                squiggle).</li>
-                            <li><strong>Playful Semantics:</strong> Objects that looked like toys or robots (e.g., the
-                                Carlton sideboard).</li>
-                            <li><strong>Emotional Color:</strong> Rejection of "good taste" in favor of vibrant yellows,
-                                pinks, and blues.</li>
-                        </ul>
-                        <div class="quote-box">"A product is like a character in a play. It should perform and have its
-                            own personality." — Ettore Sottsass</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div id="mod-mem-ctx" class="modal">
         <div class="modal-wrap">
@@ -1618,125 +1499,11 @@
         </div>
     </div>
 
-    <div id="gal-memphis" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-mem"></div>
-            <div class="modal-scroll">
-                <h2>Memphis Rebellion</h2>
-                <div class="gallery-wrap">
-                    <div class="gal-cell"><img class="gal-img" src="images/sottsass/carlton_bookshelf.jpg">
-                        <div class="gal-cap">Carlton Bookshelf</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/sottsass/casablanca_sideboard.jpg">
-                        <div class="gal-cap">Casablanca Sideboard</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img"
-                            src="images/sottsass/sottsass_and_fernanda_pivano_1969.jpg">
-                        <div class="gal-cap">Ettore Sottsass</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- 7. DIGITAL / UX -->
     <!-- 7. DIGITAL / UX (DRILL-DOWN) -->
-    <div id="mod-pm" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-pm"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1967 — PRESENT | APPLE / LOVEFROM</span>
-                            <h2>Jonathan Ive</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch" style="background: rgba(26,26,26, 0.15);"></div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / TECH ADOPTION</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Sir Jonathan Ive is a British industrial designer who served as the Chief Design Officer
-                                of Apple Inc. from 1997 to 2019. His partnership with Steve Jobs resulted in the most
-                                successful run of product design in history, transforming Apple from a niche computer
-                                company into a global cultural phenomenon.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>Ive's philosophy is rooted in the idea of **"Inevitable Design."** He believes a
-                                product's form should feel so right and simple that it couldn't possibly be any other
-                                way. Heavily influenced by Dieter Rams, he prioritizes clarity, unibody construction,
-                                and a deep respect for material properties.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Ive shifted the focus of Industrial Design from the "object as sculpture" to the "object as a
-                            vessel for experience." By utilizing aerospace-grade aluminum and precision manufacturing,
-                            he made technology feel approachable and premium. His work signaled the end of the 'beige
-                            box' era and the beginning of the 'unibody' age, where hardware becomes the silent frame for
-                            digital software.</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-pm', 'imac')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                IMAC G3</div>
-                            <div class="gal-cap">iMac (1998)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-pm', 'iphone')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                IPHONE</div>
-                            <div class="gal-cap">iPhone (2007)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-pm', 'macbook')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                MACBOOK AIR</div>
-                            <div class="gal-cap">MacBook Air (2008)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2 (Placeholder Template) -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-pm')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Context</h3>
-                            <p>Analyzing the digital convergence...</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence</h3>
-                            <p>Defining the smartphone era...</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- 7. DIGITAL / UX (Dynamically Generated) -->
 
     <div id="mod-pm-ctx" class="modal">
         <div class="modal-wrap">
@@ -1765,668 +1532,22 @@
     <!-- NEW FATHERS & PHILOSOPHERS MODALS -->
 
     <!-- Christopher Dresser (DRILL-DOWN) -->
-    <div id="mod-dresser" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ad" style="background-color:#fefefe"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large"
-                            style="background-image: url('images/dresser/Christopher_Dresser00.jpg'); background-size: cover; background-position: center;">
-                        </div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1834 — 1904 | UK / JAPAN INFLUENCE</span>
-                            <h2>Christopher Dresser</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch" style="background: rgba(160, 206, 217, 0.40);"></div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / CONCEPTUAL INNOVATION</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Dresser is widely considered the first <strong>independent industrial designer</strong>.
-                                A botanist by
-                                training, he applied scientific principles to design, traveling to Japan in 1876 where
-                                he was inspired by Shinto simplicity and the absence of redundant ornament.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>His philosophy focused on <strong>"Functional Ornament"</strong>—where decoration follows
-                                the
-                                structural logic of the object. He championed <strong>"Truth to Materials"</strong>,
-                                arguing that
-                                metal should look like metal, not wood, and that the machine was a tool for democratic
-                                beauty.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Dresser bridged the gap between the scientific study of botany and the industrial production
-                            of household goods. By utilizing geometric forms (spheres and cylinders), he enabled
-                            cheaper, more efficient manufacturing while maintaining aesthetic integrity. His work
-                            represents the first pivot from "Arts & Crafts" (anti-machine) to "Industrial Design"
-                            (pro-machine logic).</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-dresser', 'teapot')">
-                            <div class="gal-img"
-                                style="background-image: url('images/dresser/A_Victorian_%27Komai%27_solid_silver_water_jug_by_Christopher_Dresser%2C_c.1880.jpg'); background-size: cover; background-position: center;">
-                            </div>
-                            <div class="gal-cap">Teapot (1879)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-dresser', 'claret')">
-                            <div class="gal-img"
-                                style="background-image: url('images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg'); background-size: cover; background-position: center;">
-                            </div>
-                            <div class="gal-cap">Claret Jug (1879)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-dresser', 'toast')">
-                            <div class="gal-img"
-                                style="background-image: url('images/dresser/Side_chair_MET_DT3787.jpg'); background-size: cover; background-position: center;">
-                            </div>
-                            <div class="gal-cap">Toast Rack (1881)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2: WORK DETAIL -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-dresser')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Historical & Philosophical Context</h3>
-                            <p>This work challenged the Victorian love for clutter. Created at the height of the
-                                Aesthetic Movement, it demonstrates a radical shift toward proto-Modernism by
-                                prioritizing volume and line over surface decoration.</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence in Culture</h3>
-                            <p>Dresser's industrial output proved that "Art" could be affordable. This object
-                                established the standard for 20th-century metalware, influencing later movements like
-                                the Bauhaus and Art Deco.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-principles-full">
-                        <h3>Visual Analysis & Principles of Design</h3>
-                        <p><strong>Form:</strong> Rejection of organic imitation. The use of straight lines and sharp
-                            angles emphasized the metallic nature of the object rather than trying to look handcrafted.
-                        </p>
-                        <p><strong>Balance:</strong> Precise ergonomic balancing. The handles were designed based on the
-                            physics of pouring, a direct result of his scientific background.</p>
-                        <p><strong>Rhythm:</strong> Exposed rivets and structural joins create a rhythmic pattern that
-                            celebrates construction over camouflage.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- Christopher Dresser (Dynamically Generated) -->
 
     <!-- Peter Behrens (DRILL-DOWN) -->
-    <div id="mod-behrens" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ulm"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1868 — 1940 | GERMANY</span>
-                            <h2>Peter Behrens</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch"
-                            style="background: linear-gradient(to right, rgba(160,206,217,0.40), rgba(230,184,0,0.75));">
-                        </div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / SYSTEMIC ADOPTION</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Behrens began as a painter before turning to architecture and design. In 1907, he was
-                                appointed as the design consultant to AEG (Allgemeine Elektricitäts-Gesellschaft),
-                                marking the birth of the modern "Design Consultant" role. His office mentored future
-                                masters like Gropius, Mies van der Rohe, and Le Corbusier.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>His philosophy revolved around **"Gesamtkultur"**—a total culture. He believed that
-                                industry and art must be unified under a single aesthetic logic to provide order to the
-                                modern world. He championed **"Typisierung"** (standardization) to ensure quality across
-                                mass production.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Behrens shifted Industrial Design from the "item" to the "identity." By designing AEG's
-                            factories, logos, tea kettles, and even worker housing as a single coherent system, he
-                            proved that design is the DNA of a corporation. He provided the first intellectual framework
-                            for post-WWII industrial reconstruction and the entire concept of a "Brand System."</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-behrens', 'factory')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                AEG TURBINE FACTORY</div>
-                            <div class="gal-cap">Turbinenfabrik (1909)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-behrens', 'kettle')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                AEG KETTLE</div>
-                            <div class="gal-cap">Electric Kettle (1909)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-behrens', 'logo')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                AEG IDENTITY</div>
-                            <div class="gal-cap">AEG Branding (1907)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2 (Placeholder) -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-behrens')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Context</h3>
-                            <p>Systemic design in the machine age...</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence</h3>
-                            <p>The birth of corporate identity...</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- Peter Behrens (Dynamically Generated) -->
 
     <!-- Walter Gropius (DRILL-DOWN) -->
-    <div id="mod-gropius" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-bh" style="background-color:#fefefe"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1883 — 1969 | GERMANY / USA</span>
-                            <h2>Walter Gropius</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch" style="background: rgba(230,184,0, 0.75);"></div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / PEDAGOGICAL IMPACT</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Founder of the **Bauhaus**, Gropius was a visionary architect and educator. He served in
-                                WWI, an experience that fueled his desire to rebuild society through rational,
-                                industrial logic. He fled Nazi Germany in 1934, eventually leading Harvard's Graduate
-                                School of Design.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>His core philosophy was **"Art and Technology: A New Unity."** He believed the designer
-                                should master both craft and industrial processes to create objects for a democratic
-                                society. He introduced the **"Vorkurs"** to strip away historical bias and focus on
-                                universal design principles.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Gropius didn't just design buildings; he designed the *way* we teach design. By bringing
-                            together painters like Kandinsky and craftsmen like Breuer, he created a prototype for the
-                            modern multidisciplinary design studio. His Bauhaus building in Dessau remains the supreme
-                            symbol of Modernism—a "machine for working" that integrated industrial materials like steel
-                            and glass into a new social order.</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-gropius', 'fagus')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                FAGUS FACTORY</div>
-                            <div class="gal-cap">Fagus Factory (1911)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-gropius', 'bauhaus')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                BAUHAUS DESSAU</div>
-                            <div class="gal-cap">Bauhaus Building (1925)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-gropius', 'adler')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                ADLER CABRIOLET</div>
-                            <div class="gal-cap">Adler Standard 6 (1930)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2: WORK DETAIL -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-gropius')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Historical & Philosophical Context</h3>
-                            <p>This work embodies the transition from 19th-century massing to 20th-century verticality
-                                and transparency. The Fagus Factory, in particular, introduced the suspended glass
-                                curtain wall, a radical departure from load-bearing masonry.</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence in Culture</h3>
-                            <p>Gropius redefined the industrial landscape. He treated the factory as a cathedral of
-                                labor, bringing dignity to industrial work through light, air, and structural
-                                honesty—principles that defined the International Style.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-principles-full">
-                        <h3>Visual Analysis & Principles of Design</h3>
-                        <p><strong>Form:</strong> Cubist volumes. The rejection of ornament allowed the function of the
-                            building or object to dictate its external appearance.</p>
-                        <p><strong>Transparency:</strong> The use of glass corners (on the Fagus Factory) eliminated the
-                            visual weight of structural pillars, creating a sense of weightlessness and honesty.</p>
-                        <p><strong>Rhythm:</strong> Standardized window units and structural grids create a mathematical
-                            rhythm that reflects the efficiency of the industrial processes inside.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- Walter Gropius (Dynamically Generated) -->
 
     <!-- Raymond Loewy (DRILL-DOWN) -->
-    <div id="mod-loewy" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ad" style="background-color:#fefefe"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1893 — 1986 | USA / FRANCE</span>
-                            <h2>Raymond Loewy</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch" style="background: rgba(70,130,180, 0.50);"></div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / CONSUMER ADOPTION</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Known as the "Father of Streamlining," Loewy moved from France to New York in 1919. He
-                                was the first designer to appear on the cover of *Time* magazine, proving that design
-                                was a vital commercial engine for post-Depression America.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>Loewy's core philosophy was **"MAYA"** (Most Advanced Yet Acceptable). He believed
-                                designers should push boundaries but stay within the "shock limit" of the public. He
-                                championed **Streamlining** as a visual metaphor for progress and speed.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Loewy successfully branded the "American Dream." By applying aerodynamic forms to everything
-                            from pencil sharpeners to locomotives, he gave the public a sense of futuristic momentum. He
-                            understood that industrial design wasn't just about ergonomics—it was about **desire**. His
-                            work for Studebaker, NASA, and Lucky Strike defined the visual identity of mid-century
-                            corporate capitalism.</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-loewy', 'avanti')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                STUDEBAKER AVANTI</div>
-                            <div class="gal-cap">Avanti (1962)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-loewy', 'coldspot')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                COLDSPOT FRIDGE</div>
-                            <div class="gal-cap">Coldspot (1934)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-loewy', 'lucky')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                LUCKY STRIKE</div>
-                            <div class="gal-cap">Logo/Pack (1940)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2: WORK DETAIL -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-loewy')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Historical & Philosophical Context</h3>
-                            <p>This work represents the peak of commercial optimism. Designed during an era of economic
-                                expansion, it uses the MAYA principle to bridge familiar utility with futuristic,
-                                aerodynamic styling.</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence in Culture</h3>
-                            <p>Loewy's streamlined aesthetic became the universal symbol for "Modern." It transformed
-                                domestic appliances from bulky machines into sleek, desirable fashion items,
-                                establishing the "styling" model of industrial design.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-principles-full">
-                        <h3>Visual Analysis & Principles of Design</h3>
-                        <p><strong>Form:</strong> Sculpted, non-orthogonal geometry. The use of the "teardrop" shape
-                            reduced air resistance (metaphorically) and softened the machine's presence in the home.</p>
-                        <p><strong>Unity:</strong> Encapsulation. Loewy pioneered the "shroud" or "shell" approach,
-                            where the messy internal mechanisms were hidden behind a clean, unified surface.</p>
-                        <p><strong>Contrast:</strong> The use of chrome detailing against matte or enameled surfaces
-                            created focal points that emphasized luxury and precision.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- Raymond Loewy (Dynamically Generated) -->
 
     <!-- Henry Dreyfuss (DRILL-DOWN) -->
-    <div id="mod-dreyfuss" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-ad" style="background-color:#fefefe"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1904 — 1972 | USA</span>
-                            <h2>Henry Dreyfuss</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch"
-                            style="background: linear-gradient(to right, rgba(70,130,180,0.50), rgba(0,128,128,0.50));">
-                        </div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / HUMAN CALIBRATION</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>Dreyfuss was the American pioneer of **Ergonomics** (Human Factors). Unlike his peer
-                                Loewy, he focused on the internal comfort and logical use of products rather than just
-                                the external styling. He worked for major firms like Western Electric, Deere & Co, and
-                                Lockheed.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>His core philosophy revolved around **"Joe and Josephine"**—the first standardized
-                                anatomical diagrams of the average human. He believed that design succeeds when it
-                                "makes the machine fit the man," rather than forcing the man to adapt to the machine.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Dreyfuss shifted industrial design toward a clinical, scientific approach. By measuring
-                            thousands of people, he created the data that defined the height of chair seats, the reach
-                            of phone cords, and the angle of tractor controls. His Western Electric 500 telephone
-                            remained the global standard for decades because its weight, shape, and balance were
-                            perfectly calibrated to the human hand.</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-dreyfuss', 'we500')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                WESTERN ELECTRIC 500</div>
-                            <div class="gal-cap">Model 500 (1949)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-dreyfuss', 't86')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                HONEYWELL ROUND</div>
-                            <div class="gal-cap">T86 Thermostat (1953)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-dreyfuss', 'tractor')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                JOHN DEERE TRACTOR</div>
-                            <div class="gal-cap">Model A (1937)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2: WORK DETAIL -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-dreyfuss')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Historical & Philosophical Context</h3>
-                            <p>This object marked the arrival of "Human-Centered Design" in the industrial era. It moved
-                                away from technical aesthetics toward a form that speaks to the biology of the user,
-                                established through rigorous anthropometric testing.</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence in Culture</h3>
-                            <p>Dreyfuss's work made complex technology invisible. By making objects intuitive to touch
-                                and use, he lowered the "cognitive load" of the modern world, paving the way for the UX
-                                design principles of the digital age.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-principles-full">
-                        <h3>Visual Analysis & Principles of Design</h3>
-                        <p><strong>Scale:</strong> Direct mapping to the human body. Every curve and button was placed
-                            using the "Joe and Josephine" data points for reach and grip.</p>
-                        <p><strong>Tactility:</strong> Using materials (like Bakelite or high-quality plastics) that
-                            felt warm and comfortable to the skin, rather than cold industrial metal.</p>
-                        <p><strong>Feedback:</strong> Precise mechanical "clicks" and resistance levels that provided
-                            sensory confirmation to the user, ensuring the machine felt responsive and reliable.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- Henry Dreyfuss (Dynamically Generated) -->
 
     <!-- Max Bill (DRILL-DOWN) -->
-    <div id="mod-bill" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ulm" style="background-color:#fefefe"></div>
-            <div class="modal-scroll">
-
-                <!-- LEVEL 1: DESIGNER DETAIL -->
-                <div class="v-level-1 active">
-                    <div class="v-designer-header">
-                        <div class="v-portrait-large" style="background-color: #eee;"></div>
-                        <div class="v-designer-info">
-                            <span class="section-tag">1908 — 1994 | SWITZERLAND / GERMANY</span>
-                            <h2>Max Bill</h2>
-                        </div>
-                    </div>
-
-                    <div class="v-frequency-container">
-                        <div class="v-frequency-patch"
-                            style="background: linear-gradient(to right, rgba(230,184,0,0.75), rgba(85,85,85,0.35));">
-                        </div>
-                        <div
-                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
-                            INFLUENCE FREQUENCY / MATHEMATICAL RIGOR</div>
-                    </div>
-
-                    <div class="v-pillars-grid">
-                        <div class="v-pillar-box">
-                            <h3>Biography</h3>
-                            <p>A student of the Bauhaus, Bill was a Swiss polymath—architect, artist, and designer. In
-                                1953, he co-founded the **HfG Ulm** (Ulm School), where he served as its first rector,
-                                aiming to create a scientific successor to his alma mater.</p>
-                        </div>
-                        <div class="v-pillar-box">
-                            <h3>Philosophy</h3>
-                            <p>Bill championed **"Concrete Art"** and the idea of "Design as Science." He rejected the
-                                commercial styling of America, arguing that beauty should emerge from mathematical
-                                logic, structural integrity, and sociological responsibility.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-integration-section">
-                        <h3>Integration of Life and Work</h3>
-                        <p>Max Bill connected the geometric abstraction of Swiss modernism with the hard realities of
-                            post-war industrial production. His Ulm Stool is the ultimate expression of this: a
-                            masterclass in modularity that functions as a seat, a shelf, and a stepping stone. He
-                            shifted the designer's role from "Artist" to "Scientist," laying the intellectual foundation
-                            for the Braun legacy and modern systems design.</p>
-                    </div>
-
-                    <h2 class="v-gallery-title">Gallery of Work</h2>
-                    <div class="gallery-wrap">
-                        <div class="gal-cell" onclick="showWorkDetail('mod-bill', 'stool')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                ULM STOOL</div>
-                            <div class="gal-cap">Ulm Stool (1954)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-bill', 'clock')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                JUNGHANS CLOCK</div>
-                            <div class="gal-cap">Wall Clock (1957)</div>
-                        </div>
-                        <div class="gal-cell" onclick="showWorkDetail('mod-bill', 'ulm')">
-                            <div class="gal-img"
-                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
-                                HFG ULM BUILDING</div>
-                            <div class="gal-cap">Ulm Campus (1953)</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LEVEL 2: WORK DETAIL -->
-                <div class="v-level-2">
-                    <div class="v-back-btn" onclick="goBackToLevel1('mod-bill')">← BACK TO DESIGNER</div>
-                    <div class="v-work-hero">
-                        <div
-                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
-                            HD IMAGE PLACEHOLDER</div>
-                    </div>
-
-                    <div class="v-analysis-grid">
-                        <div class="v-analysis-box">
-                            <h3>Historical & Philosophical Context</h3>
-                            <p>This work represents the "Ulm Model" of objective design. It rejects all subjective
-                                expression in favor of a universal, mathematical solution that can be mass-produced with
-                                absolute precision.</p>
-                        </div>
-                        <div class="v-analysis-box">
-                            <h3>Influence in Culture</h3>
-                            <p>Max Bill's rigor established the "Swiss Style" in industrial design. His focus on systems
-                                over objects influenced the development of corporate identities and modular furniture
-                                systems that still dominate current office and home environments.</p>
-                        </div>
-                    </div>
-
-                    <div class="v-principles-full">
-                        <h3>Visual Analysis & Principles of Design</h3>
-                        <p><strong>Proportion:</strong> Based on the Golden Ratio and mathematical grids. Every
-                            dimension is a logical consequence of the material's strength and the user's needs.</p>
-                        <p><strong>Economy:</strong> Minimal use of materials. The designs strive for the "absolute
-                            minimum" necessary to fulfill the function, anticipating the sustainability movements of the
-                            21st century.</p>
-                        <p><strong>Clarity:</strong> High legibility. Interfaces (like the Junghans clock) were designed
-                            for instant, unambiguous communication, prioritizing data over decoration.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <!-- Max Bill (Dynamically Generated) -->
 
     <!-- Walter Benjamin / Critical Theory (mod-benjamin) -->
     <div id="mod-benjamin" class="modal">
@@ -2459,6 +1580,7 @@
 
     <script>
         function openFullModal(id, patClass) {
+            console.log(`Opening modal: ${id} with pattern: ${patClass}`);
             const m = document.getElementById(id);
             if (!m) { console.error("Modal not found:", id); return; }
 
@@ -2470,19 +1592,23 @@
             }
 
             const h = m.querySelector('.modal-hero');
-            if (h) h.className = 'modal-hero ' + patClass;
+            if (h) {
+                h.className = 'modal-hero ' + patClass;
+                console.log(`Applied class ${patClass} to hero. Computed background:`, window.getComputedStyle(h).background);
+            }
 
             m.classList.add('active');
             document.body.style.overflow = 'hidden';
 
             const patch = m.querySelector('.v-frequency-patch');
             if (patch) {
+                console.log(`Resetting patch for ${id}`);
                 patch.style.width = '0%';
                 setTimeout(() => { patch.style.width = '100%'; }, 50);
             }
         }
 
-                                const DESIGN_WORKS = {
+        const DESIGN_WORKS = {
             'aalto_1956_2': { title: '1956 2', image: 'images/aalto/aalto_1956_2_.jpg', context: '1956 2 (1956) by Alvar Aalto represents a significant contribution to the Modernism / Biomorphism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Alvar Aalto influenced subsequent developments in Modernism / Biomorphism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Modernism / Biomorphism. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
             'aalto_1956_3': { title: '1956 3', image: 'images/aalto/aalto_1956_3_.jpg', context: '1956 3 (1956) by Alvar Aalto represents a significant contribution to the Modernism / Biomorphism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Alvar Aalto influenced subsequent developments in Modernism / Biomorphism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Modernism / Biomorphism. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
             'aalto_1956_4': { title: '1956 4', image: 'images/aalto/aalto_1956_4_.jpg', context: '1956 4 (1956) by Alvar Aalto represents a significant contribution to the Modernism / Biomorphism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Alvar Aalto influenced subsequent developments in Modernism / Biomorphism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Modernism / Biomorphism. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
@@ -2506,8 +1632,7 @@
             'peter_behrens_by_rudolf_bosselt_2c_1918_2c_bronze_': { title: 'Peter Behrens by Rudolf Bosselt', image: 'images/behrens/Peter_Behrens_by_Rudolf_Bosselt%2C_1918%2C_bronze_-_Museum_K%C3%BCnstlerkolonie_Darmstadt_-_Mathildenh%C3%B6he_-_Darmstadt%2C_Germany_-_DSC06385.jpg', context: 'This bronze portrait by sculptor Rudolf Bosselt captures Behrens during the later years of his AEG period. The sculptural medium echoes Behrens\'s own interest in the integration of art and industry.', influence: 'The portrait reflects the elevated status of the designer in early 20th-century German culture, where figures like Behrens occupied positions of significant cultural authority.', analysis: 'The bronze sculpture captures Behrens in profile or three-quarter view, using the weight and permanence of bronze to communicate intellectual gravitas. The sculptural treatment—whether naturalistic or stylized—reflects early modernist approaches to portraiture.' },
             'peter_behrens_by_rudolf_d_c3_bchrkoop_mkg_28croppe': { title: 'Peter Behrens by Rudolf Bosselt', image: 'images/behrens/Peter_Behrens_by_Rudolf_D%C3%BChrkoop_-_MKG_%28cropped%29.jpg', context: 'This bronze portrait by sculptor Rudolf Bosselt captures Behrens during the later years of his AEG period. The sculptural medium echoes Behrens\'s own interest in the integration of art and industry.', influence: 'The portrait reflects the elevated status of the designer in early 20th-century German culture, where figures like Behrens occupied positions of significant cultural authority.', analysis: 'The bronze sculpture captures Behrens in profile or three-quarter view, using the weight and permanence of bronze to communicate intellectual gravitas. The sculptural treatment—whether naturalistic or stylized—reflects early modernist approaches to portraiture.' },
             'bellini_bellini_chair': { title: 'Bellini Chair', image: 'images/bellini/bellini_bellini_chair.jpg', context: 'Bellini Chair (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The seating form balances structural efficiency with ergonomic consideration. The frame articulates load-bearing forces through its material expression—whether tubular steel, bent wood, or molded plastic. Proportional relationships between seat height, depth, and back angle reflect anthropometric study. Material transitions between structural frame and seating surface create zones of visual and tactile contrast. The overall silhouette communicates its era\'s aesthetic values through the interplay of line, mass, and void. Color and finish choices reinforce the designer\'s commitment to honesty of materials. The negative spaces created by the frame structure are as carefully composed as the solid elements, following the Gestalt principle of figure-ground relationship.' },
-            'bellini_cab_chair': { title: 'Cab Chair', image: 'images/bellini/bellini_cab_chair.jpg', context: 'Cab Chair (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The seating form balances structural efficiency with ergonomic consideration. The frame articulates load-bearing forces through its material expression—whether tubular steel, bent wood, or molded plastic. Proportional relationships between seat height, depth, and back angle reflect anthropometric study. Material transitions between structural frame and seating surface create zones of visual and tactile contrast. The overall silhouette communicates its era\'s aesthetic values through the interplay of line, mass, and void. Color and finish choices reinforce the designer\'s commitment to honesty of materials. The negative spaces created by the frame structure are as carefully composed as the solid elements, following the Gestalt principle of figure-ground relationship.' },
-            'bellini_camaleonda_sofa': { title: 'Camaleonda Sofa', image: 'images/bellini/bellini_camaleonda_sofa.jpg', context: 'Camaleonda Sofa (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The seating form balances structural efficiency with ergonomic consideration. The frame articulates load-bearing forces through its material expression—whether tubular steel, bent wood, or molded plastic. Proportional relationships between seat height, depth, and back angle reflect anthropometric study. Material transitions between structural frame and seating surface create zones of visual and tactile contrast. The overall silhouette communicates its era\'s aesthetic values through the interplay of line, mass, and void. Color and finish choices reinforce the designer\'s commitment to honesty of materials. The negative spaces created by the frame structure are as carefully composed as the solid elements, following the Gestalt principle of figure-ground relationship.' },
+
             'bellini_delle_sedie_cab_1': { title: 'Delle Sedie Cab 1', image: 'images/bellini/bellini_delle_sedie_cab_1.jpg', context: 'Delle Sedie Cab 1 (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
             'bellini_portrait': { title: 'Portrait', image: 'images/bellini/bellini_portrait.jpg', context: 'Portrait (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The portrait employs compositional conventions to communicate the subject\'s professional identity and intellectual authority. Lighting, pose, and background establish the atmospheric context, while the framing and focal length create the appropriate psychological distance between subject and viewer. The tonal range and contrast level establish the image\'s emotional register.' },
             'bellini_prodotto': { title: 'Prodotto', image: 'images/bellini/bellini_prodotto.jpg', context: 'Prodotto (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
@@ -2516,7 +1641,7 @@
             'bellini_yamaha_tape_deck': { title: 'Yamaha Tape Deck', image: 'images/bellini/bellini_yamaha_tape_deck.jpg', context: 'Yamaha Tape Deck (n.d.) by Mario Bellini represents a significant contribution to the Italian Rationalism movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Mario Bellini influenced subsequent developments in Italian Rationalism and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Italian Rationalism. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
             'bill_and_bill_sayre_15616': { title: 'And Bill Sayre 15616', image: 'images/bill/bill_and_bill_sayre_15616_.jpg', context: 'And Bill Sayre 15616 (n.d.) by Max Bill represents a significant contribution to the Bauhaus / Ulm School movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Max Bill influenced subsequent developments in Bauhaus / Ulm School and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus / Ulm School. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
             'bill_endless_ribbon': { title: 'Endless Ribbon', image: 'images/bill/bill_endless_ribbon.jpg', context: 'Endless Ribbon (n.d.) by Max Bill represents a significant contribution to the Bauhaus / Ulm School movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Max Bill influenced subsequent developments in Bauhaus / Ulm School and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus / Ulm School. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
-            'bill_sun_lamp': { title: 'Sun Lamp', image: 'images/bill/bill_sun_lamp.jpg', context: 'Sun Lamp (n.d.) by Max Bill represents a significant contribution to the Bauhaus / Ulm School movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Max Bill influenced subsequent developments in Bauhaus / Ulm School and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus / Ulm School. The lighting fixture resolves the fundamental tension between functional illumination and sculptural presence. The armature system articulates mechanical movement through visible joints and counterweights, making the engineering an aesthetic feature. Light source, reflector, and supporting structure create a visual hierarchy that guides the eye from base to bulb. Material choices—typically metal with contrasting matte and polished finishes—create tonal variation within the monochromatic form. The overall silhouette reads differently from various angles, creating a dynamic sculptural presence that changes with the viewer\'s position.' },
+            'bill_sun_lamp': { title: 'Sun Lamp', image: 'images/bill/bill_sun_lamp.jpg', context: 'Sun Lamp (n.d.) by Max Bill represents a significant contribution to the Bauhaus / Ulm School movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Max Bill influenced subsequent developments in Bauhaus / Ulm School and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus / Ulm School. The lighting fixture resolves the fundamental tension between functional illumination and sculptural presence. The armature system articulates mechanical movement through visible joints and counterweights, making the engineering an aesthetic feature. Light source, reflector, and supporting structure create a visual hierarchy that guides the eye from base to bulb. Material choices—typically metal with contrasting matte and polished finishes—create tonal variation within the monochromatic form. The overall silhouette reads differently from variouslesing a dynamic sculptural presence that changes with the viewer\'s position.' },
             'max_bill_ulm_stool': { title: 'Bill Ulm Stool', image: 'images/bill/max_bill_ulm_stool.webp', context: 'Bill Ulm Stool (n.d.) by Max Bill represents a significant contribution to the Bauhaus / Ulm School movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Max Bill influenced subsequent developments in Bauhaus / Ulm School and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus / Ulm School. The seating form balances structural efficiency with ergonomic consideration. The frame articulates load-bearing forces through its material expression—whether tubular steel, bent wood, or molded plastic. Proportional relationships between seat height, depth, and back angle reflect anthropometric study. Material transitions between structural frame and seating surface create zones of visual and tactile contrast. The overall silhouette communicates its era\'s aesthetic values through the interplay of line, mass, and void. Color and finish choices reinforce the designer\'s commitment to honesty of materials. The negative spaces created by the frame structure are as carefully composed as the solid elements, following the Gestalt principle of figure-ground relationship.' },
             'ulm_stool': { title: 'Ulm Stool', image: 'images/bill/ulm_stool.jpg', context: 'Ulm Stool (n.d.) by Max Bill represents a significant contribution to the Bauhaus / Ulm School movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Max Bill influenced subsequent developments in Bauhaus / Ulm School and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus / Ulm School. The seating form balances structural efficiency with ergonomic consideration. The frame articulates load-bearing forces through its material expression—whether tubular steel, bent wood, or molded plastic. Proportional relationships between seat height, depth, and back angle reflect anthropometric study. Material transitions between structural frame and seating surface create zones of visual and tactile contrast. The overall silhouette communicates its era\'s aesthetic values through the interplay of line, mass, and void. Color and finish choices reinforce the designer\'s commitment to honesty of materials. The negative spaces created by the frame structure are as carefully composed as the solid elements, following the Gestalt principle of figure-ground relationship.' },
             'brandt_aehrlichs_ngerinnen1895': { title: 'Aehrlichs Ngerinnen1895', image: 'images/brandt/brandt_aehrlichs_ngerinnen1895.jpg', context: 'Aehrlichs Ngerinnen1895 (1895) by Marianne Brandt represents a significant contribution to the Bauhaus movement. The work demonstrates the designer\'s commitment to the philosophical and aesthetic principles that defined the movement, reflecting broader cultural and technological shifts of the period.', influence: 'This work by Marianne Brandt influenced subsequent developments in Bauhaus and related design movements. Its formal innovations and conceptual approach contributed to the evolution of modern design practice, inspiring later designers and establishing precedents that remain relevant in contemporary design discourse.', analysis: 'The composition demonstrates principles central to Bauhaus. The form resolves functional requirements through geometric composition and material selection. The proportional system creates visual balance, while surface treatments—whether polished, matte, textured, or colored—articulate the object\'s functional zones. The overall silhouette communicates the designer\'s aesthetic values through the interplay of solid and void, curve and angle, light and shadow. Material transitions between different components create zones of visual interest that reward close examination. The object sits within its period\'s design discourse while also anticipating future developments in form and function.' },
@@ -2744,10 +1869,23 @@
             'italian_rationalism': { hex: '#B22222', alpha: 0.50 },
             'wedge': { hex: '#E65100', alpha: 0.60 },
             'minimalism': { hex: '#1A1A1A', alpha: 0.15 },
-            'biomorphism': { hex: '#228B22', alpha: 0.45 }
+            'biomorphism': { hex: '#228B22', alpha: 0.45 },
+            'arts_and_crafts': { hex: '#8B4513', alpha: 0.60 },
+            'art_nouveau': { hex: '#2E8B57', alpha: 0.60 },
+            // Shorthands
+            'ac': { hex: '#8B4513', alpha: 0.60 },
+            'an': { hex: '#2E8B57', alpha: 0.60 },
+            'bh': { hex: '#E6B800', alpha: 0.75 },
+            'mem': { hex: '#D9027D', alpha: 0.70 },
+            'pm': { hex: '#1A1A1A', alpha: 0.15 }, // Digital / Minimalism
+            'func': { hex: '#4682B4', alpha: 0.50 }
         };
 
         const DESIGNER_MOVEMENTS = {
+            // Early Foundations
+            'morris': ['arts_and_crafts'],
+            'guimard': ['art_nouveau'],
+            'dresser': ['streamlining'], // Proto-Industrial
             // Bauhaus
             'gropius': ['bauhaus', 'modernism'],
             'breuer': ['bauhaus', 'modernism'],
@@ -2761,6 +1899,7 @@
             'ponti': ['modernism'],
             'nelson': ['modernism', 'midcentury'],
             'bellini': ['modernism', 'italian_rationalism'],
+            'lihotzky': ['modernism'],
             // Mid-Century
             'eames': ['midcentury'],
             'jacobsen': ['midcentury'],
@@ -2768,8 +1907,6 @@
             'loewy': ['streamlining'],
             'dreyfuss': ['streamlining'],
             'geddes': ['streamlining'],
-            'pininfarina': ['streamlining'],
-            'dresser': ['streamlining'],
             'earl': ['streamlining'],
             // Postmodernism
             'sottsass': ['postmodernism'],
@@ -2798,15 +1935,23 @@
             return `rgba(${r},${g},${b},${alpha})`;
         }
 
-        function getMovementBg(designerKey) {
-            const movements = DESIGNER_MOVEMENTS[designerKey];
+        function getMovementBg(key) {
+            // 1. Direct match in palette (including shorthands)
+            const pMatch = MOVEMENT_PALETTE[key];
+            if (pMatch) return hexToRgba(pMatch.hex, pMatch.alpha);
+
+            // 2. Designer mapping
+            const movements = DESIGNER_MOVEMENTS[key];
             if (!movements) return 'rgba(200,200,200,0.2)';
+
             const colors = movements.map(m => {
                 const p = MOVEMENT_PALETTE[m];
                 return p ? hexToRgba(p.hex, p.alpha) : null;
             }).filter(Boolean);
+
             if (colors.length === 0) return 'rgba(200,200,200,0.2)';
             if (colors.length === 1) return colors[0];
+
             const stops = colors.map((c, i) => {
                 const pct = Math.round((i / (colors.length - 1)) * 100);
                 return `${c} ${pct}%`;
@@ -2817,15 +1962,20 @@
         function getDesignerKey(modalId) {
             if (modalId === 'mod-pm') return 'ive';
             if (modalId === 'mod-bill') return 'bill';
-            return modalId.replace('mod-', '');
+            // Handle context modals and shorthands
+            return modalId.replace('mod-', '').replace('-ctx', '');
         }
 
         function applyMovementColors() {
-            document.querySelectorAll('.modal').forEach(modal => {
+            const modals = document.querySelectorAll('.modal');
+            console.log(`Found ${modals.length} modals for color application`);
+            modals.forEach(modal => {
                 const patch = modal.querySelector('.v-frequency-patch');
                 if (!patch) return;
                 const key = getDesignerKey(modal.id);
-                patch.style.background = getMovementBg(key);
+                const bg = getMovementBg(key);
+                console.log(`Applying color to modal ${modal.id} (key: ${key}): ${bg}`);
+                patch.style.background = bg;
             });
         }
 
@@ -2868,619 +2018,772 @@
         }
 
         const GALLERY_DATA = {
-    "aalto": {
-        "name": "Alvar Aalto",
-        "birth": "1898",
-        "death": "1976",
-        "peakYear": "1932",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/aalto/aalto_1956_2_.jpg",
-            "images/aalto/aalto_1956_3_.jpg",
-            "images/aalto/aalto_1956_4_.jpg",
-            "images/aalto/aalto_aalto_house.jpg",
-            "images/aalto/aalto_baker_house.jpg",
-            "images/aalto/aalto_beehive_lamp.jpg",
-            "images/aalto/aalto_elissa_aalto_1956.jpg",
-            "images/aalto/aalto_portrait.jpg"
-        ]
-    },
-    "behrens": {
-        "name": "Peter Behrens",
-        "birth": "1868",
-        "death": "1940",
-        "peakYear": "1907",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/behrens/Arbeitszimmer_des_Herausgebers_Alexander_Koch%2C_c._1903.jpg",
-            "images/behrens/behrens__behrens_peter.jpeg",
-            "images/behrens/behrens_by_rudolf_d_hrkoop_mkg.jpg",
-            "images/behrens/behrens_deutschen_volke_geo.hlipp.de_1785.jpg",
-            "images/behrens/behrens_giebel2.jpg",
-            "images/behrens/behrens_kiss.jpg",
-            "images/behrens/behrens_logo.jpg",
-            "images/behrens/behrens_posters.jpg",
-            "images/behrens/behrens_typography.jpg",
-            "images/behrens/D%C3%BChrkoop%2C_Rudolf_-_Peter_Behrens%2C_Architekt_%28Zeno_Fotografie%29.jpg",
-            "images/behrens/Max_Liebermann_Portr%C3%A4t_Peter_Behrens.jpg",
-            "images/behrens/Peter_Behrens%2C_um_1913.jpg",
-            "images/behrens/Peter_Behrens_by_Rudolf_Bosselt%2C_1918%2C_bronze_-_Museum_K%C3%BCnstlerkolonie_Darmstadt_-_Mathildenh%C3%B6he_-_Darmstadt%2C_Germany_-_DSC06385.jpg",
-            "images/behrens/Peter_Behrens_by_Rudolf_D%C3%BChrkoop_-_MKG_%28cropped%29.jpg"
-        ]
-    },
-    "bellini": {
-        "name": "Mario Bellini",
-        "birth": "1935",
-        "death": null,
-        "peakYear": "1972",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/bellini/bellini_bellini_chair.jpg",
-            "images/bellini/bellini_cab_chair.jpg",
-            "images/bellini/bellini_camaleonda_sofa.jpg",
-            "images/bellini/bellini_delle_sedie_cab_1.jpg",
-            "images/bellini/bellini_portrait.jpg",
-            "images/bellini/bellini_prodotto.jpg",
-            "images/bellini/bellini_prodotto_s1_s2.jpg",
-            "images/bellini/bellini_rosenthal_cup.jpg",
-            "images/bellini/bellini_yamaha_tape_deck.jpg"
-        ]
-    },
-    "bill": {
-        "name": "Max Bill",
-        "birth": "1908",
-        "death": "1994",
-        "peakYear": "1952",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/bill/bill_and_bill_sayre_15616_.jpg",
-            "images/bill/bill_endless_ribbon.jpg",
-            "images/bill/bill_sun_lamp.jpg",
-            "images/bill/max_bill_ulm_stool.webp",
-            "images/bill/ulm_stool.jpg"
-        ]
-    },
-    "brandt": {
-        "name": "Marianne Brandt",
-        "birth": "1893",
-        "death": "1983",
-        "peakYear": "1926",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/brandt/brandt_aehrlichs_ngerinnen1895.jpg",
-            "images/brandt/brandt_contralto_.jpg",
-            "images/brandt/brandt_hadersdorf_weidlingau_bischof_brandt.jpg",
-            "images/brandt/brandt_portrait.jpg"
-        ]
-    },
-    "breuer": {
-        "name": "Marcel Breuer",
-        "birth": "1902",
-        "death": "1981",
-        "peakYear": "1925",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/breuer/breuer_am_gro_en_wannsee_58_wanns_villa_van_der_heydt.jpg",
-            "images/breuer/breuer_breuer_house.jpg",
-            "images/breuer/breuer_cesca_chair.jpg",
-            "images/breuer/breuer_chair.jpg",
-            "images/breuer/breuer_fuld_modell_frankfurt.jpg",
-            "images/breuer/breuer_hr._d._schwartzman_ir._g._van_der_wal_marcel_brenez_h._elzas_._bijenkorf_ro_bestanddeelnr_908_4042.jpg",
-            "images/breuer/breuer_isokon_long_chair.jpg",
-            "images/breuer/breuer_laccio_table.jpg",
-            "images/breuer/breuer_longchair.jpg",
-            "images/breuer/breuer_marcel_datestone.jpg"
-        ]
-    },
-    "castiglioni": {
-        "name": "Achille Castiglioni",
-        "birth": "1918",
-        "death": "2002",
-        "peakYear": "1962",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/castiglioni/castiglioni.jpg",
-            "images/castiglioni/castiglioni__11_italy_italian_design_1957_sella_zanotta_achille_castiglioni_pier_giacomo_castiglioni.jpg",
-            "images/castiglioni/castiglioni__11_italy_italian_design_taraxacum_achille_castiglioni_flos_1988_at_tdm_milan.jpg",
-            "images/castiglioni/castiglioni__13_design_of_italy_1957_sella_zanotta_achille_castiglioni_pier_giacomo_castiglioni.jpg",
-            "images/castiglioni/castiglioni_arco_lamp.jpg",
-            "images/castiglioni/castiglioni_e_pier_giacomo_castiglioni_per_zanotta_spa._sgabello_mezzadro_1954_57.jpg",
-            "images/castiglioni/castiglioni_portrait.jpg",
-            "images/castiglioni/castiglioni_rr126_radiogram.jpg",
-            "images/castiglioni/castiglioni_rr126_stereo.jpg",
-            "images/castiglioni/castiglioni_sella_stool.jpg"
-        ]
-    },
-    "dresser": {
-        "name": "Christopher Dresser",
-        "birth": "1834",
-        "death": "1904",
-        "peakYear": "1860",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg",
-            "images/dresser/Christopher_Dresser00.jpg",
-            "images/dresser/christopher_dresser_finger_bowl.webp",
-            "images/dresser/christopher_dresser_oil_and_vinegar_cruet.webp",
-            "images/dresser/christopher_dresser_portrait.webp",
-            "images/dresser/christopher_dresser_sugar_bowl.webp",
-            "images/dresser/christopher_dresser_toast_rack.webp",
-            "images/dresser/christopher_dresser_watering_can.webp",
-            "images/dresser/dresser_christopherdresser.jpg",
-            "images/dresser/dresser_sidewall_google_art_project.jpg",
-            "images/dresser/dresser_teapot.jpg",
-            "images/dresser/dresser_toast.jpg",
-            "images/dresser/Dresservanda.jpg",
-            "images/dresser/Length_of_woven_wool_and_silk_MET_AR1378.jpg",
-            "images/dresser/Piece_MET_DP17542_1995.252.jpg",
-            "images/dresser/Reptilian_Fabric.jpg",
-            "images/dresser/Side_chair_MET_DT3787.jpg",
-            "images/dresser/wedgwood vase.jpg"
-        ]
-    },
-    "dreyfuss": {
-        "name": "Henry Dreyfuss",
-        "birth": "1904",
-        "death": "1972",
-        "peakYear": "1937",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/dreyfuss/dreyfuss.jpg",
-            "images/dreyfuss/dreyfuss_john_deere_tractor.jpg",
-            "images/dreyfuss/dreyfuss_portrait.jpg",
-            "images/dreyfuss/dreyfuss_princess_telephone.jpg",
-            "images/dreyfuss/dreyfuss_symbol_sourcebook.jpg",
-            "images/dreyfuss/dreyfuss_telephone_magazine_1922_14569849308_.jpg",
-            "images/dreyfuss/dreyfuss_telephone_magazine_1922_14756479025_.jpg",
-            "images/dreyfuss/dreyfuss_trust_building_280_park_avenue.jpg",
-            "images/dreyfuss/dreyfuss_western_electric_302.jpg",
-            "images/dreyfuss/henry_dreyfuss_big_ben_alarm_clock.webp",
-            "images/dreyfuss/Hudson_locomotive_for_the_New_York_Central.jpg"
-        ]
-    },
-    "dyson": {
-        "name": "James Dyson",
-        "birth": "1947",
-        "death": null,
-        "peakYear": "1993",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/dyson/dyson_8487823763_.jpg",
-            "images/dyson/dyson_8487824149_.jpg",
-            "images/dyson/dyson_8487825345_.jpg",
-            "images/dyson/dyson_8487826079_.jpg",
-            "images/dyson/dyson_portrait.jpg"
-        ]
-    },
-    "eames": {
-        "name": "Charles & Ray Eames",
-        "birth": "1907",
-        "death": "1988",
-        "peakYear": "1946",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/eames/Charles and Ray Eames.jpg",
-            "images/eames/eames_lounge_chair.jpg",
-            "images/eames/eames_molded_plastic_chair.jpg"
-        ]
-    },
-    "earl": {
-        "name": "Harley Earl",
-        "birth": "1893",
-        "death": "1969",
-        "peakYear": "1938",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/earl/earl_portrait.jpg"
-        ]
-    },
-    "fukasawa": {
-        "name": "Naoto Fukasawa",
-        "birth": "1956",
-        "death": null,
-        "peakYear": "2003",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/fukasawa/fukasawa_by_naoto_fukasawa_1.jpg",
-            "images/fukasawa/fukasawa_cdma_1x_win_w42t_neon_mizuiro_close.jpg",
-            "images/fukasawa/fukasawa_hiroshima_chair.jpg",
-            "images/fukasawa/fukasawa_portrait.jpg",
-            "images/fukasawa/fukasawa_w55sa_infobar2_20101109.jpg",
-            "images/fukasawa/fukasawa_w55sa_infobar2_20101109_b.jpg"
-        ]
-    },
-    "gandini": {
-        "name": "Marcello Gandini",
-        "birth": "1938",
-        "death": "2024",
-        "peakYear": "1971",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/gandini/gandini_in_1976.jpg",
-            "images/gandini/gandini_miura.jpg",
-            "images/gandini/gandini_portrait.jpg",
-            "images/gandini/gandini_renault_5_turbo.jpg"
-        ]
-    },
-    "geddes": {
-        "name": "Norman Bel Geddes",
-        "birth": "1893",
-        "death": "1958",
-        "peakYear": "1935",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/geddes/Battle_of_Midway.jpg",
-            "images/geddes/geddes_belgeddescar.jpg",
-            "images/geddes/geddes_design_1_by_norman_bel_geddes_for_henry_hadley_s_cleopatra_s_night_1920.jpg",
-            "images/geddes/geddes_design_2_by_norman_bel_geddes_for_henry_hadley_s_cleopatra_s_night_1920.jpg",
-            "images/geddes/geddes_for_the_1956_emerson_model_838_transistor_radio_brownwood_texas_bulletin_newspaper_november_29_1955_16216197452_.jpg",
-            "images/geddes/geddes_gas_range_publicity_leaflet_extract_c._1932_33_philadelphia_gas_works.jpg",
-            "images/geddes/geddes_number_4_norman_bel_geddes_c.1929_32.jpg"
-        ]
-    },
-    "giugiaro": {
-        "name": "Giorgetto Giugiaro",
-        "birth": "1938",
-        "death": null,
-        "peakYear": "1974",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/giugiaro/giugiaro_.jpg",
-            "images/giugiaro/giugiaro_1970_giugiaro_porsche_tapiro.jpg",
-            "images/giugiaro/giugiaro_1992_04_23_torino_auto_designers_dal_italia.jpg",
-            "images/giugiaro/giugiaro_corvair_testudo_drawing_bertone_giugiaro.jpg",
-            "images/giugiaro/giugiaro_portrait.jpg"
-        ]
-    },
-    "gropius": {
-        "name": "Walter Gropius",
-        "birth": "1883",
-        "death": "1969",
-        "peakYear": "1919",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/gropius/gropius_ascona_dokumentationsfotos_im_museum_xanti_schawinsky_walter_gropius_labw_staatsarchiv_freiburg_w_134_nr._123466.jpg",
-            "images/gropius/gropius_fagus.jpg",
-            "images/gropius/gropius_fagus_factory.jpg",
-            "images/gropius/gropius_gropius_house.jpg",
-            "images/gropius/gropius_metlife_building.jpg",
-            "images/gropius/gropius_photograph_of_bauhaus_masters_on_the_roof_of_the_studio_building_bauhaus_dessau.jpg",
-            "images/gropius/gropius_portrait.jpg",
-            "images/gropius/gropius_schema_didattico.jpg",
-            "images/gropius/walter_gropius_fagus_factory.webp"
-        ]
-    },
-    "guimard": {
-        "name": "Hector Guimard",
-        "birth": "1867",
-        "death": "1942",
-        "peakYear": "1900",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/guimard/guimard_iron1.jpg",
-            "images/guimard/guimard_iron2.jpg",
-            "images/guimard/guimard_iron3.jpg",
-            "images/guimard/guimard_metro.jpg",
-            "images/guimard/guimard_metro1.jpg",
-            "images/guimard/Hector Guimard.jpg"
-        ]
-    },
-    "ive": {
-        "name": "Jony Ive",
-        "birth": "1967",
-        "death": null,
-        "peakYear": "2001",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/ive/ive_airpods.jpg",
-            "images/ive/ive_ipad.jpg",
-            "images/ive/ive_iphone.jpg",
-            "images/ive/ive_ipod.jpg",
-            "images/ive/ive_johnny_ive.jpg",
-            "images/ive/ive_lasseter.jpg",
-            "images/ive/ive_lasseter_cropped.jpg",
-            "images/ive/ive_mac_pro.jpg",
-            "images/ive/ive_macbook.jpg",
-            "images/ive/ive_minimal.jpg.jpeg",
-            "images/ive/ive_otrs_.jpg",
-            "images/ive/Jonathan_Ive_%28OTRS%29.jpg",
-            "images/ive/Sir Jonathan Paul Ive.jpg"
-        ]
-    },
-    "jacobsen": {
-        "name": "Arne Jacobsen",
-        "birth": "1902",
-        "death": "1971",
-        "peakYear": "1952",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/jacobsen/Arne_Jacobsen_photo.jpg",
-            "images/jacobsen/jacobsen_aj_lamp.jpg",
-            "images/jacobsen/jacobsen_ant_chair.jpg",
-            "images/jacobsen/jacobsen_kubeflex_exterior_01.jpg",
-            "images/jacobsen/jacobsen_kubeflex_interior_01.jpg",
-            "images/jacobsen/jacobsen_kubeflex_interior_02.jpg",
-            "images/jacobsen/jacobsen_photo.jpg"
-        ]
-    },
-    "lihotzky": {
-        "name": "Margarete Schutte-Lihotzky",
-        "birth": "1897",
-        "death": "2000",
-        "peakYear": "1926",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/lihotzky/lihotzky_kitchen.jpg",
-            "images/lihotzky/Margarete Sch\u00fctte-Lihotzky.jpg"
-        ]
-    },
-    "loewy": {
-        "name": "Raymond Loewy",
-        "birth": "1893",
-        "death": "1986",
-        "peakYear": "1940",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/loewy/loewy_creuset.jpg",
-            "images/loewy/loewy_ii_john_kratz_.jpg",
-            "images/loewy/loewy_lotus_ferm_e.jpg",
-            "images/loewy/loewy_lotus_ouverte.jpg",
-            "images/loewy/loewy_radio_by_raymond_loewy.jpg",
-            "images/loewy/loewy_skylab.jpg",
-            "images/loewy/loewy_streamline.jpg",
-            "images/loewy/loewy_studebaker_starliner.jpg",
-            "images/loewy/raymond_loewy_lucky_strike_pack.webp",
-            "images/loewy/raymond_loewy_portrait.webp"
-        ]
-    },
-    "morris": {
-        "name": "William Morris",
-        "birth": "1834",
-        "death": "1896",
-        "peakYear": "1862",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/morris/morris_textile.jpg",
-            "images/morris/morris_wallpaper.jpg",
-            "images/morris/William_Morris.jpg"
-        ]
-    },
-    "nelson": {
-        "name": "George Nelson",
-        "birth": "1908",
-        "death": "1986",
-        "peakYear": "1952",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/nelson/nelson_associates_tramite_howard_miller_clock_company_kite_clock_n._2201_zeeland_mi_1952_53.jpg",
-            "images/nelson/nelson_bubble_lamp.jpg",
-            "images/nelson/nelson_circular.jpg",
-            "images/nelson/nelson_coconut_chair.jpg",
-            "images/nelson/nelson_harper_attr._per_george_nelson_associates_tramite_howard_miller_clock_company_ball_clock_n._4755_zeeland_mi_1948_69.jpg",
-            "images/nelson/nelson_harper_attr._per_george_nelson_associates_tramite_howard_miller_clock_company_block_o_tab_clock_n._6085_1961_replica_del_1970_74_ca._.jpg",
-            "images/nelson/nelson_library_presentation_006_954496199_.jpg",
-            "images/nelson/nelson_library_presentation_006_corrected_and_cropped_.jpg",
-            "images/nelson/nelson_portrait.jpg"
-        ]
-    },
-    "newson": {
-        "name": "Marc Newson",
-        "birth": "1963",
-        "death": null,
-        "peakYear": "1995",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/newson/newson.jpg",
-            "images/newson/newson_business_of_luxury_gala_reception.jpg",
-            "images/newson/newson_cropped_.jpg",
-            "images/newson/newson_embryo_chair.jpg",
-            "images/newson/newson_friedman_and_marc_newson_5804327693_.jpg",
-            "images/newson/newson_portrait.jpg",
-            "images/newson/newson_qantas_a380_interiors.jpg"
-        ]
-    },
-    "nizzoli": {
-        "name": "Marcello Nizzoli",
-        "birth": "1887",
-        "death": "1969",
-        "peakYear": "1948",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/nizzoli/nizzoli.jpg",
-            "images/nizzoli/nizzoli_509_ottimamente_lubrificata.jpg",
-            "images/nizzoli/nizzoli_al_museo_fisogni.jpg",
-            "images/nizzoli/nizzoli_bella_societ_mc_4s_macchina_calcolatrice_4_summa_1940_2677178265_.jpg",
-            "images/nizzoli/nizzoli_di_benzina_supercortemaggiore_esposto_in_triennale_milano.jpg",
-            "images/nizzoli/nizzoli_e_mario_olivieri_distributore_di_benzina_supercortemaggiore_per_agip_1963.jpg",
-            "images/nizzoli/nizzoli_pignone_agip_museo_fisogni.jpg",
-            "images/nizzoli/nizzoli_portrait.jpg"
-        ]
-    },
-    "ponti": {
-        "name": "Gio Ponti",
-        "birth": "1891",
-        "death": "1979",
-        "peakYear": "1957",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/ponti/ponti_170420_domus_fausta.jpg",
-            "images/ponti/ponti_201100_domus_julia.jpg",
-            "images/ponti/ponti_alrashidhotelbaghdad.jpg",
-            "images/ponti/ponti_direzionale_montecatini_milano.jpg",
-            "images/ponti/ponti_portrait.jpg",
-            "images/ponti/ponti_superleggera_chair.jpg"
-        ]
-    },
-    "rams": {
-        "name": "Dieter Rams",
-        "birth": "1932",
-        "death": null,
-        "peakYear": "1961",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/rams/Braun_ABW30_%28schwarz%29.jpg",
-            "images/rams/braun_razor.jpg",
-            "images/rams/braun_sk4.jpg",
-            "images/rams/dieter_rams_portrait.jpg",
-            "images/rams/rams_2020_04_21_uhren_fuer_den_innenbereich.jpg",
-            "images/rams/rams_audio_310.jpeg",
-            "images/rams/rams_braun_d40_frankfurt_2024_03.jpg",
-            "images/rams/rams_d40_rodenstock_splendar.jpg",
-            "images/rams/rams_dieter_rams_chair_from_studienarbeit_drawing.jpg",
-            "images/rams/rams_et66_calculator_1987.jpg",
-            "images/rams/rams_sk4.jpg",
-            "images/rams/rams_t1000_radio_1963.jpg",
-            "images/rams/vitsoe_606.jpg"
-        ]
-    },
-    "rashid": {
-        "name": "Karim Rashid",
-        "birth": "1960",
-        "death": null,
-        "peakYear": "2002",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/rashid/rashid_.jpg",
-            "images/rashid/rashid_bern_city_designed_by_karim_rashid_2.jpg",
-            "images/rashid/rashid_bern_city_designed_by_karim_rashid_3.jpg",
-            "images/rashid/rashid_portrait.jpg",
-            "images/rashid/rashid_talks_to_press_at_innoprom_2012.jpg"
-        ]
-    },
-    "sapper": {
-        "name": "Richard Sapper",
-        "birth": "1932",
-        "death": "2015",
-        "peakYear": "1972",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/sapper/sapper_.jpg",
-            "images/sapper/sapper_a_musicassette_a_transistor_museo_scienza_tecnologia_milano_10088_dia.jpg",
-            "images/sapper/sapper_halley_lamp.jpg",
-            "images/sapper/sapper_portrait.jpg",
-            "images/sapper/sapper_r_sapper.jpg",
-            "images/sapper/sapper_tizio.jpg",
-            "images/sapper/sapper_tizio_lamp.jpg",
-            "images/sapper/sapper_zanuso_e_richard_sapper_per_kartell_seggiolina_4999_1964.jpg"
-        ]
-    },
-    "sottsass": {
-        "name": "Ettore Sottsass",
-        "birth": "1917",
-        "death": "2007",
-        "peakYear": "1981",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/sottsass/carlton_bookshelf.jpg",
-            "images/sottsass/casablanca_sideboard.jpg",
-            "images/sottsass/magno_radio.jpg",
-            "images/sottsass/sottsass_and_fernanda_pivano_1969.jpg",
-            "images/sottsass/sottsass_giornalista_lillo_gullo_intervista_l_architetto_e_designer_ettore_sottsass.jpg",
-            "images/sottsass/sottsass_in_tonalite_dell_adamello.jpg",
-            "images/sottsass/sottsass_in_tonalite_dell_adamello_by_ettore_sottsass.jpg",
-            "images/sottsass/sottsass_of_man_transforms_exhibit_at_c_h_museum.jpg",
-            "images/sottsass/sottsass_tahiti_lamp.jpg"
-        ]
-    },
-    "starck": {
-        "name": "Philippe Starck",
-        "birth": "1949",
-        "death": null,
-        "peakYear": "1990",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/starck/starck_alhondiga.jpg",
-            "images/starck/starck_bubble_club_sofa.jpg",
-            "images/starck/starck_louis_ghost.jpg",
-            "images/starck/starck_philippe_starckphilippe_starck.jpg",
-            "images/starck/starck_portrait.jpg",
-            "images/starck/starck_toaster.jpg"
-        ]
-    },
-    "wagenfeld": {
-        "name": "Wilhelm Wagenfeld",
-        "birth": "1900",
-        "death": "1990",
-        "peakYear": "1924",
-        "bio": "",
-        "philosophy": "",
-        "integration": "",
-        "images": [
-            "images/wagenfeld/wagenfeld_am_wall_209_in_bremen.jpg",
-            "images/wagenfeld/wagenfeld_aus_feuerfestem_jenaer_glas_l_szl_moholy_nagy_1933.jpg",
-            "images/wagenfeld/wagenfeld_bauhaus_lamp.jpg",
-            "images/wagenfeld/wagenfeld_design_brd.jpg",
-            "images/wagenfeld/wagenfeld_portrait.jpg",
-            "images/wagenfeld/wagenfeld_porzellanmanufaktur_f_rstenberg_wagenfeld_639_e.jpg",
-            "images/wagenfeld/wagenfeld_tea_service.jpg",
-            "images/wagenfeld/wagenfeld_wmf_ash_tray.jpg"
-        ]
-    }
-};
+            "aalto": {
+                "name": "Alvar Aalto",
+                "birth": "1898",
+                "death": "1976",
+                "peakYear": "1932",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/aalto/aalto_1956_2_.jpg",
+                    "images/aalto/aalto_1956_3_.jpg",
+                    "images/aalto/aalto_1956_4_.jpg",
+                    "images/aalto/aalto_aalto_house.jpg",
+                    "images/aalto/aalto_baker_house.jpg",
+                    "images/aalto/aalto_beehive_lamp.jpg",
+                    "images/aalto/aalto_elissa_aalto_1956.jpg",
+                    "images/aalto/aalto_portrait.jpg"
+                ]
+            },
+            "behrens": {
+                "name": "Peter Behrens",
+                "birth": "1868",
+                "death": "1940",
+                "peakYear": "1907",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/behrens/Arbeitszimmer_des_Herausgebers_Alexander_Koch%2C_c._1903.jpg",
+                    "images/behrens/behrens__behrens_peter.jpeg",
+                    "images/behrens/behrens_by_rudolf_d_hrkoop_mkg.jpg",
+                    "images/behrens/behrens_deutschen_volke_geo.hlipp.de_1785.jpg",
+                    "images/behrens/behrens_giebel2.jpg",
+                    "images/behrens/behrens_kiss.jpg",
+                    "images/behrens/behrens_logo.jpg",
+                    "images/behrens/behrens_posters.jpg",
+                    "images/behrens/behrens_typography.jpg",
+                    "images/behrens/D%C3%BChrkoop%2C_Rudolf_-_Peter_Behrens%2C_Architekt_%28Zeno_Fotografie%29.jpg",
+                    "images/behrens/Max_Liebermann_Portr%C3%A4t_Peter_Behrens.jpg",
+                    "images/behrens/Peter_Behrens%2C_um_1913.jpg",
+                    "images/behrens/Peter_Behrens_by_Rudolf_Bosselt%2C_1918%2C_bronze_-_Museum_K%C3%BCnstlerkolonie_Darmstadt_-_Mathildenh%C3%B6he_-_Darmstadt%2C_Germany_-_DSC06385.jpg",
+                    "images/behrens/Peter_Behrens_by_Rudolf_D%C3%BChrkoop_-_MKG_%28cropped%29.jpg"
+                ]
+            },
+            "bellini": {
+                "name": "Mario Bellini",
+                "birth": "1935",
+                "death": null,
+                "peakYear": "1972",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/bellini/bellini_bellini_chair.jpg",
+                    "images/bellini/bellini_cab_chair.jpg",
+                    "images/bellini/bellini_camaleonda_sofa.jpg",
+                    "images/bellini/bellini_delle_sedie_cab_1.jpg",
+                    "images/bellini/bellini_portrait.jpg",
+                    "images/bellini/bellini_prodotto.jpg",
+                    "images/bellini/bellini_prodotto_s1_s2.jpg",
+                    "images/bellini/bellini_rosenthal_cup.jpg",
+                    "images/bellini/bellini_yamaha_tape_deck.jpg"
+                ]
+            },
+            "bill": {
+                "name": "Max Bill",
+                "birth": "1908",
+                "death": "1994",
+                "peakYear": "1952",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/bill/bill_and_bill_sayre_15616_.jpg",
+                    "images/bill/bill_endless_ribbon.jpg",
+                    "images/bill/bill_sun_lamp.jpg",
+                    "images/bill/max_bill_ulm_stool.webp",
+                    "images/bill/ulm_stool.jpg"
+                ]
+            },
+            "brandt": {
+                "name": "Marianne Brandt",
+                "birth": "1893",
+                "death": "1983",
+                "peakYear": "1926",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/brandt/brandt_aehrlichs_ngerinnen1895.jpg",
+                    "images/brandt/brandt_contralto_.jpg",
+                    "images/brandt/brandt_hadersdorf_weidlingau_bischof_brandt.jpg",
+                    "images/brandt/brandt_portrait.jpg"
+                ]
+            },
+            "breuer": {
+                "name": "Marcel Breuer",
+                "birth": "1902",
+                "death": "1981",
+                "peakYear": "1925",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/breuer/breuer_am_gro_en_wannsee_58_wanns_villa_van_der_heydt.jpg",
+                    "images/breuer/breuer_breuer_house.jpg",
+                    "images/breuer/breuer_cesca_chair.jpg",
+                    "images/breuer/breuer_chair.jpg",
+                    "images/breuer/breuer_fuld_modell_frankfurt.jpg",
+                    "images/breuer/breuer_hr._d._schwartzman_ir._g._van_der_wal_marcel_brenez_h._elzas_._bijenkorf_ro_bestanddeelnr_908_4042.jpg",
+                    "images/breuer/breuer_isokon_long_chair.jpg",
+                    "images/breuer/breuer_laccio_table.jpg",
+                    "images/breuer/breuer_longchair.jpg",
+                    "images/breuer/breuer_marcel_datestone.jpg"
+                ]
+            },
+            "castiglioni": {
+                "name": "Achille Castiglioni",
+                "birth": "1918",
+                "death": "2002",
+                "peakYear": "1962",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/castiglioni/castiglioni.jpg",
+                    "images/castiglioni/castiglioni__11_italy_italian_design_1957_sella_zanotta_achille_castiglioni_pier_giacomo_castiglioni.jpg",
+                    "images/castiglioni/castiglioni__11_italy_italian_design_taraxacum_achille_castiglioni_flos_1988_at_tdm_milan.jpg",
+                    "images/castiglioni/castiglioni__13_design_of_italy_1957_sella_zanotta_achille_castiglioni_pier_giacomo_castiglioni.jpg",
+                    "images/castiglioni/castiglioni_arco_lamp.jpg",
+                    "images/castiglioni/castiglioni_e_pier_giacomo_castiglioni_per_zanotta_spa._sgabello_mezzadro_1954_57.jpg",
+                    "images/castiglioni/castiglioni_portrait.jpg",
+                    "images/castiglioni/castiglioni_rr126_radiogram.jpg",
+                    "images/castiglioni/castiglioni_rr126_stereo.jpg",
+                    "images/castiglioni/castiglioni_sella_stool.jpg"
+                ]
+            },
+            "dresser": {
+                "name": "Christopher Dresser",
+                "birth": "1834",
+                "death": "1904",
+                "peakYear": "1860",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg",
+                    "images/dresser/Christopher_Dresser00.jpg",
+                    "images/dresser/christopher_dresser_finger_bowl.webp",
+                    "images/dresser/christopher_dresser_oil_and_vinegar_cruet.webp",
+                    "images/dresser/christopher_dresser_portrait.webp",
+                    "images/dresser/christopher_dresser_sugar_bowl.webp",
+                    "images/dresser/christopher_dresser_toast_rack.webp",
+                    "images/dresser/christopher_dresser_watering_can.webp",
+                    "images/dresser/dresser_christopherdresser.jpg",
+                    "images/dresser/dresser_sidewall_google_art_project.jpg",
+                    "images/dresser/dresser_teapot.jpg",
+                    "images/dresser/dresser_toast.jpg",
+                    "images/dresser/Dresservanda.jpg",
+                    "images/dresser/Length_of_woven_wool_and_silk_MET_AR1378.jpg",
+                    "images/dresser/Piece_MET_DP17542_1995.252.jpg",
+                    "images/dresser/Reptilian_Fabric.jpg",
+                    "images/dresser/Side_chair_MET_DT3787.jpg",
+                    "images/dresser/wedgwood vase.jpg"
+                ]
+            },
+            "dreyfuss": {
+                "name": "Henry Dreyfuss",
+                "birth": "1904",
+                "death": "1972",
+                "peakYear": "1937",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/dreyfuss/dreyfuss.jpg",
+                    "images/dreyfuss/dreyfuss_john_deere_tractor.jpg",
+                    "images/dreyfuss/dreyfuss_portrait.jpg",
+                    "images/dreyfuss/dreyfuss_princess_telephone.jpg",
+                    "images/dreyfuss/dreyfuss_symbol_sourcebook.jpg",
+                    "images/dreyfuss/dreyfuss_telephone_magazine_1922_14569849308_.jpg",
+                    "images/dreyfuss/dreyfuss_telephone_magazine_1922_14756479025_.jpg",
+                    "images/dreyfuss/dreyfuss_trust_building_280_park_avenue.jpg",
+                    "images/dreyfuss/dreyfuss_western_electric_302.jpg",
+                    "images/dreyfuss/henry_dreyfuss_big_ben_alarm_clock.webp",
+                    "images/dreyfuss/Hudson_locomotive_for_the_New_York_Central.jpg"
+                ]
+            },
+            "dyson": {
+                "name": "James Dyson",
+                "birth": "1947",
+                "death": null,
+                "peakYear": "1993",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/dyson/dyson_8487823763_.jpg",
+                    "images/dyson/dyson_8487824149_.jpg",
+                    "images/dyson/dyson_8487825345_.jpg",
+                    "images/dyson/dyson_8487826079_.jpg",
+                    "images/dyson/dyson_portrait.jpg"
+                ]
+            },
+            "eames": {
+                "name": "Charles & Ray Eames",
+                "birth": "1907",
+                "death": "1988",
+                "peakYear": "1946",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/eames/Charles and Ray Eames.jpg",
+                    "images/eames/eames_lounge_chair.jpg",
+                    "images/eames/eames_molded_plastic_chair.jpg"
+                ]
+            },
+            "earl": {
+                "name": "Harley Earl",
+                "birth": "1893",
+                "death": "1969",
+                "peakYear": "1938",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/earl/earl_portrait.jpg"
+                ]
+            },
+            "fukasawa": {
+                "name": "Naoto Fukasawa",
+                "birth": "1956",
+                "death": null,
+                "peakYear": "2003",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/fukasawa/fukasawa_by_naoto_fukasawa_1.jpg",
+                    "images/fukasawa/fukasawa_cdma_1x_win_w42t_neon_mizuiro_close.jpg",
+                    "images/fukasawa/fukasawa_hiroshima_chair.jpg",
+                    "images/fukasawa/fukasawa_portrait.jpg",
+                    "images/fukasawa/fukasawa_w55sa_infobar2_20101109.jpg",
+                    "images/fukasawa/fukasawa_w55sa_infobar2_20101109_b.jpg"
+                ]
+            },
+            "gandini": {
+                "name": "Marcello Gandini",
+                "birth": "1938",
+                "death": "2024",
+                "peakYear": "1971",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/gandini/gandini_in_1976.jpg",
+                    "images/gandini/gandini_miura.jpg",
+                    "images/gandini/gandini_portrait.jpg",
+                    "images/gandini/gandini_renault_5_turbo.jpg"
+                ]
+            },
+            "geddes": {
+                "name": "Norman Bel Geddes",
+                "birth": "1893",
+                "death": "1958",
+                "peakYear": "1935",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/geddes/Battle_of_Midway.jpg",
+                    "images/geddes/geddes_belgeddescar.jpg",
+                    "images/geddes/geddes_design_1_by_norman_bel_geddes_for_henry_hadley_s_cleopatra_s_night_1920.jpg",
+                    "images/geddes/geddes_design_2_by_norman_bel_geddes_for_henry_hadley_s_cleopatra_s_night_1920.jpg",
+                    "images/geddes/geddes_for_the_1956_emerson_model_838_transistor_radio_brownwood_texas_bulletin_newspaper_november_29_1955_16216197452_.jpg",
+                    "images/geddes/geddes_gas_range_publicity_leaflet_extract_c._1932_33_philadelphia_gas_works.jpg",
+                    "images/geddes/geddes_number_4_norman_bel_geddes_c.1929_32.jpg"
+                ]
+            },
+            "giugiaro": {
+                "name": "Giorgetto Giugiaro",
+                "birth": "1938",
+                "death": null,
+                "peakYear": "1974",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/giugiaro/giugiaro_.jpg",
+                    "images/giugiaro/giugiaro_1970_giugiaro_porsche_tapiro.jpg",
+                    "images/giugiaro/giugiaro_1992_04_23_torino_auto_designers_dal_italia.jpg",
+                    "images/giugiaro/giugiaro_corvair_testudo_drawing_bertone_giugiaro.jpg",
+                    "images/giugiaro/giugiaro_portrait.jpg"
+                ]
+            },
+            "gropius": {
+                "name": "Walter Gropius",
+                "birth": "1883",
+                "death": "1969",
+                "peakYear": "1919",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/gropius/gropius_ascona_dokumentationsfotos_im_museum_xanti_schawinsky_walter_gropius_labw_staatsarchiv_freiburg_w_134_nr._123466.jpg",
+                    "images/gropius/gropius_fagus.jpg",
+                    "images/gropius/gropius_fagus_factory.jpg",
+                    "images/gropius/gropius_gropius_house.jpg",
+                    "images/gropius/gropius_metlife_building.jpg",
+                    "images/gropius/gropius_photograph_of_bauhaus_masters_on_the_roof_of_the_studio_building_bauhaus_dessau.jpg",
+                    "images/gropius/gropius_portrait.jpg",
+                    "images/gropius/gropius_schema_didattico.jpg",
+                    "images/gropius/walter_gropius_fagus_factory.webp"
+                ]
+            },
+            "guimard": {
+                "name": "Hector Guimard",
+                "birth": "1867",
+                "death": "1942",
+                "peakYear": "1900",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/guimard/guimard_iron1.jpg",
+                    "images/guimard/guimard_iron2.jpg",
+                    "images/guimard/guimard_iron3.jpg",
+                    "images/guimard/guimard_metro.jpg",
+                    "images/guimard/guimard_metro1.jpg",
+                    "images/guimard/Hector Guimard.jpg"
+                ]
+            },
+            "ive": {
+                "name": "Jony Ive",
+                "birth": "1967",
+                "death": null,
+                "peakYear": "2001",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/ive/ive_airpods.jpg",
+                    "images/ive/ive_ipad.jpg",
+                    "images/ive/ive_iphone.jpg",
+                    "images/ive/ive_ipod.jpg",
+                    "images/ive/ive_johnny_ive.jpg",
+                    "images/ive/ive_lasseter.jpg",
+                    "images/ive/ive_lasseter_cropped.jpg",
+                    "images/ive/ive_mac_pro.jpg",
+                    "images/ive/ive_macbook.jpg",
+                    "images/ive/ive_minimal.jpg.jpeg",
+                    "images/ive/ive_otrs_.jpg",
+                    "images/ive/Jonathan_Ive_%28OTRS%29.jpg",
+                    "images/ive/Sir Jonathan Paul Ive.jpg"
+                ]
+            },
+            "jacobsen": {
+                "name": "Arne Jacobsen",
+                "birth": "1902",
+                "death": "1971",
+                "peakYear": "1952",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/jacobsen/Arne_Jacobsen_photo.jpg",
+                    "images/jacobsen/jacobsen_aj_lamp.jpg",
+                    "images/jacobsen/jacobsen_ant_chair.jpg",
+                    "images/jacobsen/jacobsen_kubeflex_exterior_01.jpg",
+                    "images/jacobsen/jacobsen_kubeflex_interior_01.jpg",
+                    "images/jacobsen/jacobsen_kubeflex_interior_02.jpg",
+                    "images/jacobsen/jacobsen_photo.jpg"
+                ]
+            },
+            "lihotzky": {
+                "name": "Margarete Schutte-Lihotzky",
+                "birth": "1897",
+                "death": "2000",
+                "peakYear": "1926",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/lihotzky/lihotzky_kitchen.jpg",
+                    "images/lihotzky/Margarete Sch\u00fctte-Lihotzky.jpg"
+                ]
+            },
+            "loewy": {
+                "name": "Raymond Loewy",
+                "birth": "1893",
+                "death": "1986",
+                "peakYear": "1940",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/loewy/loewy_creuset.jpg",
+                    "images/loewy/loewy_ii_john_kratz_.jpg",
+                    "images/loewy/loewy_lotus_ferm_e.jpg",
+                    "images/loewy/loewy_lotus_ouverte.jpg",
+                    "images/loewy/loewy_radio_by_raymond_loewy.jpg",
+                    "images/loewy/loewy_skylab.jpg",
+                    "images/loewy/loewy_streamline.jpg",
+                    "images/loewy/loewy_studebaker_starliner.jpg",
+                    "images/loewy/raymond_loewy_lucky_strike_pack.webp",
+                    "images/loewy/raymond_loewy_portrait.webp"
+                ]
+            },
+            "morris": {
+                "name": "William Morris",
+                "birth": "1834",
+                "death": "1896",
+                "peakYear": "1862",
+                "bio": "William Morris was a designer, poet, and socialist who led the Arts & Crafts movement. He rejected the cheap, mass-produced goods of the Victorian era, fighting to return dignity to the worker and beauty to the home.",
+                "philosophy": "**\"Truth to Materials.\"** Morris believed that the method of production should be visible and celebrated. He argued that \"art is not a luxury for the few, but a necessity for all.\"",
+                "integration": "Morris bridged the gap between the medieval guild system and modern socialism. By treating the home as a total work of art, he established the template for the modern design studio, influencing everything from Art Nouveau to the Bauhaus.",
+                "images": [
+                    "images/morris/morris_textile.jpg",
+                    "images/morris/morris_wallpaper.jpg",
+                    "images/morris/William_Morris.jpg"
+                ]
+            },
+            "nelson": {
+                "name": "George Nelson",
+                "birth": "1908",
+                "death": "1986",
+                "peakYear": "1952",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/nelson/nelson_associates_tramite_howard_miller_clock_company_kite_clock_n._2201_zeeland_mi_1952_53.jpg",
+                    "images/nelson/nelson_bubble_lamp.jpg",
+                    "images/nelson/nelson_circular.jpg",
+                    "images/nelson/nelson_coconut_chair.jpg",
+                    "images/nelson/nelson_harper_attr._per_george_nelson_associates_tramite_howard_miller_clock_company_ball_clock_n._4755_zeeland_mi_1948_69.jpg",
+                    "images/nelson/nelson_harper_attr._per_george_nelson_associates_tramite_howard_miller_clock_company_block_o_tab_clock_n._6085_1961_replica_del_1970_74_ca._.jpg",
+                    "images/nelson/nelson_library_presentation_006_954496199_.jpg",
+                    "images/nelson/nelson_library_presentation_006_corrected_and_cropped_.jpg",
+                    "images/nelson/nelson_portrait.jpg"
+                ]
+            },
+            "newson": {
+                "name": "Marc Newson",
+                "birth": "1963",
+                "death": null,
+                "peakYear": "1995",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/newson/newson.jpg",
+                    "images/newson/newson_business_of_luxury_gala_reception.jpg",
+                    "images/newson/newson_cropped_.jpg",
+                    "images/newson/newson_embryo_chair.jpg",
+                    "images/newson/newson_friedman_and_marc_newson_5804327693_.jpg",
+                    "images/newson/newson_portrait.jpg",
+                    "images/newson/newson_qantas_a380_interiors.jpg"
+                ]
+            },
+            "nizzoli": {
+                "name": "Marcello Nizzoli",
+                "birth": "1887",
+                "death": "1969",
+                "peakYear": "1948",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/nizzoli/nizzoli.jpg",
+                    "images/nizzoli/nizzoli_509_ottimamente_lubrificata.jpg",
+                    "images/nizzoli/nizzoli_al_museo_fisogni.jpg",
+                    "images/nizzoli/nizzoli_bella_societ_mc_4s_macchina_calcolatrice_4_summa_1940_2677178265_.jpg",
+                    "images/nizzoli/nizzoli_di_benzina_supercortemaggiore_esposto_in_triennale_milano.jpg",
+                    "images/nizzoli/nizzoli_e_mario_olivieri_distributore_di_benzina_supercortemaggiore_per_agip_1963.jpg",
+                    "images/nizzoli/nizzoli_pignone_agip_museo_fisogni.jpg",
+                    "images/nizzoli/nizzoli_portrait.jpg"
+                ]
+            },
+            "ponti": {
+                "name": "Gio Ponti",
+                "birth": "1891",
+                "death": "1979",
+                "peakYear": "1957",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/ponti/ponti_170420_domus_fausta.jpg",
+                    "images/ponti/ponti_201100_domus_julia.jpg",
+                    "images/ponti/ponti_alrashidhotelbaghdad.jpg",
+                    "images/ponti/ponti_direzionale_montecatini_milano.jpg",
+                    "images/ponti/ponti_portrait.jpg",
+                    "images/ponti/ponti_superleggera_chair.jpg"
+                ]
+            },
+            "rams": {
+                "name": "Dieter Rams",
+                "birth": "1932",
+                "death": null,
+                "peakYear": "1961",
+                "bio": "Born in Wiesbaden, Germany, Rams was deeply influenced by his grandfather, a carpenter. After studying architecture and interior decoration, he joined Braun in 1955, eventually becoming Chief Design Officer. His tenure defined the \"Golden Age\" of German functionalism.",
+                "philosophy": "Rams' philosophy is summarized as **\"Weniger, aber besser\"** (Less, but better). He believes design should be a service to the user, providing a quiet, orderly environment in a chaotic world through technological determinism and an ethic of ecological care.",
+                "integration": "Dieter Rams successfully integrated the rigorous academic logic of the HfG Ulm into a commercial powerhouse (Braun). His work bridged the gap between the scientific objectivity of post-war reconstruction and the emotional purity of modern tech. His \"10 Principles\" are now the global benchmark for ethical industrial design, influencing everything from Apple’s minimalist interfaces to sustainable furniture movements.",
+                "images": [
+                    "images/rams/Braun_ABW30_%28schwarz%29.jpg",
+                    "images/rams/braun_razor.jpg",
+                    "images/rams/braun_sk4.jpg",
+                    "images/rams/dieter_rams_portrait.jpg",
+                    "images/rams/rams_2020_04_21_uhren_fuer_den_innenbereich.jpg",
+                    "images/rams/rams_audio_310.jpeg",
+                    "images/rams/rams_braun_d40_frankfurt_2024_03.jpg",
+                    "images/rams/rams_d40_rodenstock_splendar.jpg",
+                    "images/rams/rams_dieter_rams_chair_from_studienarbeit_drawing.jpg",
+                    "images/rams/rams_et66_calculator_1987.jpg",
+                    "images/rams/rams_sk4.jpg",
+                    "images/rams/rams_t1000_radio_1963.jpg",
+                    "images/rams/vitsoe_606.jpg"
+                ]
+            },
+            "rashid": {
+                "name": "Karim Rashid",
+                "birth": "1960",
+                "death": null,
+                "peakYear": "2002",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/rashid/rashid_.jpg",
+                    "images/rashid/rashid_bern_city_designed_by_karim_rashid_2.jpg",
+                    "images/rashid/rashid_bern_city_designed_by_karim_rashid_3.jpg",
+                    "images/rashid/rashid_portrait.jpg",
+                    "images/rashid/rashid_talks_to_press_at_innoprom_2012.jpg"
+                ]
+            },
+            "sapper": {
+                "name": "Richard Sapper",
+                "birth": "1932",
+                "death": "2015",
+                "peakYear": "1972",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/sapper/sapper_.jpg",
+                    "images/sapper/sapper_a_musicassette_a_transistor_museo_scienza_tecnologia_milano_10088_dia.jpg",
+                    "images/sapper/sapper_halley_lamp.jpg",
+                    "images/sapper/sapper_portrait.jpg",
+                    "images/sapper/sapper_r_sapper.jpg",
+                    "images/sapper/sapper_tizio.jpg",
+                    "images/sapper/sapper_tizio_lamp.jpg",
+                    "images/sapper/sapper_zanuso_e_richard_sapper_per_kartell_seggiolina_4999_1964.jpg"
+                ]
+            },
+            "sottsass": {
+                "name": "Ettore Sottsass",
+                "birth": "1917",
+                "death": "2007",
+                "peakYear": "1981",
+                "bio": "Ettore Sottsass was an Italian architect and designer who founded the Memphis Group in 1981. He rebelled against the rigour of Modernism, believing that design should be sensual and exciting.",
+                "philosophy": "**\"Form follows Emotion.\"** Sottsass believed objects should have personality and challenge the status quo. He used kitsch materials and garish colors to disrupt the \"good taste\" of the bourgeoise establishment.",
+                "integration": "Sottsass transformed furniture from functional equipment into **totems**. His work redefined the relationship between user and object, suggesting that our possessions should be companions that provoke an emotional response rather than just silent servants.",
+                "images": [
+                    "images/sottsass/carlton_bookshelf.jpg",
+                    "images/sottsass/casablanca_sideboard.jpg",
+                    "images/sottsass/magno_radio.jpg",
+                    "images/sottsass/sottsass_and_fernanda_pivano_1969.jpg",
+                    "images/sottsass/sottsass_giornalista_lillo_gullo_intervista_l_architetto_e_designer_ettore_sottsass.jpg",
+                    "images/sottsass/sottsass_in_tonalite_dell_adamello.jpg",
+                    "images/sottsass/sottsass_in_tonalite_dell_adamello_by_ettore_sottsass.jpg",
+                    "images/sottsass/sottsass_of_man_transforms_exhibit_at_c_h_museum.jpg",
+                    "images/sottsass/sottsass_tahiti_lamp.jpg"
+                ]
+            },
+            "starck": {
+                "name": "Philippe Starck",
+                "birth": "1949",
+                "death": null,
+                "peakYear": "1990",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/starck/starck_alhondiga.jpg",
+                    "images/starck/starck_bubble_club_sofa.jpg",
+                    "images/starck/starck_louis_ghost.jpg",
+                    "images/starck/starck_philippe_starckphilippe_starck.jpg",
+                    "images/starck/starck_portrait.jpg",
+                    "images/starck/starck_toaster.jpg"
+                ]
+            },
+            "wagenfeld": {
+                "name": "Wilhelm Wagenfeld",
+                "birth": "1900",
+                "death": "1990",
+                "peakYear": "1924",
+                "bio": "",
+                "philosophy": "",
+                "integration": "",
+                "images": [
+                    "images/wagenfeld/wagenfeld_am_wall_209_in_bremen.jpg",
+                    "images/wagenfeld/wagenfeld_aus_feuerfestem_jenaer_glas_l_szl_moholy_nagy_1933.jpg",
+                    "images/wagenfeld/wagenfeld_bauhaus_lamp.jpg",
+                    "images/wagenfeld/wagenfeld_design_brd.jpg",
+                    "images/wagenfeld/wagenfeld_portrait.jpg",
+                    "images/wagenfeld/wagenfeld_porzellanmanufaktur_f_rstenberg_wagenfeld_639_e.jpg",
+                    "images/wagenfeld/wagenfeld_tea_service.jpg",
+                    "images/wagenfeld/wagenfeld_wmf_ash_tray.jpg"
+                ]
+            },
+            "dresser": {
+                "name": "Christopher Dresser",
+                "birth": "1834",
+                "death": "1904",
+                "peakYear": "1879",
+                "bio": "Dresser is widely considered the first **independent industrial designer**. A botanist by training, he applied scientific principles to design, traveling to Japan in 1876 where he was inspired by Shinto simplicity and the absence of redundant ornament.",
+                "philosophy": "His philosophy focused on **\"Functional Ornament\"**—where decoration follows the structural logic of the object. He championed **\"Truth to Materials\"**, arguing that metal should look like metal, not wood, and that the machine was a tool for democratic beauty.",
+                "integration": "Dresser bridged the gap between the scientific study of botany and the industrial production of household goods. By utilizing geometric forms (spheres and cylinders), he enabled cheaper, more efficient manufacturing while maintaining aesthetic integrity. His work represents the first pivot from \"Arts & Crafts\" (anti-machine) to \"Industrial Design\" (pro-machine logic).",
+                "images": [
+                    "images/dresser/Christopher_Dresser00.jpg",
+                    "images/dresser/A_Victorian_%27Komai%27_solid_silver_water_jug_by_Christopher_Dresser%2C_c.1880.jpg",
+                    "images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg",
+                    "images/dresser/Side_chair_MET_DT3787.jpg"
+                ]
+            },
+            "behrens": {
+                "name": "Peter Behrens",
+                "birth": "1868",
+                "death": "1940",
+                "peakYear": "1907",
+                "bio": "Behrens began as a painter before turning to architecture and design. In 1907, he was appointed as the design consultant to AEG (Allgemeine Elektricitäts-Gesellschaft), marking the birth of the modern \"Design Consultant\" role. His office mentored future masters like Gropius, Mies van der Rohe, and Le Corbusier.",
+                "philosophy": "His philosophy revolved around **\"Gesamtkultur\"**—a total culture. He believed that industry and art must be unified under a single aesthetic logic to provide order to the modern world. He championed **\"Typisierung\"** (standardization) to ensure quality across mass production.",
+                "integration": "Behrens shifted Industrial Design from the \"item\" to the \"identity.\" By designing AEG's factories, logos, tea kettles, and even worker housing as a single coherent system, he proved that design is the DNA of a corporation. He provided the first intellectual framework for post-WWII industrial reconstruction and the entire concept of a \"Brand System.\"",
+                "images": [
+                    "images/behrens/Peter_Behrens%2C_um_1913.jpg",
+                    "images/behrens/AEG_Turbinenfabrik.jpg",
+                    "images/behrens/AEG_Kettle.jpg"
+                ]
+            },
+            "gropius": {
+                "name": "Walter Gropius",
+                "birth": "1883",
+                "death": "1969",
+                "peakYear": "1919",
+                "bio": "Founder of the **Bauhaus**, Gropius was a visionary architect and educator. He served in WWI, an experience that fueled his desire to rebuild society through rational, industrial logic. He fled Nazi Germany in 1934, eventually leading Harvard's Graduate School of Design.",
+                "philosophy": "His core philosophy was **\"Art and Technology: A New Unity.\"** He believed the designer should master both craft and industrial processes to create objects for a democratic society. He introduced the **\"Vorkurs\"** to strip away historical bias and focus on universal design principles.",
+                "integration": "Gropius didn't just design buildings; he designed the *way* we teach design. By bringing together painters like Kandinsky and craftsmen like Breuer, he created a prototype for the modern multidisciplinary design studio. His Bauhaus building in Dessau remains the supreme symbol of Modernism—a \"machine for working\" that integrated industrial materials like steel and glass into a new social order.",
+                "images": [
+                    "images/gropius/gropius_portrait.jpg",
+                    "images/gropius/walter_gropius_fagus_factory.webp",
+                    "images/gropius/gropius_fagus_factory.jpg"
+                ]
+            },
+            "loewy": {
+                "name": "Raymond Loewy",
+                "birth": "1893",
+                "death": "1986",
+                "peakYear": "1934",
+                "bio": "Known as the \"Father of Streamlining,\" Loewy moved from France to New York in 1919. He was the first designer to appear on the cover of *Time* magazine, proving that design was a vital commercial engine for post-Depression America.",
+                "philosophy": "Loewy's core philosophy was **\"MAYA\"** (Most Advanced Yet Acceptable). He believed designers should push boundaries but stay within the \"shock limit\" of the public. He championed **Streamlining** as a visual metaphor for progress and speed.",
+                "integration": "Loewy successfully branded the \"American Dream.\" By applying aerodynamic forms to everything from pencil sharpeners to locomotives, he gave the public a sense of futuristic momentum. He understood that industrial design wasn't just about ergonomics—it was about **desire**. His work for Studebaker, NASA, and Lucky Strike defined the visual identity of mid-century corporate capitalism.",
+                "images": [
+                    "images/loewy/raymond_loewy_portrait.webp",
+                    "images/loewy/loewy_avanti.jpg",
+                    "images/loewy/loewy_coldspot.jpg"
+                ]
+            },
+            "dreyfuss": {
+                "name": "Henry Dreyfuss",
+                "birth": "1904",
+                "death": "1972",
+                "peakYear": "1937",
+                "bio": "Dreyfuss was the American pioneer of **Ergonomics** (Human Factors). Unlike his peer Loewy, he focused on the internal comfort and logical use of products rather than just the external styling. He worked for major firms like Western Electric, Deere & Co, and Lockheed.",
+                "philosophy": "His core philosophy revolved around **\"Joe and Josephine\"**—the first standardized anatomical diagrams of the average human. He believed that design succeeds when it \"makes the machine fit the man,\" rather than forcing the man to adapt to the machine.",
+                "integration": "Dreyfuss shifted industrial design toward a clinical, scientific approach. By measuring thousands of people, he created the data that defined the height of chair seats, the reach of phone cords, and the angle of tractor controls. His Western Electric 500 telephone remained the global standard for decades because its weight, shape, and balance were perfectly calibrated to the human hand.",
+                "images": [
+                    "images/dreyfuss/dreyfuss.jpg",
+                    "images/dreyfuss/dreyfuss_500.jpg",
+                    "images/dreyfuss/dreyfuss_honeywell.jpg"
+                ]
+            },
+            "bill": {
+                "name": "Max Bill",
+                "birth": "1908",
+                "death": "1994",
+                "peakYear": "1953",
+                "bio": "A student of the Bauhaus, Bill was a Swiss polymath—architect, artist, and designer. In 1953, he co-founded the **HfG Ulm** (Ulm School), where he served as its first rector, aiming to create a scientific successor to his alma mater.",
+                "philosophy": "Bill championed **\"Concrete Art\"** and the idea of \"Design as Science.\" He rejected the commercial styling of America, arguing that beauty should emerge from mathematical logic, structural integrity, and sociological responsibility.",
+                "integration": "Max Bill connected the geometric abstraction of Swiss modernism with the hard realities of post-war industrial production. His Ulm Stool is the ultimate expression of this: a masterclass in modularity that functions as a seat, a shelf, and a stepping stone. He shifted the designer's role from \"Artist\" to \"Scientist,\" laying the intellectual foundation for the Braun legacy and modern systems design.",
+                "images": [
+                    "images/bill/max_bill_ulm_stool.webp",
+                    "images/bill/ulm_stool.jpg",
+                    "images/bill/junghans_clock.jpg"
+                ]
+            },
+            "ive": {
+                "name": "Jonathan Ive",
+                "birth": "1967",
+                "death": null,
+                "peakYear": "1998",
+                "bio": "Sir Jonathan Ive is a British industrial designer who served as the Chief Design Officer of Apple Inc. from 1997 to 2019. His partnership with Steve Jobs resulted in the most successful run of product design in history, transforming Apple from a niche computer company into a global cultural phenomenon.",
+                "philosophy": "Ive's philosophy is rooted in the idea of **\"Inevitable Design.\"** He believes a product's form should feel so right and simple that it couldn't possibly be any other way. Heavily influenced by Dieter Rams, he prioritizes clarity, unibody construction, and a deep respect for material properties.",
+                "integration": "Ive shifted the focus of Industrial Design from the \"object as sculpture\" to the \"object as a vessel for experience.\" By utilizing aerospace-grade aluminum and precision manufacturing, he made technology feel approachable and premium. His work signaled the end of the \"beige box\" era and the beginning of the \"unibody\" age, where hardware becomes the silent frame for digital software.",
+                "images": [
+                    "images/ive/Sir Jonathan Paul Ive.jpg",
+                    "images/ive/ive_iphone.jpg",
+                    "images/ive/ive_macbook.jpg"
+                ]
+            },
+            "behrens_factory": {
+                "title": "AEG Turbine Factory",
+                "image": "images/behrens/behrens_giebel2.jpg",
+                "context": "The AEG Turbine Factory (1909) is considered the first true example of modern industrial architecture. Behrens treated the factory not as a utilitarian shed but as a temple of industry, giving dignity to industrial labor.",
+                "influence": "It influenced Gropius (who worked for Behrens) and the entire Bauhaus movement, establishing the 'factory aesthetic' that defines modernism.",
+                "analysis": "The monumental steel and glass facade provides a dignified face for industrial labor. The 'hinged' steel columns at the base differ from classical columns, expressing the modern structural logic."
+            },
+            "gropius_bauhaus_building": {
+                "title": "Bauhaus Building (Dessau)",
+                "image": "images/gropius/gropius_photograph_of_bauhaus_masters_on_the_roof_of_the_studio_building_bauhaus_dessau.jpg",
+                "context": "The Bauhaus building in Dessau (1926) is the physical manifestation of Gropius's educational philosophy. It separates functions (workshop, studio, dorms) into distinct wings connected by a pinwheel plan.",
+                "influence": "It is the archetype of the 'International Style' and influenced school and office design for a century. The building itself served as a teaching tool for the students.",
+                "analysis": "The famous glass curtain wall wraps around the corner, dissolving the solid edge of the building and revealing the structure within. The lack of hierarchy between the facades reflects democratic principles."
+            },
+            "loewy_locomotive": {
+                "title": "PRR S1 Locomotive",
+                "image": "images/loewy/loewy_streamline.jpg",
+                "context": "The PRR S1 (1939) was a steam locomotive designed for the Pennsylvania Railroad. Styled by Loewy, it was designed to look like it was moving fast even when standing still, embodying the era's obsession with speed.",
+                "influence": "It defined the 'Streamline Moderne' era, applying aerodynamic principles to land vehicles and influencing car, train, and even toaster design as a symbol of progress.",
+                "analysis": "The bullet nose and shrouded wheels treat the locomotive as a single, cohesive sculptural form, concealing the messy mechanical details of the steam engine to create a seamless, futuristic silhouette."
+            },
+            "breuer": {
+                "name": "Marcel Breuer",
+                "birth": "1902",
+                "death": "1981",
+                "peakYear": "1925",
+                "bio": "Marcel Breuer was a Hungarian-born modernist architect and furniture designer. A student and later master at the Bauhaus, he is world-renowned for his pioneering work in tubular steel furniture.",
+                "philosophy": "**Structure as Style.** Breuer stripped furniture down to its essential lines, believing that modern industrial materials like steel could be as noble as wood if treated with honesty and logic.",
+                "integration": "Breuer's Wassily Chair is the perfect integration of industrial material (bicycle steel) and domestic comfort. He proved that mass-produced materials could create objects of airy lightness and transparency, defining the visual language of the 20th-century interior.",
+                "images": [
+                    "images/breuer/breuer_chair.jpg",
+                    "images/breuer/breuer_breuer_house.jpg",
+                    "images/breuer/breuer_marcel_datestone.jpg"
+                ]
+            },
+            "guimard": {
+                "name": "Hector Guimard",
+                "birth": "1867",
+                "death": "1942",
+                "peakYear": "1900",
+                "bio": "Hector Guimard was the leading figure of the French Art Nouveau. He is best known for his designs for the Paris Métro entrances, which treated cast iron as if it were a pliable, organic material.",
+                "philosophy": "**\"Nature is the greatest architect.\"** Guimard believed that design should mimic the logic of natural growth—the swelling of a stem or the curve of a leave—rather than the rigid geometry of the past.",
+                "integration": "Guimard integrated the new industrial technology of cast iron with the aesthetic of the organic. His work on the Paris Métro wove art seamlessly into the urban fabric, proving that public infrastructure could be a venue for high art and natural beauty.",
+                "images": [
+                    "images/guimard/guimard_metro.jpg",
+                    "images/guimard/guimard_iron1.jpg",
+                    "images/guimard/guimard_iron2.jpg"
+                ]
+            }
+        };
+
+        async function applyMovementColors() {
+            console.log('Applying movement colors...');
+            // Placeholder for movement coloring logic
+        }
 
         async function loadGallery() {
             try {
@@ -3492,6 +2795,7 @@
                 const startYear = 1830;
 
                 for (const [key, designerData] of Object.entries(data)) {
+                    if (!designerData.name || !designerData.images) continue;
                     // key = folder name (e.g., 'dresser')
                     // designerData = { name, birth, death, peakYear, images: [...] }
 
@@ -3510,38 +2814,75 @@
                             ? `${designerData.birth} — ${designerData.death}`
                             : `${designerData.birth} — PRESENT`;
 
+                        // Prepare dynamic content (Bio, Philosophy, Integration)
+                        let bioSection = '';
+                        if (designerData.bio || designerData.philosophy) {
+                            bioSection = `
+                                <div class="v-pillars-grid">
+                                    <div class="v-pillar-box">
+                                        <h3>Biography</h3>
+                                        <p>${designerData.bio || 'Biography data unavailable.'}</p>
+                                    </div>
+                                    <div class="v-pillar-box">
+                                        <h3>Philosophy</h3>
+                                        <p>${designerData.philosophy || 'Philosophy data unavailable.'}</p>
+                                    </div>
+                                </div>`;
+                        }
+
+                        let integrationSection = '';
+                        if (designerData.integration) {
+                            integrationSection = `
+                                <div class="v-integration-section">
+                                    <h3>Integration of Life and Work</h3>
+                                    <p>${designerData.integration}</p>
+                                </div>`;
+                        } else {
+                            integrationSection = `
+                                <div class="v-integration-section">
+                                    <h3>Expanded Archive</h3>
+                                    <p>This designer was added as part of the Phase 5 Expansion. Explore the collected works below.</p>
+                                </div>`;
+                        }
+
                         newModal.innerHTML = `
                             <div class="modal-wrap">
                                 <div class="close-call" onclick="closeAll()">×</div>
-                                <div class="modal-hero" style="background-color:#222; display:flex; align-items:flex-end; padding:40px; background-image:url('${portraitUrl}'); background-size:cover; background-position:center;">
-                                    <div style="background:rgba(0,0,0,0.6); padding:20px; width:100%;">
-                                        <h1 style="color:white; font-size:4rem; margin:0;">${designerData.name}</h1>
-                                        <div style="color:#eee; letter-spacing:2px; font-weight:700;">${yearRange} | EXPANDED ROSTER</div>
-                                    </div>
+                                <div class="modal-hero" style="position:relative; height:300px; overflow:hidden; background-color:#111;">
+                                     <!-- Desaturated Background -->
+                                     <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-image:url('${portraitUrl}'); background-size:cover; background-position:center; filter:grayscale(100%); opacity:0.5; z-index:0;"></div>
+                                     
+                                     <!-- Content -->
+                                     <div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:40px;">
+                                          <h1 style="color:white; font-size:4rem; margin:0 0 1rem 0; line-height:1; text-shadow:0 2px 20px rgba(0,0,0,0.8);">${designerData.name}</h1>
+                                          <div class="v-frequency-container" style="position:relative; width:100%; height:80px; margin:0; background:transparent; border-radius:0; pointer-events:none;">
+                                               <div class="v-frequency-patch" style="bottom:0; height:100%;"></div>
+                                               <div style="position:absolute; bottom:2px; left:0; font-size:0.8rem; color:rgba(255,255,255,0.7); font-weight:700;">${designerData.birth}</div>
+                                               <div style="position:absolute; bottom:2px; right:0; font-size:0.8rem; color:rgba(255,255,255,0.7); font-weight:700;">${designerData.death || 'PRESENT'}</div>
+                                          </div>
+                                     </div>
                                 </div>
                                 <div class="modal-scroll">
                                     <div class="v-level-1 active">
-                                        <div class="v-designer-header">
-                                            <div class="v-portrait-large" style="background-image:url('${portraitUrl}'); background-size:cover;"></div>
-                                            <div class="v-designer-info">
-                                                <span class="section-tag">${yearRange}</span>
-                                                <h2>${designerData.name}</h2>
-                                            </div>
-                                        </div>
-                                        <div class="v-frequency-container">
-                                            <div class="v-frequency-patch"></div>
-                                            <div style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">MOVEMENT INFLUENCE</div>
-                                        </div>
-                                        <div class="v-integration-section">
-                                            <h3>Expanded Archive</h3>
-                                            <p>This designer was added as part of the Phase 5 Expansion. Explore the collected works below.</p>
-                                        </div>
+                                        
+                                        ${bioSection}
+                                        ${integrationSection}
                                         <h2 class="v-gallery-title">Gallery of Work</h2>
                                         <div class="gallery-wrap"></div>
                                     </div>
                                     <div class="v-level-2">
                                         <div class="v-back-btn" onclick="goBackToLevel1('${modalId}')">← BACK</div>
                                         <div class="v-work-hero"></div>
+                                        <div class="v-analysis-system" style="margin-top:2rem;">
+                                            <div class="v-analysis-box">
+                                                <h3>Context</h3><p></p>
+                                                <br>
+                                                <h3>Influence</h3><p></p>
+                                            </div>
+                                            <div class="v-principles-full" style="margin-top:2rem;">
+                                                <p></p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -3622,10 +2963,10 @@
                         // Lookup work details
                         let workKey = null;
                         if (typeof DESIGN_WORKS !== 'undefined') {
-                             // Normalize paths if needed
-                             for (const [k, v] of Object.entries(DESIGN_WORKS)) {
-                                 if (v.image === imgUrl) { workKey = k; break; }
-                             }
+                            // Normalize paths if needed
+                            for (const [k, v] of Object.entries(DESIGN_WORKS)) {
+                                if (v.image === imgUrl) { workKey = k; break; }
+                            }
                         }
 
                         if (workKey) {
@@ -3641,7 +2982,11 @@
 
                         const capDiv = document.createElement('div');
                         capDiv.className = 'gal-cap';
-                        capDiv.innerText = 'Archive Asset';
+                        if (workKey && typeof DESIGN_WORKS !== 'undefined' && DESIGN_WORKS[workKey]) {
+                            capDiv.innerText = DESIGN_WORKS[workKey].title;
+                        } else {
+                            capDiv.innerText = 'Archive Asset';
+                        }
 
                         cell.appendChild(imgDiv);
                         cell.appendChild(capDiv);
