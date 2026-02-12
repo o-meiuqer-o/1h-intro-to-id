@@ -1,0 +1,11 @@
+# Exclude large/useless files
+/error shots/
+*.bak
+*.log
+.DS_Store
+Thumbs.db
+
+# Exclude potential large temp files
+/temp/
+/tmp/
+node_modules/

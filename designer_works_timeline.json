@@ -1,0 +1,342 @@
+{
+    "dresser": {
+        "works": [
+            {
+                "year": 1853,
+                "title": "Ladies' Smock fabric design",
+                "type": "textile"
+            },
+            {
+                "year": 1858,
+                "title": "First carpet design",
+                "type": "textile"
+            },
+            {
+                "year": 1858,
+                "title": "First wallpaper design",
+                "type": "textile"
+            },
+            {
+                "year": 1862,
+                "title": "The Art of Decorative Design",
+                "type": "book"
+            },
+            {
+                "year": 1873,
+                "title": "Principles of Decorative Design",
+                "type": "book"
+            },
+            {
+                "year": 1874,
+                "title": "Studies in Design",
+                "type": "book"
+            },
+            {
+                "year": 1879,
+                "title": "Silver Teapot",
+                "type": "product"
+            },
+            {
+                "year": 1879,
+                "title": "Linthorpe Pottery designs (1000+ pots)",
+                "type": "ceramics"
+            },
+            {
+                "year": 1880,
+                "title": "Clutha Glass designs",
+                "type": "glass"
+            },
+            {
+                "year": 1882,
+                "title": "Japan: Its Architecture, Art, and Art Manufactures",
+                "type": "book"
+            },
+            {
+                "year": 1886,
+                "title": "Modern Ornamentation",
+                "type": "book"
+            }
+        ]
+    },
+    "behrens": {
+        "works": [
+            {
+                "year": 1907,
+                "title": "AEG Corporate Identity",
+                "type": "branding"
+            },
+            {
+                "year": 1908,
+                "title": "AEG Electric Kettle",
+                "type": "product"
+            },
+            {
+                "year": 1909,
+                "title": "AEG Turbine Factory",
+                "type": "architecture"
+            },
+            {
+                "year": 1909,
+                "title": "AEG Typography System",
+                "type": "typography"
+            }
+        ]
+    },
+    "rams": {
+        "works": [
+            {
+                "year": 1956,
+                "title": "SK4 Radio (Snow White's Coffin)",
+                "type": "product"
+            },
+            {
+                "year": 1958,
+                "title": "T3 Pocket Radio",
+                "type": "product"
+            },
+            {
+                "year": 1960,
+                "title": "606 Universal Shelving System",
+                "type": "furniture"
+            },
+            {
+                "year": 1961,
+                "title": "TP1 Portable Radio",
+                "type": "product"
+            },
+            {
+                "year": 1965,
+                "title": "T1000 World Receiver",
+                "type": "product"
+            }
+        ]
+    },
+    "ive": {
+        "works": [
+            {
+                "year": 1998,
+                "title": "iMac G3",
+                "type": "product"
+            },
+            {
+                "year": 2001,
+                "title": "iPod",
+                "type": "product"
+            },
+            {
+                "year": 2007,
+                "title": "iPhone",
+                "type": "product"
+            },
+            {
+                "year": 2008,
+                "title": "MacBook Air",
+                "type": "product"
+            },
+            {
+                "year": 2010,
+                "title": "iPad",
+                "type": "product"
+            }
+        ]
+    },
+    "eames": {
+        "works": [
+            {
+                "year": 1942,
+                "title": "Molded Plywood Leg Splint",
+                "type": "medical"
+            },
+            {
+                "year": 1945,
+                "title": "Molded Plywood Elephant",
+                "type": "furniture"
+            },
+            {
+                "year": 1946,
+                "title": "LCW (Lounge Chair Wood)",
+                "type": "furniture"
+            },
+            {
+                "year": 1949,
+                "title": "Eames House (Case Study House 8)",
+                "type": "architecture"
+            },
+            {
+                "year": 1950,
+                "title": "Molded Fiberglass Armchair",
+                "type": "furniture"
+            },
+            {
+                "year": 1951,
+                "title": "Wire Chair Series",
+                "type": "furniture"
+            },
+            {
+                "year": 1953,
+                "title": "Hang-It-All",
+                "type": "furniture"
+            },
+            {
+                "year": 1956,
+                "title": "Eames Lounge Chair and Ottoman",
+                "type": "furniture"
+            },
+            {
+                "year": 1958,
+                "title": "Aluminum Group",
+                "type": "furniture"
+            },
+            {
+                "year": 1969,
+                "title": "Soft Pad Group",
+                "type": "furniture"
+            },
+            {
+                "year": 1977,
+                "title": "Powers of Ten (film)",
+                "type": "film"
+            }
+        ]
+    },
+    "loewy": {
+        "works": [
+            {
+                "year": 1929,
+                "title": "Gestetner Duplicating Machine",
+                "type": "product"
+            },
+            {
+                "year": 1934,
+                "title": "Coldspot Refrigerator",
+                "type": "product"
+            },
+            {
+                "year": 1937,
+                "title": "Pennsylvania Railroad S1 Locomotive",
+                "type": "transportation"
+            },
+            {
+                "year": 1940,
+                "title": "Lucky Strike Package Redesign",
+                "type": "packaging"
+            },
+            {
+                "year": 1947,
+                "title": "Studebaker Starlight Coupe",
+                "type": "automotive"
+            },
+            {
+                "year": 1953,
+                "title": "Studebaker Starliner",
+                "type": "automotive"
+            },
+            {
+                "year": 1962,
+                "title": "Air Force One Livery",
+                "type": "branding"
+            }
+        ]
+    },
+    "dreyfuss": {
+        "works": [
+            {
+                "year": 1930,
+                "title": "Big Ben Alarm Clock",
+                "type": "product"
+            },
+            {
+                "year": 1936,
+                "title": "20th Century Limited Train",
+                "type": "transportation"
+            },
+            {
+                "year": 1937,
+                "title": "Mercury Train",
+                "type": "transportation"
+            },
+            {
+                "year": 1955,
+                "title": "Designing for People (book)",
+                "type": "book"
+            },
+            {
+                "year": 1959,
+                "title": "Princess Telephone",
+                "type": "product"
+            }
+        ]
+    },
+    "gropius": {
+        "works": [
+            {
+                "year": 1911,
+                "title": "Fagus Factory",
+                "type": "architecture"
+            },
+            {
+                "year": 1919,
+                "title": "Bauhaus School Founded",
+                "type": "institution"
+            },
+            {
+                "year": 1925,
+                "title": "Bauhaus Dessau Building",
+                "type": "architecture"
+            },
+            {
+                "year": 1937,
+                "title": "Harvard Graduate Center",
+                "type": "architecture"
+            }
+        ]
+    },
+    "breuer": {
+        "works": [
+            {
+                "year": 1925,
+                "title": "Wassily Chair (B3)",
+                "type": "furniture"
+            },
+            {
+                "year": 1928,
+                "title": "Cesca Chair (B32)",
+                "type": "furniture"
+            },
+            {
+                "year": 1936,
+                "title": "Long Chair",
+                "type": "furniture"
+            }
+        ]
+    },
+    "jacobsen": {
+        "works": [
+            {
+                "year": 1952,
+                "title": "Ant Chair",
+                "type": "furniture"
+            },
+            {
+                "year": 1955,
+                "title": "Series 7 Chair",
+                "type": "furniture"
+            },
+            {
+                "year": 1958,
+                "title": "Egg Chair",
+                "type": "furniture"
+            },
+            {
+                "year": 1958,
+                "title": "Swan Chair",
+                "type": "furniture"
+            },
+            {
+                "year": 1960,
+                "title": "SAS Royal Hotel Copenhagen",
+                "type": "architecture"
+            }
+        ]
+    }
+}

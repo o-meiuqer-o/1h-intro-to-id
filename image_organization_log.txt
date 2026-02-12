@@ -1,0 +1,70 @@
+﻿MOVED: behrens_factory.jpg â†’ behrens/
+MOVED: behrens_logo.jpg â†’ behrens/
+MOVED: bill_stool.jpg â†’ bill/
+UNMATCHED: boulton and watt steam engine.png (no designer folder identified)
+MOVED: braun_razor.jpg â†’ rams/
+MOVED: braun_sk4.jpg â†’ rams/
+MOVED: breuer_chair.png â†’ breuer/
+MOVED: breuer_interior.jpg â†’ breuer/
+MOVED: breuer_interior1.jpg â†’ breuer/
+MOVED: breuer_longchair.jpg â†’ breuer/
+MOVED: carlton_bookshelf.jpg â†’ sottsass/
+MOVED: casablanca_sideboard.jpg â†’ sottsass/
+MOVED: Charles and Ray Eames.jpg â†’ eames/
+MOVED: christopher_dresser_candlesticks.webp â†’ dresser/
+MOVED: christopher_dresser_claret_jug.webp â†’ dresser/
+MOVED: christopher_dresser_finger_bowl.webp â†’ dresser/
+MOVED: christopher_dresser_oil_and_vinegar_cruet.webp â†’ dresser/
+MOVED: christopher_dresser_portrait.webp â†’ dresser/
+MOVED: christopher_dresser_sifter.webp â†’ dresser/
+MOVED: christopher_dresser_sugar_bowl.webp â†’ dresser/
+MOVED: christopher_dresser_teapot.webp â†’ dresser/
+MOVED: christopher_dresser_toast_rack.webp â†’ dresser/
+MOVED: christopher_dresser_tureen.webp â†’ dresser/
+MOVED: christopher_dresser_watering_can.webp â†’ dresser/
+MOVED: dieter_rams.jpg â†’ rams/
+MOVED: dieter_rams_portrait.jpg â†’ rams/
+MOVED: dresser_teapot.jpg â†’ dresser/
+MOVED: dresser_toast.jpg â†’ dresser/
+MOVED: eames_wood.jpg â†’ eames/
+MOVED: ettore_sottsass.jpg â†’ sottsass/
+MOVED: gropius_bauhaus.jpg â†’ gropius/
+MOVED: gropius_fagus.jpg â†’ gropius/
+MOVED: guimard_iron1.jpg â†’ guimard/
+MOVED: guimard_iron2.jpg â†’ guimard/
+MOVED: guimard_iron3.jpg â†’ guimard/
+MOVED: guimard_metro.jpg â†’ guimard/
+MOVED: guimard_metro1.jpg â†’ guimard/
+MOVED: Hector Guimard.jpg â†’ guimard/
+MOVED: henry_dreyfuss_big_ben_alarm_clock.webp â†’ dreyfuss/
+MOVED: ive_imac.jpg â†’ ive/
+MOVED: ive_imac.png â†’ ive/
+MOVED: ive_iphone.jpg â†’ ive/
+MOVED: ive_macbook.jpg â†’ ive/
+MOVED: ive_minimal.jpg.jpeg â†’ ive/
+MOVED: lihotzky_kitchen.jpg â†’ lihotzky/
+MOVED: loewy_deco.jpeg â†’ loewy/
+MOVED: loewy_streamline.jpg â†’ loewy/
+MOVED: magno_radio.jpg â†’ sottsass/
+MOVED: marcel breuer.png â†’ breuer/
+MOVED: Margarete Schütte-Lihotzky.jpg â†’ lihotzky/
+MOVED: max_bill.jpg â†’ bill/
+MOVED: max_bill_ulm_stool.webp â†’ bill/
+MOVED: missing.jpg â†’ _archive/
+MOVED: morris_textile.jpg â†’ morris/
+MOVED: morris_wallpaper.jpg â†’ morris/
+UNMATCHED: pattern_arts_crafts.png (no designer folder identified)
+UNMATCHED: pattern_art_nouveau.png (no designer folder identified)
+MOVED: rams_sk4.jpg â†’ rams/
+MOVED: rams_t3.jpg â†’ rams/
+MOVED: Raymond Loewy.jpg â†’ loewy/
+MOVED: raymond_loewy_lucky_strike_pack.webp â†’ loewy/
+MOVED: raymond_loewy_portrait.webp â†’ loewy/
+MOVED: Sir Jonathan Paul Ive.jpg â†’ ive/
+MOVED: ulm_stool.jpg â†’ bill/
+MOVED: vitsoe_606.jpg â†’ rams/
+MOVED: walter_gropius_fagus_factory.webp â†’ gropius/
+MOVED: walter_gropius_portrait.webp â†’ gropius/
+MOVED: wedgwood vase.jpg â†’ dresser/
+UNMATCHED: William Van Alen.png (no designer folder identified)
+MOVED: William_Morris.jpg â†’ morris/

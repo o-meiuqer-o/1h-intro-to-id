@@ -1,0 +1,593 @@
+[11:40:15] Harvesting Category: Christopher_Dresser -> dresser
+[11:40:16]   [DOWNLOADING] A_Victorian_%27Komai%27_solid_silver_water_jug_by_Christopher_Dresser%2C_c.1880.jpg (1240 KB)
+[11:40:18]   [DOWNLOADING] The_art_of_decorative_design_%28IA_artofdecoratived00dres%29.pdf (18903 KB)
+[11:40:35]   [DOWNLOADING] Christopher_Dresser_-_Sidewall_-_Google_Art_Project.jpg (5050 KB)
+[11:40:40]   [DOWNLOADING] Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg (3280 KB)
+[11:40:48]   [DOWNLOADING] Christopher_Dresser00.jpg (155 KB)
+[11:40:49]   [DOWNLOADING] Dresservanda.jpg (51 KB)
+[11:40:50]   [DOWNLOADING] Length_of_woven_wool_and_silk_MET_AR1378.jpg (123 KB)
+[11:40:51]   [DOWNLOADING] Piece_MET_DP17542_1995.252.jpg (1350 KB)
+[11:40:53]   [DOWNLOADING] Reptilian_Fabric.jpg (94 KB)
+[11:40:54]   [DOWNLOADING] Side_chair_MET_DT3787.jpg (1248 KB)
+[11:40:57] Harvesting Category: Peter_Behrens -> behrens
+[11:40:57]   [DOWNLOADING] De-Peter_Behrens.ogg (22 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] D%C3%BChrkoop%2C_Rudolf_-_Peter_Behrens%2C_Architekt_%28Zeno_Fotografie%29.jpg (216 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Peter_Behrens_by_Rudolf_D%C3%BChrkoop_-_MKG_%28cropped%29.jpg (297 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Peter_Behrens_by_Rudolf_D%C3%BChrkoop_-_MKG.jpg (722 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Titzenthaler%2C_Waldemar_-_Behrens%2C_Peter.jpeg (33107 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Peter_Behrens%2C_um_1913.jpg (902 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Peter_Behrens_by_Rudolf_Bosselt%2C_1918%2C_bronze_-_Museum_K%C3%BCnstlerkolonie_Darmstadt_-_Mathildenh%C3%B6he_-_Darmstadt%2C_Germany_-_DSC06385.jpg (5829 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Max_Liebermann_Portr%C3%A4t_Peter_Behrens.jpg (72 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] 1915-06_Ausstellung_Verwundeten-_und_Krankenf%C3%BCrsorge_Erster_Weltkrieg_Magdeburg_Freimaurerloge_Ferdinand_zur_Gl%C3%BCckseligkeit_Peter_Behrens_A._Molling_%26_Comp._Hannover_Berlin.jpg (383 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Arbeitszimmer_des_Herausgebers_Alexander_Koch%2C_c._1903.jpg (1390 KB)
+[11:40:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:40:58]   [DOWNLOADING] Behrens_kiss.jpg (880 KB)
+[11:40:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00] Harvesting Category: Raymond_Loewy -> loewy
+[11:41:00]   [DOWNLOADING] Anscoflex_II_%28John_Kratz%29.jpg (425 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Columnair_tall_clock_and_radio%2C_by_Raymond_Loewy%2C_Westinghouse_Electric_Co.%2C_Cranberry%2C_PA%2C_c._1930%2C_mahogany%2C_oak_veneer%2C_enameled_stee.%2C_Masonite_-_Montreal_Museum_of_Fine_Arts_-_Montreal%2C_Canada_-DSC09032.jpg (6267 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Elna_Lotus_ferm%C3%A9e.jpg (1039 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Elna_Lotus_ouverte.jpg (966 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Globe_Radio_by_Raymond_Loewy.jpg (3278 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Le_Creuset.jpg (32 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] LOEWY_HOUSE_PALM_SPRINGS_RIVERSIDE_COUNTY_CA.jpg (754 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Nordmende-05_hg.jpg (2399 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Nordmende-06_hg.jpg (1936 KB)
+[11:41:00]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:00]   [DOWNLOADING] Nordmende-07_hg.jpg (1361 KB)
+[11:41:01]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:01]   [DOWNLOADING] Nordmende-08_hg.jpg (1916 KB)
+[11:41:01]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02] Harvesting Category: Henry_Dreyfuss -> dreyfuss
+[11:41:02]   [DOWNLOADING] Bankers_Trust_Building_280_Park_Avenue.jpg (885 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Bell_telephone_magazine_%281922%29_%2814569849308%29.jpg (557 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Bell_telephone_magazine_%281922%29_%2814756479025%29.jpg (1226 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Dreyfuss-henry-thermostat-design.ogv (37796 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Dreyfuss.jpg (258 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Henry_dreyfuss_per_western_electric_manufacturing_co.%2C_telefono_modlelo_302%2C_1937_ca.jpg (1646 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Henry_Dreyfuss_Symbol_Sourcebook.jpg (64 KB)
+[11:41:02]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:02]   [DOWNLOADING] Henry_Dreyfuss.jpg (83 KB)
+[11:41:03]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:03]   [DOWNLOADING] Hudson_locomotive_for_the_New_York_Central.jpg (51 KB)
+[11:41:03]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:03]   [DOWNLOADING] John_Deere_Model_A_late_style.jpg (3929 KB)
+[11:41:03]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:03]   [DOWNLOADING] John_Deere_model_B_tractor%2C_Agricultural_and_Industrial_Museum_York.jpg (3386 KB)
+[11:41:03]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:03]   [DOWNLOADING] New_York_Central_20th_Century_Limited_1938.jpg (357 KB)
+[11:41:03]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:04] Harvesting Category: Norman_Bel_Geddes -> geddes
+[11:41:04]   [DOWNLOADING] Acorn_Gas_Range_publicity_leaflet_extract%2C_c._1932-33_Philadelphia_Gas_Works.jpg (18906 KB)
+[11:41:04]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:04]   [DOWNLOADING] Advertising_For_The_1956_Emerson_Model_838_Transistor_Radio_-_Brownwood_Texas_Bulletin_Newspaper%2C_November_29%2C_1955_%2816216197452%29.jpg (4837 KB)
+[11:41:04]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:04]   [DOWNLOADING] Airliner_Number_4_-_Norman_Bel_Geddes%2C_c.1929-32.jpg (1457 KB)
+[11:41:04]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:04]   [DOWNLOADING] Battle_of_Midway.jpg (283 KB)
+[11:41:05]   [DOWNLOADING] BelGeddesCar.jpg (2374 KB)
+[11:41:05]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:05]   [DOWNLOADING] Costume_design_%281%29_by_Norman_Bel_Geddes_for_Henry_Hadley%E2%80%99s_Cleopatra%E2%80%99s_Night%2C_1920.jpg (1271 KB)
+[11:41:05]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:05]   [DOWNLOADING] Costume_design_%282%29_by_Norman_Bel_Geddes_for_Henry_Hadley%E2%80%99s_Cleopatra%E2%80%99s_Night%2C_1920.jpg (1206 KB)
+[11:41:05]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:05]   [DOWNLOADING] General_Motors_25th_anniversary_medal_Norman_Bel_Geddes_1933.jpg (262 KB)
+[11:41:06]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:06]   [DOWNLOADING] Kaga%2C_Akagi_and_Soryu_under_attack.jpg (6560 KB)
+[11:41:06]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:06]   [DOWNLOADING] Magic_Motorways_by_Norman_Bel_Geddes_cover.jpg (135 KB)
+[11:41:06]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:06]   [DOWNLOADING] Magic_Motorways_by_Norman_Bel_Geddes%2C_Random_House%2C_1940_-_Magicmotorways00geddrich.pdf (30178 KB)
+[11:41:06]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:06]   [DOWNLOADING] Norman_Bel_Geddes_-_Jan_1923_Shadowland.jpg (40 KB)
+[11:41:06]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:07] Harvesting Category: Walter_Gropius -> gropius
+[11:41:07]   [DOWNLOADING] De-Walter_Gropius.ogg (24 KB)
+[11:41:07]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:07]   [DOWNLOADING] 1955_01-Oct_HansGConrad_Portrait-WalterGropius_HfGUlm-Opening.jpg (1351 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Alma_1918_gropius_manon.png (4406 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Anonymous_photograph_of_Bauhaus_masters_on_the_roof_of_the_studio_building%2C_Bauhaus_Dessau.jpg (262 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Ascona-_Dokumentationsfotos_im_Museum%2C_Xanti_Schawinsky%2C_Walter_Gropius_-_LABW_-_Staatsarchiv_Freiburg_W_134_Nr._123466.jpg (1071 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] BAUHAUS_schema_didattico.jpg (1368 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Bauhaus-program.svg (94 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Bauhausb%C3%BCcher_Anzeige_1925.jpg (470 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Der_Architekt_Walter_Gropius%2C_Begr%C3%BCnder_des_Staatlichen_Bauhauses_Weimar%2C_um_1919.jpg (4618 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] F51_render_cropped.png (279 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] F51_render.png (251 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:08]   [DOWNLOADING] Gedenktafel_Goebelstr_18_%28CharN%29_Walter_Gropius.jpg (1516 KB)
+[11:41:08]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:09] Harvesting Category: Marcel_Breuer -> breuer
+[11:41:10]   [DOWNLOADING] Anonymous_photograph_of_Bauhaus_masters_on_the_roof_of_the_studio_building%2C_Bauhaus_Dessau.jpg (262 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Breuer_plaque_P%C3%A9cs.jpg (267 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Fuld-modell-frankfurt.jpg (3750 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Gedenktafel_Am_Gro%C3%9Fen_Wannsee_58_%28Wanns%29_Villa_van_der_Heydt.jpg (7422 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Hotel_Marcel_datestone.jpg (4960 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Hr._D._Schwartzman_%2C_Ir._G._van_der_Wal%2C_Marcel_Brenez_%2C_H._Elzas_._Bijenkorf_Ro%2C_Bestanddeelnr_908-4042.jpg (2538 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Hr._D._Schwartzman_%2C_Ir._G._van_der_Wal%2C_Marcel_Breuer_%2C_Abraham_Elzas_._Bijenko%2C_Bestanddeelnr_908-4043.jpg (1401 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Marcel_Breuer_%28cropped%29.jpg (72 KB)
+[11:41:10]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:10]   [DOWNLOADING] Marcel_Breuer.png (33 KB)
+[11:41:12] Harvesting Category: Marianne_Brandt -> brandt
+[11:41:12]   [DOWNLOADING] BischofMarie.jpg (45 KB)
+[11:41:12]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:12]   [DOWNLOADING] Brandt_an_Voss.pdf (1174 KB)
+[11:41:12]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:12]   [DOWNLOADING] Marianne_Brandt_%28contralto%29.jpg (202 KB)
+[11:41:12]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:12]   [DOWNLOADING] Erinnerungen_an_Pauline_Viardot.pdf (307 KB)
+[11:41:12]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:12]   [DOWNLOADING] Friedhof_Hadersdorf-Weidlingau_Bischof-Brandt.jpg (3833 KB)
+[11:41:12]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:12]   [DOWNLOADING] Marianne_Brandt_AEhrlichS%C3%A4ngerinnen1895.jpg (269 KB)
+[11:41:12]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:12]   [DOWNLOADING] Marianne_Brandt_as_Adriano_in_Rienzi%2C_photo_by_Falk%2C_1886_%28Newberry_Library%2C_Westervelt_Coll%29.jpg (463 KB)
+[11:41:13]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:13]   [DOWNLOADING] Marianne_Brandt%2C_photo_by_Falk%2C_c1886_%28Newberry_Library%2C_Westervelt_Coll%29.jpg (317 KB)
+[11:41:13]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14] Harvesting Category: Wilhelm_Wagenfeld -> wagenfeld
+[11:41:14]   [DOWNLOADING] Buch_mit_Wagenfeld_Tischlampe.jpg (720 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] Eierkoch_Egg_coddler_No2_Wilhelm_Wagenfeld_Jenaer_Glas.jpg (1747 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] Gerhard_Roese%2C_Wilhelm_Wagenfeld_B%C3%BCste%2C_2011%2C_private_Sammlung.jpg (691 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] GLAM_Porzellanmanufaktur_F%C3%BCrstenberg_Wagenfeld_639_e.jpg (3621 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] Ostertorwache_Am_Wall_%28209%29_in_Bremen.jpg (8550 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] Sossengiesser_aus_feuerfestem_JENAer_GLAS_-_L%C3%A1szl%C3%B3_Moholy-Nagy%2C_1933.jpg (204 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] Stamp_Design_BRD.jpg (81 KB)
+[11:41:14]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:14]   [DOWNLOADING] Tischlampe_di_Carl_Jakob_Jucker_%28left%2C_1923-24%29_e_di_Wilhelm_Wagenfeld_%28right%2C_1924%29_%28cropped%29.JPG (1063 KB)
+[11:41:15]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:15]   [DOWNLOADING] Tischlampe_di_Carl_Jakob_Jucker_%28left%2C_1923-24%29_e_di_Wilhelm_Wagenfeld_%28right%2C_1924%29.JPG (891 KB)
+[11:41:15]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:15]   [DOWNLOADING] Wagenfeld_wmf_besteck.jpg (1736 KB)
+[11:41:15]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:15]   [DOWNLOADING] Wagenfeld-Lindner-Leuchte_Erdbeere.jpg (1058 KB)
+[11:41:15]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:15]   [DOWNLOADING] Wagenfeldleuchte-reedition-in-lampenladen.jpg (3294 KB)
+[11:41:15]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:16] Harvesting Category: Alvar_Aalto -> aalto
+[11:41:16]   [DOWNLOADING] Aaltofirma.jpg (33 KB)
+[11:41:16]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:16]   [DOWNLOADING] Alvar_Aalto_%26_Elissa_Aalto_1956.jpg (13524 KB)
+[11:41:16]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:16]   [DOWNLOADING] ALVAR_AALTO_%281898-1976%29%2C_Ateneum%2C_Helsinki_2017._4K.webm (487367 KB)
+[11:41:16]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:16]   [DOWNLOADING] Alvar_Aalto_1956_%281%29.jpg (12589 KB)
+[11:41:16]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:16]   [DOWNLOADING] Alvar_Aalto_1956_%282%29.jpg (13284 KB)
+[11:41:16]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:16]   [DOWNLOADING] Alvar_Aalto_1956_%283%29.jpg (12413 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:17]   [DOWNLOADING] Alvar_Aalto_1956_%284%29.jpg (13196 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:17]   [DOWNLOADING] Alvar_Aalto_1964.jpg (9632 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:17]   [DOWNLOADING] Alvar_Aalto_and_his_Tammisaari_centre_plan_1966_%28JOKAVN4A2G53-1%29.tif (63362 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:17]   [DOWNLOADING] Alvar_Aalto_and_his_Tammisaari_centre_plan_1966_%28JOKAVN4A2G53-2%29.tif (62872 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:17]   [DOWNLOADING] Alvar_Aalto_and_model_of_the_Finlandia_Hall_1966_%28JOKAHBL3E_G10-1%29.tif (20738 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:17]   [DOWNLOADING] Alvar_Aalto_and_model_of_the_Finlandia_Hall_1966_%28JOKAHBL3E_G10-2%29.tif (20823 KB)
+[11:41:17]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:18] Harvesting Category: Charles_and_Ray_Eames -> eames
+[11:41:18]   [DOWNLOADING] Charle_e_ray_eames_per_herman_miller_inc.%2C_unit%C3%A0_esu_420-c%2C_1949-50.jpg (2839 KB)
+[11:41:18]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:18]   [DOWNLOADING] Eames_elephant.jpg (3106 KB)
+[11:41:18]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:18]   [DOWNLOADING] Eames_Molded_Plywood_Coffee_Table_%281947-1953%29_Designed_by_Charles_and_Ray_Eames_and_manufactured_in_the_United_States_by_Herman_Miller%2C_Inc._%28Object_ID_89.177.6%29_-_Fully_Furnished_-_Historic_Furniture_Exhibit_-_Henry_Ford_Museum.jpg (1406 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Eames.jpg (294 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] EamesCards.JPG (191 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Modern_furniture_and_a_leg_splint.jpg (38 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Moulded_plywood_chair%2C_stools%2C_and_table%2C_Charles_and_Ray_Eames_exhibit%2C_MAAT%2C_Lisbon%2C_Portugal_julesvernex2.jpg (1387 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Ulmer_Volkshochschule_Club_Orange_mit_den_St%C3%BChlen_Dining_Armchair_von_Charles_und_Ray_Eames_1.jpg (8682 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Ulmer_Volkshochschule_EinsteinHaus_2_OG_mit_den_St%C3%BChlen_Dining_Armchair_von_Charles_und_Ray_Eames_links.jpg (11381 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Ulmer_Volkshochschule_EinsteinHaus_2_OG_mit_den_St%C3%BChlen_Dining_Armchair_von_Charles_und_Ray_Eames.jpg (9985 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Vitra_Schaudepot_Untergeschoss_mit_Fenster_zum_B%C3%BCro_von_Charles_Eames%2C_Tafel.jpg (3269 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:19]   [DOWNLOADING] Vitra_Schaudepot_Untergeschoss_mit_Fenster_zum_B%C3%BCro_von_Charles_Eames.jpg (3491 KB)
+[11:41:19]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:20] Harvesting Category: Dieter_Rams -> rams
+[11:41:21]   [DOWNLOADING] 002_2020_04_21_Uhren_fuer_den_Innenbereich.jpg (297 KB)
+[11:41:21]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:21]   [DOWNLOADING] 1952_Dieter_Rams_Chair_from_Studienarbeit_drawing_%28resized%29.jpg (4686 KB)
+[11:41:21]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:21]   [DOWNLOADING] 1952_Dieter_Rams_Chair_from_Studienarbeit_drawing.jpg (4890 KB)
+[11:41:21]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:21]   [DOWNLOADING] 1961_Braun_D40_Frankfurt_2024-03.jpg (5204 KB)
+[11:41:21]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:21]   [DOWNLOADING] Braun_ABW30_%28schwarz%29.jpg (67 KB)
+[11:41:21]   [DOWNLOADING] Braun_D40_Rodenstock_Splendar.jpg (2918 KB)
+[11:41:22]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:22]   [DOWNLOADING] Braun_Dieter_Rams_Lighter_Austin_Calhoon_Photograph.jpg (181 KB)
+[11:41:22]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:22]   [DOWNLOADING] Braun_portable_radios_and_turntable_at_the_SFMOMA_%286098612783%29.jpg (95 KB)
+[11:41:22]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:22]   [DOWNLOADING] Braun_regie_510.jpg (41 KB)
+[11:41:22]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:22]   [DOWNLOADING] Braun_SK_4.1.jpg (2413 KB)
+[11:41:22]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:22]   [DOWNLOADING] Braun_SK_5.png (152 KB)
+[11:41:22]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:23] Harvesting Category: George_Nelson_(designer) -> nelson
+[11:41:23]   [WARN] No files found for category
+[11:41:23] Harvesting Category: Arne_Jacobsen -> jacobsen
+[11:41:24]   [DOWNLOADING] Wanduhren_Arne_Jacobsen.jpg (1370 KB)
+[11:41:24]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:24]   [DOWNLOADING] A_jacobsen_tischlampe_1959.jpg (291 KB)
+[11:41:24]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:24]   [DOWNLOADING] Arne_Jacobsen_-_SAS_-_K%C3%B6penhamn-2000.jpg (898 KB)
+[11:41:24]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:24]   [DOWNLOADING] Arne_Jacobsen_Kubeflex_exterior_01.JPG (4103 KB)
+[11:41:24]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:24]   [DOWNLOADING] Arne_Jacobsen_Kubeflex_interior_01.JPG (4500 KB)
+[11:41:24]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:24]   [DOWNLOADING] Arne_Jacobsen_Kubeflex_interior_02.JPG (3941 KB)
+[11:41:24]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:24]   [DOWNLOADING] Arne_Jacobsen_photo.jpg (21 KB)
+[11:41:25]   [DOWNLOADING] Arne_Jacobsen_villa_-_Le_Klint_lamp.jpg (3862 KB)
+[11:41:25]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:25]   [DOWNLOADING] Arne_jacobsen%2C_enghaveparken_bandstand%2C_copenhagen_1927-1928_%284736366937%29.jpg (11907 KB)
+[11:41:25]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:25]   [DOWNLOADING] Arne_jacobsen%2C_fire_escape_stairs%2C_NOVO%2C_copenhagen_1954-1955_%284745925138%29.jpg (6722 KB)
+[11:41:25]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:25]   [DOWNLOADING] Arne_jacobsen%2C_fire_escape_stairs%2C_NOVO%2C_copenhagen_1954-1955_%284759895666%29.jpg (9949 KB)
+[11:41:25]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:25]   [DOWNLOADING] Arne_jacobsen%2C_skodsborg_strandvej_300%2C_1953-1956_%283817671339%29.jpg (2853 KB)
+[11:41:25]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:26] Harvesting Category: Richard_Sapper -> sapper
+[11:41:27]   [DOWNLOADING] Alessi-Caffetiera_espresso_9090-Design_Richard_Sapper_1979.jpg (495 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Alessi-richard-sapper.jpg (1643 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Foto_tizio.png (14402 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Kessel_R_Sapper.jpg (936 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Laufenburg_%2822%29.JPG (3662 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Marco_zanuso_e_richard_sapper_per_kartell%2C_seggiolina_4999%2C_1964.jpg (2951 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Marco_zanuso_e_richard_sapper%2C_telefono_grillo_turchese%2C_anni_%2770.jpg (2370 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Radioregistratore_a_musicassette%2C_a_transistor_-_Museo_scienza_tecnologia_Milano_10088_dia.jpg (601 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Richard_sapper_per_alessi_spa%2C_cocotte_la_cintura_di_orione%2C_1986.jpg (1182 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Richard_sapper_per_alessi_spa.%2C_caffettiera_modello_gogo%2C_1978-79.jpg (637 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:27]   [DOWNLOADING] Richard_Sapper_Sandwich_Clock_Austin_Calhoon_Photograph.jpg (291 KB)
+[11:41:27]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:28] Harvesting Category: Gio_Ponti -> ponti
+[11:41:29]   [DOWNLOADING] %22_11_-_ITALY_-_Superleggera_Gi%C3%B2_Ponti_chair_CASSINA.jpg (3174 KB)
+[11:41:29]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:29]   [DOWNLOADING] 1954_Cini_Boeri_Gio_Ponti.jpg (514 KB)
+[11:41:29]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:29]   [DOWNLOADING] 20160717_170420_Domus_Fausta.jpg (1223 KB)
+[11:41:29]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:29]   [DOWNLOADING] 20160718_201100_Domus_Julia.jpg (1824 KB)
+[11:41:29]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:29]   [DOWNLOADING] AlRashidHotelBaghdad.jpg (973 KB)
+[11:41:29]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:29]   [DOWNLOADING] Centro_direzionale_Montecatini_-_Milano.jpg (3050 KB)
+[11:41:29]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:29]   [DOWNLOADING] FUGA%2C_Gio_Ponti_Ausstellung%2C_2021_Budapest.jpg (938 KB)
+[11:41:30]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:30]   [DOWNLOADING] FUGA%2C_Lucien_und_Rodolf_Herv%C3%A9_Saal%2C_2021_Budapest.jpg (951 KB)
+[11:41:30]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:30]   [DOWNLOADING] Gebouw_van_De_Bijenkorf_in_Eindhoven.jpg (3758 KB)
+[11:41:30]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:30]   [DOWNLOADING] Gio_Ponti_1950s.jpg (415 KB)
+[11:41:30]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:30]   [DOWNLOADING] Gio_Ponti_1950s2.jpg (465 KB)
+[11:41:30]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:30]   [DOWNLOADING] Gio_Ponti_1950s3.jpg (122 KB)
+[11:41:30]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:31] Harvesting Category: Achille_Castiglioni -> castiglioni
+[11:41:31]   [DOWNLOADING] %22_11_-_ITALY_-_design_and_furniture_-_MEZZADRO_-_Achille_e_Pier_Giacomo_Castiglioni_-_Zanotta_%281957%29.jpg (4686 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] %22_11_-_ITALY_-_Italian_Design_-_1957_-_Sella_-_Zanotta_-_Achille_Castiglioni_Pier_Giacomo_Castiglioni_TDM.jpg (832 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] %22_11_-_ITALY_-_Italian_Design_-_1957_-_Sella_-_Zanotta_-_Achille_Castiglioni_Pier_Giacomo_Castiglioni.jpg (3984 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] %22_11_-_ITALY_-_Italian_design_-_Taraxacum_-_Achille_Castiglioni_-_Flos_-_1988_at_TDM_Milan.jpg (2939 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] %22_13_-_DESIGN_OF_ITALY_-_1957_-_Sella_-_Zanotta_-_Achille_Castiglioni_Pier_Giacomo_Castiglioni.jpg (3103 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] %2213_-_ITALY_-_bar_code_FLOS_lamp_by_Achille_Castiglioni_-_Made_in_Italy_-_product_design_of_furniture_-_italian_style.jpg (1425 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] Achille_Castiglioni-FLOS_Lampadina_01.jpg (2432 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] Achille_Castiglioni.jpg (24 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] Achille_e_pier_giacomo_castiglioni_per_zanotta_spa.%2C_sgabello_mezzadro%2C_1954-57.jpg (1249 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] Brionvega_RR126_radiogram.jpg (746 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] Castiglioni_brothers_-_Lampada_Taccia.jpg (1126 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:32]   [DOWNLOADING] CENTO3_-_EGO.M.jpg (236 KB)
+[11:41:32]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:33] Harvesting Category: Ettore_Sottsass -> sottsass
+[11:41:34]   [DOWNLOADING] Designers_of_%22MAN_TRANSFORMS%22_Exhibit_at_C-H_Museum.jpg (91 KB)
+[11:41:34]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:34]   [DOWNLOADING] Ettore_Sottsass_1969.jpg (164 KB)
+[11:41:34]   [DOWNLOADING] Ettore_Sottsass_and_Fernanda_Pivano_1969.jpg (208 KB)
+[11:41:34]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:34]   [DOWNLOADING] Fontana_in_Tonalite_dell%27Adamello_by_Ettore_Sottsass.jpg (489 KB)
+[11:41:34]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:35]   [DOWNLOADING] Fontana_in_Tonalite_dell%27Adamello.jpg (73 KB)
+[11:41:35]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:35]   [DOWNLOADING] Il_giornalista_Lillo_Gullo_intervista_l%E2%80%99architetto_e_designer_Ettore_Sottsass.jpg (130 KB)
+[11:41:35]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:35]   [DOWNLOADING] Maruceli_Sottsass_1949.jpg (27 KB)
+[11:41:35]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:35]   [DOWNLOADING] Paolo_Monti_-_Servizio_fotografico_%28Torino%2C_1961%29_-_BEIC_6360349.jpg (1562 KB)
+[11:41:35]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:35]   [DOWNLOADING] Room_76%2C_Design_1900_-_Now%2C_V%26A_-_2024-01-05.jpg (16452 KB)
+[11:41:35]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:35]   [DOWNLOADING] Room_76%2C_modern_design_exhibts%2C_V%26A_London.jpg (2384 KB)
+[11:41:35]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:36] Harvesting Category: Marcello_Nizzoli -> nizzoli
+[11:41:36]   [DOWNLOADING] Artisti_a_Como_1936.jpg (70 KB)
+[11:41:36]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:36]   [DOWNLOADING] Distributore_di_benzina_supercortemaggiore_esposto_in_Triennale_Milano.jpg (1985 KB)
+[11:41:36]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:36]   [DOWNLOADING] Fiat_509_ottimamente_lubrificata.jpg (3123 KB)
+[11:41:36]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:36]   [DOWNLOADING] Marcello_nizzoli_e_mario_olivieri%2C_distributore_di_benzina_supercortemaggiore_per_agip%2C_1963.jpg (2723 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Nuovo_Pignone_AGIP_Museo_Fisogni.png (526 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Oliofiat_al_Museo_Fisogni.jpg (7653 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Olivetti%2C_Una_bella_societ%C3%A0_-_MC_4S_Macchina_Calcolatrice_4_Summa%2C_1940_%282677178265%29.jpg (3809 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Olivetti%2C_Una_bella_societ%C3%A0_-_MC_4S_Macchina_Calcolatrice_4_Summa%2C_1940_%282677181623%29.jpg (2345 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Paolo_Monti_-_Servizio_fotografico_%28Milano%2C_1954%29_-_BEIC_6347052.jpg (1291 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Paolo_Monti_-_Servizio_fotografico_%28Milano%2C_1954%29_-_BEIC_6347070.jpg (1489 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:37]   [DOWNLOADING] Paolo_Monti_-_Servizio_fotografico_-_BEIC_6347022.jpg (1011 KB)
+[11:41:37]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:38] Harvesting Category: Mario_Bellini -> bellini
+[11:41:38]   [DOWNLOADING] Asymmetry_-_Flickr_-_Rob_Oo.jpg (4686 KB)
+[11:41:38]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:38]   [DOWNLOADING] Calculator%2C_Model_41_PD%2C_Logos%2C_designed_by_Mario_Bellini%2C_Olivetti_%26_Co.%2C_Milan%2C_1977%2C_plastic_case_-_Museum_f%C3%BCr_Angewandte_Kunst_K%C3%B6ln_-_Cologne%2C_Germany_-_DSC09677.jpg (7212 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Camaleonda-modular-sofa_10068.jpg (81 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Colorazioni_Sedia_412_Cab.gif (969 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Colori_delle_sedie_Cab_1.jpg (58 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Dimensioni_prodotto_S1_S2.png (34 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Dimensioni_prodotto.jpg (50 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Fiera_Milano_%28Milan%2C_ITA%29_2015.jpg (76 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Fieramilanocity_cometa.jpg (268 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Fuji_DL_100_Mario_Bellini_Design_Austin_Calhoon_Photography.jpg (614 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:39]   [DOWNLOADING] Les_arts_de_l%27Islam_au_Louvre_%288055981963%29.jpg (1378 KB)
+[11:41:39]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:40] Harvesting Category: Giorgetto_Giugiaro -> giugiaro
+[11:41:41]   [DOWNLOADING] 1962_Ferrari_250_GT_Bertone_sn3269GT_Giugiaro_and_wood.jpg (101 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:41]   [DOWNLOADING] 1963_Corvair_Testudo_drawing_Bertone_Giugiaro.jpg (235 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:41]   [DOWNLOADING] 1970-Giugiaro-Porsche-Tapiro.jpg (54 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:41]   [DOWNLOADING] 1992-04-23_Torino_auto_designers_dal_Italia.jpg (123 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:41]   [DOWNLOADING] GiorgettoGiugiaro_%28cropped%29.jpg (576 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:41]   [DOWNLOADING] GiorgettoGiugiaro.jpg (1439 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:41]   [DOWNLOADING] Giugiaro%2C_bicchiere_da_vodka%2C_1996.JPG (1590 KB)
+[11:41:41]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:42] Harvesting Category: Marcello_Gandini -> gandini
+[11:41:42]   [DOWNLOADING] 1969_Autobianchi_A112_Runabout_e_Marcello_Gandini.jpg (30 KB)
+[11:41:43]   [DOWNLOADING] 1976_Bertone_Gandini_Ferrari_Rainbow.jpg (172 KB)
+[11:41:44]   [DOWNLOADING] Marcello_Gandini_in_1976.jpg (51 KB)
+[11:41:44]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:45] Harvesting Category: Battista_Pininfarina -> pininfarina
+[11:41:45]   [WARN] No files found for category
+[11:41:45] Harvesting Category: Harley_Earl -> earl
+[11:41:45]   [DOWNLOADING] 1939_..._Harley_Earl_and_%22The_Y_Job%22.jpg (370 KB)
+[11:41:45]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:46] Harvesting Category: Jonathan_Ive -> ive
+[11:41:47]   [DOWNLOADING] HK_HKCEC_Wan_Chai_%E8%98%87%E5%AF%8C%E6%AF%94_Sotheby%27s_Preview_%E6%8B%8D%E8%B3%A3_%E9%A0%90%E5%B1%95_Tony_and_Marc%27s_Red_Auction_sign_Oct-2013.JPG (1487 KB)
+[11:41:47]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:47]   [DOWNLOADING] Ive_Lasseter_cropped.jpg (203 KB)
+[11:41:47]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:47]   [DOWNLOADING] Ive_Lasseter.jpg (871 KB)
+[11:41:47]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:47]   [DOWNLOADING] Johnny-ive.jpg (44 KB)
+[11:41:47]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:47]   [DOWNLOADING] Jonathan_Ive_%28OTRS%29_%28cropped%29.jpg (139 KB)
+[11:41:47]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:47]   [DOWNLOADING] Jonathan_Ive_%28OTRS%29.jpg (397 KB)
+[11:41:48]   [DOWNLOADING] Jonathan_Ive_2006.jpeg (156 KB)
+[11:41:48]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:48]   [DOWNLOADING] Jonathan_Ive_2009.jpg (6186 KB)
+[11:41:48]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:48]   [DOWNLOADING] Jonathan_Ive_at_Apple%2C_2011.jpg (35 KB)
+[11:41:48]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:49] Harvesting Category: James_Dyson -> dyson
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487823423%29.jpg (526 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487823763%29.jpg (1054 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487824149%29.jpg (1136 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487825345%29.jpg (1123 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487826079%29.jpg (1016 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487827935%29.jpg (595 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487828223%29.jpg (360 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288487828917%29.jpg (527 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288488917546%29.jpg (1022 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288488918056%29.jpg (1180 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288488919568%29.jpg (1204 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:50]   [DOWNLOADING] James_Dyson_%288488921190%29.jpg (365 KB)
+[11:41:50]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:51] Harvesting Category: Philippe_Starck -> starck
+[11:41:52]   [DOWNLOADING] Alessi_at_Local_Root.jpg (459 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Alhondiga.jpg (847 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Card_Philippe_StarckPhilippe_Starck.png (545 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Chaise_Louis_Ghost.png (9276 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] D2_starck_toaster.jpg (50 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Geneva_International_Motor_Show_2018%2C_Le_Grand-Saconnex_%281X7A1508%29.jpg (12834 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Mama_Shelter_Lyon.jpg (5477 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] MamaMarseille.jpg (1341 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Philippe_Starck_at_TED_%288518013685%29.jpg (2219 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Philippe_Starck_crop.jpg (1897 KB)
+[11:41:52]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:52]   [DOWNLOADING] Philippe_starck_per_alessi_spa.%2C_bollitore_hot_bertaa%2C_1990.jpg (59 KB)
+[11:41:53]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:53]   [DOWNLOADING] Philippe_starck_per_alessi_spa.%2C_centrotavola_les_ministres%2C_1996%2C_in_reina_e_acciaio.jpg (741 KB)
+[11:41:53]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54] Harvesting Category: Marc_Newson -> newson
+[11:41:54]   [DOWNLOADING] FT_Business_of_Luxury_Gala_Reception.jpg (5927 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] Marc_Newson_%28cropped%29.jpg (1420 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] Marc_Newson.jpg (502 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] Vanessa_Friedman_and_Marc_Newson_%285804327693%29.jpg (5020 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] 1952_Ferrari_225_S_Vignale_sn0198ET_at_2012_Mille_Miglia.jpg (174 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] Lockheed_Lounge.jpg (622 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] Ngv_design%2C_marc_newson%2C_lc2_lockheed_lounge_1985-86.JPG (875 KB)
+[11:41:54]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:54]   [DOWNLOADING] Marc_Newson_Sedia_Embryo%2C_1988%2C_Mus%C3%A9e_des_Arts_D%C3%A9coratifs_Paris.jpg (83 KB)
+[11:41:55]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:55]   [DOWNLOADING] Marc_newson%2C_sedia_embryo%2C_1988.JPG (756 KB)
+[11:41:55]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:55]   [DOWNLOADING] Embryo_Chair.jpg (610 KB)
+[11:41:55]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:55]   [DOWNLOADING] Cloisonn%C3%A9_Blue_Chair.jpg (6224 KB)
+[11:41:55]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:55]   [DOWNLOADING] HK_HKCEC_Wan_Chai_%E8%98%87%E5%AF%8C%E6%AF%94_Sotheby%27s_Preview_%E6%8B%8D%E8%B3%A3_%E9%A0%90%E5%B1%95_Tony_and_Marc%27s_Red_Auction_sign_Oct-2013.JPG (1487 KB)
+[11:41:55]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:56] Harvesting Category: Naoto_Fukasawa -> fukasawa
+[11:41:56]   [DOWNLOADING] Au_CDMA_1X_WIN_W42T_neon_mizuiro_close.jpg (64 KB)
+[11:41:56]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:56]   [DOWNLOADING] Au_CDMA_1X_WIN_W42T_neon_mizuiro.jpg (77 KB)
+[11:41:56]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:56]   [DOWNLOADING] Au_W55SA_INFOBAR2_20101109_b.jpg (721 KB)
+[11:41:56]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:56]   [DOWNLOADING] Au_W55SA_INFOBAR2_20101109.jpg (775 KB)
+[11:41:56]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:56]   [DOWNLOADING] Disign_by_Naoto_Fukasawa_1.jpg (22 KB)
+[11:41:56]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:56]   [DOWNLOADING] Icon_Design_giugno_2018_copertina_Mondadori.jpg (22 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:57]   [DOWNLOADING] Info.bar_prototype.jpg (871 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:57]   [DOWNLOADING] INFOBAR_A01%28HACCA%29.jpg (182 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:57]   [DOWNLOADING] INFOBAR_C01.jpg (1008 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:57]   [DOWNLOADING] IS01_open.JPG (2466 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:57]   [DOWNLOADING] KDDI_INFOBAR_A02_NISHIKIGOI.jpg (298 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:57]   [DOWNLOADING] Muji_NYC_inside_CD_players.jpg (848 KB)
+[11:41:57]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:58] Harvesting Category: Karim_Rashid -> rashid
+[11:41:58]   [DOWNLOADING] Human_Media_Lab_by_Karim_Rashid.jpg (2499 KB)
+[11:41:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:58]   [DOWNLOADING] Karim_Rashid_talks_to_press_at_Innoprom-2012.jpg (928 KB)
+[11:41:58]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:58]   [DOWNLOADING] Kia_%288478980364%29.jpg (252 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] Prizeotel_Bern-City_designed_by_Karim_Rashid_2.jpg (5575 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] Prizeotel_Bern-City_designed_by_Karim_Rashid_3.jpg (4688 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] Prizeotel_Bern-City_designed_by_Karim_Rashid_4.jpg (4248 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] Prizeotel_Bern-City_designed_by_Karim_Rashid_6.jpg (4575 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] Prizeotel_Bern-City_designed_by_Karim_Rashid.jpg (5218 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] Sweet_Chill.jpg (141 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:41:59]   [DOWNLOADING] %EC%B9%B4%EB%A6%BC_%EB%9D%BC%EC%8B%9C%EB%93%9C.PNG (297 KB)
+[11:41:59]   [ERROR] Download failed: The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+[11:42:00] Harvesting Complete.

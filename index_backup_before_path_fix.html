@@ -1,0 +1,2843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1h Intro to ID | The History of Industrial Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+
+        :root {
+            --bg-color: #fcfcfc;
+            --text-main: #121212;
+            --text-muted: #555;
+            --accent: #b8860b;
+            --accent-soft: #f4ebd0;
+            --border: #eeeeee;
+            --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem;
+            background: #fff;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#eee 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            margin-bottom: 1rem;
+            color: #000;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+
+        .scroll-down {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--accent);
+            animation: bounce 2s infinite;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 10rem 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-tag {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            color: #000;
+            line-height: 1.1;
+        }
+
+        .editorial-content {
+            font-size: 1.25rem;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .feature-img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            transition: transform 0.5s;
+        }
+
+        .quote-box {
+            background: #fdf6e3;
+            padding: 3rem;
+            border-left: 5px solid var(--accent);
+            margin-top: 2rem;
+            font-style: italic;
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* VERTICAL TIMELINE REDESIGN */
+        .timeline-section {
+            background: #fff;
+            padding: 10rem 0;
+            position: relative;
+            overflow: visible;
+        }
+
+        .timeline-v-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            --year-height: 40px;
+            /* One year = 40px height */
+            height: calc(200 * var(--year-height));
+            /* 1830 to 2030 roughly */
+            padding-top: 5rem;
+        }
+
+        .v-spine {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: #121212;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        /* Era Layers (Large transparent blocks) */
+        .v-era-layer {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            opacity: 0.15;
+            transition: opacity 0.5s;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .v-era-layer:hover {
+            opacity: 0.25;
+        }
+
+        .v-era-label {
+            position: absolute;
+            left: 10%;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 1);
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .v-era-icon {
+            position: absolute;
+            right: 15%;
+            width: 240px;
+            height: 240px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.8;
+            filter: grayscale(100%);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .v-era-layer:hover .v-era-icon {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* Designer Bubbles */
+        .v-designer-bubble {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            border: 8px solid #fff;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            z-index: 30;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        .v-bubble-label {
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+            position: absolute;
+            bottom: -15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .v-designer-bubble:hover {
+            transform: translate(-50%, -50%) scale(1.3) rotate(5deg);
+            border-color: var(--accent);
+            z-index: 100;
+        }
+
+        /* Year Labels on Side */
+        .v-year-side {
+            position: absolute;
+            left: 50%;
+            width: 120px;
+            text-align: right;
+            padding-right: 50px;
+            transform: translate(-100%, -50%);
+            font-weight: 800;
+            color: #e0e0e0;
+            font-size: 2.5rem;
+            z-index: 5;
+            pointer-events: none;
+            letter-spacing: -2px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .v-demise-marker {
+            position: absolute;
+            left: 50%;
+            width: 100px;
+            height: 3px;
+            background: #ff3b30;
+            transform: translateX(-50%);
+            z-index: 15;
+            opacity: 0.6;
+        }
+
+        .v-demise-marker::after {
+            content: 'DECEASED';
+            position: absolute;
+            left: 110px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #ff3b30;
+            white-space: nowrap;
+        }
+
+        /* Specific Mapping Helper Classes (Calculated top positions) */
+        /* Range: 1830-2030 = 200 years. Top 0 = 1830 */
+        .y-1830 {
+            top: 0;
+        }
+
+        .y-1840 {
+            top: calc(10 * var(--year-height));
+        }
+
+        .y-1850 {
+            top: calc(20 * var(--year-height));
+        }
+
+        .y-1860 {
+            top: calc(30 * var(--year-height));
+        }
+
+        .y-1870 {
+            top: calc(40 * var(--year-height));
+        }
+
+        .y-1880 {
+            top: calc(50 * var(--year-height));
+        }
+
+        .y-1890 {
+            top: calc(60 * var(--year-height));
+        }
+
+        .y-1900 {
+            top: calc(70 * var(--year-height));
+        }
+
+        .y-1910 {
+            top: calc(80 * var(--year-height));
+        }
+
+        .y-1920 {
+            top: calc(90 * var(--year-height));
+        }
+
+        .y-1930 {
+            top: calc(100 * var(--year-height));
+        }
+
+        .y-1940 {
+            top: calc(110 * var(--year-height));
+        }
+
+        .y-1950 {
+            top: calc(120 * var(--year-height));
+        }
+
+        .y-1960 {
+            top: calc(130 * var(--year-height));
+        }
+
+        .y-1970 {
+            top: calc(140 * var(--year-height));
+        }
+
+        .y-1980 {
+            top: calc(150 * var(--year-height));
+        }
+
+        .y-1990 {
+            top: calc(160 * var(--year-height));
+        }
+
+        .y-2000 {
+            top: calc(170 * var(--year-height));
+        }
+
+        .y-2010 {
+            top: calc(180 * var(--year-height));
+        }
+
+        .y-2020 {
+            top: calc(190 * var(--year-height));
+        }
+
+        /* Custom year positions */
+        .y-1834 {
+            top: calc(4 * var(--year-height));
+        }
+
+        .y-1868 {
+            top: calc(38 * var(--year-height));
+        }
+
+        .y-1883 {
+            top: calc(53 * var(--year-height));
+        }
+
+        .y-1892 {
+            top: calc(62 * var(--year-height));
+        }
+
+        .y-1893 {
+            top: calc(63 * var(--year-height));
+        }
+
+        .y-1896 {
+            top: calc(66 * var(--year-height));
+        }
+
+        .y-1904 {
+            top: calc(74 * var(--year-height));
+        }
+
+        .y-1908 {
+            top: calc(78 * var(--year-height));
+        }
+
+        .y-1917 {
+            top: calc(87 * var(--year-height));
+        }
+
+        .y-1919 {
+            top: calc(89 * var(--year-height));
+        }
+
+        .y-1932 {
+            top: calc(102 * var(--year-height));
+        }
+
+        .y-1933 {
+            top: calc(103 * var(--year-height));
+        }
+
+        .y-1953 {
+            top: calc(123 * var(--year-height));
+        }
+
+        .y-1955 {
+            top: calc(125 * var(--year-height));
+        }
+
+        .y-1967 {
+            top: calc(137 * var(--year-height));
+        }
+
+        .y-1968 {
+            top: calc(138 * var(--year-height));
+        }
+
+        .y-1969 {
+            top: calc(139 * var(--year-height));
+        }
+
+        .y-1972 {
+            top: calc(142 * var(--year-height));
+        }
+
+        .y-1981 {
+            top: calc(151 * var(--year-height));
+        }
+
+        .y-1986 {
+            top: calc(156 * var(--year-height));
+        }
+
+        .y-1987 {
+            top: calc(157 * var(--year-height));
+        }
+
+        .y-1994 {
+            top: calc(164 * var(--year-height));
+        }
+
+        .y-2007 {
+            top: calc(177 * var(--year-height));
+        }
+
+        /* ERA BLOCKS */
+        .v-era-ac {
+            height: calc(40 * var(--year-height));
+            top: calc(50 * var(--year-height));
+            background: #8B4513;
+        }
+
+        .v-era-an {
+            height: calc(20 * var(--year-height));
+            top: calc(60 * var(--year-height));
+            background: #2E8B57;
+        }
+
+        .v-era-bh {
+            height: calc(14 * var(--year-height));
+            top: calc(89 * var(--year-height));
+            background: #E11D48;
+        }
+
+        .v-era-ulm {
+            height: calc(15 * var(--year-height));
+            top: calc(123 * var(--year-height));
+            background: #334155;
+        }
+
+        .v-era-rams {
+            height: calc(40 * var(--year-height));
+            top: calc(125 * var(--year-height));
+            background: #64748B;
+        }
+
+        .v-era-mem {
+            height: calc(6 * var(--year-height));
+            top: calc(151 * var(--year-height));
+            background: #FF4081;
+        }
+
+        .v-era-dig {
+            height: calc(35 * var(--year-height));
+            top: calc(160 * var(--year-height));
+            background: #0EA5E9;
+        }
+
+        /* MODALS */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            z-index: 9999;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s;
+            backdrop-filter: blur(15px);
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-wrap {
+            background: #fff;
+            width: 95%;
+            max-width: 1300px;
+            height: 92vh;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 50px 150px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .close-call {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: #000;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10000;
+            transition: transform 0.3s;
+        }
+
+        .close-call:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-hero {
+            height: 300px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+        }
+
+        /* DRILL-DOWN SYSTEM (LEVEL 1 & 2) */
+        .v-level-1,
+        .v-level-2 {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .v-level-1.active,
+        .v-level-2.active {
+            display: flex;
+        }
+
+        /* Level 1: Designer Bio */
+        .v-designer-header {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .v-portrait-large {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 8px solid #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+
+        .v-designer-info h2 {
+            font-size: 4.5rem !important;
+            margin: 0 !important;
+            line-height: 1;
+        }
+
+        /* Frequency Patch (Yellow Influence Blob) */
+        .v-frequency-container {
+            width: 100%;
+            height: 120px;
+            position: relative;
+            margin: 2rem 0;
+            background: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .v-frequency-patch {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 204, 0, 0.4);
+            clip-path: polygon(0% 80%, 15% 40%, 30% 60%, 45% 10%, 60% 70%, 75% 30%, 90% 90%, 100% 50%, 100% 100%, 0% 100%);
+            transition: all 1s ease;
+        }
+
+        .v-pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .v-pillar-box {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eee;
+        }
+
+        .v-integration-section {
+            padding: 4rem;
+            background: #fdfdfd;
+            border-radius: 20px;
+            margin-bottom: 5rem;
+            border: 1px solid #eee;
+        }
+
+        .v-gallery-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+        }
+
+        /* Level 2: Work Detail */
+        .v-work-hero {
+            width: 100%;
+            height: 50vh;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+            margin-bottom: 3rem;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .v-back-btn {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            z-index: 10;
+            transition: transform 0.3s;
+        }
+
+        .v-back-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .v-analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .v-analysis-box {
+            padding: 2.5rem;
+            border: 1px solid #eee;
+            border-radius: 15px;
+        }
+
+        .v-principles-full {
+            background: #121212;
+            color: #fff;
+            padding: 5rem;
+            border-radius: 25px;
+            margin-top: 2rem;
+        }
+
+        .v-principles-full h3 {
+            color: var(--accent);
+            border-color: rgba(255, 255, 255, 0.1);
+            margin-top: 0;
+        }
+
+        .v-principles-full p {
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 1000px) {
+
+            .v-pillars-grid,
+            .v-analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .v-designer-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .v-portrait-large {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .modal-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 5rem;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .modal-scroll h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1;
+        }
+
+        .modal-scroll h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 4px solid var(--accent-soft);
+            display: inline-block;
+        }
+
+        .principle-list {
+            list-style: none;
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .principle-item {
+            margin-bottom: 3.5rem;
+            padding-left: 2.5rem;
+            border-left: 5px solid var(--accent);
+            position: relative;
+        }
+
+        .principle-item span.num {
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.3;
+            font-size: 2.5rem;
+        }
+
+        .principle-item strong {
+            display: block;
+            font-size: 1.6rem;
+            color: #000;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .principle-item p {
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .gallery-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .gal-cell {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 16px;
+            transition: transform 0.3s;
+        }
+
+        .gal-cell:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
+
+        .gal-img {
+            width: 100%;
+            aspect-ratio: 1.3;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+
+        .gal-cap {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        @media (max-width: 1000px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .timeline-v-container {
+                --year-height: 60px;
+                /* Increase year spacing on mobile for touch */
+            }
+
+            .v-era-label {
+                font-size: 2.5rem;
+                left: 5%;
+                opacity: 0.15;
+            }
+
+            .v-designer-bubble {
+                width: 100px;
+                height: 100px;
+                border-width: 4px;
+            }
+
+            .v-year-side {
+                font-size: 1.5rem;
+                padding-right: 20px;
+                width: 70px;
+            }
+
+            .v-era-icon {
+                width: 100px;
+                height: 100px;
+                right: 5%;
+                bottom: 10%;
+            }
+
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-hero {
+                height: 15vh;
+            }
+
+            .modal-scroll {
+                padding: 2rem;
+            }
+
+            .modal-scroll h2 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HERO -->
+    <div class="hero">
+        <span class="section-tag">Historical Overview</span>
+        <h1>1h Intro to ID</h1>
+        <p>A comprehensive study from the dawn of mechanization to the digital intersection. Explore the philosophies
+            that shaped our physical and digital world.</p>
+        <div class="scroll-down" onclick="document.getElementById('basics').scrollIntoView()">Explore the History</div>
+    </div>
+
+    <!-- PART 1: FOUNDATIONS -->
+    <section id="basics">
+        <span class="section-tag">Phase 1: Foundations</span>
+        <h2 class="section-title">The Birth of a Profession</h2>
+        <div class="editorial-grid">
+            <div class="editorial-content">
+                <p>Industrial Design is the strategic intersection of Art, Engineering, and Business. Its birth was
+                    predicated on a radical shift in energy and economy.</p>
+                <h3 style="margin-top: 3rem; font-family:'Playfair Display';">James Watt & The Steam Engine</h3>
+                <p>The <strong>Steam Engine</strong> provided the massive, consistent energy required to power global
+                    factories and railroads. It created the concentration of labor and capital necessary for industry to
+                    demand a role that could bridge the machine and the human: The Designer.</p>
+                <div class="quote-box">"We have machines that can make anything, but we don't know what they SHOULD look
+                    like."</div>
+            </div>
+            <img class="feature-img" src="images/boulton and watt steam engine.png" alt="Steam Engine">
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section" id="timeline">
+        <span class="section-tag">Phase 2: Evolution</span>
+        <h2 class="section-title">The Vertical Thread</h2>
+
+        <div class="timeline-v-container">
+            <div class="v-spine"></div>
+
+            <!-- ERA LAYERS (BACKGROUNDS) -->
+            <div class="v-era-layer v-era-ac" onclick="openFullModal('mod-ac', 'pat-ac')">
+                <div class="v-era-label">ARTS & CRAFTS</div>
+                <div class="v-era-icon" style="background-image: url('images/icon_arts_crafts.png');"></div>
+            </div>
+            <div class="v-era-layer v-era-an" onclick="openFullModal('mod-an', 'pat-an')">
+                <div class="v-era-label">ART NOUVEAU</div>
+                <div class="v-era-icon" style="background-image: url('images/icon_art_nouveau.png');"></div>
+            </div>
+            <div class="v-era-layer v-era-bh" onclick="openFullModal('mod-bh', 'pat-bh')">
+                <div class="v-era-label">BAUHAUS</div>
+                <div class="v-era-icon" style="background-image: url('images/icon_bauhaus.png');"></div>
+            </div>
+            <div class="v-era-layer v-era-ulm" onclick="openFullModal('mod-ulm', 'pat-ulm')">
+                <div class="v-era-label">ULM</div>
+                <div class="v-era-icon" style="background-image: url('images/icon_functionalism.png');"></div>
+            </div>
+            <div class="v-era-layer v-era-rams" onclick="openFullModal('mod-rams', 'pat-sm')">
+                <div class="v-era-label">FUNCTIONALISM</div>
+            </div>
+            <div class="v-era-layer v-era-mem" onclick="openFullModal('mod-mem', 'pat-mem')">
+                <div class="v-era-label">MEMPHIS</div>
+                <div class="v-era-icon" style="background-image: url('images/icon_memphis.png');"></div>
+            </div>
+            <div class="v-era-layer v-era-dig" onclick="openFullModal('mod-pm', 'pat-pm')">
+                <div class="v-era-label">DIGITAL</div>
+                <div class="v-era-icon" style="background-image: url('images/icon_digital_ux.png');"></div>
+            </div>
+
+            <!-- YEAR MARKERS -->
+            <div class="v-year-side y-1840">1840</div>
+            <div class="v-year-side y-1860">1860</div>
+            <div class="v-year-side y-1880">1880</div>
+            <div class="v-year-side y-1900">1900</div>
+            <div class="v-year-side y-1920">1920</div>
+            <div class="v-year-side y-1940">1940</div>
+            <div class="v-year-side y-1960">1960</div>
+            <div class="v-year-side y-1980">1980</div>
+            <div class="v-year-side y-2000">2000</div>
+            <div class="v-year-side y-2020">2020</div>
+
+            <!-- DESIGNERS & PHILOSOPHERS (BUBBLES) -->
+
+            <!-- Christopher Dresser (1834-1904) -->
+            <div class="v-designer-bubble y-1834" style="background-image: url('images/christopher_dresser.jpg');"
+                onclick="openFullModal('mod-dresser', 'pat-ad')">
+                <div class="v-bubble-label">C. Dresser</div>
+            </div>
+            <div class="v-demise-marker y-1904"></div>
+
+            <!-- Peter Behrens (1868-1940) -->
+            <div class="v-designer-bubble y-1868" style="background-image: url('images/peter_behrens.jpg');"
+                onclick="openFullModal('mod-behrens', 'pat-ulm')">
+                <div class="v-bubble-label">P. Behrens</div>
+            </div>
+            <div class="v-demise-marker y-1940"></div>
+
+            <!-- William Morris (1834-1896) -->
+            <div class="v-designer-bubble y-1834"
+                style="left: calc(50% + 180px); background-image: url('images/William_Morris.jpg');"
+                onclick="openFullModal('gal-morris', 'pat-ac')">
+                <div class="v-bubble-label">W. Morris</div>
+            </div>
+
+            <!-- Walter Gropius (1883-1969) -->
+            <div class="v-designer-bubble y-1883" style="background-image: url('images/walter_gropius.jpg');"
+                onclick="openFullModal('mod-gropius', 'pat-bh')">
+                <div class="v-bubble-label">W. Gropius</div>
+            </div>
+            <div class="v-demise-marker y-1969"></div>
+
+            <!-- Walter Benjamin (1892-1940) -->
+            <div class="v-designer-bubble y-1892"
+                style="left: calc(50% - 180px); background-image: url('images/walter_benjamin.jpg');"
+                onclick="openFullModal('mod-benjamin', 'pat-ctx-bh')">
+                <div class="v-bubble-label">W. Benjamin</div>
+            </div>
+
+            <!-- Raymond Loewy (1893-1986) -->
+            <div class="v-designer-bubble y-1893"
+                style="left: calc(50% + 180px); background-image: url('images/raymond_loewy.jpg');"
+                onclick="openFullModal('mod-loewy', 'pat-ad')">
+                <div class="v-bubble-label">R. Loewy</div>
+            </div>
+            <div class="v-demise-marker y-1986"></div>
+
+            <!-- Henry Dreyfuss (1904-1972) -->
+            <div class="v-designer-bubble y-1904" style="background-image: url('images/henry_dreyfuss.jpg');"
+                onclick="openFullModal('mod-dreyfuss', 'pat-ctx-ad')">
+                <div class="v-bubble-label">H. Dreyfuss</div>
+            </div>
+            <div class="v-demise-marker y-1972"></div>
+
+            <!-- Max Bill (1908-1994) -->
+            <div class="v-designer-bubble y-1908"
+                style="left: calc(50% - 180px); background-image: url('images/max_bill.jpg');"
+                onclick="openFullModal('mod-bill', 'pat-ulm')">
+                <div class="v-bubble-label">Max Bill</div>
+            </div>
+            <div class="v-demise-marker y-1994"></div>
+
+            <!-- Dieter Rams (1932-) -->
+            <div class="v-designer-bubble y-1932" style="background-image: url('images/dieter_rams_portrait.jpg');"
+                onclick="openFullModal('mod-rams', 'pat-sm')">
+                <div class="v-bubble-label">D. Rams</div>
+            </div>
+
+            <!-- Ettore Sottsass (1917-2007) -->
+            <div class="v-designer-bubble y-1917"
+                style="left: calc(50% + 180px); background-image: url('images/ettore_sottsass.jpg');"
+                onclick="openFullModal('gal-memphis', 'pat-mem')">
+                <div class="v-bubble-label">E. Sottsass</div>
+            </div>
+            <div class="v-demise-marker y-2007"></div>
+
+            <!-- Jonathan Ive (1967-) -->
+            <div class="v-designer-bubble y-1967" style="background-image: url('images/Sir Jonathan Paul Ive.jpg');"
+                onclick="openFullModal('gal-ive', 'pat-pm')">
+                <div class="v-bubble-label">J. Ive</div>
+            </div>
+
+        </div>
+    </section>
+    </section>
+
+    <!-- MODALS -->
+
+    <!-- 1. ARTS & CRAFTS -->
+    <div id="mod-ac" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ac"></div>
+            <div class="modal-scroll"><span class="section-tag">Origin: 1880 - 1920 | UK</span>
+                <h2>Arts & Crafts</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Moral Manifesto</h3>
+                        <p>Led by **William Morris**, this movement was a fierce rejection of the "soulless" mass
+                            production of the Victorian era. It championed **"Truth to Materials"**—the idea that an
+                            object should never hide how it was made. If a chair has a joint, that joint should be
+                            visible and beautiful.</p>
+                        <p>It was deeply tied to the socialism of John Ruskin, who believed that mass production
+                            degraded both the worker and the consumer. The solution was a return to the **Guild
+                            System**, where craftsmen took pride in every stage of creation.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Botanical Motifs:</strong> Highly stylized but recognizable patterns of local
+                                flora (birds, leaves, vines).</li>
+                            <li><strong>Honest Joinery:</strong> Visible mortise and tenon joints as a decorative
+                                element.</li>
+                            <li><strong>Local Sourcing:</strong> Rejection of exotic materials in favor of local oak and
+                                stone.</li>
+                        </ul>
+                        <div class="quote-box">"Have nothing in your houses that you do not know to be useful, or
+                            believe to be beautiful." — William Morris</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-ac-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-ac"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>Industrial Revolt</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Great Exhibition Crisis</h3>
+                        <p>In 1851, the "Crystal Palace" exhibition showcased thousands of factory-made objects. To
+                            Morris and Ruskin, these were "shams"—metal made to look like wood, and machine-carved
+                            plastic made to look like hand-carved ivory. This **aesthetic dishonesty** sparked the
+                            rebellion.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Socio-Economic Impact</h3>
+                        <p>The movement wasn't just about art; it was about the **Worker's Rights**. By advocating for
+                            hand-craft, they sought to return "joy in labor" to a working class that had been reduced to
+                            mere cogs in the factory machine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gal-morris" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ac"></div>
+            <div class="modal-scroll">
+                <h2>William Morris</h2>
+                <div class="gallery-wrap">
+                    <div class="gal-cell"><img class="gal-img" src="images/morris_textile.jpg">
+                        <div class="gal-cap">Strawberry Thief</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/morris_wallpaper.jpg">
+                        <div class="gal-cap">Acanthus motifs</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/William_Morris.jpg">
+                        <div class="gal-cap">The Designer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ART NOUVEAU -->
+    <div id="mod-an" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-an"></div>
+            <div class="modal-scroll"><span class="section-tag">Origin: 1890 - 1910 | France, Belgium, Austria</span>
+                <h2>Art Nouveau</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The "New Art" & Modernity</h3>
+                        <p>Art Nouveau was the first conscious attempt to create a **"Modern" style** that didn't look
+                            back to the Greeks or Romans. It utilized the **Whiplash Curve**—a dynamic, undulating line
+                            that mimicked the growth of vines and the flow of water.</p>
+                        <p>It embraced the concept of **Gesamtkunstwerk** (Total Work of Art), where the designer
+                            controlled everything from the building's architecture down to the silverware and the
+                            jewelry worn by the inhabitants.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Organicism:</strong> Asymmetrical shapes inspired by orchids, lilies, and
+                                insects.</li>
+                            <li><strong>New Materials:</strong> Creative use of cast iron, glass, and ceramic in
+                                ornamental ways.</li>
+                            <li><strong>Japonisme:</strong> Strong influence from Japanese woodblock prints (flat
+                                colors, bold outlines).</li>
+                        </ul>
+                        <div class="quote-box">"Nature is the only architect who never makes a mistake." — Hector
+                            Guimard</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-an-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-an"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>Urban Spring</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>Booming Metropolises</h3>
+                        <p>This was the era of the **Belle Époque**. Europe was at peace, and cities like Paris and
+                            Vienna were expanding rapidly. The new middle class wanted a style that felt optimistic,
+                            luxurious, and completely disconnected from the "grime" of the earlier Industrial
+                            Revolution.</p>
+                    </div>
+                    <div class="body">
+                        <h3>The Subway Symbol</h3>
+                        <p>Hector Guimard's entrances for the **Paris Métro** became the ultimate symbols of the
+                            movement: using industrial cast iron to create "alien," organic forms that welcomed the
+                            public into the modern underground.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gal-guimard" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-an"></div>
+            <div class="modal-scroll">
+                <h2>Hector Guimard</h2>
+                <div class="gallery-wrap">
+                    <div class="gal-cell"><img class="gal-img" src="images/guimard_metro.jpg">
+                        <div class="gal-cap">Metropolitain Entrance</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/guimard_iron1.jpg">
+                        <div class="gal-cap">Ironwork detail</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/guimard_iron2.jpg">
+                        <div class="gal-cap">Sinuous structure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BAUHAUS -->
+    <div id="mod-bh" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-bh"></div>
+            <div class="modal-scroll"><span class="section-tag">Phase: 1919 - 1933 | Germany</span>
+                <h2>The Bauhaus</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>Art into Industry</h3>
+                        <p>Founded by **Walter Gropius**, the Bauhaus sought to bridge the gap between creative art and
+                            industrial production. They believed that machines were the modern tools of the artist, and
+                            that good design should be accessible to everyone, not just the elite.</p>
+                        <p>The curriculum was unique: students began with the **Vorkurs** (Preliminary Course), where
+                            they unlearned their artistic biases by experimenting with raw materials (wood, metal,
+                            textiles) before specializing in a workshop.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Geometry:</strong> Heavy use of primary shapes (circle, square, triangle) and
+                                primary colors.</li>
+                            <li><strong>Tubular Steel:</strong> Inspired by bicycle frames, Marcel Breuer pioneered the
+                                use of bent steel tubing for furniture.</li>
+                            <li><strong>San-Serif:</strong> Typography was stripped of its "ornamental feet" for maximum
+                                clarity.</li>
+                        </ul>
+                        <div class="quote-box">"Design is not a profession, design is a mind-set." — László Moholy-Nagy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-bh-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-bh"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>Rationalism</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>Post-War Crisis</h3>
+                        <p>Germany was shattered after WWI. There was a desperate need for efficient, low-cost housing
+                            and household goods. The Bauhaus responded with **Rationalism**—the idea that beauty emerges
+                            from the logical solution to a functional problem.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Dessau & Industry</h3>
+                        <p>When the school moved to Dessau in 1925, it fully committed to industry. They created
+                            standardized lighting, chairs, and wallpaper that were licensed to factories, proving that
+                            "Modernism" could be a profitable business model.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gal-breuer" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-bh"></div>
+            <div class="modal-scroll">
+                <h2>Marcel Breuer</h2>
+                <div class="gallery-wrap">
+                    <div class="gal-cell"><img class="gal-img" src="images/breuer_chair.png">
+                        <div class="gal-cap">Wassily Chair</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/breuer_interior.jpg">
+                        <div class="gal-cap">Bauhaus Interior</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/marcel breuer.png">
+                        <div class="gal-cap">The Designer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. ULM -->
+    <div id="mod-ulm" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ulm"></div>
+            <div class="modal-scroll"><span class="section-tag">Phase: 1953 - 1968 | Germany</span>
+                <h2>HfG Ulm (Ulm School)</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Ulm Model</h3>
+                        <p>Often called the "Spiritual Successor" to the Bauhaus, the **Ulm School of Design** was even
+                            more rigorous. It completely rejected the idea of the "Designer-Artist" in favor of the
+                            **"Designer-Scientist"**.</p>
+                        <p>They introduced **System Design**, where objects weren't designed in isolation but as part of
+                            an interconnected ecosystem. This led to the creation of the first standardized corporate
+                            identity for Lufthansa and the modular systems for Braun.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>The Stool:</strong> The "Ulm Stool" (Max Bill) was a masterclass in
+                                modularity—it was a seat, a shelf, and a stepping stone.</li>
+                            <li><strong>Semiotics:</strong> The study of signs and icons, leading to the clear,
+                                clickable interfaces of today.</li>
+                            <li><strong>Ergonomics:</strong> Scientific study of how the human body interacts with
+                                products.</li>
+                        </ul>
+                        <div class="quote-box">"Design is not a self-expressive art; it is a serious professional
+                            discipline based on science and logic."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-ulm-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-ulm"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>Scientific Objectivity</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Reconstruction</h3>
+                        <p>Post-war West Germany needed to rebuild its global identity as a leader in quality
+                            technology. Ulm provided the **intellectual framework** for this. They collaborated with
+                            industry titans to ensure that "Made in Germany" meant "Scientifically Perfect."</p>
+                    </div>
+                    <div class="body">
+                        <h3>Legacy</h3>
+                        <p>The school's closure in 1968 was due to political pressure, but its graduates went on to lead
+                            design at IBM, Braun, and Porsche, cementing the "Ulm Model" as the gold standard for late
+                            20th-century design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gal-ulm" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ulm"></div>
+            <div class="modal-scroll">
+                <h2>Ulm School Details</h2>
+                <div class="gallery-wrap">
+                    <div class="gal-cell"><img class="gal-img" src="images/ulm_stool.jpg">
+                        <div class="gal-cap">Ulm Stool</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/braun_razor.jpg">
+                        <div class="gal-cap">Braun Razor</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/max_bill.jpg">
+                        <div class="gal-cap">The Designer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. DIETER RAMS (ELABORATED) -->
+    <!-- 5. DIETER RAMS (DRILL-DOWN) -->
+    <div id="mod-rams" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-sm" style="background-color:#fefefe"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1932 — PRESENT | GERMANY</span>
+                            <h2>Dieter Rams</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / WORK VOLUME</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Born in Wiesbaden, Germany, Rams was deeply influenced by his grandfather, a carpenter.
+                                After studying architecture and interior decoration, he joined Braun in 1955, eventually
+                                becoming Chief Design Officer. His tenure defined the "Golden Age" of German
+                                functionalism.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>Rams' philosophy is summarized as <strong>"Weniger, aber besser"</strong> (Less, but
+                                better). He
+                                believes design should be a service to the user, providing a quiet, orderly environment
+                                in a chaotic world through technological determinism and an ethic of ecological care.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Dieter Rams successfully integrated the rigorous academic logic of the HfG Ulm into a
+                            commercial powerhouse (Braun). His work bridge the gap between the scientific objectivity of
+                            post-war reconstruction and the emotional purity of modern tech. His "10 Principles" are now
+                            the global benchmark for ethical industrial design, influencing everything from Apple’s
+                            minimalist interfaces to sustainable furniture movements.</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-rams', 'sk4')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                SK4 RECORD PLAYER</div>
+                            <div class="gal-cap">Braun SK4 (1956)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-rams', 't3')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                T3 POCKET RADIO</div>
+                            <div class="gal-cap">Braun T3 (1958)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-rams', '606')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                606 SHELVING</div>
+                            <div class="gal-cap">Vitsœ 606 System (1960)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: WORK DETAIL (DYNAMIC) -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-rams')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero" id="rams-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Historical & Philosophical Context</h3>
+                            <p>This work represents the transition from 'styling' to 'logic'. Designed during the
+                                reconstruction of West Germany, it embodies the HfG Ulm model of objective
+                                problem-solving over artistic expression.</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence in Culture</h3>
+                            <p>This object redefined its category. It transformed from a "piece of furniture" into a
+                                "technical instrument," establishing the visual vocabulary for modern consumer
+                                electronics and high-end minimalism.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-principles-full">
+                        <h3>Visual Analysis & Principles of Design</h3>
+                        <p><strong>Form:</strong> Absolute geometric purity. The use of a transparent lid (on the SK4)
+                            introduced the concept of visual honesty—revealing the mechanism rather than hiding it.</p>
+                        <p><strong>Balance:</strong> Asymmetrical but balanced control layouts that prioritize the
+                            ergonomics of operation over formal symmetry.</p>
+                        <p><strong>Rhythm:</strong> Repeating vents and buttons create a rhythmic logic that makes the
+                            complex interface understandable and approachable.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-func-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-sm"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>Functionalism</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Servant of Action</h3>
+                        <p>Functionalism is the belief that design should prioritize a product's purpose over its
+                            appearance. It's the philosophy of the **"Silent Servant"**—objects that work perfectly
+                            without demanding attention.</p>
+                    </div>
+                    <div class="body">
+                        <h3>The Impact</h3>
+                        <p>This led to the "Black Box" aesthetic of the 1970s and 80s—simple, rectangular forms for
+                            Hi-Fi systems and kitchen appliances that emphasized clarity and reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. MEMPHIS -->
+    <div id="mod-mem" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-mem"></div>
+            <div class="modal-scroll"><span class="section-tag">Origin: 1981 - 1987 | Milan, Italy</span>
+                <h2>Memphis Group</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Postmodern Rebellion</h3>
+                        <p>Named after a Bob Dylan song, the **Memphis Group** was a collective of designers who were
+                            bored by the "rational" gray boxes of the 70s. Led by **Ettore Sottsass**, they believed
+                            that **Form follows Emotion**, not just function.</p>
+                        <p>They used inexpensive "kitsch" materials like plastic laminate and neon colors to create
+                            objects that were more like **living sculptures** than tools. Their debut in 1981 sent
+                            shockwaves through the design world, appearing both ugly and exciting to the establishment.
+                        </p>
+                    </div>
+                    <div class="body">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Geometric Maximalism:</strong> Bold, clashing patterns (like the "Bacterio"
+                                squiggle).</li>
+                            <li><strong>Playful Semantics:</strong> Objects that looked like toys or robots (e.g., the
+                                Carlton sideboard).</li>
+                            <li><strong>Emotional Color:</strong> Rejection of "good taste" in favor of vibrant yellows,
+                                pinks, and blues.</li>
+                        </ul>
+                        <div class="quote-box">"A product is like a character in a play. It should perform and have its
+                            own personality." — Ettore Sottsass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-mem-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-mem"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>PM Rebellion</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>Anti-Modernism</h3>
+                        <p>By the 1980s, the "International Style" of glass, steel, and concrete had become sterile and
+                            corporate. Memphis was a sensory explosion against this austerity, proving that design could
+                            be **fun, messy, and human**.</p>
+                    </div>
+                    <div class="body">
+                        <h3>The Cultural Spark</h3>
+                        <p>This movement coincided with the rise of **MTV and Pop Art**, reflecting a society that was
+                            moving away from industrial production toward a culture of consumption and media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gal-memphis" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-mem"></div>
+            <div class="modal-scroll">
+                <h2>Memphis Rebellion</h2>
+                <div class="gallery-wrap">
+                    <div class="gal-cell"><img class="gal-img" src="images/carlton_bookshelf.jpg">
+                        <div class="gal-cap">Carlton Bookshelf</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/casablanca_sideboard.jpg">
+                        <div class="gal-cap">Casablanca Sideboard</div>
+                    </div>
+                    <div class="gal-cell"><img class="gal-img" src="images/ettore_sottsass.jpg">
+                        <div class="gal-cap">Ettore Sottsass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. DIGITAL / UX -->
+    <!-- 7. DIGITAL / UX (DRILL-DOWN) -->
+    <div id="mod-pm" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-pm"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1967 — PRESENT | APPLE / LOVEFROM</span>
+                            <h2>Jonathan Ive</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(14, 165, 233, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / TECH ADOPTION</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Sir Jonathan Ive is a British industrial designer who served as the Chief Design Officer
+                                of Apple Inc. from 1997 to 2019. His partnership with Steve Jobs resulted in the most
+                                successful run of product design in history, transforming Apple from a niche computer
+                                company into a global cultural phenomenon.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>Ive's philosophy is rooted in the idea of **"Inevitable Design."** He believes a
+                                product's form should feel so right and simple that it couldn't possibly be any other
+                                way. Heavily influenced by Dieter Rams, he prioritizes clarity, unibody construction,
+                                and a deep respect for material properties.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Ive shifted the focus of Industrial Design from the "object as sculpture" to the "object as a
+                            vessel for experience." By utilizing aerospace-grade aluminum and precision manufacturing,
+                            he made technology feel approachable and premium. His work signaled the end of the 'beige
+                            box' era and the beginning of the 'unibody' age, where hardware becomes the silent frame for
+                            digital software.</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-pm', 'imac')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                IMAC G3</div>
+                            <div class="gal-cap">iMac (1998)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-pm', 'iphone')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                IPHONE</div>
+                            <div class="gal-cap">iPhone (2007)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-pm', 'macbook')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                MACBOOK AIR</div>
+                            <div class="gal-cap">MacBook Air (2008)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2 (Placeholder Template) -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-pm')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Context</h3>
+                            <p>Analyzing the digital convergence...</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence</h3>
+                            <p>Defining the smartphone era...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="mod-pm-ctx" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-pm"></div>
+            <div class="modal-scroll"><span class="section-tag">Landscape</span>
+                <h2>The Cloud</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Great Convergence</h3>
+                        <p>The 2007 launch of the iPhone signaled the end of "Single-Purpose" objects. The camera, the
+                            map, the phone, and the computer merged into one. This created a new challenge: how to
+                            design for **infinite utility** in a finite space.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Sustainability Crisis</h3>
+                        <p>Modern Industrial Design now faces its greatest challenge: **Planned Obsolescence**. The
+                            shift toward the "Circular Economy" aims to ensure these digital-physical objects are as
+                            honest about their lifespan as Morris's oak chairs were.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW FATHERS & PHILOSOPHERS MODALS -->
+
+    <!-- Christopher Dresser (DRILL-DOWN) -->
+    <div id="mod-dresser" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ad" style="background-color:#fefefe"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large"
+                            style="background-image: url('images/dresser/Christopher_Dresser00.jpg'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1834 — 1904 | UK / JAPAN INFLUENCE</span>
+                            <h2>Christopher Dresser</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(180, 83, 9, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / CONCEPTUAL INNOVATION</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Dresser is widely considered the first <strong>independent industrial designer</strong>.
+                                A botanist by
+                                training, he applied scientific principles to design, traveling to Japan in 1876 where
+                                he was inspired by Shinto simplicity and the absence of redundant ornament.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>His philosophy focused on <strong>"Functional Ornament"</strong>—where decoration follows
+                                the
+                                structural logic of the object. He championed <strong>"Truth to Materials"</strong>,
+                                arguing that
+                                metal should look like metal, not wood, and that the machine was a tool for democratic
+                                beauty.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Dresser bridged the gap between the scientific study of botany and the industrial production
+                            of household goods. By utilizing geometric forms (spheres and cylinders), he enabled
+                            cheaper, more efficient manufacturing while maintaining aesthetic integrity. His work
+                            represents the first pivot from "Arts & Crafts" (anti-machine) to "Industrial Design"
+                            (pro-machine logic).</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-dresser', 'teapot')">
+                            <div class="gal-img"
+                                style="background-image: url('images/dresser/A_Victorian_%27Komai%27_solid_silver_water_jug_by_Christopher_Dresser%2C_c.1880.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="gal-cap">Teapot (1879)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-dresser', 'claret')">
+                            <div class="gal-img"
+                                style="background-image: url('images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="gal-cap">Claret Jug (1879)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-dresser', 'toast')">
+                            <div class="gal-img"
+                                style="background-image: url('images/dresser/Side_chair_MET_DT3787.jpg'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="gal-cap">Toast Rack (1881)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: WORK DETAIL -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-dresser')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Historical & Philosophical Context</h3>
+                            <p>This work challenged the Victorian love for clutter. Created at the height of the
+                                Aesthetic Movement, it demonstrates a radical shift toward proto-Modernism by
+                                prioritizing volume and line over surface decoration.</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence in Culture</h3>
+                            <p>Dresser's industrial output proved that "Art" could be affordable. This object
+                                established the standard for 20th-century metalware, influencing later movements like
+                                the Bauhaus and Art Deco.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-principles-full">
+                        <h3>Visual Analysis & Principles of Design</h3>
+                        <p><strong>Form:</strong> Rejection of organic imitation. The use of straight lines and sharp
+                            angles emphasized the metallic nature of the object rather than trying to look handcrafted.
+                        </p>
+                        <p><strong>Balance:</strong> Precise ergonomic balancing. The handles were designed based on the
+                            physics of pouring, a direct result of his scientific background.</p>
+                        <p><strong>Rhythm:</strong> Exposed rivets and structural joins create a rhythmic pattern that
+                            celebrates construction over camouflage.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Peter Behrens (DRILL-DOWN) -->
+    <div id="mod-behrens" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ulm"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1868 — 1940 | GERMANY</span>
+                            <h2>Peter Behrens</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(46, 139, 87, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / SYSTEMIC ADOPTION</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Behrens began as a painter before turning to architecture and design. In 1907, he was
+                                appointed as the design consultant to AEG (Allgemeine Elektricitäts-Gesellschaft),
+                                marking the birth of the modern "Design Consultant" role. His office mentored future
+                                masters like Gropius, Mies van der Rohe, and Le Corbusier.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>His philosophy revolved around **"Gesamtkultur"**—a total culture. He believed that
+                                industry and art must be unified under a single aesthetic logic to provide order to the
+                                modern world. He championed **"Typisierung"** (standardization) to ensure quality across
+                                mass production.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Behrens shifted Industrial Design from the "item" to the "identity." By designing AEG's
+                            factories, logos, tea kettles, and even worker housing as a single coherent system, he
+                            proved that design is the DNA of a corporation. He provided the first intellectual framework
+                            for post-WWII industrial reconstruction and the entire concept of a "Brand System."</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-behrens', 'factory')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                AEG TURBINE FACTORY</div>
+                            <div class="gal-cap">Turbinenfabrik (1909)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-behrens', 'kettle')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                AEG KETTLE</div>
+                            <div class="gal-cap">Electric Kettle (1909)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-behrens', 'logo')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                AEG IDENTITY</div>
+                            <div class="gal-cap">AEG Branding (1907)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2 (Placeholder) -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-behrens')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Context</h3>
+                            <p>Systemic design in the machine age...</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence</h3>
+                            <p>The birth of corporate identity...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Walter Gropius (DRILL-DOWN) -->
+    <div id="mod-gropius" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-bh" style="background-color:#fefefe"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1883 — 1969 | GERMANY / USA</span>
+                            <h2>Walter Gropius</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(168, 85, 247, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / PEDAGOGICAL IMPACT</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Founder of the **Bauhaus**, Gropius was a visionary architect and educator. He served in
+                                WWI, an experience that fueled his desire to rebuild society through rational,
+                                industrial logic. He fled Nazi Germany in 1934, eventually leading Harvard's Graduate
+                                School of Design.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>His core philosophy was **"Art and Technology: A New Unity."** He believed the designer
+                                should master both craft and industrial processes to create objects for a democratic
+                                society. He introduced the **"Vorkurs"** to strip away historical bias and focus on
+                                universal design principles.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Gropius didn't just design buildings; he designed the *way* we teach design. By bringing
+                            together painters like Kandinsky and craftsmen like Breuer, he created a prototype for the
+                            modern multidisciplinary design studio. His Bauhaus building in Dessau remains the supreme
+                            symbol of Modernism—a "machine for working" that integrated industrial materials like steel
+                            and glass into a new social order.</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-gropius', 'fagus')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                FAGUS FACTORY</div>
+                            <div class="gal-cap">Fagus Factory (1911)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-gropius', 'bauhaus')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                BAUHAUS DESSAU</div>
+                            <div class="gal-cap">Bauhaus Building (1925)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-gropius', 'adler')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                ADLER CABRIOLET</div>
+                            <div class="gal-cap">Adler Standard 6 (1930)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: WORK DETAIL -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-gropius')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Historical & Philosophical Context</h3>
+                            <p>This work embodies the transition from 19th-century massing to 20th-century verticality
+                                and transparency. The Fagus Factory, in particular, introduced the suspended glass
+                                curtain wall, a radical departure from load-bearing masonry.</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence in Culture</h3>
+                            <p>Gropius redefined the industrial landscape. He treated the factory as a cathedral of
+                                labor, bringing dignity to industrial work through light, air, and structural
+                                honesty—principles that defined the International Style.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-principles-full">
+                        <h3>Visual Analysis & Principles of Design</h3>
+                        <p><strong>Form:</strong> Cubist volumes. The rejection of ornament allowed the function of the
+                            building or object to dictate its external appearance.</p>
+                        <p><strong>Transparency:</strong> The use of glass corners (on the Fagus Factory) eliminated the
+                            visual weight of structural pillars, creating a sense of weightlessness and honesty.</p>
+                        <p><strong>Rhythm:</strong> Standardized window units and structural grids create a mathematical
+                            rhythm that reflects the efficiency of the industrial processes inside.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Raymond Loewy (DRILL-DOWN) -->
+    <div id="mod-loewy" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ad" style="background-color:#fefefe"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1893 — 1986 | USA / FRANCE</span>
+                            <h2>Raymond Loewy</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(239, 68, 68, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / CONSUMER ADOPTION</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Known as the "Father of Streamlining," Loewy moved from France to New York in 1919. He
+                                was the first designer to appear on the cover of *Time* magazine, proving that design
+                                was a vital commercial engine for post-Depression America.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>Loewy's core philosophy was **"MAYA"** (Most Advanced Yet Acceptable). He believed
+                                designers should push boundaries but stay within the "shock limit" of the public. He
+                                championed **Streamlining** as a visual metaphor for progress and speed.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Loewy successfully branded the "American Dream." By applying aerodynamic forms to everything
+                            from pencil sharpeners to locomotives, he gave the public a sense of futuristic momentum. He
+                            understood that industrial design wasn't just about ergonomics—it was about **desire**. His
+                            work for Studebaker, NASA, and Lucky Strike defined the visual identity of mid-century
+                            corporate capitalism.</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-loewy', 'avanti')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                STUDEBAKER AVANTI</div>
+                            <div class="gal-cap">Avanti (1962)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-loewy', 'coldspot')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                COLDSPOT FRIDGE</div>
+                            <div class="gal-cap">Coldspot (1934)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-loewy', 'lucky')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                LUCKY STRIKE</div>
+                            <div class="gal-cap">Logo/Pack (1940)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: WORK DETAIL -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-loewy')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Historical & Philosophical Context</h3>
+                            <p>This work represents the peak of commercial optimism. Designed during an era of economic
+                                expansion, it uses the MAYA principle to bridge familiar utility with futuristic,
+                                aerodynamic styling.</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence in Culture</h3>
+                            <p>Loewy's streamlined aesthetic became the universal symbol for "Modern." It transformed
+                                domestic appliances from bulky machines into sleek, desirable fashion items,
+                                establishing the "styling" model of industrial design.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-principles-full">
+                        <h3>Visual Analysis & Principles of Design</h3>
+                        <p><strong>Form:</strong> Sculpted, non-orthogonal geometry. The use of the "teardrop" shape
+                            reduced air resistance (metaphorically) and softened the machine's presence in the home.</p>
+                        <p><strong>Unity:</strong> Encapsulation. Loewy pioneered the "shroud" or "shell" approach,
+                            where the messy internal mechanisms were hidden behind a clean, unified surface.</p>
+                        <p><strong>Contrast:</strong> The use of chrome detailing against matte or enameled surfaces
+                            created focal points that emphasized luxury and precision.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Henry Dreyfuss (DRILL-DOWN) -->
+    <div id="mod-dreyfuss" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-ad" style="background-color:#fefefe"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1904 — 1972 | USA</span>
+                            <h2>Henry Dreyfuss</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(20, 184, 166, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / HUMAN CALIBRATION</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>Dreyfuss was the American pioneer of **Ergonomics** (Human Factors). Unlike his peer
+                                Loewy, he focused on the internal comfort and logical use of products rather than just
+                                the external styling. He worked for major firms like Western Electric, Deere & Co, and
+                                Lockheed.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>His core philosophy revolved around **"Joe and Josephine"**—the first standardized
+                                anatomical diagrams of the average human. He believed that design succeeds when it
+                                "makes the machine fit the man," rather than forcing the man to adapt to the machine.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Dreyfuss shifted industrial design toward a clinical, scientific approach. By measuring
+                            thousands of people, he created the data that defined the height of chair seats, the reach
+                            of phone cords, and the angle of tractor controls. His Western Electric 500 telephone
+                            remained the global standard for decades because its weight, shape, and balance were
+                            perfectly calibrated to the human hand.</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-dreyfuss', 'we500')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                WESTERN ELECTRIC 500</div>
+                            <div class="gal-cap">Model 500 (1949)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-dreyfuss', 't86')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                HONEYWELL ROUND</div>
+                            <div class="gal-cap">T86 Thermostat (1953)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-dreyfuss', 'tractor')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                JOHN DEERE TRACTOR</div>
+                            <div class="gal-cap">Model A (1937)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: WORK DETAIL -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-dreyfuss')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Historical & Philosophical Context</h3>
+                            <p>This object marked the arrival of "Human-Centered Design" in the industrial era. It moved
+                                away from technical aesthetics toward a form that speaks to the biology of the user,
+                                established through rigorous anthropometric testing.</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence in Culture</h3>
+                            <p>Dreyfuss's work made complex technology invisible. By making objects intuitive to touch
+                                and use, he lowered the "cognitive load" of the modern world, paving the way for the UX
+                                design principles of the digital age.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-principles-full">
+                        <h3>Visual Analysis & Principles of Design</h3>
+                        <p><strong>Scale:</strong> Direct mapping to the human body. Every curve and button was placed
+                            using the "Joe and Josephine" data points for reach and grip.</p>
+                        <p><strong>Tactility:</strong> Using materials (like Bakelite or high-quality plastics) that
+                            felt warm and comfortable to the skin, rather than cold industrial metal.</p>
+                        <p><strong>Feedback:</strong> Precise mechanical "clicks" and resistance levels that provided
+                            sensory confirmation to the user, ensuring the machine felt responsive and reliable.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Max Bill (DRILL-DOWN) -->
+    <div id="mod-bill" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ulm" style="background-color:#fefefe"></div>
+            <div class="modal-scroll">
+
+                <!-- LEVEL 1: DESIGNER DETAIL -->
+                <div class="v-level-1 active">
+                    <div class="v-designer-header">
+                        <div class="v-portrait-large" style="background-color: #eee;"></div>
+                        <div class="v-designer-info">
+                            <span class="section-tag">1908 — 1994 | SWITZERLAND / GERMANY</span>
+                            <h2>Max Bill</h2>
+                        </div>
+                    </div>
+
+                    <div class="v-frequency-container">
+                        <div class="v-frequency-patch" style="background: rgba(71, 85, 105, 0.4);"></div>
+                        <div
+                            style="position:absolute; bottom:5px; left:10px; font-size:0.6rem; letter-spacing:2px; font-weight:700;">
+                            INFLUENCE FREQUENCY / MATHEMATICAL RIGOR</div>
+                    </div>
+
+                    <div class="v-pillars-grid">
+                        <div class="v-pillar-box">
+                            <h3>Biography</h3>
+                            <p>A student of the Bauhaus, Bill was a Swiss polymath—architect, artist, and designer. In
+                                1953, he co-founded the **HfG Ulm** (Ulm School), where he served as its first rector,
+                                aiming to create a scientific successor to his alma mater.</p>
+                        </div>
+                        <div class="v-pillar-box">
+                            <h3>Philosophy</h3>
+                            <p>Bill championed **"Concrete Art"** and the idea of "Design as Science." He rejected the
+                                commercial styling of America, arguing that beauty should emerge from mathematical
+                                logic, structural integrity, and sociological responsibility.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-integration-section">
+                        <h3>Integration of Life and Work</h3>
+                        <p>Max Bill connected the geometric abstraction of Swiss modernism with the hard realities of
+                            post-war industrial production. His Ulm Stool is the ultimate expression of this: a
+                            masterclass in modularity that functions as a seat, a shelf, and a stepping stone. He
+                            shifted the designer's role from "Artist" to "Scientist," laying the intellectual foundation
+                            for the Braun legacy and modern systems design.</p>
+                    </div>
+
+                    <h2 class="v-gallery-title">Gallery of Work</h2>
+                    <div class="gallery-wrap">
+                        <div class="gal-cell" onclick="showWorkDetail('mod-bill', 'stool')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                ULM STOOL</div>
+                            <div class="gal-cap">Ulm Stool (1954)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-bill', 'clock')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                JUNGHANS CLOCK</div>
+                            <div class="gal-cap">Wall Clock (1957)</div>
+                        </div>
+                        <div class="gal-cell" onclick="showWorkDetail('mod-bill', 'ulm')">
+                            <div class="gal-img"
+                                style="background-color: #f5f5f5; display:flex; align-items:center; justify-content:center; color:#ccc; font-weight:700;">
+                                HFG ULM BUILDING</div>
+                            <div class="gal-cap">Ulm Campus (1953)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: WORK DETAIL -->
+                <div class="v-level-2">
+                    <div class="v-back-btn" onclick="goBackToLevel1('mod-bill')">← BACK TO DESIGNER</div>
+                    <div class="v-work-hero">
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:900; color:#ccc;">
+                            HD IMAGE PLACEHOLDER</div>
+                    </div>
+
+                    <div class="v-analysis-grid">
+                        <div class="v-analysis-box">
+                            <h3>Historical & Philosophical Context</h3>
+                            <p>This work represents the "Ulm Model" of objective design. It rejects all subjective
+                                expression in favor of a universal, mathematical solution that can be mass-produced with
+                                absolute precision.</p>
+                        </div>
+                        <div class="v-analysis-box">
+                            <h3>Influence in Culture</h3>
+                            <p>Max Bill's rigor established the "Swiss Style" in industrial design. His focus on systems
+                                over objects influenced the development of corporate identities and modular furniture
+                                systems that still dominate current office and home environments.</p>
+                        </div>
+                    </div>
+
+                    <div class="v-principles-full">
+                        <h3>Visual Analysis & Principles of Design</h3>
+                        <p><strong>Proportion:</strong> Based on the Golden Ratio and mathematical grids. Every
+                            dimension is a logical consequence of the material's strength and the user's needs.</p>
+                        <p><strong>Economy:</strong> Minimal use of materials. The designs strive for the "absolute
+                            minimum" necessary to fulfill the function, anticipating the sustainability movements of the
+                            21st century.</p>
+                        <p><strong>Clarity:</strong> High legibility. Interfaces (like the Junghans clock) were designed
+                            for instant, unambiguous communication, prioritizing data over decoration.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Walter Benjamin / Critical Theory (mod-benjamin) -->
+    <div id="mod-benjamin" class="modal">
+        <div class="modal-wrap">
+            <div class="close-call" onclick="closeAll()">×</div>
+            <div class="modal-hero pat-ctx-bh"></div>
+            <div class="modal-scroll"><span class="section-tag">Philosophy | The Frankfurt School</span>
+                <h2>Critical Theory</h2>
+                <div class="modal-grid">
+                    <div class="body">
+                        <h3>The Aura of the Object</h3>
+                        <p>**Walter Benjamin** asked: what happens to an object when it is mass-produced? He argued that
+                            a handcrafted object has an **"Aura"**—a presence in time and space. Mass production
+                            destroys this aura, leading to a **"Pseudo-Aura"** where branding fakes uniqueness to keep
+                            us consuming.</p>
+                    </div>
+                    <div class="body">
+                        <h3>Power Structures</h3>
+                        <ul>
+                            <li><strong>Liberation Tool:</strong> Critical Theory analyzes daily objects to ask: *"Who
+                                does this design serve?"* (The user or the corporation?).</li>
+                            <li><strong>Aesthetics & Politics:</strong> Benjamin warned that Fascism tries to solve
+                                political problems through "Aesthetics" rather than structural change.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openFullModal(id, patClass) {
+            const m = document.getElementById(id);
+            if (!m) { console.error("Modal not found:", id); return; }
+
+            const levels = m.querySelectorAll('.v-level-1, .v-level-2');
+            if (levels.length > 0) {
+                levels.forEach(l => l.classList.remove('active'));
+                const l1 = m.querySelector('.v-level-1');
+                if (l1) l1.classList.add('active');
+            }
+
+            const h = m.querySelector('.modal-hero');
+            if (h) h.className = 'modal-hero ' + patClass;
+
+            m.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            const patch = m.querySelector('.v-frequency-patch');
+            if (patch) {
+                patch.style.width = '0%';
+                setTimeout(() => { patch.style.width = '100%'; }, 50);
+            }
+        }
+
+        const DESIGN_WORKS = {
+            // CHRISTOPHER DRESSER
+            'dresser_portrait': { title: 'Christopher Dresser', image: 'images/christopher_dresser_portrait.jpg', context: 'The first industrial designer.', influence: 'Professionalized design practice.', analysis: 'Function over ornament.' },
+            'claret': { title: 'Claret Jug', image: 'images/christopher_dresser_claret_jug.jpg', context: 'Scientific botanical influence on industrial forms.', influence: 'Established the logic of "Truth to Materials".', analysis: 'Sharp lines and exposed structural rivets.' },
+            'teapot': { title: 'Dresser Teapot', image: 'images/christopher_dresser_teapot.jpg', context: 'The first pivot toward professional industrial logic.', influence: 'Proto-modernism; influenced the Bauhaus 40 years early.', analysis: 'Geometric volumes and rejection of organic ornament.' },
+            'toast': { title: 'Toast Rack', image: 'images/christopher_dresser_toast_rack.jpg', context: 'Maximum utility through minimum industrial means.', influence: 'The iconic example of Dresser’s "Fitness for Purpose".', analysis: 'Rhythmic structural repetition and ergonomic clarity.' },
+            'sugar': { title: 'Sugar Bowl', image: 'images/christopher_dresser_sugar_bowl.jpg', context: 'Japanese influence on British metalwork.', influence: 'Cross-cultural design synthesis.', analysis: 'Minimalist spherical form.' },
+            'tureen': { title: 'Tureen', image: 'images/christopher_dresser_tureen.jpg', context: 'Functionalist approach to dining ware.', influence: 'Prefigured modern kitchen aesthetics.', analysis: 'Bold geometric handles and clean surfaces.' },
+            'cruet': { title: 'Cruet Set', image: 'images/christopher_dresser_oil_and_vinegar_cruet.jpg', context: 'Industrial glass and metal assembly.', influence: 'Honest display of construction.', analysis: 'Exposed structural framework.' },
+            'finger': { title: 'Finger Bowl', image: 'images/christopher_dresser_finger_bowl.jpg', context: 'Etched glass innovation.', influence: 'Pattern integration with form.', analysis: 'Botanical symmetry on translucent glass.' },
+            'water': { title: 'Watering Can', image: 'images/christopher_dresser_watering_can.jpg', context: 'Utilitarian objects as art.', influence: 'Elevated gardening tools to design status.', analysis: 'Ergonomic handle and balanced spout.' },
+            'sifter': { title: 'Sugar Sifter', image: 'images/christopher_dresser_sifter.jpg', context: 'Perforated metal design.', influence: 'Texture as function.', analysis: 'Rhythmic drilling patterns.' },
+            'candle': { title: 'Candlesticks', image: 'images/christopher_dresser_candlesticks.jpg', context: 'Verticality in domestic objects.', influence: 'Simplified traditional forms.', analysis: 'Circular base and slender stem.' },
+
+            // PETER BEHRENS
+            'behrens_portrait': { title: 'Peter Behrens', image: 'images/peter_behrens_portrait.jpg', context: 'The first corporate designer.', influence: 'Created the first corporate identity.', analysis: 'Unification of art and industry.' },
+            'factory': { title: 'AEG Turbine Factory', image: 'images/peter_behrens_aeg_turbine_factory.jpg', context: 'The temple of industry; birth of corporate consultancy.', influence: 'Elevated industrial construction to the level of high art.', analysis: 'Glass curtain walls and heavy structural rhythm.' },
+            'kettle': { title: 'AEG Kettle', image: 'images/peter_behrens_aeg_electric_kettle.jpg', context: 'Applying geometric standardization to domestic goods.', influence: 'Proved that mass-produced items could be beautiful.', analysis: 'Proportional balance and interchangeable base units.' },
+            'logo': { title: 'AEG Logo', image: 'images/peter_behrens_aeg_logo.jpg', context: 'The first instance of a global corporate brand system.', influence: 'Foundation of modern graphic and corporate identity.', analysis: 'Grid-based typography and geometric unity.' },
+            'lamp': { title: 'AEG Arc Lamp', image: 'images/peter_behrens_aeg_arc_lamp.jpg', context: 'Industrial lighting design.', influence: 'Standardized street furniture.', analysis: 'Functionalist curve and robust base.' },
+            'hair': { title: 'AEG Hairdryer', image: 'images/peter_behrens_aeg_hairdryer.jpg', context: 'Early electric appliance coding.', influence: 'Defined the form of handheld tools.', analysis: 'Ergonomic pistol grip.' },
+            'house': { title: 'Behrens House', image: 'images/peter_behrens_behrens_house.jpg', context: 'Transition from Art Nouveau.', influence: 'Personal manifesto of style.', analysis: 'Brick expressionism.' },
+            'fan': { title: 'AEG Fan', image: 'images/peter_behrens_fan_for_aeg.jpg', context: 'Cooling as a designed experience.', influence: 'Aestheticized mechanical function.', analysis: 'Exposed blade geometry.' },
+            'street': { title: 'Street Lighting', image: 'images/peter_behrens_street_lighting.jpg', context: 'Urban infrastructure design.', influence: 'Unified city aesthetics.', analysis: 'Rational lamp housing.' },
+            'type': { title: 'AEG Typeface', image: 'images/peter_behrens_aeg_typeface.jpg', context: 'Corporate typography.', influence: 'Brand consistency through text.', analysis: 'Geometric serif structure.' },
+            'ad': { title: 'AEG Advertisement', image: 'images/peter_behrens_aeg_advertisement.jpg', context: 'Graphic design for industry.', influence: 'Marketing as art.', analysis: 'Clean layout and clear hierarchy.' },
+
+            // WALTER GROPIUS
+            'gropius_portrait': { title: 'Walter Gropius', image: 'images/walter_gropius_portrait.jpg', context: 'Founder of the Bauhaus.', influence: 'Modernist education pioneer.', analysis: 'Total architecture.' },
+            'bauhaus': { title: 'Bauhaus Dessau', image: 'images/walter_gropius_bauhaus_dessau.jpg', context: 'The supreme symbol of the International Style.', influence: 'The blueprint for all modern design education.', analysis: 'Cubist volumes and multidisciplinary integration.' },
+            'fagus': { title: 'Fagus Factory', image: 'images/walter_gropius_fagus_factory.jpg', context: 'The emergence of the Modernist glass curtain wall.', influence: 'A precursor to the Bauhaus building architecture.', analysis: 'Suspended glass corners and weightless transparency.' },
+            'ghouse': { title: 'Gropius House', image: 'images/walter_gropius_gropius_house.jpg', context: 'Modernism in America.', influence: 'Transplanted European theory to US soil.', analysis: 'White box in nature.' },
+            'adler': { title: 'Adler Standard 6', image: 'images/walter_gropius_adler_automobile.jpg', context: 'Rationalizing the automobile as a "machine for driving".', influence: 'Brought Bauhaus logic to the automotive industry.', analysis: 'Horizontal emphasis and rejection of traditional status symbols.' },
+            'door': { title: 'Door Handle', image: 'images/walter_gropius_door_handle.jpg', context: 'The tactile interface of the Bauhaus.', influence: 'Geometric hardware standard.', analysis: 'Cylindrical grip and square shaft.' },
+            'total': { title: 'Total Theater', image: 'images/walter_gropius_total_theater_project.jpg', context: 'Visionary theater design.', influence: 'Flexible performance space.', analysis: 'Modular stage mechanics.' },
+            'sommer': { title: 'Sommerfeld House', image: 'images/walter_gropius_somperfeld_house.jpg', context: 'Expressionist phase.', influence: 'Craft and wood in modernism.', analysis: 'Timber geometry.' },
+            'dammer': { title: 'Dammerstock', image: 'images/walter_gropius_dammerstock_housing.jpg', context: 'Social housing rationality.', influence: 'Efficient living standards.', analysis: 'Row housing logic.' },
+            'monument': { title: 'March Dead', image: 'images/walter_gropius_monument_to_march_dead.jpg', context: 'Geometric memorial.', influence: 'Abstract commemoration.', analysis: 'Angular concrete sculpture.' },
+            'chicago': { title: 'Tribune Tower', image: 'images/walter_gropius_chicago_tribune_entry.jpg', context: 'The unbuilt masterpiece.', influence: 'Modernist skyscraper typology.', analysis: 'Asymmetric balcony rhythm.' },
+
+            // WILLIAM MORRIS
+            'morris_portrait': { title: 'William Morris', image: 'images/william_morris_portrait.jpg', context: 'Father of Arts & Crafts.', influence: 'Resistance to industrial soullessness.', analysis: 'Truth to materials.' },
+            'sussex': { title: 'Sussex Chair', image: 'images/william_morris_sussex_chair.jpg', context: 'Revival of vernacular craft.', influence: 'Affordable art furniture.', analysis: 'Turned wood simplicity.' },
+            'thief': { title: 'Strawberry Thief', image: 'images/william_morris_strawberry_thief.jpg', context: 'Complex indigo discharge printing.', influence: 'Narrative textile design.', analysis: 'Dense botanical mirroring.' },
+            'trellis': { title: 'Trellis Wallpaper', image: 'images/william_morris_trellis_wallpaper.jpg', context: 'Morris first wallpaper.', influence: 'Bringing nature indoors.', analysis: 'Grid overlaid with organic vines.' },
+            'redhouse': { title: 'Red House', image: 'images/william_morris_red_house.jpg', context: 'The home of the movement.', influence: 'Architecture as a total work of art.', analysis: 'Gothic revival honesty.' },
+            'kelmscott': { title: 'Kelmscott Chaucer', image: 'images/william_morris_kelmscott_chaucer.jpg', context: 'Book design masterpiece.', influence: 'Typography as architecture.', analysis: 'Dense woodcut borders.' },
+            'pimpernel': { title: 'Pimpernel', image: 'images/william_morris_pimpernel_wallpaper.jpg', context: 'Swirling symmetrical wall covering.', influence: 'Victorian interior richness.', analysis: 'Rotational floral symmetry.' },
+            'daisy': { title: 'Daisy Tile', image: 'images/william_morris_daisy_tile.jpg', context: 'Hand-painted ceramic.', influence: 'Decorative architectural details.', analysis: 'Simple meadow motif.' },
+            'tulip': { title: 'Tulip & Willow', image: 'images/william_morris_tulip_and_willow.jpg', context: 'Indigo discharge print.', influence: 'Rhythmic nature abstraction.', analysis: 'Interlocking stem logic.' },
+            'willow': { title: 'Willow Bough', image: 'images/william_morris_willow_bough.jpg', context: 'Naturalistic foliage.', influence: 'The definitive Arts & Crafts pattern.', analysis: 'Overlapping leaf layers.' },
+            'compton': { title: 'Compton', image: 'images/william_morris_compton_wallpaper.jpg', context: 'Late period richness.', influence: 'Complex color theory.', analysis: 'Deep floral density.' },
+
+            // RAYMOND LOEWY
+            'loewy_portrait': { title: 'Raymond Loewy', image: 'images/raymond_loewy_portrait.jpg', context: 'The father of streamlining.', influence: 'MAYA stage (Most Advanced Yet Acceptable).', analysis: 'Sales through styling.' },
+            'avanti': { title: 'Studebaker Avanti', image: 'images/raymond_loewy_studebaker_avanti.jpg', context: 'The peak of mid-century commercial streamlining.', influence: 'The "shape of things to come" in American car design.', analysis: 'Coke-bottle profile and sculpted, asymmetric cabin.' },
+            'coldspot': { title: 'Coldspot Fridge', image: 'images/raymond_loewy_coldspot_refrigerator.jpg', context: 'The arrival of "styling" as a competitive advantage.', influence: 'Saved Sears from the Depression; redefined home appliances.', analysis: 'Enclosed mechanisms and clean, unified casing.' },
+            'lucky': { title: 'Lucky Strike', image: 'images/raymond_loewy_lucky_strike_pack.jpg', context: 'Branding the American consumer experience.', influence: 'The most iconic packaging change in history.', analysis: 'Symmetrical bullseye and typographic target.' },
+            'shell': { title: 'Shell Logo', image: 'images/raymond_loewy_shell_logo.jpg', context: 'Corporate identity simplification.', influence: 'Global brand recognition.', analysis: 'Pecten shell geometry.' },
+            'exxon': { title: 'Exxon Logo', image: 'images/raymond_loewy_exxon_logo.jpg', context: 'The double X.', influence: 'Visual power in text.', analysis: 'Interlocking X dynamic stability.' },
+            'greyhound': { title: 'Scenicruiser', image: 'images/raymond_loewy_greyhound_scenicruiser.jpg', context: 'Bus travel glamour.', influence: 'Split-level transport design.', analysis: 'Ribbed aluminum side panels.' },
+            'af1': { title: 'Air Force One', image: 'images/raymond_loewy_air_force_one_livery.jpg', context: 'Presidential branding.', influence: 'Diplomacy through design.', analysis: 'Caslon font and cyan livery.' },
+            'skylab': { title: 'Skylab Interior', image: 'images/raymond_loewy_skylab_interior.jpg', context: 'Habitability in space.', influence: 'Human factors in zero-G.', analysis: 'Color-coded orientation.' },
+            'coke': { title: 'Coke Dispenser', image: 'images/raymond_loewy_coca_cola_dispenser.jpg', context: 'Soda fountain modernization.', influence: 'Point-of-sale streamlining.', analysis: 'Radiused corners and chrome.' },
+            'worm': { title: 'NASA Worm', image: 'images/raymond_loewy_nasa_worm_logo.jpg', context: 'Space age typography.', influence: 'Retrofuturist identity.', analysis: 'Continuous stroke lettering.' },
+
+            // HENRY DREYFUSS
+            'dreyfuss_portrait': { title: 'Henry Dreyfuss', image: 'images/henry_dreyfuss_portrait.jpg', context: 'The anthropometric pioneer.', influence: 'Designing for people (Joe & Josephine).', analysis: 'Safety and comfort first.' },
+            'we500': { title: 'Western Electric 500', image: 'images/henry_dreyfuss_we_500_telephone.jpg', context: 'The arrival of clinical human-factors engineering.', influence: 'The universal physical standard for the telephone.', analysis: 'Ergonomic balance and anthropometric reach.' },
+            't86': { title: 'Honeywell Round', image: 'images/henry_dreyfuss_honeywell_thermostat.jpg', context: 'The intuitiveness of the "dial" as a user interface.', influence: 'The gold standard for domestic cybernetic control.', analysis: 'Rotational logic and tactile precision.' },
+            'tractor': { title: 'John Deere Tractor', image: 'images/henry_dreyfuss_john_deere_tractor.jpg', context: 'Designing for the worker in the field (Ergonomics).', influence: 'Reduced farmer fatigue; built brand loyalty through comfort.', analysis: 'Direct sight lines and optimized control placement.' },
+            'ben': { title: 'Big Ben Clock', image: 'images/henry_dreyfuss_big_ben_alarm_clock.jpg', context: 'Legibility study.', influence: 'Waking up America.', analysis: 'High contrast numerals.' },
+            'princess': { title: 'Princess Phone', image: 'images/henry_dreyfuss_princess_phone.jpg', context: 'Bedroom telephonics.', influence: 'Gendered product marketing.', analysis: 'Compact oval footprint.' },
+            'hoover': { title: 'Hoover 150', image: 'images/henry_dreyfuss_hoover_model_150.jpg', context: 'Streamlined cleaning.', influence: 'Bakelite housing innovation.', analysis: 'Tear-drop chassis.' },
+            '302': { title: 'Model 302', image: 'images/henry_dreyfuss_model_302_telephone.jpg', context: 'The first modern handset.', influence: 'Integrated ringer and base.', analysis: 'Weighted bakelite curves.' },
+            'mercury': { title: 'Mercury Train', image: 'images/henry_dreyfuss_mercury_train.jpg', context: 'The train of tomorrow.', influence: 'Unified locomotive styling.', analysis: 'Driving wheel concealment.' },
+            'land': { title: 'Polaroid', image: 'images/henry_dreyfuss_polaroid_camera.jpg', context: 'Instant photography interface.', influence: 'Complex mechanics made simple.', analysis: 'Bellows folding mechanism.' },
+            'strato': { title: 'Stratoliner', image: 'images/henry_dreyfuss_stratoliner_interior.jpg', context: 'Pressurized luxury.', influence: 'Air travel comfort standards.', analysis: 'Soft textiles and lighting.' },
+
+            // MAX BILL
+            'bill_portrait': { title: 'Max Bill', image: 'images/max_bill_portrait.jpg', context: 'Concrete Art practitioner.', influence: 'Ulm School founder.', analysis: 'Mathematical beauty.' },
+            'stool': { title: 'Ulm Stool', image: 'images/max_bill_ulm_stool.jpg', context: 'The ultimate expression of "Design as Science".', influence: 'The blueprint for modular, multi-functional utility.', analysis: 'Absolute material economy and mathematical proportion.' },
+            'clock': { title: 'Junghans Clock', image: 'images/max_bill_junghans_kitchen_clock.jpg', context: 'Bringing mathematical clarity to the perception of time.', influence: 'The bridge between Bauhaus and Braun aesthetics.', analysis: 'High legibility and rejection of temporal decoration.' },
+            'ulm': { title: 'HfG Ulm Campus', image: 'images/max_bill_hfg_ulm_building.jpg', context: 'Architecture as a programmatic teaching tool.', influence: 'Created the spatial environment for the "Ulm Model".', analysis: 'Modular concrete grids and functional hierarchy.' },
+            'watch': { title: 'Max Bill Watch', image: 'images/max_bill_max_bill_wristwatch.jpg', context: ' Bauhaus on the wrist.', influence: 'Timeless dial design.', analysis: 'Thin baton markers.' },
+            'three': { title: 'Three Equal Parts', image: 'images/max_bill_three_equal_parts.jpg', context: 'Sculpture as logic.', influence: 'Topology in art.', analysis: 'Möbius strip variation.' },
+            'ribbon': { title: 'Endless Ribbon', image: 'images/max_bill_endless_ribbon.jpg', context: 'Granite continuity.', influence: 'Mathematical form finding.', analysis: 'Single surface loop.' },
+            'book': { title: 'Art of the Book', image: 'images/max_bill_art_of_the_book.jpg', context: 'Grid systems in print.', influence: 'Swiss Style typography.', analysis: 'Asymmetric layout.' },
+            'quad': { title: 'Quadrant', image: 'images/max_bill_quadrant_sculpture.jpg', context: 'Spatial division.', influence: 'Public art geometry.', analysis: 'Four vertical planes.' },
+            'furn': { title: 'HfG Furniture', image: 'images/max_bill_hfg_ulm_furniture.jpg', context: 'Student housing units.', influence: 'Flexible living.', analysis: 'Minimalist wood joinery.' },
+            'poster': { title: 'HfG Poster', image: 'images/max_bill_hfg_ulm_poster.jpg', context: 'Visual communication.', influence: 'Informational clarity.', analysis: 'Sans-serif hierarchy.' },
+
+            // DIETER RAMS
+            'rams_portrait': { title: 'Dieter Rams', image: 'images/dieter_rams_portrait.jpg', context: 'Mr. Braun.', influence: 'The 10 Principles.', analysis: 'Less but better.' },
+            'sk4': { title: 'Braun SK4', image: 'images/dieter_rams_braun_sk4.jpg', context: 'Transition from "styling" to "logic". West German reconstruction era.', influence: 'Redefined audio equipment as technical instruments.', analysis: 'Geometric purity and visual honesty.' },
+            't3': { title: 'Braun T3', image: 'images/dieter_rams_braun_t3_radio.jpg', context: 'The birth of the pocket transistor radio era.', influence: 'Established the "pocket" form factor for all future personal tech.', analysis: 'Minimalist interface with ultra-low visual noise.' },
+            '606': { title: 'Vitsœ 606', image: 'images/dieter_rams_vitsoe_606_system.jpg', context: 'The shift toward modular, long-life furniture systems.', influence: 'The benchmark for sustainable, adaptive interior design.', analysis: 'Structural rhythm and mathematical flexibility.' },
+            'et66': { title: 'ET66 Calculator', image: 'images/dieter_rams_braun_et66_calculator.jpg', context: 'Function coding.', influence: 'Influenced the iPhone calculator.', analysis: 'Convex buttons and color grouping.' },
+            '620': { title: '620 Chair', image: 'images/dieter_rams_braun_620_chair.jpg', context: 'System seating.', influence: 'Disassemblable upholstery.', analysis: 'Exposed shell construction.' },
+            'tp1': { title: 'Braun TP1', image: 'images/dieter_rams_braun_tp1.jpg', context: 'Mobile audio.', influence: 'The Walkman precursor.', analysis: 'Radio and player docking.' },
+            'hl70': { title: 'HL70 Fan', image: 'images/dieter_rams_braun_hl70_fan.jpg', context: 'Desktop cooling.', influence: 'Small appliance rigor.', analysis: 'Cylindrical housing.' },
+            'oralb': { title: 'Oral-B', image: 'images/dieter_rams_braun_oral_b_early.jpg', context: 'Hygiene tech.', influence: 'Clinical aesthetics in bathroom.', analysis: 'Smooth cleanable surfaces.' },
+            'l2': { title: 'L2 Speaker', image: 'images/dieter_rams_braun_l2_speaker.jpg', context: 'Hi-Fi furniture.', influence: 'Stand-alone audio units.', analysis: 'Face-mounted stand.' },
+            'kf20': { title: 'KF 20 Coffee', image: 'images/dieter_rams_braun_kf_20_coffee.jpg', context: 'Stackable kitchen.', influence: 'Vertical appliance organization.', analysis: 'Water tank tower.' },
+
+            // ETTORE SOTTSASS
+            'sottsass_portrait': { title: 'Ettore Sottsass', image: 'images/ettore_sottsass_portrait.jpg', context: 'The Memphis provocateur.', influence: 'Postmodern revolution.', analysis: 'Function is not enough.' },
+            'val': { title: 'Valentine', image: 'images/ettore_sottsass_valentine_typewriter.jpg', context: 'The anti-machine.', influence: 'Pop art in the office.', analysis: 'Bright red casing.' },
+            'carlton': { title: 'Carlton', image: 'images/ettore_sottsass_carlton_case.jpg', context: 'Furniture as totem.', influence: 'Defining Memphis object.', analysis: 'Angled laminate planes.' },
+            'casa': { title: 'Casablanca', image: 'images/ettore_sottsass_casablanca_sideboard.jpg', context: 'Bacteria pattern.', influence: 'Surface decoration revival.', analysis: 'Cabinet as character.' },
+            'ashoka': { title: 'Ashoka Lamp', image: 'images/ettore_sottsass_ashoka_lamp.jpg', context: 'Light sculpture.', influence: 'Emotional lighting.', analysis: 'Primary color tubes.' },
+            'tawa': { title: 'Tawaraya Bed', image: 'images/ettore_sottsass_tawaraya_bed.jpg', context: 'The boxing ring.', influence: 'Ritualistic furniture.', analysis: 'Tatami mats and monochrome.' },
+            'tartar': { title: 'Tartar Console', image: 'images/ettore_sottsass_tartar_console.jpg', context: 'Geometric assembly.', influence: 'Furniture as architecture.', analysis: 'Vertical slab construction.' },
+            'tahiti': { title: 'Tahiti Lamp', image: 'images/ettore_sottsass_tahiti_lamp.jpg', context: 'Zoomorphic light.', influence: 'Playfulness in function.', analysis: 'Duck head pivot.' },
+            'murmansk': { title: 'Murmansk', image: 'images/ettore_sottsass_murmansk_bowl.jpg', context: 'Memphis silver.', influence: 'Luxury postmodernism.', analysis: 'Jagged zig-zag base.' },
+            'super': { title: 'Superbox', image: 'images/ettore_sottsass_superbox_cabinet.jpg', context: 'Radical design.', influence: 'Closet as monolith.', analysis: 'Striped laminate block.' },
+            'ultra': { title: 'Ultrafragola', image: 'images/ettore_sottsass_ultrafragola_mirror.jpg', context: 'Sensual minimalism.', influence: 'Light and reflection.', analysis: 'Wavy neon perimeter.' },
+
+            // JONATHAN IVE
+            'ive_portrait': { title: 'Jonathan Ive', image: 'images/jonathan_ive_portrait.jpg', context: 'The alchemist of Apple.', influence: 'Trillion dollar design.', analysis: 'Inevitability.' },
+            'imac': { title: 'iMac G3', image: 'images/jonathan_ive_imac_g3.jpg', context: 'The return of Steve Jobs and the focus on "consumer joy".', influence: 'End of the "beige box" era; saved Apple.', analysis: 'Translucent material and organic, approachable form.' },
+            'iphone': { title: 'iPhone', image: 'images/jonathan_ive_iphone.jpg', context: 'The great convergence of phone, internet, and iPod.', influence: 'Defining the slab-form factor for the 21st century.', analysis: 'Multi-touch interface and material reductionism.' },
+            'macbook': { title: 'MacBook Air', image: 'images/jonathan_ive_macbook_air.jpg', context: 'The "Manila Envelope" moment in computing history.', influence: 'Pioneered the ultrabook category and unibody machining.', analysis: 'Precision aluminum milling and wedge profile.' },
+            'ipod': { title: 'iPod', image: 'images/jonathan_ive_ipod.jpg', context: '1000 songs in pocket.', influence: 'Digital music revolution.', analysis: 'Scroll wheel interface.' },
+            'ipad': { title: 'iPad', image: 'images/jonathan_ive_ipad.jpg', context: 'The third category.', influence: 'Tablet computing standard.', analysis: 'Screen-dominant slate.' },
+            'watch': { title: 'Apple Watch', image: 'images/jonathan_ive_apple_watch.jpg', context: 'Digital horology.', influence: 'Health and notification wrist.', analysis: 'Digital crown input.' },
+            'cube': { title: 'G4 Cube', image: 'images/jonathan_ive_mac_g4_cube.jpg', context: 'Suspended computer.', influence: 'Design over thermal failure.', analysis: 'Clear acrylic housing.' },
+            'ibook': { title: 'iBook G3', image: 'images/jonathan_ive_ibook_g3.jpg', context: 'Laptop for students.', influence: 'Durability via handles.', analysis: 'Toilet seat ruggedness.' },
+            'trash': { title: 'Mac Pro', image: 'images/jonathan_ive_mac_pro_2013.jpg', context: 'Thermal core.', influence: 'Radical desktop rethink.', analysis: 'Polished black cylinder.' },
+            'pods': { title: 'AirPods', image: 'images/jonathan_ive_airpods.jpg', context: 'Wireless freedom.', influence: 'Hearables category.', analysis: 'Stem and bud integration.' },
+
+            // MARIANNE BRANDT
+            'brandt_portrait': { title: 'Marianne Brandt', image: 'images/marianne_brandt_portrait.jpg', context: 'Metal workshop master.', influence: 'Broken the glass ceiling.', analysis: 'Geometric functionalism.' },
+            'infuser': { title: 'Tea Infuser', image: 'images/marianne_brandt_tea_infuser_mt_49.jpg', context: 'Wait-list icon.', influence: 'Most famous Bauhaus object.', analysis: 'Ebony and silver hemisphere.' },
+            'ashtray': { title: 'Ashtray', image: 'images/marianne_brandt_bauhaus_ashtray.jpg', context: 'Sphere and cylinder.', influence: 'Perfect geometric ratio.', analysis: 'Rotating lid mechanism.' },
+            'bedside': { title: 'Kandem Lamp', image: 'images/marianne_brandt_kandem_bedside_lamp.jpg', context: 'The adjustable light.', influence: 'Mass production lighting.', analysis: 'Push button base.' },
+            'ceiling': { title: 'Ceiling Light', image: 'images/marianne_brandt_bauhaus_ceiling_light.jpg', context: 'Diffused illumination.', influence: 'School lighting standard.', analysis: 'Opaline glass globe.' },
+            'tea': { title: 'Tea Service', image: 'images/marianne_brandt_tea_service.jpg', context: 'Prototype set.', influence: 'Collector rarity.', analysis: 'Collar and lid geometry.' },
+            'floor': { title: 'Floor Lamp', image: 'images/marianne_brandt_kandem_floor_lamp.jpg', context: 'Standing luminaire.', influence: 'Reading light evolution.', analysis: 'Counterweight balance.' },
+            'napkin': { title: 'Napkin Holder', image: 'images/marianne_brandt_napkin_holder.jpg', context: 'Folded metal.', influence: 'Simple sheet forming.', analysis: 'Tension clip.' },
+            'ink': { title: 'Inkwell', image: 'images/marianne_brandt_inkwell.jpg', context: 'Desk accessory.', influence: 'Writing ritual.', analysis: 'Glass insert and metal tray.' },
+            'dammer_light': { title: 'Dammerstock', image: 'images/marianne_brandt_dammerstock_light.jpg', context: 'Housing estate light.', influence: 'Social housing fixture.', analysis: 'Standardized mounting.' },
+            'bowl': { title: 'Bauhaus Bowl', image: 'images/marianne_brandt_bauhaus_bowls.jpg', context: 'Studio piece.', influence: 'Material study.', analysis: 'Hammered texture vs polish.' },
+
+            // EAMES
+            'eames_portrait': { title: 'Charles & Ray', image: 'images/charles_and_ray_eames_portrait.jpg', context: 'The golden couple.', influence: 'Play and discipline.', analysis: 'California modern.' },
+            'lounge': { title: 'Lounge Chair', image: 'images/charles_and_ray_eames_lounge_chair.jpg', context: 'The refuge.', influence: 'Icon of comfort.', analysis: 'Rosewood and leather shock-mounts.' },
+            'plastic': { title: 'Side Chair', image: 'images/charles_and_ray_eames_plastic_side_chair.jpg', context: 'Shell for everyone.', influence: 'Mass produced seating.', analysis: 'Fiberglass molding.' },
+            'lcw': { title: 'LCW', image: 'images/charles_and_ray_eames_lcw_plywood_chair.jpg', context: 'Potato chip chair.', influence: 'Compound curves.', analysis: 'Low slung plywood.' },
+            'elephant': { title: 'Elephant', image: 'images/charles_and_ray_eames_plywood_elephant.jpg', context: 'Toy as art.', influence: 'Complex molding limits.', analysis: 'Folded ears.' },
+            'case8': { title: 'Case Study 8', image: 'images/charles_and_ray_eames_case_study_8.jpg', context: 'The Eames House.', influence: 'Off-the-shelf architecture.', analysis: 'Steel frame and color panels.' },
+            'alum': { title: 'Aluminum Group', image: 'images/charles_and_ray_eames_aluminum_group.jpg', context: 'Office standard.', influence: 'Suspension comfort.', analysis: 'Ribbed leather sling.' },
+            'esu': { title: 'ESU Unit', image: 'images/charles_and_ray_eames_storage_unit_esu.jpg', context: 'Erector set storage.', influence: 'Modular home office.', analysis: 'Zinc plated angles.' },
+            'rar': { title: 'RAR Rocker', image: 'images/charles_and_ray_eames_rar_rocker.jpg', context: 'Nursery icon.', influence: 'Wire base variation.', analysis: 'Birch runners.' },
+            'wire': { title: 'Wire Chair', image: 'images/charles_and_ray_eames_wire_chair.jpg', context: 'Bikini pad.', influence: 'Transparency in seating.', analysis: 'Welded steel grid.' },
+            'powers': { title: 'Powers of Ten', image: 'images/charles_and_ray_eames_powers_of_ten.jpg', context: 'Scale film.', influence: 'Information design.', analysis: 'Zoom factor.' }
+        };
+
+        function showWorkDetail(designerId, workId) {
+            const m = document.getElementById(designerId);
+            const l1 = m.querySelector('.v-level-1');
+            const l2 = m.querySelector('.v-level-2');
+            const data = DESIGN_WORKS[workId];
+            if (!data) return;
+
+            const hero = l2.querySelector('.v-work-hero');
+            const analysisBoxes = l2.querySelectorAll('.v-analysis-box p');
+            const principlesBox = l2.querySelector('.v-principles-full');
+
+            if (hero) {
+                hero.innerHTML = `<div style="position:absolute; bottom:20px; left:20px; font-weight:900; font-size:1.4rem; color:#fff; text-shadow:0 2px 10px rgba(0,0,0,0.5); z-index:2;">${data.title}</div>
+                                  <img src="${data.image}" style="width:100%; height:100%; object-fit:cover;" alt="${data.title}">`;
+            }
+            if (analysisBoxes.length >= 2) {
+                analysisBoxes[0].textContent = data.context;
+                analysisBoxes[1].textContent = data.influence;
+            }
+            if (principlesBox) {
+                const ps = principlesBox.querySelectorAll('p');
+                if (ps.length > 0) ps[0].innerHTML = `<strong>Note:</strong> ${data.analysis}`;
+            }
+
+            l1.classList.remove('active');
+            l2.classList.add('active');
+            m.querySelector('.modal-scroll').scrollTop = 0;
+        }
+
+        function goBackToLevel1(designerId) {
+            const m = document.getElementById(designerId);
+            const l1 = m.querySelector('.v-level-1');
+            const l2 = m.querySelector('.v-level-2');
+            l2.classList.remove('active');
+            l1.classList.add('active');
+            m.querySelector('.modal-scroll').scrollTop = 0;
+        }
+
+        async function loadGallery() {
+            try {
+                const response = await fetch('gallery_manifest.json');
+                const data = await response.json();
+
+                const timelineContainer = document.querySelector('.timeline-v-container');
+                const yearHeight = 40; // matches CSS var --year-height
+                const startYear = 1830;
+
+                for (const [key, designerData] of Object.entries(data)) {
+                    // key = folder name (e.g., 'dresser')
+                    // designerData = { name, birth, death, peakYear, images: [...] }
+
+                    let designerId = key;
+                    const modalId = 'mod-' + designerId;
+                    let modal = document.getElementById(modalId);
+
+                    // 1. Generate Modal if missing
+                    if (!modal) {
+                        console.log(`Creating new modal for ${designerData.name}`);
+                        const newModal = document.createElement('div');
+                        newModal.id = modalId;
+                        newModal.className = 'modal';
+                        const portraitUrl = designerData.images[0] || '';
+                        const yearRange = designerData.death
+                            ? `${designerData.birth} — ${designerData.death}`
+                            : `${designerData.birth} — PRESENT`;
+
+                        newModal.innerHTML = `
+                            <div class="modal-wrap">
+                                <div class="close-call" onclick="closeAll()">×</div>
+                                <div class="modal-hero" style="background-color:#222; display:flex; align-items:flex-end; padding:40px; background-image:url('${portraitUrl}'); background-size:cover; background-position:center;">
+                                    <div style="background:rgba(0,0,0,0.6); padding:20px; width:100%;">
+                                        <h1 style="color:white; font-size:4rem; margin:0;">${designerData.name}</h1>
+                                        <div style="color:#eee; letter-spacing:2px; font-weight:700;">${yearRange} | EXPANDED ROSTER</div>
+                                    </div>
+                                </div>
+                                <div class="modal-scroll">
+                                    <div class="v-level-1 active">
+                                        <div class="v-designer-header">
+                                            <div class="v-portrait-large" style="background-image:url('${portraitUrl}'); background-size:cover;"></div>
+                                            <div class="v-designer-info">
+                                                <span class="section-tag">${yearRange}</span>
+                                                <h2>${designerData.name}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="v-integration-section">
+                                            <h3>Expanded Archive</h3>
+                                            <p>This designer was added as part of the Phase 5 Expansion. Explore the collected works below.</p>
+                                        </div>
+                                        <h2 class="v-gallery-title">Gallery of Work</h2>
+                                        <div class="gallery-wrap"></div>
+                                    </div>
+                                    <div class="v-level-2">
+                                        <div class="v-back-btn" onclick="goBackToLevel1('${modalId}')">← BACK</div>
+                                        <div class="v-work-hero"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        document.body.appendChild(newModal);
+                        modal = newModal;
+                    }
+
+                    // 2. Check/Generate Timeline Bubble functionality
+                    // We need to see if a bubble exists for this designer.
+                    // Existing bubbles don't have IDs usually, but they trigger 'mod-name'
+                    // We can check if any element has onclick containing the modalId
+
+                    // Actually, simpler: if we just created the modal, we likely need a bubble.
+                    // But even for existing designers, we might want to ensure they are on the timeline?
+                    // Let's assume existing HTML structure covers existing designers.
+                    // We only add bubbles for the ONES WE JUST CREATED or if we can't find a trigger.
+
+                    // Let's try to query for a bubble that opens this modal.
+                    const existingTrigger = document.querySelector(`div[onclick*="'${modalId}'"], div[onclick*='"${modalId}"']`);
+
+                    if (!existingTrigger && timelineContainer && designerData.birth) {
+                        console.log(`Creating timeline bubble for ${designerData.name} at birth year ${designerData.birth}`);
+                        const bubble = document.createElement('div');
+                        bubble.className = 'v-designer-bubble';
+
+                        // Calculate top position using BIRTH year
+                        const birthYear = parseInt(designerData.birth) || 1900;
+                        const offsetYears = birthYear - startYear;
+                        const topPx = offsetYears * yearHeight;
+
+                        bubble.style.top = `${topPx}px`;
+
+                        // Alternate horizontal positioning to avoid overlaps
+                        const bubbleIndex = Object.keys(data).indexOf(key);
+                        if (bubbleIndex % 3 === 1) {
+                            bubble.style.left = 'calc(50% + 180px)';
+                        } else if (bubbleIndex % 3 === 2) {
+                            bubble.style.left = 'calc(50% - 180px)';
+                        }
+
+                        // Set background image
+                        if (designerData.images.length > 0) {
+                            bubble.style.backgroundImage = `url('${designerData.images[0]}')`;
+                        } else {
+                            bubble.style.backgroundColor = '#555';
+                        }
+
+                        // Set click handler
+                        bubble.setAttribute('onclick', `document.getElementById('${modalId}').classList.add('active'); document.body.style.overflow='hidden';`);
+
+                        // Label (abbreviated)
+                        const label = document.createElement('div');
+                        label.className = 'v-bubble-label';
+                        const nameParts = designerData.name.split(' ');
+                        const shortName = nameParts.length > 1
+                            ? nameParts[0].charAt(0) + '. ' + nameParts[nameParts.length - 1]
+                            : designerData.name;
+                        label.innerText = shortName;
+                        bubble.appendChild(label);
+
+                        timelineContainer.appendChild(bubble);
+
+                        // Add death marker if applicable
+                        if (designerData.death) {
+                            const deathYear = parseInt(designerData.death);
+                            const deathOffsetYears = deathYear - startYear;
+                            const deathTopPx = deathOffsetYears * yearHeight;
+
+                            const deathMarker = document.createElement('div');
+                            deathMarker.className = 'v-demise-marker';
+                            deathMarker.style.top = `${deathTopPx}px`;
+                            timelineContainer.appendChild(deathMarker);
+                        }
+                    }
+
+                    // 3. Populate Gallery
+                    const galleryWrap = modal.querySelector('.gallery-wrap');
+                    if (!galleryWrap) continue;
+
+                    designerData.images.forEach(imgUrl => {
+                        if (document.querySelector(`img[src="${imgUrl}"]`)) return;
+
+                        const cell = document.createElement('div');
+                        cell.className = 'gal-cell';
+
+                        const imgDiv = document.createElement('div');
+                        imgDiv.className = 'gal-img';
+                        imgDiv.style.backgroundImage = `url('${imgUrl}')`;
+                        imgDiv.style.backgroundSize = 'cover';
+                        imgDiv.style.backgroundPosition = 'center';
+
+                        const capDiv = document.createElement('div');
+                        capDiv.className = 'gal-cap';
+                        capDiv.innerText = 'Archive Asset';
+
+                        cell.appendChild(imgDiv);
+                        cell.appendChild(capDiv);
+                        galleryWrap.appendChild(cell);
+                    });
+                }
+            } catch (e) {
+                console.error('Failed to load gallery manifest:', e);
+            }
+        }
+
+        // Initialize
+        loadGallery();
+
+        function closeAll() {
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function (e) { if (e.target.classList.contains('modal')) closeAll(); }
+    </script>
+</body>
+
+</html>
