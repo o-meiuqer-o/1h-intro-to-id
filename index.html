@@ -17,6 +17,7 @@
             --accent-soft: #f4ebd0;
             --border: #eeeeee;
             --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            --nav-height: 80px;
         }
 
         * {
@@ -34,6 +35,70 @@
             overflow-x: hidden;
         }
 
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5rem;
+            z-index: 10000;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #000;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
         /* HERO */
         .hero {
             min-height: 100vh;
@@ -45,6 +110,32 @@
             padding: 4rem;
             background: #fff;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, #fef3c7 0%, transparent 40%),
+                radial-gradient(circle at 30% 70%, #dcfce7 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, #eff6ff 0%, transparent 60%);
+            opacity: 0.5;
+            z-index: 0;
+            animation: mesh-float 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes mesh-float {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            100% {
+                transform: rotate(10deg) scale(1.1);
+            }
         }
 
         .hero::after {
@@ -58,15 +149,35 @@
             background-size: 40px 40px;
             opacity: 0.3;
             pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: hero-appear 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        @keyframes hero-appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 5.5rem;
-            margin-bottom: 1rem;
+            font-size: 7.5rem;
+            margin-bottom: 1.5rem;
             color: #000;
-            letter-spacing: -2px;
-            line-height: 1;
+            letter-spacing: -4px;
+            line-height: 0.9;
+            font-style: italic;
         }
 
         .hero p {
@@ -162,6 +273,48 @@
             font-family: 'Playfair Display', serif;
         }
 
+        /* PILLARS */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 6rem;
+        }
+
+        .pillar-card {
+            padding: 3rem;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .pillar-card .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.2;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .pillar-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card p {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
         /* VERTICAL TIMELINE REDESIGN */
         .timeline-section {
             background: #fff;
@@ -198,7 +351,7 @@
             left: 0;
             width: 100%;
             z-index: 1;
-            opacity: 0.15;
+            /* background removed by request */
             transition: opacity 0.5s;
             cursor: pointer;
             display: flex;
@@ -216,9 +369,9 @@
             font-family: 'Playfair Display', serif;
             font-size: 5rem;
             font-weight: 800;
-            color: rgba(0, 0, 0, 1);
+            color: #000;
             pointer-events: none;
-            opacity: 0.3;
+            opacity: 0.05;
         }
 
         .v-era-icon {
@@ -278,6 +431,25 @@
             transform: translate(-50%, -50%) scale(1.3) rotate(5deg);
             border-color: var(--accent);
             z-index: 100;
+        }
+
+        /* INFLUENCE GRAPH AREA */
+        .v-designer-graph {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            /* Scaled to 3x amplitude */
+            z-index: 2;
+            /* Behind bubbles (z-index 30), behind labels (z-index 5) */
+            opacity: 0.1;
+            /* Subtler opacity for larger area */
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .v-designer-bubble:hover+.v-designer-graph {
+            opacity: 0.4;
         }
 
         /* Year Labels on Side */
@@ -500,43 +672,36 @@
         .v-era-ac {
             height: calc(40 * var(--year-height));
             top: calc(50 * var(--year-height));
-            background: #8B4513;
         }
 
         .v-era-an {
             height: calc(20 * var(--year-height));
             top: calc(60 * var(--year-height));
-            background: #2E8B57;
         }
 
         .v-era-bh {
             height: calc(14 * var(--year-height));
             top: calc(89 * var(--year-height));
-            background: #E11D48;
         }
 
         .v-era-ulm {
             height: calc(15 * var(--year-height));
             top: calc(123 * var(--year-height));
-            background: #334155;
         }
 
         .v-era-rams {
             height: calc(40 * var(--year-height));
             top: calc(125 * var(--year-height));
-            background: #64748B;
         }
 
         .v-era-mem {
             height: calc(6 * var(--year-height));
             top: calc(151 * var(--year-height));
-            background: #FF4081;
         }
 
         .v-era-dig {
             height: calc(35 * var(--year-height));
             top: calc(160 * var(--year-height));
-            background: #0EA5E9;
         }
 
         /* MODALS */
@@ -1017,13 +1182,25 @@
 </head>
 
 <body>
+    <!-- NAVIGATION -->
+    <nav id="main-nav">
+        <a href="#hero" class="nav-logo">The Vertical Thread</a>
+        <div class="nav-links">
+            <a href="#basics" class="nav-item">Foundations</a>
+            <a href="#timeline" class="nav-item">Timeline</a>
+        </div>
+    </nav>
+
     <!-- HERO -->
-    <div class="hero">
-        <span class="section-tag">Historical Overview</span>
-        <h1>1h Intro to ID</h1>
-        <p>A comprehensive study from the dawn of mechanization to the digital intersection. Explore the philosophies
-            that shaped our physical and digital world.</p>
-        <div class="scroll-down" onclick="document.getElementById('basics').scrollIntoView()">Explore the History</div>
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <span class="section-tag">Historical Overview</span>
+            <h1>The Vertical <br> Thread</h1>
+            <p>From the soot of the Steam Engine to the glow of the digital screen. <br> Explore the physical and
+                philosophical journey of Industrial Design.</p>
+            <div class="scroll-down" onclick="document.getElementById('basics').scrollIntoView()">Begin the Journey
+            </div>
+        </div>
     </div>
 
     <!-- PART 1: FOUNDATIONS -->
@@ -1042,6 +1219,24 @@
                     like."</div>
             </div>
             <img class="feature-img" src="images/boulton and watt steam engine.jpg" alt="Steam Engine">
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <span class="num">01</span>
+                <h3>The Birth of Power</h3>
+                <p>How the steam engine decoupled production from human muscle and location.</p>
+            </div>
+            <div class="pillar-card">
+                <span class="num">02</span>
+                <h3>The Reach of the Hand</h3>
+                <p>The tension between artisanal craft and the mass-produced machine aesthetic.</p>
+            </div>
+            <div class="pillar-card">
+                <span class="num">03</span>
+                <h3>The Precision of the Machine</h3>
+                <p>Developing a universal language for objects that could be made by anyone, anywhere.</p>
+            </div>
         </div>
     </section>
 
@@ -1187,7 +1382,9 @@
     <div id="mod-ac" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ac"></div>
+            <div class="modal-hero pat-ac">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Origin: 1880 - 1920 | UK</span>
                 <h2>Arts & Crafts</h2>
                 <div class="modal-grid">
@@ -1222,7 +1419,9 @@
     <div id="mod-ac-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-ac"></div>
+            <div class="modal-hero pat-ctx-ac">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>Industrial Revolt</h2>
                 <div class="modal-grid">
@@ -1246,7 +1445,9 @@
     <div id="gal-morris" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ac"></div>
+            <div class="modal-hero pat-ac">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll">
                 <h2>William Morris</h2>
                 <div class="gallery-wrap">
@@ -1268,7 +1469,9 @@
     <div id="mod-an" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-an"></div>
+            <div class="modal-hero pat-an">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Origin: 1890 - 1910 | France, Belgium, Austria</span>
                 <h2>Art Nouveau</h2>
                 <div class="modal-grid">
@@ -1302,7 +1505,9 @@
     <div id="mod-an-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-an"></div>
+            <div class="modal-hero pat-ctx-an">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>Urban Spring</h2>
                 <div class="modal-grid">
@@ -1329,7 +1534,9 @@
     <div id="mod-bh" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-bh"></div>
+            <div class="modal-hero pat-bh">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Phase: 1919 - 1933 | Germany</span>
                 <h2>The Bauhaus</h2>
                 <div class="modal-grid">
@@ -1363,7 +1570,9 @@
     <div id="mod-bh-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-bh"></div>
+            <div class="modal-hero pat-ctx-bh">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>Rationalism</h2>
                 <div class="modal-grid">
@@ -1389,7 +1598,9 @@
     <div id="mod-ulm" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ulm"></div>
+            <div class="modal-hero pat-ulm">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Phase: 1953 - 1968 | Germany</span>
                 <h2>HfG Ulm (Ulm School)</h2>
                 <div class="modal-grid">
@@ -1423,7 +1634,9 @@
     <div id="mod-ulm-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-ulm"></div>
+            <div class="modal-hero pat-ctx-ulm">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>Scientific Objectivity</h2>
                 <div class="modal-grid">
@@ -1453,7 +1666,9 @@
     <div id="mod-func-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-sm"></div>
+            <div class="modal-hero pat-ctx-sm">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>Functionalism</h2>
                 <div class="modal-grid">
@@ -1479,7 +1694,9 @@
     <div id="mod-mem-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-mem"></div>
+            <div class="modal-hero pat-ctx-mem">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>PM Rebellion</h2>
                 <div class="modal-grid">
@@ -1508,7 +1725,9 @@
     <div id="mod-pm-ctx" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-pm"></div>
+            <div class="modal-hero pat-ctx-pm">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Landscape</span>
                 <h2>The Cloud</h2>
                 <div class="modal-grid">
@@ -1553,7 +1772,9 @@
     <div id="mod-benjamin" class="modal">
         <div class="modal-wrap">
             <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ctx-bh"></div>
+            <div class="modal-hero pat-ctx-bh">
+                <div class="v-frequency-patch"></div>
+            </div>
             <div class="modal-scroll"><span class="section-tag">Philosophy | The Frankfurt School</span>
                 <h2>Critical Theory</h2>
                 <div class="modal-grid">
@@ -1593,8 +1814,16 @@
 
             const h = m.querySelector('.modal-hero');
             if (h) {
-                h.className = 'modal-hero ' + patClass;
-                console.log(`Applied class ${patClass} to hero. Computed background:`, window.getComputedStyle(h).background);
+                // Apply pattern class if provided (for static/era modals)
+                if (patClass) {
+                    h.className = 'modal-hero ' + patClass;
+                } else {
+                    // For designer bubbles: apply spectrum gradient to hero directly
+                    const key = getDesignerKey(id);
+                    const bg = getMovementBg(key);
+                    console.log(`Applying spectrum to designer hero (${key}): ${bg}`);
+                    h.style.background = bg;
+                }
             }
 
             m.classList.add('active');
@@ -1861,31 +2090,35 @@
         /* ── MOVEMENT COLOR SYSTEM ── */
         const MOVEMENT_PALETTE = {
             'bauhaus': { hex: '#E6B800', alpha: 0.75 },
-            'ulm': { hex: '#555555', alpha: 0.35 },
+            'ulm': { hex: '#334155', alpha: 0.35 },
             'modernism': { hex: '#A0CED9', alpha: 0.40 },
             'midcentury': { hex: '#008080', alpha: 0.50 },
             'streamlining': { hex: '#4682B4', alpha: 0.50 },
-            'postmodernism': { hex: '#D9027D', alpha: 0.70 },
+            'postmodernism': { hex: '#FF4081', alpha: 0.70 },
             'italian_rationalism': { hex: '#B22222', alpha: 0.50 },
             'wedge': { hex: '#E65100', alpha: 0.60 },
             'minimalism': { hex: '#1A1A1A', alpha: 0.15 },
             'biomorphism': { hex: '#228B22', alpha: 0.45 },
             'arts_and_crafts': { hex: '#8B4513', alpha: 0.60 },
             'art_nouveau': { hex: '#2E8B57', alpha: 0.60 },
+            'aesthetic': { hex: '#8B4513', alpha: 0.60 },
+            'memphis': { hex: '#FFD700', alpha: 0.70 }, // Distinguish from PM for spectrum
             // Shorthands
             'ac': { hex: '#8B4513', alpha: 0.60 },
             'an': { hex: '#2E8B57', alpha: 0.60 },
             'bh': { hex: '#E6B800', alpha: 0.75 },
-            'mem': { hex: '#D9027D', alpha: 0.70 },
-            'pm': { hex: '#1A1A1A', alpha: 0.15 }, // Digital / Minimalism
-            'func': { hex: '#4682B4', alpha: 0.50 }
+            'mem': { hex: '#FFD700', alpha: 0.70 },
+            'pm': { hex: '#FF4081', alpha: 0.70 },
+            'func': { hex: '#64748B', alpha: 0.50 },
+            'sm': { hex: '#64748B', alpha: 0.50 },
+            'ad': { hex: '#8B4513', alpha: 0.60 }
         };
 
         const DESIGNER_MOVEMENTS = {
             // Early Foundations
             'morris': ['arts_and_crafts'],
             'guimard': ['art_nouveau'],
-            'dresser': ['streamlining'], // Proto-Industrial
+            'dresser': ['aesthetic', 'streamlining'], // Proto-Industrial
             // Bauhaus
             'gropius': ['bauhaus', 'modernism'],
             'breuer': ['bauhaus', 'modernism'],
@@ -1904,12 +2137,12 @@
             'eames': ['midcentury'],
             'jacobsen': ['midcentury'],
             // Streamlining
-            'loewy': ['streamlining'],
-            'dreyfuss': ['streamlining'],
+            'loewy': ['streamlining', 'aesthetic'],
+            'dreyfuss': ['streamlining', 'minimalism'],
             'geddes': ['streamlining'],
             'earl': ['streamlining'],
             // Postmodernism
-            'sottsass': ['postmodernism'],
+            'sottsass': ['postmodernism', 'memphis'],
             'starck': ['postmodernism'],
             // Italian Rationalism
             'nizzoli': ['italian_rationalism'],
@@ -1957,6 +2190,27 @@
                 return `${c} ${pct}%`;
             }).join(', ');
             return `linear-gradient(to right, ${stops})`;
+        }
+
+        function getYearTop(year) {
+            const startYear = 1830;
+            const y = parseInt(year);
+            if (isNaN(y)) return 0;
+
+            let top = 0;
+            // Scale definition:
+            // 1830-1900: 20px / year
+            // 1900-1945: 40px / year
+            // 1945-2024: 60px / year
+
+            if (y <= 1900) {
+                top = (y - 1830) * 20;
+            } else if (y <= 1945) {
+                top = (1900 - 1830) * 20 + (y - 1900) * 40;
+            } else {
+                top = (1900 - 1830) * 20 + (1945 - 1900) * 40 + (y - 1945) * 60;
+            }
+            return top;
         }
 
         function getDesignerKey(modalId) {
@@ -2791,7 +3045,6 @@
                 const data = GALLERY_DATA;
 
                 const timelineContainer = document.querySelector('.timeline-v-container');
-                const yearHeight = 40; // matches CSS var --year-height
                 const startYear = 1830;
 
                 for (const [key, designerData] of Object.entries(data)) {
@@ -2848,7 +3101,7 @@
                         newModal.innerHTML = `
                             <div class="modal-wrap">
                                 <div class="close-call" onclick="closeAll()">×</div>
-                                <div class="modal-hero" style="position:relative; height:300px; overflow:hidden; background-color:#111;">
+                                <div class="modal-hero" style="position:relative; height:300px; overflow:hidden;">
                                      <!-- Desaturated Background -->
                                      <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-image:url('${portraitUrl}'); background-size:cover; background-position:center; filter:grayscale(100%); opacity:0.5; z-index:0;"></div>
                                      
@@ -2900,10 +3153,9 @@
                         const bubble = document.createElement('div');
                         bubble.className = 'v-designer-bubble';
 
-                        // Calculate top position using BIRTH year
+                        // Calculate top position using non-linear scale
                         const birthYear = parseInt(designerData.birth) || 1900;
-                        const offsetYears = birthYear - startYear;
-                        const topPx = offsetYears * yearHeight;
+                        const topPx = getYearTop(birthYear);
 
                         bubble.style.top = `${topPx}px`;
 
@@ -2923,7 +3175,7 @@
                         }
 
                         // Set click handler
-                        bubble.setAttribute('onclick', `document.getElementById('${modalId}').classList.add('active'); document.body.style.overflow='hidden';`);
+                        bubble.setAttribute('onclick', `openFullModal('${modalId}', '')`);
 
                         // Label (abbreviated)
                         const label = document.createElement('div');
@@ -2937,11 +3189,39 @@
 
                         timelineContainer.appendChild(bubble);
 
+                        // --- NEW: INFLUENCE GRAPH ---
+                        const careerStart = parseInt(designerData.birth) + 15; // Start of career approx 15 years after birth
+                        const careerEnd = designerData.death ? parseInt(designerData.death) : 2024;
+                        const peakYear = designerData.peakYear ? parseInt(designerData.peakYear) : careerStart + 20;
+
+                        const graphTop = getYearTop(careerStart);
+                        const graphBottom = getYearTop(careerEnd);
+                        const totalGraphHeight = graphBottom - graphTop;
+
+                        if (totalGraphHeight > 10) {
+                            const graph = document.createElement('div');
+                            graph.className = 'v-designer-graph';
+                            graph.style.top = `${graphTop}px`;
+                            graph.style.height = `${totalGraphHeight}px`;
+
+                            // Calculate peak position relative to graph top as percentage
+                            const peakRel = getYearTop(peakYear) - graphTop;
+                            const peakPct = (peakRel / totalGraphHeight) * 100;
+
+                            // Apply movement color
+                            const bg = getMovementBg(key);
+                            graph.style.background = bg;
+
+                            // Diamond/Mountain shape via clip-path
+                            graph.style.clipPath = `polygon(50% 0%, 100% ${peakPct}%, 50% 100%, 0% ${peakPct}%)`;
+
+                            timelineContainer.appendChild(graph);
+                        }
+
                         // Add death marker if applicable
                         if (designerData.death) {
                             const deathYear = parseInt(designerData.death);
-                            const deathOffsetYears = deathYear - startYear;
-                            const deathTopPx = deathOffsetYears * yearHeight;
+                            const deathTopPx = getYearTop(deathYear);
 
                             const deathMarker = document.createElement('div');
                             deathMarker.className = 'v-demise-marker';
@@ -3001,6 +3281,30 @@
         // Initialize
         loadGallery().then(() => applyMovementColors());
 
+        // Intersection Observer for Nav
+        const observerOptions = {
+            root: null,
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.nav-item').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .hero').forEach(section => {
+            observer.observe(section);
+        });
+
         function closeAll() {
             document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
             document.body.style.overflow = 'auto';
@@ -3008,6 +3312,14 @@
 
         window.onclick = function (e) { if (e.target.classList.contains('modal')) closeAll(); }
     </script>
+    <footer style="padding: 5rem; text-align: center; border-top: 1px solid #eee; background: #fff;">
+        <div class="nav-logo" style="margin-bottom: 2rem; display: block;">The Vertical Thread</div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Produced for the 1h Intro to ID Course. <br> All rights
+            reserved &copy; 2026.</p>
+        <a href="#hero"
+            style="margin-top: 2rem; display: inline-block; color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Back
+            to Top</a>
+    </footer>
 </body>
 
 </html>
