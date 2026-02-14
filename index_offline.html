@@ -8,9 +8,13 @@
     <title>1h Intro to ID | The History of Industrial Design</title>
     <script src="design_works_data.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap'); */
 
         :root {
+            /* Fallback fonts for offline safe mode */
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --font-display: 'Georgia', 'Times New Roman', serif;
+
             --bg-color: #fcfcfc;
             --text-main: #121212;
             --text-muted: #555;
@@ -31,7 +35,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -56,7 +60,7 @@
         }
 
         .nav-logo {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 800;
             color: #000;
@@ -172,7 +176,7 @@
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 7.5rem;
             margin-bottom: 1.5rem;
             color: #000;
@@ -237,7 +241,7 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 3.5rem;
             margin-bottom: 4rem;
             color: #000;
@@ -271,7 +275,7 @@
             margin-top: 2rem;
             font-style: italic;
             font-size: 1.4rem;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
         }
 
         /* PILLARS */
@@ -297,7 +301,7 @@
         }
 
         .pillar-card .num {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 3rem;
             color: var(--accent);
             opacity: 0.2;
@@ -306,7 +310,7 @@
         }
 
         .pillar-card h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 1.8rem;
             margin-bottom: 1rem;
         }
@@ -367,7 +371,7 @@
         .v-era-label {
             position: absolute;
             left: 10%;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 5rem;
             font-weight: 800;
             color: #000;
@@ -467,7 +471,7 @@
             z-index: 5;
             pointer-events: none;
             letter-spacing: -2px;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
         }
 
         .v-demise-marker {
@@ -862,7 +866,7 @@
         }
 
         .v-gallery-title {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 2.5rem;
             margin-bottom: 2rem;
             border-bottom: 2px solid #000;
@@ -1024,14 +1028,14 @@
         }
 
         .modal-scroll h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 4.8rem;
             margin-bottom: 1.5rem;
             line-height: 1;
         }
 
         .modal-scroll h3 {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
             font-size: 2.2rem;
             margin-top: 3.5rem;
             margin-bottom: 1.5rem;
@@ -1110,7 +1114,7 @@
             margin-top: 1.4rem;
             font-weight: 700;
             text-align: center;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-display);
         }
 
         @media (max-width: 1000px) {
