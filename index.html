@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
     <title>1h Intro to ID | The History of Industrial Design</title>
-    <script src="design_works_data.js"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
 
@@ -493,7 +493,7 @@
         }
 
         .v-demise-marker::after {
-            content: 'DECEASED';
+            content: '';
             position: absolute;
             left: 110px;
             top: 50%;
@@ -1755,6 +1755,19 @@
 </head>
 
 <body>
+    <script>
+        window.myLogs = [];
+        const origLog = console.log;
+        const origErr = console.error;
+        console.log = (...args) => {
+            window.myLogs.push('LOG: ' + args.join(' '));
+            origLog.apply(console, args);
+        };
+        console.error = (...args) => {
+            window.myLogs.push('ERROR: ' + args.join(' '));
+            origErr.apply(console, args);
+        };
+    </script>
     <!-- NAVIGATION -->
     <nav id="main-nav">
         <a href="#hero" class="nav-logo">The Vertical Thread</a>
@@ -2020,28 +2033,7 @@
             </div>
         </div>
     </div>
-    <div id="gal-morris" class="modal">
-        <div class="modal-wrap">
-            <div class="close-call" onclick="closeAll()">×</div>
-            <div class="modal-hero pat-ac">
-                <div class="v-frequency-patch"></div>
-            </div>
-            <div class="modal-scroll">
-                <h2>William Morris</h2>
-                <div class="gallery-wrap">
-                    <div class="gal-cell"><img class="gal-img" src="images/morris/morris_textile.jpg">
-                        <div class="gal-cap">Strawberry Thief</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/morris/morris_wallpaper.jpg">
-                        <div class="gal-cap">Acanthus motifs</div>
-                    </div>
-                    <div class="gal-cell"><img class="gal-img" src="images/morris/William_Morris.jpg">
-                        <div class="gal-cap">The Designer</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- 2. ART NOUVEAU -->
     <div id="mod-an" class="modal">
@@ -2849,6 +2841,14 @@
             m.querySelector('.modal-scroll').scrollTop = 0;
         }
 
+        window.onerror = function (msg, url, line, col, error) {
+            const box = document.createElement('div');
+            box.style.cssText = 'position:fixed; top:0; left:0; width:100%; padding:20px; background:red; color:white; z-index:10000; font-size:14px;';
+            box.textContent = `Global Error: ${msg} at line ${line}:${col}`;
+            document.body.appendChild(box);
+            return false;
+        };
+
         const GALLERY_DATA = {
             "aalto": {
                 "name": "Alvar Aalto",
@@ -2874,9 +2874,9 @@
                 "birth": "1868",
                 "death": "1940",
                 "peakYear": "1907",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Behrens began as a painter before turning to architecture and design. In 1907, he was appointed as the design consultant to AEG (Allgemeine Elektricitäts-Gesellschaft), marking the birth of the modern \"Design Consultant\" role. His office mentored future masters like Gropius, Mies van der Rohe, and Le Corbusier.",
+                "philosophy": "His philosophy revolved around **\"Gesamtkultur\"**—a total culture. He believed that industry and art must be unified under a single aesthetic logic to provide order to the modern world. He championed **\"Typisierung\"** (standardization) to ensure quality across mass production.",
+                "integration": "Behrens shifted Industrial Design from the \"item\" to the \"identity.\" By designing AEG's factories, logos, tea kettles, and even worker housing as a single coherent system, he proved that design is the DNA of a corporation. He provided the first intellectual framework for post-WWII industrial reconstruction and the entire concept of a \"Brand System.\"",
                 "images": [
                     "images/behrens/Arbeitszimmer_des_Herausgebers_Alexander_Koch%2C_c._1903.jpg",
                     "images/behrens/behrens__behrens_peter.jpeg",
@@ -2918,10 +2918,10 @@
                 "name": "Max Bill",
                 "birth": "1908",
                 "death": "1994",
-                "peakYear": "1952",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "peakYear": "1953",
+                "bio": "A student of the Bauhaus, Bill was a Swiss polymath—architect, artist, and designer. In 1953, he co-founded the **HfG Ulm** (Ulm School), where he served as its first rector, aiming to create a scientific successor to his alma mater.",
+                "philosophy": "Bill championed **\"Concrete Art\"** and the idea of \"Design as Science.\" He rejected the commercial styling of America, arguing that beauty should emerge from mathematical logic, structural integrity, and sociological responsibility.",
+                "integration": "Max Bill connected the geometric abstraction of Swiss modernism with the hard realities of post-war industrial production. His Ulm Stool is the ultimate expression of this: a masterclass in modularity that functions as a seat, a shelf, and a stepping stone. He shifted the designer's role from \"Artist\" to \"Scientist,\" laying the intellectual foundation for the Braun legacy and modern systems design.",
                 "images": [
                     "images/bill/bill_and_bill_sayre_15616_.jpg",
                     "images/bill/bill_endless_ribbon.jpg",
@@ -2950,9 +2950,9 @@
                 "birth": "1902",
                 "death": "1981",
                 "peakYear": "1925",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Marcel Breuer was a Hungarian-born modernist architect and furniture designer. A student and later master at the Bauhaus, he is world-renowned for his pioneering work in tubular steel furniture.",
+                "philosophy": "**Structure as Style.** Breuer stripped furniture down to its essential lines, believing that modern industrial materials like steel could be as noble as wood if treated with honesty and logic.",
+                "integration": "Breuer's Wassily Chair is the perfect integration of industrial material (bicycle steel) and domestic comfort. He proved that mass-produced materials could create objects of airy lightness and transparency, defining the visual language of the 20th-century interior.",
                 "images": [
                     "images/breuer/breuer_am_gro_en_wannsee_58_wanns_villa_van_der_heydt.jpg",
                     "images/breuer/breuer_breuer_house.jpg",
@@ -2991,10 +2991,10 @@
                 "name": "Christopher Dresser",
                 "birth": "1834",
                 "death": "1904",
-                "peakYear": "1860",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "peakYear": "1879",
+                "bio": "Dresser is widely considered the first **independent industrial designer**. A botanist by training, he applied scientific principles to design, traveling to Japan in 1876 where he was inspired by Shinto simplicity and the absence of redundant ornament.",
+                "philosophy": "**\"Functional Ornament\"**—where decoration follows the structural logic of the object. He championed **\"Truth to Materials\"**, arguing that metal should look like metal, not wood, and that the machine was a tool for democratic beauty.",
+                "integration": "Dresser bridged the gap between the scientific study of botany and the industrial production of household goods. By utilizing geometric forms (spheres and cylinders), he enabled cheaper, more efficient manufacturing while maintaining aesthetic integrity. His work represents the first pivot from \"Arts & Crafts\" (anti-machine) to \"Industrial Design\" (pro-machine logic).",
                 "images": [
                     "images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg",
                     "images/dresser/Christopher_Dresser00.jpg",
@@ -3021,9 +3021,9 @@
                 "birth": "1904",
                 "death": "1972",
                 "peakYear": "1937",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Dreyfuss was the American pioneer of **Ergonomics** (Human Factors). Unlike his peer Loewy, he focused on the internal comfort and logical use of products rather than just the external styling. He worked for major firms like Western Electric, Deere & Co, and Lockheed.",
+                "philosophy": "His core philosophy revolved around **\"Joe and Josephine\"**—the first standardized anatomical diagrams of the average human. He believed that design succeeds when it \"makes the machine fit the man,\" rather than forcing the man to adapt to the machine.",
+                "integration": "Dreyfuss shifted industrial design toward a clinical, scientific approach. By measuring thousands of people, he created the data that defined the height of chair seats, the reach of phone cords, and the angle of tractor controls. His Western Electric 500 telephone remained the global standard for decades because its weight, shape, and balance were perfectly calibrated to the human hand.",
                 "images": [
                     "images/dreyfuss/dreyfuss.jpg",
                     "images/dreyfuss/dreyfuss_john_deere_tractor.jpg",
@@ -3151,9 +3151,9 @@
                 "birth": "1883",
                 "death": "1969",
                 "peakYear": "1919",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Founder of the **Bauhaus**, Gropius was a visionary architect and educator. He served in WWI, an experience that fueled his desire to rebuild society through rational, industrial logic. He fled Nazi Germany in 1934, eventually leading Harvard's Graduate School of Design.",
+                "philosophy": "His core philosophy was **\"Art and Technology: A New Unity.\"** He believed the designer should master both craft and industrial processes to create objects for a democratic society. He introduced the **\"Vorkurs\"** to strip away historical bias and focus on universal design principles.",
+                "integration": "Gropius didn't just design buildings; he designed the *way* we teach design. By bringing together painters like Kandinsky and craftsmen like Breuer, he created a prototype for the modern multidisciplinary design studio. His Bauhaus building in Dessau remains the supreme symbol of Modernism—a \"machine for working\" that integrated industrial materials like steel and glass into a new social order.",
                 "images": [
                     "images/gropius/gropius_ascona_dokumentationsfotos_im_museum_xanti_schawinsky_walter_gropius_labw_staatsarchiv_freiburg_w_134_nr._123466.jpg",
                     "images/gropius/gropius_fagus.jpg",
@@ -3171,9 +3171,9 @@
                 "birth": "1867",
                 "death": "1942",
                 "peakYear": "1900",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Hector Guimard was the leading figure of the French Art Nouveau. He is best known for his designs for the Paris Métro entrances, which treated cast iron as if it were a pliable, organic material.",
+                "philosophy": "**\"Nature is the greatest architect.\"** Guimard believed that design should mimic the logic of natural growth—the swelling of a stem or the curve of a leave—rather than the rigid geometry of the past.",
+                "integration": "Guimard integrated the new industrial technology of cast iron with the aesthetic of the organic. His work on the Paris Métro wove art seamlessly into the urban fabric, proving that public infrastructure could be a venue for high art and natural beauty.",
                 "images": [
                     "images/guimard/guimard_iron1.jpg",
                     "images/guimard/guimard_iron2.jpg",
@@ -3184,13 +3184,13 @@
                 ]
             },
             "ive": {
-                "name": "Jony Ive",
+                "name": "Sir Jonathan Ive",
                 "birth": "1967",
                 "death": null,
-                "peakYear": "2001",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "peakYear": "1998",
+                "bio": "Sir Jonathan Ive is a British industrial designer who served as the Chief Design Officer of Apple Inc. from 1997 to 2019. His partnership with Steve Jobs resulted in the most successful run of product design in history, transforming Apple from a niche computer company into a global cultural phenomenon.",
+                "philosophy": "Ive's philosophy is rooted in the idea of **\"Inevitable Design.\"** He believed a product's form should feel so right and simple that it couldn't possibly be any other way. Heavily influenced by Dieter Rams, he prioritizes clarity, unibody construction, and a deep respect for material properties.",
+                "integration": "Ive shifted the focus of Industrial Design from the \"object as sculpture\" to the \"object as a vessel for experience.\" By utilizing aerospace-grade aluminum and precision manufacturing, he made technology feel approachable and premium. His work signaled the end of the \"beige box\" era and the beginning of the \"unibody\" age, where hardware becomes the silent frame for digital software.",
                 "images": [
                     "images/ive/ive_airpods.jpg",
                     "images/ive/ive_ipad.jpg",
@@ -3242,10 +3242,10 @@
                 "name": "Raymond Loewy",
                 "birth": "1893",
                 "death": "1986",
-                "peakYear": "1940",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "peakYear": "1934",
+                "bio": "Known as the \"Father of Streamlining,\" Loewy moved from France to New York in 1919. He was the first designer to appear on the cover of *Time* magazine, proving that design was a vital commercial engine for post-Depression America.",
+                "philosophy": "Loewy's core philosophy was **\"MAYA\"** (Most Advanced Yet Acceptable). He believed designers should push boundaries but stay within the \"shock limit\" of the public. He championed **Streamlining** as a visual metaphor for progress and speed.",
+                "integration": "Loewy successfully branded the \"American Dream.\" By applying aerodynamic forms to everything from pencil sharpeners to locomotives, he gave the public a sense of futuristic momentum. He understood that industrial design wasn't just about ergonomics—it was about **desire**. His work for Studebaker, NASA, and Lucky Strike defined the visual identity of mid-century corporate capitalism.",
                 "images": [
                     "images/loewy/loewy_creuset.jpg",
                     "images/loewy/loewy_ii_john_kratz_.jpg",
@@ -3462,193 +3462,94 @@
                     "images/wagenfeld/wagenfeld_wmf_ash_tray.jpg"
                 ]
             },
-            "dresser": {
-                "name": "Christopher Dresser",
-                "birth": "1834",
-                "death": "1904",
-                "peakYear": "1879",
-                "bio": "Dresser is widely considered the first **independent industrial designer**. A botanist by training, he applied scientific principles to design, traveling to Japan in 1876 where he was inspired by Shinto simplicity and the absence of redundant ornament.",
-                "philosophy": "His philosophy focused on **\"Functional Ornament\"**—where decoration follows the structural logic of the object. He championed **\"Truth to Materials\"**, arguing that metal should look like metal, not wood, and that the machine was a tool for democratic beauty.",
-                "integration": "Dresser bridged the gap between the scientific study of botany and the industrial production of household goods. By utilizing geometric forms (spheres and cylinders), he enabled cheaper, more efficient manufacturing while maintaining aesthetic integrity. His work represents the first pivot from \"Arts & Crafts\" (anti-machine) to \"Industrial Design\" (pro-machine logic).",
-                "images": [
-                    "images/dresser/Christopher_Dresser00.jpg",
-                    "images/dresser/A_Victorian_%27Komai%27_solid_silver_water_jug_by_Christopher_Dresser%2C_c.1880.jpg",
-                    "images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg",
-                    "images/dresser/Side_chair_MET_DT3787.jpg"
-                ]
-            },
-            "behrens": {
-                "name": "Peter Behrens",
-                "birth": "1868",
-                "death": "1940",
-                "peakYear": "1907",
-                "bio": "Behrens began as a painter before turning to architecture and design. In 1907, he was appointed as the design consultant to AEG (Allgemeine Elektricitäts-Gesellschaft), marking the birth of the modern \"Design Consultant\" role. His office mentored future masters like Gropius, Mies van der Rohe, and Le Corbusier.",
-                "philosophy": "His philosophy revolved around **\"Gesamtkultur\"**—a total culture. He believed that industry and art must be unified under a single aesthetic logic to provide order to the modern world. He championed **\"Typisierung\"** (standardization) to ensure quality across mass production.",
-                "integration": "Behrens shifted Industrial Design from the \"item\" to the \"identity.\" By designing AEG's factories, logos, tea kettles, and even worker housing as a single coherent system, he proved that design is the DNA of a corporation. He provided the first intellectual framework for post-WWII industrial reconstruction and the entire concept of a \"Brand System.\"",
-                "images": [
-                    "images/behrens/Peter_Behrens%2C_um_1913.jpg",
-                    "images/behrens/AEG_Turbinenfabrik.jpg",
-                    "images/behrens/AEG_Kettle.jpg"
-                ]
-            },
-            "gropius": {
-                "name": "Walter Gropius",
-                "birth": "1883",
-                "death": "1969",
-                "peakYear": "1919",
-                "bio": "Founder of the **Bauhaus**, Gropius was a visionary architect and educator. He served in WWI, an experience that fueled his desire to rebuild society through rational, industrial logic. He fled Nazi Germany in 1934, eventually leading Harvard's Graduate School of Design.",
-                "philosophy": "His core philosophy was **\"Art and Technology: A New Unity.\"** He believed the designer should master both craft and industrial processes to create objects for a democratic society. He introduced the **\"Vorkurs\"** to strip away historical bias and focus on universal design principles.",
-                "integration": "Gropius didn't just design buildings; he designed the *way* we teach design. By bringing together painters like Kandinsky and craftsmen like Breuer, he created a prototype for the modern multidisciplinary design studio. His Bauhaus building in Dessau remains the supreme symbol of Modernism—a \"machine for working\" that integrated industrial materials like steel and glass into a new social order.",
-                "images": [
-                    "images/gropius/gropius_portrait.jpg",
-                    "images/gropius/walter_gropius_fagus_factory.webp",
-                    "images/gropius/gropius_fagus_factory.jpg"
-                ]
-            },
-            "loewy": {
-                "name": "Raymond Loewy",
-                "birth": "1893",
-                "death": "1986",
-                "peakYear": "1934",
-                "bio": "Known as the \"Father of Streamlining,\" Loewy moved from France to New York in 1919. He was the first designer to appear on the cover of *Time* magazine, proving that design was a vital commercial engine for post-Depression America.",
-                "philosophy": "Loewy's core philosophy was **\"MAYA\"** (Most Advanced Yet Acceptable). He believed designers should push boundaries but stay within the \"shock limit\" of the public. He championed **Streamlining** as a visual metaphor for progress and speed.",
-                "integration": "Loewy successfully branded the \"American Dream.\" By applying aerodynamic forms to everything from pencil sharpeners to locomotives, he gave the public a sense of futuristic momentum. He understood that industrial design wasn't just about ergonomics—it was about **desire**. His work for Studebaker, NASA, and Lucky Strike defined the visual identity of mid-century corporate capitalism.",
-                "images": [
-                    "images/loewy/raymond_loewy_portrait.webp",
-                    "images/loewy/loewy_avanti.jpg",
-                    "images/loewy/loewy_coldspot.jpg"
-                ]
-            },
-            "dreyfuss": {
-                "name": "Henry Dreyfuss",
-                "birth": "1904",
-                "death": "1972",
-                "peakYear": "1937",
-                "bio": "Dreyfuss was the American pioneer of **Ergonomics** (Human Factors). Unlike his peer Loewy, he focused on the internal comfort and logical use of products rather than just the external styling. He worked for major firms like Western Electric, Deere & Co, and Lockheed.",
-                "philosophy": "His core philosophy revolved around **\"Joe and Josephine\"**—the first standardized anatomical diagrams of the average human. He believed that design succeeds when it \"makes the machine fit the man,\" rather than forcing the man to adapt to the machine.",
-                "integration": "Dreyfuss shifted industrial design toward a clinical, scientific approach. By measuring thousands of people, he created the data that defined the height of chair seats, the reach of phone cords, and the angle of tractor controls. His Western Electric 500 telephone remained the global standard for decades because its weight, shape, and balance were perfectly calibrated to the human hand.",
-                "images": [
-                    "images/dreyfuss/dreyfuss.jpg",
-                    "images/dreyfuss/dreyfuss_500.jpg",
-                    "images/dreyfuss/dreyfuss_honeywell.jpg"
-                ]
-            },
-            "bill": {
-                "name": "Max Bill",
-                "birth": "1908",
-                "death": "1994",
-                "peakYear": "1953",
-                "bio": "A student of the Bauhaus, Bill was a Swiss polymath—architect, artist, and designer. In 1953, he co-founded the **HfG Ulm** (Ulm School), where he served as its first rector, aiming to create a scientific successor to his alma mater.",
-                "philosophy": "Bill championed **\"Concrete Art\"** and the idea of \"Design as Science.\" He rejected the commercial styling of America, arguing that beauty should emerge from mathematical logic, structural integrity, and sociological responsibility.",
-                "integration": "Max Bill connected the geometric abstraction of Swiss modernism with the hard realities of post-war industrial production. His Ulm Stool is the ultimate expression of this: a masterclass in modularity that functions as a seat, a shelf, and a stepping stone. He shifted the designer's role from \"Artist\" to \"Scientist,\" laying the intellectual foundation for the Braun legacy and modern systems design.",
-                "images": [
-                    "images/bill/max_bill_ulm_stool.webp",
-                    "images/bill/ulm_stool.jpg",
-                    "images/bill/junghans_clock.jpg"
-                ]
-            },
-            "ive": {
-                "name": "Jonathan Ive",
-                "birth": "1967",
-                "death": null,
-                "peakYear": "1998",
-                "bio": "Sir Jonathan Ive is a British industrial designer who served as the Chief Design Officer of Apple Inc. from 1997 to 2019. His partnership with Steve Jobs resulted in the most successful run of product design in history, transforming Apple from a niche computer company into a global cultural phenomenon.",
-                "philosophy": "Ive's philosophy is rooted in the idea of **\"Inevitable Design.\"** He believes a product's form should feel so right and simple that it couldn't possibly be any other way. Heavily influenced by Dieter Rams, he prioritizes clarity, unibody construction, and a deep respect for material properties.",
-                "integration": "Ive shifted the focus of Industrial Design from the \"object as sculpture\" to the \"object as a vessel for experience.\" By utilizing aerospace-grade aluminum and precision manufacturing, he made technology feel approachable and premium. His work signaled the end of the \"beige box\" era and the beginning of the \"unibody\" age, where hardware becomes the silent frame for digital software.",
-                "images": [
-                    "images/ive/Sir Jonathan Paul Ive.jpg",
-                    "images/ive/ive_iphone.jpg",
-                    "images/ive/ive_macbook.jpg"
-                ]
-            },
-            "behrens_factory": {
-                "title": "AEG Turbine Factory",
-                "image": "images/behrens/behrens_giebel2.jpg",
-                "context": "The AEG Turbine Factory (1909) is considered the first true example of modern industrial architecture. Behrens treated the factory not as a utilitarian shed but as a temple of industry, giving dignity to industrial labor.",
-                "influence": "It influenced Gropius (who worked for Behrens) and the entire Bauhaus movement, establishing the 'factory aesthetic' that defines modernism.",
-                "analysis": "The monumental steel and glass facade provides a dignified face for industrial labor. The 'hinged' steel columns at the base differ from classical columns, expressing the modern structural logic."
-            },
-            "gropius_bauhaus_building": {
-                "title": "Bauhaus Building (Dessau)",
-                "image": "images/gropius/gropius_photograph_of_bauhaus_masters_on_the_roof_of_the_studio_building_bauhaus_dessau.jpg",
-                "context": "The Bauhaus building in Dessau (1926) is the physical manifestation of Gropius's educational philosophy. It separates functions (workshop, studio, dorms) into distinct wings connected by a pinwheel plan.",
-                "influence": "It is the archetype of the 'International Style' and influenced school and office design for a century. The building itself served as a teaching tool for the students.",
-                "analysis": "The famous glass curtain wall wraps around the corner, dissolving the solid edge of the building and revealing the structure within. The lack of hierarchy between the facades reflects democratic principles."
-            },
-            "loewy_locomotive": {
-                "title": "PRR S1 Locomotive",
-                "image": "images/loewy/loewy_streamline.jpg",
-                "context": "The PRR S1 (1939) was a steam locomotive designed for the Pennsylvania Railroad. Styled by Loewy, it was designed to look like it was moving fast even when standing still, embodying the era's obsession with speed.",
-                "influence": "It defined the 'Streamline Moderne' era, applying aerodynamic principles to land vehicles and influencing car, train, and even toaster design as a symbol of progress.",
-                "analysis": "The bullet nose and shrouded wheels treat the locomotive as a single, cohesive sculptural form, concealing the messy mechanical details of the steam engine to create a seamless, futuristic silhouette."
-            },
-            "breuer": {
-                "name": "Marcel Breuer",
-                "birth": "1902",
-                "death": "1981",
-                "peakYear": "1925",
-                "bio": "Marcel Breuer was a Hungarian-born modernist architect and furniture designer. A student and later master at the Bauhaus, he is world-renowned for his pioneering work in tubular steel furniture.",
-                "philosophy": "**Structure as Style.** Breuer stripped furniture down to its essential lines, believing that modern industrial materials like steel could be as noble as wood if treated with honesty and logic.",
-                "integration": "Breuer's Wassily Chair is the perfect integration of industrial material (bicycle steel) and domestic comfort. He proved that mass-produced materials could create objects of airy lightness and transparency, defining the visual language of the 20th-century interior.",
-                "images": [
-                    "images/breuer/breuer_chair.jpg",
-                    "images/breuer/breuer_breuer_house.jpg",
-                    "images/breuer/breuer_marcel_datestone.jpg"
-                ]
-            },
-            "guimard": {
-                "name": "Hector Guimard",
-                "birth": "1867",
-                "death": "1942",
-                "peakYear": "1900",
-                "bio": "Hector Guimard was the leading figure of the French Art Nouveau. He is best known for his designs for the Paris Métro entrances, which treated cast iron as if it were a pliable, organic material.",
-                "philosophy": "**\"Nature is the greatest architect.\"** Guimard believed that design should mimic the logic of natural growth—the swelling of a stem or the curve of a leave—rather than the rigid geometry of the past.",
-                "integration": "Guimard integrated the new industrial technology of cast iron with the aesthetic of the organic. His work on the Paris Métro wove art seamlessly into the urban fabric, proving that public infrastructure could be a venue for high art and natural beauty.",
-                "images": [
-                    "images/guimard/guimard_metro.jpg",
-                    "images/guimard/guimard_iron1.jpg",
-                    "images/guimard/guimard_iron2.jpg"
-                ]
-            }
+
         };
+
 
         async function applyMovementColors() {
             console.log('Applying movement colors...');
             // Placeholder for movement coloring logic
         }
 
+        function openFullModal(modalId, movementClass) {
+            const modal = document.getElementById(modalId);
+            if (!modal) {
+                console.error('Modal not found:', modalId);
+                return;
+            }
+
+            // Reset levels
+            const level1 = modal.querySelector('.v-level-1');
+            const level2 = modal.querySelector('.v-level-2');
+            if (level1) level1.classList.add('active');
+            if (level2) level2.classList.remove('active');
+
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Apply gradient if hero exists (optional enhancement based on previous tasks)
+            const hero = modal.querySelector('.modal-hero');
+            // Logic for dynamic gradient could go here if needed
+        }
+
+        // DEBUG: On-screen logger
+        function logToScreen(msg) {
+            console.log(msg);
+            let logBox = document.getElementById('debug-log-box');
+            if (!logBox) {
+                logBox = document.createElement('div');
+                logBox.id = 'debug-log-box';
+                logBox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:#0f0; font-family:monospace; font-size:10px; z-index:9999; pointer-events:none; padding:5px;';
+                document.body.appendChild(logBox);
+            }
+            const line = document.createElement('div');
+            line.textContent = msg;
+            logBox.appendChild(line);
+            logBox.scrollTop = logBox.scrollHeight;
+        }
+
         async function loadGallery() {
+            logToScreen('Starting loadGallery...');
             try {
                 // Local data for file:// access
                 const data = GALLERY_DATA;
+                logToScreen(`GALLERY_DATA keys: ${Object.keys(data).length}`);
 
                 const timelineContainer = document.querySelector('.timeline-v-container');
+                // Clear existing bubbles/graphs to prevent duplicates on re-run
+                if (timelineContainer) timelineContainer.innerHTML = '';
+
                 const startYear = 1830;
 
                 for (const [key, designerData] of Object.entries(data)) {
                     if (!designerData.name || !designerData.images) continue;
-                    // key = folder name (e.g., 'dresser')
-                    // designerData = { name, birth, death, peakYear, images: [...] }
 
-                    let designerId = key;
-                    const modalId = 'mod-' + designerId;
-                    let modal = document.getElementById(modalId);
+                    try {
+                        // key = folder name (e.g., 'dresser')
+                        // designerData = { name, birth, death, peakYear, images: [...] }
 
-                    // 1. Generate Modal if missing
-                    if (!modal) {
-                        console.log(`Creating new modal for ${designerData.name}`);
-                        const newModal = document.createElement('div');
-                        newModal.id = modalId;
-                        newModal.className = 'modal';
-                        const portraitUrl = designerData.images[0] || '';
-                        const yearRange = designerData.death
-                            ? `${designerData.birth} — ${designerData.death}`
-                            : `${designerData.birth} — PRESENT`;
+                        let designerId = key;
+                        const modalId = 'mod-' + designerId;
+                        let modal = document.getElementById(modalId);
 
-                        // Prepare dynamic content (Bio, Philosophy, Integration)
-                        let bioSection = '';
-                        if (designerData.bio || designerData.philosophy) {
-                            bioSection = `
+                        logToScreen(`Processing ${designerId}. Modal exists? ${!!modal}`);
+
+                        // 1. Generate Modal if missing
+                        if (!modal) {
+                            logToScreen(`Generating NEW modal for ${designerId}`);
+                            const newModal = document.createElement('div');
+                            newModal.id = modalId;
+                            newModal.className = 'modal';
+                            const portraitUrl = designerData.images[0] || '';
+                            const yearRange = designerData.death
+                                ? `${designerData.birth} — ${designerData.death}`
+                                : `${designerData.birth} — PRESENT`;
+
+                            // Prepare dynamic content (Bio, Philosophy, Integration)
+                            let bioSection = '';
+                            if (designerData.bio || designerData.philosophy) {
+                                bioSection = `
                                 <div class="v-pillars-grid">
                                     <div class="v-pillar-box">
                                         <h3>Biography</h3>
@@ -3659,24 +3560,24 @@
                                         <p>${designerData.philosophy || 'Philosophy data unavailable.'}</p>
                                     </div>
                                 </div>`;
-                        }
+                            }
 
-                        let integrationSection = '';
-                        if (designerData.integration) {
-                            integrationSection = `
+                            let integrationSection = '';
+                            if (designerData.integration) {
+                                integrationSection = `
                                 <div class="v-integration-section">
                                     <h3>Integration of Life and Work</h3>
                                     <p>${designerData.integration}</p>
                                 </div>`;
-                        } else {
-                            integrationSection = `
+                            } else {
+                                integrationSection = `
                                 <div class="v-integration-section">
                                     <h3>Expanded Archive</h3>
                                     <p>This designer was added as part of the Phase 5 Expansion. Explore the collected works below.</p>
                                 </div>`;
-                        }
+                            }
 
-                        newModal.innerHTML = `
+                            newModal.innerHTML = `
                             <div class="modal-wrap">
                                 <div class="close-call" onclick="closeAll()">×</div>
                                 <div class="modal-hero" style="position:relative; height:300px; overflow:hidden;">
@@ -3718,141 +3619,145 @@
                                 </div>
                             </div>
                         `;
-                        document.body.appendChild(newModal);
-                        modal = newModal;
-                    }
-
-                    // 2. Check/Generate Timeline Bubble functionality
-                    // FIX: Target only actual bubbles, not back buttons or other triggers
-                    const existingTrigger = document.querySelector(`.v-designer-bubble[onclick*="${modalId}"]`);
-
-                    if (!existingTrigger && timelineContainer && designerData.birth) {
-                        console.log(`Creating timeline bubble for ${designerData.name} at birth year ${designerData.birth}`);
-                        const bubble = document.createElement('div');
-                        bubble.className = 'v-designer-bubble';
-
-                        // Calculate top position using non-linear scale
-                        const birthYear = parseInt(designerData.birth) || 1900;
-                        const topPx = getYearTop(birthYear);
-
-                        bubble.style.top = `${topPx}px`;
-
-                        // Alternate horizontal positioning to avoid overlaps
-                        const bubbleIndex = Object.keys(data).indexOf(key);
-                        if (bubbleIndex % 3 === 1) {
-                            bubble.style.left = 'calc(50% + 180px)';
-                        } else if (bubbleIndex % 3 === 2) {
-                            bubble.style.left = 'calc(50% - 180px)';
+                            document.body.appendChild(newModal);
+                            modal = newModal;
+                            logToScreen(`Created modal ${modalId}. Body children: ${document.body.children.length}`);
                         }
 
-                        // Set background image
-                        if (designerData.images.length > 0) {
-                            bubble.style.backgroundImage = `url('${designerData.images[0]}')`;
-                        } else {
-                            bubble.style.backgroundColor = '#555';
-                        }
+                        // 2. Check/Generate Timeline Bubble functionality
+                        // FIX: Target only actual bubbles, not back buttons or other triggers
+                        const existingTrigger = document.querySelector(`.v-designer-bubble[onclick*="${modalId}"]`);
 
-                        // Set click handler
-                        bubble.setAttribute('onclick', `openFullModal('${modalId}', '')`);
+                        if (!existingTrigger && timelineContainer && designerData.birth) {
+                            // console.log(`Creating timeline bubble for ${designerData.name} at birth year ${designerData.birth}`);
+                            const bubble = document.createElement('div');
+                            bubble.className = 'v-designer-bubble';
 
-                        // Label (abbreviated)
-                        const label = document.createElement('div');
-                        label.className = 'v-bubble-label';
-                        const nameParts = designerData.name.split(' ');
-                        const shortName = nameParts.length > 1
-                            ? nameParts[0].charAt(0) + '. ' + nameParts[nameParts.length - 1]
-                            : designerData.name;
-                        label.innerText = shortName;
-                        bubble.appendChild(label);
+                            // Calculate top position using non-linear scale
+                            const birthYear = parseInt(designerData.birth) || 1900;
+                            const topPx = getYearTop(birthYear);
 
-                        timelineContainer.appendChild(bubble);
+                            bubble.style.top = `${topPx}px`;
 
-                        // --- NEW: INFLUENCE GRAPH ---
-                        const careerStart = parseInt(designerData.birth) + 15; // Start of career approx 15 years after birth
-                        const careerEnd = designerData.death ? parseInt(designerData.death) : 2024;
-                        const peakYear = designerData.peakYear ? parseInt(designerData.peakYear) : careerStart + 20;
-
-                        const graphTop = getYearTop(careerStart);
-                        const graphBottom = getYearTop(careerEnd);
-                        const totalGraphHeight = graphBottom - graphTop;
-
-                        if (totalGraphHeight > 10) {
-                            const graph = document.createElement('div');
-                            graph.className = 'v-designer-graph';
-                            graph.style.top = `${graphTop}px`;
-                            graph.style.height = `${totalGraphHeight}px`;
-
-                            // Calculate peak position relative to graph top as percentage
-                            const peakRel = getYearTop(peakYear) - graphTop;
-                            const peakPct = (peakRel / totalGraphHeight) * 100;
-
-                            // Apply movement color
-                            const bg = getMovementBg(key);
-                            graph.style.background = bg;
-
-                            // Diamond/Mountain shape via clip-path
-                            graph.style.clipPath = `polygon(50% 0%, 100% ${peakPct}%, 50% 100%, 0% ${peakPct}%)`;
-
-                            timelineContainer.appendChild(graph);
-                        }
-
-                        // Add death marker if applicable
-                        if (designerData.death) {
-                            const deathYear = parseInt(designerData.death);
-                            const deathTopPx = getYearTop(deathYear);
-
-                            const deathMarker = document.createElement('div');
-                            deathMarker.className = 'v-demise-marker';
-                            deathMarker.style.top = `${deathTopPx}px`;
-                            timelineContainer.appendChild(deathMarker);
-                        }
-                    }
-
-                    // 3. Populate Gallery
-                    const galleryWrap = modal.querySelector('.gallery-wrap');
-                    if (!galleryWrap) continue;
-
-                    designerData.images.forEach(imgUrl => {
-                        if (document.querySelector(`img[src="${imgUrl}"]`)) return;
-
-                        const cell = document.createElement('div');
-                        cell.className = 'gal-cell';
-
-                        // Lookup work details
-                        let workKey = null;
-                        if (typeof DESIGN_WORKS !== 'undefined') {
-                            // Normalize paths if needed
-                            for (const [k, v] of Object.entries(DESIGN_WORKS)) {
-                                if (v.image === imgUrl) { workKey = k; break; }
+                            // Alternate horizontal positioning to avoid overlaps
+                            const bubbleIndex = Object.keys(data).indexOf(key);
+                            if (bubbleIndex % 3 === 1) {
+                                bubble.style.left = 'calc(50% + 180px)';
+                            } else if (bubbleIndex % 3 === 2) {
+                                bubble.style.left = 'calc(50% - 180px)';
                             }
+
+                            // Set background image
+                            if (designerData.images.length > 0) {
+                                bubble.style.backgroundImage = `url('${designerData.images[0]}')`;
+                            } else {
+                                bubble.style.backgroundColor = '#555';
+                            }
+
+                            // Set click handler (and touchend for mobile reliability)
+                            // Using ontouchend ensures touch devices respond even if click is intercepted
+                            bubble.setAttribute('onclick', `openFullModal('${modalId}', '')`);
+                            bubble.setAttribute('ontouchend', `openFullModal('${modalId}', '')`);
+                            bubble.style.cursor = 'pointer';
+
+                            // Label (abbreviated)
+                            const label = document.createElement('div');
+                            label.className = 'v-bubble-label';
+                            const nameParts = designerData.name.split(' ');
+                            const shortName = nameParts.length > 1
+                                ? nameParts[0].charAt(0) + '. ' + nameParts[nameParts.length - 1]
+                                : designerData.name;
+                            label.innerText = shortName;
+                            bubble.appendChild(label);
+
+                            timelineContainer.appendChild(bubble);
+
+                            // --- NEW: INFLUENCE GRAPH ---
+                            const careerStart = parseInt(designerData.birth) + 15; // Start of career approx 15 years after birth
+                            const careerEnd = designerData.death ? parseInt(designerData.death) : 2024;
+                            const peakYear = designerData.peakYear ? parseInt(designerData.peakYear) : careerStart + 20;
+
+                            const graphTop = getYearTop(careerStart);
+                            const graphBottom = getYearTop(careerEnd);
+                            const totalGraphHeight = graphBottom - graphTop;
+
+                            // Debug log for graph
+                            // console.log(`Designer: ${designerData.name}. Career: ${careerStart}-${careerEnd}. GraphHeight: ${totalGraphHeight}px`);
+
+                            if (totalGraphHeight > 10) {
+                                const graph = document.createElement('div');
+                                graph.className = 'v-designer-graph';
+                                graph.style.top = `${graphTop}px`;
+                                graph.style.height = `${totalGraphHeight}px`;
+
+                                // Calculate peak position relative to graph top as percentage
+                                const peakRel = getYearTop(peakYear) - graphTop;
+                                const peakPct = (peakRel / totalGraphHeight) * 100;
+
+                                // Apply movement color
+                                const bg = getMovementBg(key);
+                                graph.style.background = bg;
+
+                                // Diamond/Mountain shape via clip-path
+                                graph.style.clipPath = `polygon(50% 0%, 100% ${peakPct}%, 50% 100%, 0% ${peakPct}%)`;
+
+                                timelineContainer.appendChild(graph);
+                            }
+
+                            // Add death marker if applicable
+
                         }
 
-                        if (workKey) {
-                            cell.setAttribute('onclick', `showWorkDetail('${modalId}', '${workKey}')`);
-                            cell.style.cursor = 'pointer';
-                        }
+                        // 3. Populate Gallery
+                        const galleryWrap = modal.querySelector('.gallery-wrap');
+                        if (!galleryWrap) continue;
 
-                        const imgDiv = document.createElement('div');
-                        imgDiv.className = 'gal-img';
-                        imgDiv.style.backgroundImage = `url('${imgUrl}')`;
-                        imgDiv.style.backgroundSize = 'cover';
-                        imgDiv.style.backgroundPosition = 'center';
+                        designerData.images.forEach(imgUrl => {
+                            if (document.querySelector(`img[src="${imgUrl}"]`)) return;
 
-                        const capDiv = document.createElement('div');
-                        capDiv.className = 'gal-cap';
-                        if (workKey && typeof DESIGN_WORKS !== 'undefined' && DESIGN_WORKS[workKey]) {
-                            capDiv.innerText = DESIGN_WORKS[workKey].title;
-                        } else {
-                            capDiv.innerText = 'Archive Asset';
-                        }
+                            const cell = document.createElement('div');
+                            cell.className = 'gal-cell';
 
-                        cell.appendChild(imgDiv);
-                        cell.appendChild(capDiv);
-                        galleryWrap.appendChild(cell);
-                    });
+                            // Lookup work details
+                            let workKey = null;
+                            if (typeof DESIGN_WORKS !== 'undefined') {
+                                // Normalize paths if needed
+                                for (const [k, v] of Object.entries(DESIGN_WORKS)) {
+                                    if (v.image === imgUrl) { workKey = k; break; }
+                                }
+                            }
+
+                            if (workKey) {
+                                cell.setAttribute('onclick', `showWorkDetail('${modalId}', '${workKey}')`);
+                                cell.style.cursor = 'pointer';
+                            }
+
+                            const imgDiv = document.createElement('div');
+                            imgDiv.className = 'gal-img';
+                            imgDiv.style.backgroundImage = `url('${imgUrl}')`;
+                            imgDiv.style.backgroundSize = 'cover';
+                            imgDiv.style.backgroundPosition = 'center';
+
+                            const capDiv = document.createElement('div');
+                            capDiv.className = 'gal-cap';
+                            if (workKey && typeof DESIGN_WORKS !== 'undefined' && DESIGN_WORKS[workKey]) {
+                                capDiv.innerText = DESIGN_WORKS[workKey].title;
+                            } else {
+                                capDiv.innerText = 'Archive Asset';
+                            }
+
+                            cell.appendChild(imgDiv);
+                            cell.appendChild(capDiv);
+                            galleryWrap.appendChild(cell);
+                        });
+                    } catch (err) {
+                        console.error('Error loading designer:', key, err);
+                        logToScreen(`ERROR for ${key}: ${err.message}`);
+                    }
                 }
             } catch (e) {
                 console.error('Failed to load gallery manifest:', e);
+                logToScreen(`FATAL ERROR: ${e.message}`);
             }
         }
 
@@ -3918,6 +3823,67 @@
             style="margin-top: 2rem; display: inline-block; color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Back
             to Top</a>
     </footer>
+    <script>
+        // STABILITY HOTFIX: Ensure critical functions and cleanup run regardless of main script errors
+        window.addEventListener('load', () => {
+            console.log('Running Stability Hotfix...');
+
+            // 1. Remove phantom 'DECEASED' markers
+            const removePhantomMarkers = () => {
+                const markers = document.querySelectorAll('.v-demise-marker');
+                if (markers.length > 0) {
+                    console.log(`Removing ${markers.length} phantom markers.`);
+                    markers.forEach(el => el.remove());
+                }
+                // Also check for red lines in year-side
+                document.querySelectorAll('.v-year-side').forEach(el => {
+                    el.style.borderBottom = 'none';
+                    if (el.innerText === 'DECEASED') el.remove();
+                });
+            };
+            removePhantomMarkers();
+            // Run again after a short delay in case of async loading
+            setTimeout(removePhantomMarkers, 500);
+
+            // 2. Ensure openFullModal is globally available
+            if (typeof window.openFullModal === 'undefined') {
+                console.log('Restoring openFullModal function...');
+                window.openFullModal = function (modalId, movementClass) {
+                    const modal = document.getElementById(modalId);
+                    if (!modal) { console.error('Modal not found:', modalId); return; }
+
+                    // Reset levels
+                    const level1 = modal.querySelector('.v-level-1');
+                    const level2 = modal.querySelector('.v-level-2');
+                    if (level1) level1.classList.add('active');
+                    if (level2) level2.classList.remove('active');
+
+                    // Show modal
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                };
+            }
+
+            // 3. Re-bind clicks for mobile reliability
+            const bubbles = document.querySelectorAll('.v-designer-bubble');
+            bubbles.forEach(b => {
+                b.style.cursor = 'pointer';
+                const onclick = b.getAttribute('onclick');
+                if (onclick && onclick.includes('openFullModal')) {
+                    const match = onclick.match(/'([^']+)'/);
+                    if (match && match[1]) {
+                        const mid = match[1];
+                        b.onclick = () => window.openFullModal(mid, '');
+                        b.ontouchend = (e) => {
+                            // Prevent double-firing but ensure touch works
+                            e.preventDefault();
+                            window.openFullModal(mid, '');
+                        };
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
