@@ -451,7 +451,8 @@
             left: 50%;
             transform: translateX(-50%);
             width: 540px;
-            /* Scaled to extensive 540px amplitude */
+            max-width: 90vw;
+            /* Scaled to extensive 540px amplitude, but responsive */
             z-index: 2;
             /* Behind bubbles (z-index 30), behind labels (z-index 5) */
             opacity: 0.08;
@@ -3500,7 +3501,7 @@
             if (!logBox) {
                 logBox = document.createElement('div');
                 logBox.id = 'debug-log-box';
-                logBox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:#0f0; font-family:monospace; font-size:10px; z-index:9999; pointer-events:none; padding:5px;';
+                logBox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:#0f0; font-family:monospace; font-size:10px; z-index:9999; pointer-events:none; padding:5px; display:none;';
                 document.body.appendChild(logBox);
             }
             const line = document.createElement('div');
