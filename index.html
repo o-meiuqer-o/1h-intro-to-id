@@ -3651,7 +3651,8 @@
 
                             // Align bubble to the left edge of the graph
                             // Graph is centered, so its left edge is at (50% - width/2)
-                            bubble.style.left = `calc(50% - ${widthPercent / 2}vw)`;
+                            // Bubble has transform: translate(-50%), so we add 80px (half width) to align its left edge
+                            bubble.style.left = `calc(50% - ${graphWidthPercent / 2}vw + 80px)`;
 
                             // Set background image
                             if (designerData.images.length > 0) {
