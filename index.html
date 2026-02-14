@@ -450,9 +450,8 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            width: 540px;
-            max-width: 90vw;
-            /* Scaled to extensive 540px amplitude, but responsive */
+            width: 75vw;
+            /* Scaled to 75% of screen width */
             z-index: 2;
             /* Behind bubbles (z-index 30), behind labels (z-index 5) */
             opacity: 0.08;
@@ -3523,6 +3522,12 @@
 
                 const startYear = 1830;
 
+                // Calculate max contribution (images count) for dynamic graph width
+                let maxImages = 0;
+                for (const d of Object.values(data)) {
+                    if (d.images && d.images.length > maxImages) maxImages = d.images.length;
+                }
+
                 for (const [key, designerData] of Object.entries(data)) {
                     if (!designerData.name || !designerData.images) continue;
 
@@ -3634,19 +3639,19 @@
                             const bubble = document.createElement('div');
                             bubble.className = 'v-designer-bubble';
 
-                            // Calculate top position using non-linear scale
-                            const birthYear = parseInt(designerData.birth) || 1900;
-                            const topPx = getYearTop(birthYear);
+                            // Calculate top position using Peak Year if available, else birth + 20
+                            const bubblePeakYear = designerData.peakYear ? parseInt(designerData.peakYear) : (parseInt(designerData.birth) + 30);
+                            const topPx = getYearTop(bubblePeakYear);
 
                             bubble.style.top = `${topPx}px`;
 
-                            // Alternate horizontal positioning to avoid overlaps
-                            const bubbleIndex = Object.keys(data).indexOf(key);
-                            if (bubbleIndex % 3 === 1) {
-                                bubble.style.left = 'calc(50% + 180px)';
-                            } else if (bubbleIndex % 3 === 2) {
-                                bubble.style.left = 'calc(50% - 180px)';
-                            }
+                            // Dynamic Width & Horizontal Alignment
+                            // Max width = 75vw. Width is proportional to images count.
+                            const widthPercent = (designerData.images.length / maxImages) * 75;
+
+                            // Align bubble to the left edge of the graph
+                            // Graph is centered, so its left edge is at (50% - width/2)
+                            bubble.style.left = `calc(50% - ${widthPercent / 2}vw)`;
 
                             // Set background image
                             if (designerData.images.length > 0) {
@@ -3690,6 +3695,10 @@
                                 graph.className = 'v-designer-graph';
                                 graph.style.top = `${graphTop}px`;
                                 graph.style.height = `${totalGraphHeight}px`;
+
+                                // Set dynamic width based on contribution
+                                const graphWidthPercent = (designerData.images.length / maxImages) * 75;
+                                graph.style.width = `${graphWidthPercent}vw`;
 
                                 // Calculate peak position relative to graph top as percentage
                                 const peakRel = getYearTop(peakYear) - graphTop;
