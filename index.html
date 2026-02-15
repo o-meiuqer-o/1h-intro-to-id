@@ -3511,7 +3511,7 @@
             logBox.scrollTop = logBox.scrollHeight;
         }
 
-        logToScreen('SCRIPT STARTED: Debugging missing timeline (v5 - Computed Width)...');
+        logToScreen('SCRIPT STARTED: Debugging missing timeline (v6 - Percentage Units)...');
 
         async function loadGallery() {
             logToScreen('Starting loadGallery...');
@@ -3657,7 +3657,8 @@
                             // Align bubble to the left edge of the graph
                             // Graph is centered, so its left edge is at (50% - width/2)
                             // Bubble has transform: translate(-50%), so we add 80px (half width) to align its left edge
-                            bubble.style.left = `calc(50% - ${graphWidthPercent / 2}vw + 80px)`;
+                            // USING PERCENTAGE NOW (Relative to container, not viewport)
+                            bubble.style.left = `calc(50% - ${graphWidthPercent / 2}% + 80px)`;
 
                             // Set background image
                             if (designerData.images.length > 0) {
