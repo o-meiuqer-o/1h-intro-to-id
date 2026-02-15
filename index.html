@@ -3497,29 +3497,12 @@
         window.openFullModal = openFullModal;
 
         // DEBUG: On-screen logger
-        function logToScreen(msg) {
-            console.log(msg);
-            let logBox = document.getElementById('debug-log-box');
-            if (!logBox) {
-                logBox = document.createElement('div');
-                logBox.id = 'debug-log-box';
-                logBox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:#0f0; font-family:monospace; font-size:10px; z-index:9999; pointer-events:none; padding:5px;';
-                document.body.appendChild(logBox);
-            }
-            const line = document.createElement('div');
-            line.textContent = msg;
-            logBox.appendChild(line);
-            logBox.scrollTop = logBox.scrollHeight;
-        }
-
-        logToScreen('SCRIPT STARTED: Debugging missing timeline (v9 - Strict Centering)...');
-
         async function loadGallery() {
-            logToScreen('Starting loadGallery...');
+            // logToScreen('Starting loadGallery...');
             try {
                 // Local data for file:// access
                 const data = GALLERY_DATA;
-                logToScreen(`GALLERY_DATA keys: ${Object.keys(data).length}`);
+                // logToScreen(`GALLERY_DATA keys: ${Object.keys(data).length}`);
 
                 const timelineContainer = document.querySelector('.timeline-v-container');
                 // Clear existing bubbles/graphs to prevent duplicates on re-run
@@ -3544,11 +3527,11 @@
                         const modalId = 'mod-' + designerId;
                         let modal = document.getElementById(modalId);
 
-                        logToScreen(`Processing ${designerId}. Modal exists? ${!!modal}`);
+                        // logToScreen(`Processing ${designerId}. Modal exists? ${!!modal}`);
 
                         // 1. Generate Modal if missing
                         if (!modal) {
-                            logToScreen(`Generating NEW modal for ${designerId}`);
+                            // logToScreen(`Generating NEW modal for ${designerId}`);
                             const newModal = document.createElement('div');
                             newModal.id = modalId;
                             newModal.className = 'modal';
@@ -3632,7 +3615,9 @@
                         `;
                             document.body.appendChild(newModal);
                             modal = newModal;
-                            logToScreen(`Created modal ${modalId}. Body children: ${document.body.children.length}`);
+                            document.body.appendChild(newModal);
+                            modal = newModal;
+                            // logToScreen(`Created modal ${modalId}. Body children: ${document.body.children.length}`);
                         }
 
                         // 2. Check/Generate Timeline Bubble functionality
@@ -3653,7 +3638,7 @@
                             // Dynamic Width & Horizontal Alignment
                             // Max width = 75vw. Width is proportional to images count.
                             const graphWidthPercent = (designerData.images.length / maxImages) * 75;
-                            logToScreen(`Designer: ${designerData.name}, Images: ${designerData.images.length}, Max: ${maxImages}, Width%: ${graphWidthPercent}`);
+                            // logToScreen(`Designer: ${designerData.name}, Images: ${designerData.images.length}, Max: ${maxImages}, Width%: ${graphWidthPercent}`);
 
                             // Align bubble to the left edge of the graph
                             // Graph is centered, so its left edge is at (50% - width/2)
@@ -3716,11 +3701,14 @@
                                 graph.style.transform = 'none'; // Ensure no CSS override
 
                                 // Debug actual rendered width
+                                /*
                                 setTimeout(() => {
-                                    const computed = window.getComputedStyle(graph).width;
+                                    const computedWidth = window.getComputedStyle(graph).width;
+                                    const computedLeft = window.getComputedStyle(graph).left;
                                     const containerWidth = timelineContainer.getBoundingClientRect().width;
-                                    logToScreen(`Graph ${designerData.name}: Set ${graphWidthPercent}%. Rendered: ${computed} (Container: ${containerWidth}px)`);
+                                    console.log(`Graph ${designerData.name}: W:${graphWidthPercent}%/L:${leftPercent}%. Rendered W:${computedWidth} L:${computedLeft} (Container: ${containerWidth}px)`);
                                 }, 500);
+                                */
 
                                 // Calculate peak position relative to graph top as percentage
                                 const peakRel = getYearTop(peakYear) - graphTop;
