@@ -2844,6 +2844,14 @@
             });
         }
 
+        // Global Markdown Parser (Bold & Italic)
+        const parseMd = (text) => {
+            if (!text) return '';
+            return text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>');
+        };
+
         function showWorkDetail(designerId, workId) {
             const m = document.getElementById(designerId);
             const l1 = m.querySelector('.v-level-1');
@@ -2860,12 +2868,12 @@
                                   <img src="${data.image}" style="width:100%; height:100%; object-fit:cover;" alt="${data.title}">`;
             }
             if (analysisBoxes.length >= 2) {
-                analysisBoxes[0].textContent = data.context;
-                analysisBoxes[1].textContent = data.influence;
+                analysisBoxes[0].innerHTML = parseMd(data.context);
+                analysisBoxes[1].innerHTML = parseMd(data.influence);
             }
             if (principlesBox) {
                 const ps = principlesBox.querySelectorAll('p');
-                if (ps.length > 0) ps[0].innerHTML = `<strong>Note:</strong> ${data.analysis}`;
+                if (ps.length > 0) ps[0].innerHTML = `<strong>Note:</strong> ${parseMd(data.analysis)}`;
             }
 
             l1.classList.remove('active');
@@ -3579,14 +3587,6 @@
                             const yearRange = designerData.death
                                 ? `${designerData.birth} — ${designerData.death}`
                                 : `${designerData.birth} — PRESENT`;
-
-                            // Helper to parse simple markdown (bold and italic)
-                            const parseMd = (text) => {
-                                if (!text) return '';
-                                return text
-                                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                                    .replace(/\*(.*?)\*/g, '<em>$1</em>');
-                            };
 
                             // Prepare dynamic content (Bio, Philosophy, Integration)
                             let bioSection = '';
