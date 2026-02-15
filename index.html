@@ -3826,6 +3826,9 @@
         }
 
         window.onclick = function (e) { if (e.target.classList.contains('modal')) closeAll(); }
+
+        // Initialize Gallery
+        document.addEventListener('DOMContentLoaded', loadGallery);
     </script>
     <footer style="padding: 5rem; text-align: center; border-top: 1px solid #eee; background: #fff;">
         <div class="nav-logo" style="margin-bottom: 2rem; display: block;">The Vertical Thread</div>
