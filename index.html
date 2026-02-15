@@ -3580,6 +3580,12 @@
                                 ? `${designerData.birth} — ${designerData.death}`
                                 : `${designerData.birth} — PRESENT`;
 
+                            // Helper to parse simple markdown (bold only)
+                            const parseMd = (text) => {
+                                if (!text) return '';
+                                return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                            };
+
                             // Prepare dynamic content (Bio, Philosophy, Integration)
                             let bioSection = '';
                             if (designerData.bio || designerData.philosophy) {
@@ -3587,11 +3593,11 @@
                                 <div class="v-pillars-grid">
                                     <div class="v-pillar-box">
                                         <h3>Biography</h3>
-                                        <p>${designerData.bio || 'Biography data unavailable.'}</p>
+                                        <p>${parseMd(designerData.bio) || 'Biography data unavailable.'}</p>
                                     </div>
                                     <div class="v-pillar-box">
                                         <h3>Philosophy</h3>
-                                        <p>${designerData.philosophy || 'Philosophy data unavailable.'}</p>
+                                        <p>${parseMd(designerData.philosophy) || 'Philosophy data unavailable.'}</p>
                                     </div>
                                 </div>`;
                             }
@@ -3601,7 +3607,7 @@
                                 integrationSection = `
                                 <div class="v-integration-section">
                                     <h3>Integration of Life and Work</h3>
-                                    <p>${designerData.integration}</p>
+                                    <p>${parseMd(designerData.integration)}</p>
                                 </div>`;
                             } else {
                                 integrationSection = `
