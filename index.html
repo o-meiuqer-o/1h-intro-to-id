@@ -451,16 +451,15 @@
         /* INFLUENCE GRAPH AREA */
         .v-designer-graph {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 75vw;
-            /* Scaled to 75% of screen width */
+            /* JS sets left and width */
             z-index: 2;
             /* Behind bubbles (z-index 30), behind labels (z-index 5) */
             opacity: 0.2;
             /* Extra subtle for large area */
             pointer-events: none;
             transition: opacity 0.4s ease;
+            border: 1px dotted rgba(0, 0, 0, 0.1);
+            /* Subtle debug guide */
         }
 
         .v-designer-bubble:hover+.v-designer-graph {
@@ -3513,7 +3512,7 @@
             logBox.scrollTop = logBox.scrollHeight;
         }
 
-        logToScreen('SCRIPT STARTED: Debugging missing timeline (v7 - Container Fix)...');
+        logToScreen('SCRIPT STARTED: Debugging missing timeline (v8 - Manual Percents)...');
 
         async function loadGallery() {
             logToScreen('Starting loadGallery...');
@@ -3707,15 +3706,20 @@
 
                                 // Set dynamic width based on contribution
                                 // graphWidthPercent is calculated above
-                                // FORCE width with !important to prevent overrides
-                                // FORCE width with !important to prevent overrides
-                                graph.style.cssText += `width: ${graphWidthPercent}vw !important;`;
+
+                                // MANUAL POSITIONING (No Transforms)
+                                // Calculate left position to center the graph
+                                const leftPercent = 50 - (graphWidthPercent / 2);
+
+                                graph.style.left = `${leftPercent}%`;
+                                graph.style.width = `${graphWidthPercent}%`;
+                                graph.style.transform = 'none'; // Ensure no CSS override
 
                                 // Debug actual rendered width
                                 setTimeout(() => {
                                     const computed = window.getComputedStyle(graph).width;
-                                    const vw = document.documentElement.clientWidth;
-                                    logToScreen(`Graph ${designerData.name}: Set ${graphWidthPercent}vw. Rendered: ${computed} (Viewport: ${vw}px)`);
+                                    const containerWidth = timelineContainer.getBoundingClientRect().width;
+                                    logToScreen(`Graph ${designerData.name}: Set ${graphWidthPercent}%. Rendered: ${computed} (Container: ${containerWidth}px)`);
                                 }, 500);
 
                                 // Calculate peak position relative to graph top as percentage
