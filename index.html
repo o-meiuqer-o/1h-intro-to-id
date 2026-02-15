@@ -3510,7 +3510,7 @@
             logBox.scrollTop = logBox.scrollHeight;
         }
 
-        logToScreen('SCRIPT STARTED: Debugging missing timeline...');
+        logToScreen('SCRIPT STARTED: Debugging missing timeline (v3 - Opacity Fix)...');
 
         async function loadGallery() {
             logToScreen('Starting loadGallery...');
@@ -3651,6 +3651,7 @@
                             // Dynamic Width & Horizontal Alignment
                             // Max width = 75vw. Width is proportional to images count.
                             const graphWidthPercent = (designerData.images.length / maxImages) * 75;
+                            // logToScreen(`Designer: ${designerData.name}, Images: ${designerData.images.length}, Max: ${maxImages}, Width%: ${graphWidthPercent}`);
 
                             // Align bubble to the left edge of the graph
                             // Graph is centered, so its left edge is at (50% - width/2)
