@@ -454,7 +454,7 @@
             /* Scaled to 75% of screen width */
             z-index: 2;
             /* Behind bubbles (z-index 30), behind labels (z-index 5) */
-            opacity: 0.08;
+            opacity: 0.15;
             /* Extra subtle for large area */
             pointer-events: none;
             transition: opacity 0.4s ease;
@@ -3651,7 +3651,7 @@
                             // Dynamic Width & Horizontal Alignment
                             // Max width = 75vw. Width is proportional to images count.
                             const graphWidthPercent = (designerData.images.length / maxImages) * 75;
-                            // logToScreen(`Designer: ${designerData.name}, Images: ${designerData.images.length}, Max: ${maxImages}, Width%: ${graphWidthPercent}`);
+                            logToScreen(`Designer: ${designerData.name}, Images: ${designerData.images.length}, Max: ${maxImages}, Width%: ${graphWidthPercent}`);
 
                             // Align bubble to the left edge of the graph
                             // Graph is centered, so its left edge is at (50% - width/2)
