@@ -187,7 +187,22 @@
         document.getElementById('mov-modal-quote').innerText = `"${data.quote}"`;
         document.getElementById('mov-modal-quote').style.borderLeftColor = color;
 
-        document.getElementById('mov-modal-desc').innerText = data.description;
+        // Helper to parse simple markdown
+        function parseMarkdown(text) {
+            if (!text) return '';
+            // bold
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            // italic
+            text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            return text;
+        }
+
+        document.getElementById('mov-modal-desc').innerHTML = parseMarkdown(data.description);
+
+        // New Fields
+        document.getElementById('mov-modal-phil').innerHTML = parseMarkdown(data.philosophy || '');
+        document.getElementById('mov-modal-impact').innerHTML = parseMarkdown(data.impact || '');
+        document.getElementById('mov-modal-context').innerHTML = parseMarkdown(data.sociopolitical_context || '');
 
         // Features
         const featContainer = document.getElementById('mov-modal-features');
@@ -195,7 +210,7 @@
         data.key_features.forEach(f => {
             const pil = document.createElement('span');
             pil.className = 'mov-pill';
-            pil.innerText = f;
+            pil.innerHTML = parseMarkdown(f);
             featContainer.appendChild(pil);
         });
 

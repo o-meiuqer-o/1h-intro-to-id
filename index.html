@@ -759,22 +759,25 @@
             position: absolute;
             top: 2rem;
             right: 2rem;
-            background: #000;
-            color: #fff;
+            background: transparent;
+            color: #333;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 300;
             cursor: pointer;
-            z-index: 10000;
-            transition: transform 0.3s;
+            z-index: 20000;
+            /* Increased to sit above everything */
+            transition: transform 0.3s, color 0.3s;
         }
 
         .close-call:hover {
             transform: rotate(90deg);
+            color: #000;
         }
 
         .modal-hero {
@@ -1030,6 +1033,7 @@
             flex: 1;
             overflow-y: auto;
             padding: 5rem;
+            text-align: left;
         }
 
         .modal-grid {
@@ -1883,10 +1887,17 @@
             padding: 3rem;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
             position: relative;
             transform: translateY(20px);
             transition: transform 0.4s;
+        }
+
+        .movement-content h2,
+        .movement-content h3,
+        .movement-content p,
+        .movement-content div {
+            text-align: left;
         }
 
         #movement-modal.active .movement-content {
@@ -1933,6 +1944,37 @@
             color: #444;
         }
 
+        .mov-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .mov-section h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .mov-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-main);
+        }
+
+        .mov-section.large-context p {
+            white-space: pre-wrap;
+            /* Handles newlines from data */
+        }
+
+        .mov-desc {
+            color: #444;
+        }
+
         .mov-features {
             display: flex;
             justify-content: center;
@@ -1952,7 +1994,7 @@
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
-            font-size: 1.5rem;
+            font-size: 2rem;
             cursor: pointer;
             width: 40px;
             height: 40px;
@@ -1960,12 +2002,15 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: #eee;
-            transition: background 0.2s;
+            background: transparent;
+            color: #333;
+            transition: transform 0.2s;
+            z-index: 10002;
         }
 
         .close-mov:hover {
-            background: #ddd;
+            transform: scale(1.1);
+            color: #000;
         }
 
         /* ──────────────────────────────────────────────────────────
@@ -3234,9 +3279,9 @@
                 "birth": "1898",
                 "death": "1976",
                 "peakYear": "1932",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Alvar Aalto (1898–1976), the Finnish maestro, humanized Modernism. While the Central Europeans (Bauhaus) were bending cold steel, Aalto was bending warm birch wood. He was a nationalist and a humanist, deeply connected to the Finnish landscape of forests and lakes. His architecture and furniture (founded Artek in 1935) were designed as a total physiological experience. He was famously concerned with the 'little man'—the user—ensuring that door handles felt good to the hand and light entered rooms gently.",
+                "philosophy": "Aalto's philosophy was **'Human Modernism'**. He rejected the 'dictatorship of the right angle' and the machine aesthetic. He believed that biology, not geometry, should be the model for design. His 'Paimio Chair' was designed for tuberculosis patients; the angle of the back was calculated to help them breathe. He used **Bent Wood** technology not just for strength, but to create continuous, organic curves that mimicked the natural world. He famously said, 'Form must have a content, and that content is nature.'",
+                "integration": "Aalto integrated **Nature** and **Technology**. He developed a way to bend solid wood (using saw cuts and steam) that allowed it to act like steel, creating the L-leg system which became the standard for millions of stools (Stool 60). He integrated the building into the landscape, and the furniture into the building. His Savoy Vase is an integration of the fluid dynamics of water and the rigidity of glass, a frozen wave that serves a domestic function.",
                 "images": [
                     "images/aalto/aalto_1956_2_.jpg",
                     "images/aalto/aalto_1956_3_.jpg",
@@ -3253,9 +3298,9 @@
                 "birth": "1868",
                 "death": "1940",
                 "peakYear": "1907",
-                "bio": "Behrens began as a painter before turning to architecture and design. In 1907, he was appointed as the design consultant to AEG (Allgemeine Elektricitäts-Gesellschaft), marking the birth of the modern \"Design Consultant\" role. His office mentored future masters like Gropius, Mies van der Rohe, and Le Corbusier.",
-                "philosophy": "His philosophy revolved around **\"Gesamtkultur\"**—a total culture. He believed that industry and art must be unified under a single aesthetic logic to provide order to the modern world. He championed **\"Typisierung\"** (standardization) to ensure quality across mass production.",
-                "integration": "Behrens shifted Industrial Design from the \"item\" to the \"identity.\" By designing AEG's factories, logos, tea kettles, and even worker housing as a single coherent system, he proved that design is the DNA of a corporation. He provided the first intellectual framework for post-WWII industrial reconstruction and the entire concept of a \"Brand System.\"",
+                "bio": "Peter Behrens (1868–1940) is the formidable 'Godfather' of German Modernism. Originally a painter and a founding member of the Munich Secession, he pivoted to architecture and design with a singular, totalizing vision. In 1907, he was appointed artistic consultant to AEG (Allgemeine Elektricitäts-Gesellschaft), becoming the world's first corporate designer. His studio was the crucible of the 20th century: Walter Gropius, Ludwig Mies van der Rohe, and Le Corbusier all worked under him simultaneously, presumably terrified by his imposing mustache and rigorous standards.",
+                "philosophy": "Behrens championed the **'Gesamtkunstwerk'** (Total Work of Art) within an industrial context. He rejected the 19th-century habit of masking factories as gothic castles, arguing instead for **'Sachlichkeit'** (objectivity/simplicity). He believed that the rhythm of the machine should dictate the form of the object. For Behrens, a turbine factory was a temple of labor, and a tea kettle was a piece of domestic architecture. He sought to tame the chaos of the industrial age through geometry and classical proportion.",
+                "integration": "Behrens invented **Corporate Identity**. For AEG, he designed everything: the massive turbine factory, the electric fans, the Arc lamps, the letterhead, and the logo itself. This was a radical integration of architecture, graphic design, and product design into a cohesive brand language. He demonstrated that industry wasn't just about efficiency; it was about culture. By giving the machine a dignified form, he civilized the Industrial Revolution and set the stage for the Deutscher Werkbund.",
                 "images": [
                     "images/behrens/Arbeitszimmer_des_Herausgebers_Alexander_Koch%2C_c._1903.jpg",
                     "images/behrens/behrens__behrens_peter.jpeg",
@@ -3278,9 +3323,9 @@
                 "birth": "1935",
                 "death": null,
                 "peakYear": "1972",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Mario Bellini (b. 1935) is an Italian architect and design chameleon. He succeeded Nizzoli at Olivetti, designing over 35 machines. He was instrumental in the success of B&B Italia (furniture) and has won 8 Compasso d'Orio awards. Bellini is a thinker who designs 'relationships' rather than just forms. His work ranges from the **Camaleonda** sofa (a modular infinite landscape) to the **Divisumma 18** calculator.",
+                "philosophy": "Bellini focuses on the **'Skin'** of the object. He treated electronics as soft, anthropomorphic creatures. His philosophy is **'The object as a companion'**. He rejected the 'hard box' aesthetic of computers. His Divisumma 18 is covered in a continuous yellow rubber skin with nipples for buttons, asking to be touched. He believes furniture should be a 'dynamic composition', adaptable to the changing needs of the user.",
+                "integration": "Bellini integrated **Touch and Technology**. He introduced rubberized, soft-touch interfaces to office machines, predicting the tactile nature of modern smartphones. He integrated the 'variable geometry' into furniture—his Cab Chair is a steel skeleton wearing a zippered leather suit, integrating structure and upholstery into a single, inseparable entity.",
                 "images": [
                     "images/bellini/bellini_bellini_chair.jpg",
                     "images/bellini/bellini_cab_chair.jpg",
@@ -3314,9 +3359,9 @@
                 "birth": "1893",
                 "death": "1983",
                 "peakYear": "1926",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Marianne Brandt (1893–1983) was a powerhouse of the Bauhaus Metal Workshop, and eventually its director (one of the few women to achieve such a rank in that male-dominated environment). A painter by training, she attacked metalwork with a geometric rigor that put her male peers to shame. While Gropius preached standardization, Brandt practiced it. Her designs for teapots and ashtrays are among the purest expressions of the Bauhaus aesthetic, fetching record prices at auction today, which is ironic given her socialist intent.",
+                "philosophy": "Brandt's philosophy was **'Geometric Purity'** and **'Functionality'**. She decomposed objects into their primary solid forms—spheres, cylinders, and circles. She avoided all superfluous ornament; the visual interest came from the juxtaposition of materials (ebony wood handles against silver or brass) and the perfection of the form. She anticipated the needs of mass production, designing objects that could be stamped and spun from sheet metal, though initially, they were laboriously hand-crafted.",
+                "integration": "Brandt integrated **Gender Equality** with **Industrial Mastery**. She shattered the glass ceiling of the 'hard' workshops (metal, wood) which women were typically discouraged from entering. She integrated the constructivist art theories of Moholy-Nagy with the practical requirements of the teapot (non-drip spouts, heat-resistant handles). Her lighting fixtures for the Bauhaus building in Dessau demonstrate a seamless integration of adjusting mechanisms and simple shades, defining the artifact as a tool for living.",
                 "images": [
                     "images/brandt/brandt_aehrlichs_ngerinnen1895.jpg",
                     "images/brandt/brandt_contralto_.jpg",
@@ -3329,9 +3374,9 @@
                 "birth": "1902",
                 "death": "1981",
                 "peakYear": "1925",
-                "bio": "Marcel Breuer was a Hungarian-born modernist architect and furniture designer. A student and later master at the Bauhaus, he is world-renowned for his pioneering work in tubular steel furniture.",
-                "philosophy": "**Structure as Style.** Breuer stripped furniture down to its essential lines, believing that modern industrial materials like steel could be as noble as wood if treated with honesty and logic.",
-                "integration": "Breuer's Wassily Chair is the perfect integration of industrial material (bicycle steel) and domestic comfort. He proved that mass-produced materials could create objects of airy lightness and transparency, defining the visual language of the 20th-century interior.",
+                "bio": "Marcel Breuer (1902–1981) was the quintessential Bauhaus student-turned-master. A Hungarian modernist with a calm demeanor and a revolutionary mind, he transformed the landscape of furniture design before he turned 25. Inspired by the handlebars of his 'Adler' bicycle, he realized that tubular steel could be bent to create strong, lightweight frames. This epiphany led to the **Wassily Chair** (1925), a constructivist skeleton of leather and steel that looked like it belonged in a spaceship rather than a parlor.",
+                "philosophy": "Breuer focused on **'Weightlessness'** and **'Transparency'**. He wanted furniture to be 'a line in space,' dissolving the heavy mass of the traditional armchair. His philosophy was one of continuous structural loops—the cantilever. He believed that modern materials allowed for a separation of 'structure' and 'surface', peeling the upholstery away from the frame to reveal the logic of the object. He later applied this same structural logic to brutalist architecture with concrete.",
+                "integration": "Breuer integrated **Industrial Materials** into the **Domestic Interior**. He brought the cold, hygienic steel of the hospital and the factory into the living room, rendering it warm through impeccable proportion and the use of leather or wicker (Cesca Chair). He integrated the concept of the 'floating' support, effectively retiring the four-legged chair in favor of the S-shaped cantilever that used the tensile strength of steel to provide pneumatic comfort.",
                 "images": [
                     "images/breuer/breuer_am_gro_en_wannsee_58_wanns_villa_van_der_heydt.jpg",
                     "images/breuer/breuer_breuer_house.jpg",
@@ -3350,9 +3395,9 @@
                 "birth": "1918",
                 "death": "2002",
                 "peakYear": "1962",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Achille Castiglioni (1918–2002), typically working with his brother Pier Giacomo, was the master of the 'Ready-made'. He was a chain-smoking, joke-telling professor who treated design as a process of problem-solving through observation. He filled his studio with curious objects found on the street. He is famous for the **Arco Lamp** (1962), designed to light a table without hanging from the ceiling, inspired by a street lamp.",
+                "philosophy": "Castiglioni's philosophy was **'Design demands observation'**. He believed in the **'Principal Design Component'**—identifying the core function and stripping away everything else. He was a master of the **'Ready-made'**, repurposing existing industrial parts (tractor seats, car headlights, fishing rods) into new domestic contexts. He rejected 'styling' in favor of 'solution'. He famously said, 'Delete, delete, delete and at the end find the core design.'",
+                "integration": "Castiglioni integrated **Humor and Rigor**. His **Mezzadro Stool** (a tractor seat on a bent steel bar) is a Dadaist joke that is also comfortably functional. He integrated the 'anonymous design' of everyday tools into high-end furniture. He proved that a switch from a vacuum cleaner could be the perfect foot pedal for a lamp, integrating industrial catalogue parts into the domestic landscape with wit and elegance.",
                 "images": [
                     "images/castiglioni/castiglioni.jpg",
                     "images/castiglioni/castiglioni__11_italy_italian_design_1957_sella_zanotta_achille_castiglioni_pier_giacomo_castiglioni.jpg",
@@ -3371,9 +3416,9 @@
                 "birth": "1834",
                 "death": "1904",
                 "peakYear": "1879",
-                "bio": "Dresser is widely considered the first **independent industrial designer**. A botanist by training, he applied scientific principles to design, traveling to Japan in 1876 where he was inspired by Shinto simplicity and the absence of redundant ornament.",
-                "philosophy": "**\"Functional Ornament\"**—where decoration follows the structural logic of the object. He championed **\"Truth to Materials\"**, arguing that metal should look like metal, not wood, and that the machine was a tool for democratic beauty.",
-                "integration": "Dresser bridged the gap between the scientific study of botany and the industrial production of household goods. By utilizing geometric forms (spheres and cylinders), he enabled cheaper, more efficient manufacturing while maintaining aesthetic integrity. His work represents the first pivot from \"Arts & Crafts\" (anti-machine) to \"Industrial Design\" (pro-machine logic).",
+                "bio": "Dr. Christopher Dresser (1834–1904) was a Victorian design radical disguised as a botanist. A graduate of the Government School of Design, he earned a doctorate in botany from the University of Jena, a background that fundamentally structured his design approach. Unlike his contemporary William Morris, who looked backward to medieval guilds, Dresser embraced the industrial machine. He was the first European designer to visit Japan (1876) as an official guest of the Emperor, a journey that revolutionized his understanding of form and void. He acted as an 'art advisor' to over 50 manufacturers, effectively inventing the role of the consultant industrial designer before the term existed.",
+                "philosophy": "Dresser's philosophy was rooted in **'Scientific Botany'** and **'Truth to Materials'**. He believed that ornament should not disguise the construction but articulate it. Influenced by Owen Jones's *The Grammar of Ornament*, Dresser argued that natural forms should be geometricized—flattened and abstracted—to suit the medium of production. His maxim was that design is not art, but a regulated science. He detested the 'sham' of painting wood to look like marble, insisting that a teapot should look like a vessel for pouring, not a Rococo sculpture. He was a functionalist in a velvet frock coat.",
+                "integration": "Dresser's integration of **Botany and Industry** was unprecedented. He applied the structural logic of plant stems to metal toast racks, creating objects that were structurally rigid yet visually lightweight. His Electroplate designs for James Dixon & Sons (circa 1880) are startlingly modern, anticipating the Bauhaus by half a century. He proved that mass production could yield high art, democratizing 'Good Design' for the burgeoning middle class. His work stands as the bridge between the decorative excesses of the Victorian era and the clean lines of Modernism.",
                 "images": [
                     "images/dresser/Christopher_dresser%2C_per_coalbrookdale_company_of_ironbridge%2C_guardaroba%2C_inghilterra_1870_ca.jpg",
                     "images/dresser/Christopher_Dresser00.jpg",
@@ -3400,9 +3445,9 @@
                 "birth": "1904",
                 "death": "1972",
                 "peakYear": "1937",
-                "bio": "Dreyfuss was the American pioneer of **Ergonomics** (Human Factors). Unlike his peer Loewy, he focused on the internal comfort and logical use of products rather than just the external styling. He worked for major firms like Western Electric, Deere & Co, and Lockheed.",
-                "philosophy": "His core philosophy revolved around **\"Joe and Josephine\"**—the first standardized anatomical diagrams of the average human. He believed that design succeeds when it \"makes the machine fit the man,\" rather than forcing the man to adapt to the machine.",
-                "integration": "Dreyfuss shifted industrial design toward a clinical, scientific approach. By measuring thousands of people, he created the data that defined the height of chair seats, the reach of phone cords, and the angle of tractor controls. His Western Electric 500 telephone remained the global standard for decades because its weight, shape, and balance were perfectly calibrated to the human hand.",
+                "bio": "Henry Dreyfuss (1904–1972) was the conscience of American industrial design. Unlike the flamboyant Loewy, Dreyfuss was a pragmatist who wore a suit and carried a tape measure. He opened his office in 1929 and focused on the long-term relationship between the user and the object. He was a man of systems, analyzing the phone system for Bell Labs and the passenger train for New York Central. He wrote *Designing for People* (1955), a seminal text that shifted the focus from styling to usability.",
+                "philosophy": "Dreyfuss pioneered **proto-ergonomics**. He refused to design an object until he understood the anatomy of the user. He created **'Joe' and 'Josephine'**, statistical anthropometric composites of the average American male and female, to ensure his designs fit the human body. His philosophy was that the machine should adapt to the man, not vice versa. If a design required a user to strain their back or squint their eyes, Dreyfuss considered it a failure of design, no matter how beautiful it looked.",
+                "integration": "Dreyfuss integrated **Human Factors** into the design process. His work on the Bell 300 (the classic black rotary phone) is a masterclass in tactile and auditory feedback. He verified the weight of the handset, the angle of the dial, and the sound of the ring. He integrated safety with efficiency, redesigning the John Deere tractor seat to reduce fatigue and the Honeywell thermostat to be readable from across the room. He made the modern world habitable.",
                 "images": [
                     "images/dreyfuss/dreyfuss.jpg",
                     "images/dreyfuss/dreyfuss_john_deere_tractor.jpg",
@@ -3422,9 +3467,9 @@
                 "birth": "1947",
                 "death": null,
                 "peakYear": "1993",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Sir James Dyson (b. 1947) is the British inventor-industrialist who made the vacuum cleaner sexy. Frustrated by a clogging dustbag, he spent 5 years and 5,127 prototypes developing the **Dual Cyclone** technology. He runs his company as an engineering lab. He is a vocal critic of 'style over substance', though his products are undeniably stylish.",
+                "philosophy": "His philosophy is **'Form follows Engineering'**. He uses transparent plastics to show the dirt and the mechanism, celebrating the **'Functional Guts'** of the machine. He believes failure is the key to success. He champions **'Structural Color'**—using bright colors to denote function (red buttons, yellow clips) rather than fashion.",
+                "integration": "Dyson integrated **Heavy Industrial Engineering** into the **Domestic Sphere**. He applied the physics of a sawmill cyclone to a carpet cleaner. He integrated the 'inventor-hero' narrative into the brand. His Airblade and Supersonic hairdryer integrate fluid dynamics motors into ergonomic handles, turning noisy chores into high-tech experiences.",
                 "images": [
                     "images/dyson/dyson_8487823763_.jpg",
                     "images/dyson/dyson_8487824149_.jpg",
@@ -3438,9 +3483,9 @@
                 "birth": "1907",
                 "death": "1988",
                 "peakYear": "1946",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Charles (1907–1978) and Ray Eames (1912–1988) were the dynamic duo of American mid-century design. Operating out of the 'Eames Office' in Venice, California, they approached design as a joyous, collaborative experiment. Charles, the architect, and Ray, the artist, famously finished each other's sentences and sketches. Their work spanned furniture, film, architecture, and toys. They are best known for their pioneering work with molded plywood and fiberglass, creating furniture that was mass-producible, affordable, and incredibly comfortable.",
+                "philosophy": "Their philosophy was **'The Best for the Most for the Least'**. They believed that design was a method of action, not just a result. They famously treated furniture as a 'system' rather than sculpture. Their approach was playful yet rigorous; they would iterate a curve of plywood thousands of times until it perfectly matched the human spine. They embraced the concept of **'Serious Play'**, believing that toys were the prelude to serious ideas.",
+                "integration": "The Eameses integrated **Technology and Whimsy**. They took the wartime technology of molded plywood splints (which they designed for the Navy) and applied it to domestic furniture (the LCW Chair). They integrated film and communication into design education (e.g., 'Powers of Ten'). Their home, Case Study House No. 8, was an integration of off-the-shelf industrial parts into a warm, lived-in space, defining the California lifestyle.",
                 "images": [
                     "images/eames/Charles and Ray Eames.jpg",
                     "images/eames/eames_lounge_chair.jpg",
@@ -3452,9 +3497,9 @@
                 "birth": "1893",
                 "death": "1969",
                 "peakYear": "1938",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Harley Earl (1893–1969), the towering 6'4\" boss of GM's 'Art and Color Section', invented the modern car industry. He was the first to build a clay model of a car. He brought the principles of Hollywood styling (he started building chariots for movies) to Detroit. He gave us the tailfin, the concept car, and the Corvette.",
+                "philosophy": "Earl believed in **'Dynamic Obsolescence'** (planned obsolescence). He argued that by changing the style every year, you could make the old model look outdated, driving new sales. He believed in **'The Longer, Lower, Wider'** aesthetic. To Earl, the car was a dream machine, a status symbol, a rocket ship for the suburbs. He famously said, 'I want to design a car so that you can't tell if it's coming or going.'",
+                "integration": "Earl integrated **Fashion with Engineering**. He employed female designers ('The Damsels of Design') to integrate fashion trends into interior fabrics. He integrated the jet-age iconography (intakes, fins, afterburners) onto the family sedan. He made the car an object of desire and fantasy, effectively integrating the automobile into the psycho-sexual landscape of America.",
                 "images": [
                     "images/earl/earl_portrait.jpg"
                 ]
@@ -3464,9 +3509,9 @@
                 "birth": "1956",
                 "death": null,
                 "peakYear": "2003",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Naoto Fukasawa (b. 1956) is the master of Japanese minimalism and the driving force behind **MUJI**. He worked in America (IDEO) before returning to Japan. He is famous for his Wall-Mounted CD Player. He observes human behavior to find the natural solutions to problems we didn't know we had.",
+                "philosophy": "His concept is **'Without Thought'** (or Super Normal). He designs for the unconscious behavior of humans. He believes objects should dissolve into the background of daily life. He rejects 'design' that screams for attention. He finds beauty in the ordinary interaction—the way an umbrella handle has a notch to hang a grocery bag.",
+                "integration": "Fukasawa integrated **Intuition into Form**. His CD player is pulled like a kitchen fan, linking the digital music experience to the analog memory of ventilation. He integrated the philosophy of 'Zen' with modern manufacturing. He integrates the object into the 'affordance' of the environment, making things that feel like they have always existed.",
                 "images": [
                     "images/fukasawa/fukasawa_by_naoto_fukasawa_1.jpg",
                     "images/fukasawa/fukasawa_cdma_1x_win_w42t_neon_mizuiro_close.jpg",
@@ -3481,9 +3526,9 @@
                 "birth": "1938",
                 "death": "2024",
                 "peakYear": "1971",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Marcello Gandini (1938–2024) was the wizard of automotive drama. Working for Bertone, he designed the most radical supercars of the 20th century. He gave the world the **Lamborghini Miura** (the first supercar) and the **Lamborghini Countach**. While Giugiaro was rational, Gandini was emotional. He didn't care if you could see out of the rear window; he cared if the car looked like a spaceship landing.",
+                "philosophy": "His philosophy was **'The Wedge'**. He rejected the sensual curves of the 60s for sharp, aggressive, geometric lines that looked like they were moving at light speed even when parked. He believed a sports car should be **'Architecture in Motion'**. He famously invented the 'scissor doors' not just for style, but because the chassis was too wide to open a normal door.",
+                "integration": "Gandini integrated **Aerodynamics with Pure Drama**. He proved that a car's primary function is not just transport, but 'emotional impact' and futuristic projection. He integrated the radical 'cab-forward' layout into reality. His Lancia Stratos integrated the brutality of a rally car with the compact logic of a geometric puzzle.",
                 "images": [
                     "images/gandini/gandini_in_1976.jpg",
                     "images/gandini/gandini_miura.jpg",
@@ -3496,9 +3541,9 @@
                 "birth": "1893",
                 "death": "1958",
                 "peakYear": "1935",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Norman Bel Geddes (1893–1958) was a visionary, a showman, and a bit of a megalomaniac. Originally a theatrical set designer, he brought the drama of the stage to the industrial landscape. He visualized a future that didn't exist yet. He is best known for the **Futurama** exhibit at the 1939 New York World's Fair, a massive diorama that predicted the interstate highway system and the car-centric culture of 1960s America. He didn't just design objects; he designed scenarios.",
+                "philosophy": "Geddes believed in **'The World of Tomorrow'**. He was a proponent of **Teardrop Streamlining**, applying aerodynamic principles to cars, trains, and even ocean liners (which looked like giant floating whales). His philosophy was one of optimistic determinism: technology would solve all social ills if we just built bigger, faster roads. He saw design as a tool for social engineering, using spectacle to manufacture consent for a modernist future.",
+                "integration": "Geddes integrated **Speculative Design** with corporate ambition. He worked with General Motors to visualize a friction-free world of speed. His designs were often impractical (like his massive flying wing airliner), but they were incredibly influential as cultural artifacts. He integrated the role of the designer as a prophet, showing the public not what they needed today, but what they would dream of tomorrow.",
                 "images": [
                     "images/geddes/Battle_of_Midway.jpg",
                     "images/geddes/geddes_belgeddescar.jpg",
@@ -3514,9 +3559,9 @@
                 "birth": "1938",
                 "death": null,
                 "peakYear": "1974",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Giorgetto Giugiaro (b. 1938) was named 'Car Designer of the Century' in 1999. He founded **Italdesign** and is the father of the 'Folded Paper' aesthetic. While others were designing curves, Giugiaro designed sharp lines and wedges. He is responsible for the **VW Golf Mk1**, the **Fiat Panda**, and the **DeLorean**. He proved that a box could be beautiful.",
+                "philosophy": "Giugiaro focused on **'Rational Beauty'** and **'Packaging'**. Unlike Gandini's wild concepts, Giugiaro designed for mass production. He believed that the primary duty of the car designer was to solve the spatial puzzle of passengers and engine. His philosophy was 'The Line'—a crisp, architectural edge that defined the form. He championed the hatchback as the ultimate democratic vehicle.",
+                "integration": "Giugiaro integrated **Geometry with Manufacturing Constraints**. He made sharpness affordable. He integrated the 'folded paper' look (origami) into steel stamping. He integrated the needs of the factory (flat panels are easier to press) with the desire of the public for a modern look, defining the visual language of the 1970s and 80s streets.",
                 "images": [
                     "images/giugiaro/giugiaro_.jpg",
                     "images/giugiaro/giugiaro_1970_giugiaro_porsche_tapiro.jpg",
@@ -3530,9 +3575,9 @@
                 "birth": "1883",
                 "death": "1969",
                 "peakYear": "1919",
-                "bio": "Founder of the **Bauhaus**, Gropius was a visionary architect and educator. He served in WWI, an experience that fueled his desire to rebuild society through rational, industrial logic. He fled Nazi Germany in 1934, eventually leading Harvard's Graduate School of Design.",
-                "philosophy": "His core philosophy was **\"Art and Technology: A New Unity.\"** He believed the designer should master both craft and industrial processes to create objects for a democratic society. He introduced the **\"Vorkurs\"** to strip away historical bias and focus on universal design principles.",
-                "integration": "Gropius didn't just design buildings; he designed the *way* we teach design. By bringing together painters like Kandinsky and craftsmen like Breuer, he created a prototype for the modern multidisciplinary design studio. His Bauhaus building in Dessau remains the supreme symbol of Modernism—a \"machine for working\" that integrated industrial materials like steel and glass into a new social order.",
+                "bio": "Walter Gropius (1883–1969) is the founder of the Bauhaus and the great educator of Modernism. He was an architect who saw the catastrophe of World War I as a reason to reboot civilization. In 1919, he merged the Weimar Academy of Fine Art with the School of Arts and Crafts to create the **Bauhaus** ('House of Building'). He assembled a faculty of superstars (Klee, Kandinsky, Breuer) and created a curriculum that is still the blueprint for every design school in the world today.",
+                "philosophy": "Gropius believed in the **'Unity of Art and Technology'**. He rejected the 19th-century schism between the 'high art' of the salon and the 'low craft' of the trades. His philosophy was collaboration: the building was the ultimate aim of all artistic activity. He championed **Standardization** and pre-fabrication, believing that the artist must master the machine to create housing and goods for the masses. He famously stated, 'The ultimate goal of all art is the building.'",
+                "integration": "Gropius integrated the **Guild System** with the **Industrial Factory**. His 'Vorkurs' (Preliminary Course) forced students to unlearn academic traditions and experiment with basic materials and forms. He integrated the curriculum components—color theory, carpentry, metalwork—into a holistic education. He successfully migrated the Bauhaus idea from Germany to Harvard (GSD), effectively defining the International Style that would dominate corporate architecture for decades.",
                 "images": [
                     "images/gropius/gropius_ascona_dokumentationsfotos_im_museum_xanti_schawinsky_walter_gropius_labw_staatsarchiv_freiburg_w_134_nr._123466.jpg",
                     "images/gropius/gropius_fagus.jpg",
@@ -3567,9 +3612,9 @@
                 "birth": "1967",
                 "death": null,
                 "peakYear": "1998",
-                "bio": "Sir Jonathan Ive is a British industrial designer who served as the Chief Design Officer of Apple Inc. from 1997 to 2019. His partnership with Steve Jobs resulted in the most successful run of product design in history, transforming Apple from a niche computer company into a global cultural phenomenon.",
-                "philosophy": "Ive's philosophy is rooted in the idea of **\"Inevitable Design.\"** He believed a product's form should feel so right and simple that it couldn't possibly be any other way. Heavily influenced by Dieter Rams, he prioritizes clarity, unibody construction, and a deep respect for material properties.",
-                "integration": "Ive shifted the focus of Industrial Design from the \"object as sculpture\" to the \"object as a vessel for experience.\" By utilizing aerospace-grade aluminum and precision manufacturing, he made technology feel approachable and premium. His work signaled the end of the \"beige box\" era and the beginning of the \"unibody\" age, where hardware becomes the silent frame for digital software.",
+                "bio": "Sir Jony Ive (b. 1967) was the Chief Design Officer at **Apple** (1992–2019) and the spiritual partner of Steve Jobs. He redefined the relationship between humans and technology in the digital age. From the translucent iMac to the iPhone, Ive turned computing into a lifestyle. He is a devotee of Dieter Rams, applying the principles of German functionalism to Silicon Valley technology.",
+                "philosophy": "Ive focuses on **'Inevitability'**. He believes an object should look like it is the 'only possible solution' to the problem. He champions **'Care'**—the idea that even the inside of the computer, which you never see, should be beautiful. He pushes for **'Seamlessness'**—removing screw heads, shut lines, and buttons until the device appears to be a single, magical slab of material (unibody).",
+                "integration": "Ive integrated **Hardware and Material Science**. He pushed manufacturing to impossible limits (milling macbooks from solid aluminum). He integrated the software interface with the physical device (the round corners of the icon matching the round corners of the screen). He integrated the high-tech 'black box' into the world of luxury goods, making the phone a piece of jewelry.",
                 "images": [
                     "images/ive/ive_airpods.jpg",
                     "images/ive/ive_ipad.jpg",
@@ -3591,9 +3636,9 @@
                 "birth": "1902",
                 "death": "1971",
                 "peakYear": "1952",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Arne Jacobsen (1902–1971) was a Danish perfectionist who operated at every scale, from the tea spoon to the skyscraper. Although he considered himself primarily an architect, he is world-famous for his furniture. He was a difficult, demanding master who reportedly fired employees for drawing a line too thick. This obsession with detail resulted in some of the most coherent environments of the 20th century, most notably the SAS Royal Hotel in Copenhagen.",
+                "philosophy": "Jacobsen's philosophy was **'Total Art'** (Gesamtkunstwerk) filtered through **Organic Modernism**. Unlike the geometric Bauhaus, Jacobsen embraced the curve. He focused on **Proportion**. He believed that the landscape, the building, and the furniture should form a single, seamless composition. His **Egg** and **Swan** chairs were designed as organic, sculptural counterpoints to the rigid glass grid of the hotel they sat in.",
+                "integration": "Jacobsen integrated the **Texture of Nature** with the **Precision of Industry**. He pushed the technology of molded foam and upholstery to its limits to create liquid-like forms. He integrated the concept of privacy in public spaces—the high back of the Egg Chair creates a 'room within a room'. His cutlery design for the film '2001: A Space Odyssey' (actually designed earlier) shows his integration of extreme minimalism with functional ergonomics.",
                 "images": [
                     "images/jacobsen/Arne_Jacobsen_photo.jpg",
                     "images/jacobsen/jacobsen_aj_lamp.jpg",
@@ -3609,9 +3654,9 @@
                 "birth": "1897",
                 "death": "2000",
                 "peakYear": "1926",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Margarete Schutte-Lihotzky (1897–2000) was the first female Austrian architect and a pioneer of social housing. She is best known for the **Frankfurt Kitchen** (1926), the forerunner of every modern fitted kitchen in the world. Working for the city of Frankfurt, she approached the kitchen not as a room, but as a laboratory.",
+                "philosophy": "She believed in **'Scientific Housekeeping'** (Taylorism). She used stopwatch studies to track the movement of housewives, optimizing the kitchen layout to reduce steps and fatigue. She believed that 'housework is work' and deserved the same rational planning as factory work. Her philosophy was deeply political—socialist emancipation through efficiency.",
+                "integration": "Lihotzky integrated **Industrial Efficiency** with the **Domestic Hearth**. She integrated labeled aluminum bins (for flour, sugar) directly into the cabinetry, invention of the 'fitted' concept. She integrated a fold-out ironing board and specific workspaces. She integrated the role of the architect into social reform, saving millions of hours of labor for women, though she ironically barely cooked herself.",
                 "images": [
                     "images/lihotzky/lihotzky_kitchen.jpg",
                     "images/lihotzky/Margarete Sch\u00fctte-Lihotzky.jpg"
@@ -3622,9 +3667,9 @@
                 "birth": "1893",
                 "death": "1986",
                 "peakYear": "1934",
-                "bio": "Known as the \"Father of Streamlining,\" Loewy moved from France to New York in 1919. He was the first designer to appear on the cover of *Time* magazine, proving that design was a vital commercial engine for post-Depression America.",
-                "philosophy": "Loewy's core philosophy was **\"MAYA\"** (Most Advanced Yet Acceptable). He believed designers should push boundaries but stay within the \"shock limit\" of the public. He championed **Streamlining** as a visual metaphor for progress and speed.",
-                "integration": "Loewy successfully branded the \"American Dream.\" By applying aerodynamic forms to everything from pencil sharpeners to locomotives, he gave the public a sense of futuristic momentum. He understood that industrial design wasn't just about ergonomics—it was about **desire**. His work for Studebaker, NASA, and Lucky Strike defined the visual identity of mid-century corporate capitalism.",
+                "bio": "Raymond Loewy (1893–1986), the French-American styling wizard, was the first designer to become a media celebrity. Arriving in New York in 1919 with nothing but a sharp suit and a sharper eye, he transformed the look of mid-century America. He appeared on the cover of *Time* magazine in 1949, surrounded by his creations—locomotives, cars, and packaging. Loewy understood that in the capitalist West, design was effectively a sales tool. He streamlined everything, from pencil sharpeners to the Studebaker Avanti, making the future look fast, shiny, and irresistible.",
+                "philosophy": "Loewy's guiding principle was **MAYA: 'Most Advanced Yet Acceptable'**. He argued that the consumer desires novelty but fears the unfamiliar. The designer's job is to push the envelope just far enough to excite, but not so far as to alienate (the 'shock zone'). He believed in **Streamlining** not just as aerodynamic science, but as a visual metaphor for friction-free progress. To Loewy, a curve was a line of beauty that also happened to reduce drag and increase sales figures.",
+                "integration": "Loewy integrated **Psychology and Engineering**. He took the clunky, exposed machinery of the depression era (like the coldspot refrigerator) and encased it in sleek, white shells. He branded the 'American Dream' itself—designing the livery for Air Force One, the Shell logo, and the Lucky Strike pack. He proved that aesthetic styling was a vital economic engine, successfully merging the role of the artist with that of the marketing executive.",
                 "images": [
                     "images/loewy/loewy_creuset.jpg",
                     "images/loewy/loewy_ii_john_kratz_.jpg",
@@ -3657,9 +3702,9 @@
                 "birth": "1908",
                 "death": "1986",
                 "peakYear": "1952",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "George Nelson (1908–1986) was the articulate intellectual of American Modernism. As the Design Director of **Herman Miller** for over 20 years, he didn't just design furniture; he curated an entire culture. He had a genius for spotting talent, hiring Charles Eames, Isamu Noguchi, and Alexander Girard. A graduate of Yale, Nelson was a writer and editor before he was a designer, and he approached design problems with a narrative clarity. He invented the 'Storage Wall' and the 'Family Room'.",
+                "philosophy": "Nelson believed in **'Total Design'**. He saw the corporate office and the modern home as systems that needed organizing. He argued that 'Design is a response to social change.' His **Marshmallow Sofa** and **Ball Clock** reveal his philosophy that modernism didn't have to be serious; it could be witty and sculptural. He introduced the concept of the **'Action Office'**, the precursor to the cubicle, though he later horrified by what it became.",
+                "integration": "Nelson integrated **European Modernism** with **American Business**. He packaged high-concept design as a viable commercial product. He integrated the atomic age anxiety with atomic age optimism—his clock designs are essentially exploded atoms frozen in time. He proved that a furniture company could be a patron of the arts and a cultural leader, not just a manufacturer of chairs.",
                 "images": [
                     "images/nelson/nelson_associates_tramite_howard_miller_clock_company_kite_clock_n._2201_zeeland_mi_1952_53.jpg",
                     "images/nelson/nelson_bubble_lamp.jpg",
@@ -3677,9 +3722,9 @@
                 "birth": "1963",
                 "death": null,
                 "peakYear": "1995",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Marc Newson (b. 1963) is the Australian globetrotter of 'Biomorphism'. He is one of the most influential designers of his generation. He works with forms that look like they were melted or grown. His **Lockheed Lounge** (a riveted aluminum chaise) set the world record for prices at auction. He has worked for Apple, Qantas, and Louis Vuitton.",
+                "philosophy": "Newson focuses on **'Smoothness'**. His objects have no sharp edges; they are continuous, fluid functionality. He is obsessed with the **'Monocoque'**—the single shell. He looks to the future of the 1960s (retro-futurism) for inspiration. He believes materials should be pushed to their limits to look liquid.",
+                "integration": "Newson integrated the **Luxury World** with **Industrial Design**. He blurred the line between furniture and fine art sculpture. He integrated aerospace technology into furniture. He integrated the 'cool' of surf culture with the precision of Swiss watchmaking (Ikepod). His work integrates the digital spline curve into physical, tactile reality.",
                 "images": [
                     "images/newson/newson.jpg",
                     "images/newson/newson_business_of_luxury_gala_reception.jpg",
@@ -3695,9 +3740,9 @@
                 "birth": "1887",
                 "death": "1969",
                 "peakYear": "1948",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Marcello Nizzoli (1887–1969) was the man who gave the machine a sex appeal. Originally a painter and poster designer (influenced by Futurism), he became the chief design consultant for Olivetti in the 1930s. He transformed the typewriter and the calculator from clunky mechanical contraptions into smooth, sculptural objects. His **Lettera 22** (1950) is widely considered the most beautiful typewriter ever made.",
+                "philosophy": "Nizzoli believed the machine should be an **'Extension of the Body'**. He softened the hard edges of technology, encasing mechanisms in organic, flowing aluminum shells. His philosophy was **'Sculptural Functionalism'**. He treated the casing not just as a cover, but as a skin. He believed that office work was drudgery, but the tools of office work should be inspiring and beautiful.",
+                "integration": "Nizzoli integrated the **Artist's Hand** into **Mass Production**. He brought a graphical, painterly sensibility to 3D objects. He integrated the mechanism and the casing into a unified whole, hiding the screws and joints. He effectively created the 'biomorphic' look of 1950s technology, integrating the softness of the human form with the precision of the clockwork mechanism.",
                 "images": [
                     "images/nizzoli/nizzoli.jpg",
                     "images/nizzoli/nizzoli_509_ottimamente_lubrificata.jpg",
@@ -3714,9 +3759,9 @@
                 "birth": "1891",
                 "death": "1979",
                 "peakYear": "1957",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Gio Ponti (1891–1979) was the exuberant father figure of 20th-century Italian design. An architect, designer, poet, and the founder of *Domus* magazine, he was a tireless promoter of 'Italianita'. While the rest of Europe was getting colder and more minimal, Ponti was getting lighter and more decorative. He worked until he was 88, designing skyscrapers (Pirelli Tower) and toilets with equal enthusiasm. He was a true Renaissance man who refused to specialize.",
+                "philosophy": "Ponti championed **'The Superleggera'** (Super-lightness). He obsessed over removing weight, both physical and visual. He believed architecture should be a crystal—precise, faceted, and transparent. He rejected the separation of old and new, happily mixing modern geometric forms with classical Italian craft traditions. His philosophy was **'Love implies participation'**; he believed architecture was a stage for life.",
+                "integration": "Ponti integrated **Art, Craft, and Industry**. He revitalized the Italian ceramics industry. His **Superleggera Chain** (1957) is the ultimate integration of traditional Chiavari craftsmanship with modern engineering—it is so light (1.7kg) it can be lifted with a pinky finger, yet strong enough to be thrown out a window (which he did, to test it). He integrated the role of the editor with that of the creator, curating the Italian design identity for half a century.",
                 "images": [
                     "images/ponti/ponti_170420_domus_fausta.jpg",
                     "images/ponti/ponti_201100_domus_julia.jpg",
@@ -3731,9 +3776,9 @@
                 "birth": "1932",
                 "death": null,
                 "peakYear": "1961",
-                "bio": "Born in Wiesbaden, Germany, Rams was deeply influenced by his grandfather, a carpenter. After studying architecture and interior decoration, he joined Braun in 1955, eventually becoming Chief Design Officer. His tenure defined the \"Golden Age\" of German functionalism.",
-                "philosophy": "Rams' philosophy is summarized as **\"Weniger, aber besser\"** (Less, but better). He believes design should be a service to the user, providing a quiet, orderly environment in a chaotic world through technological determinism and an ethic of ecological care.",
-                "integration": "Dieter Rams successfully integrated the rigorous academic logic of the HfG Ulm into a commercial powerhouse (Braun). His work bridged the gap between the scientific objectivity of post-war reconstruction and the emotional purity of modern tech. His \"10 Principles\" are now the global benchmark for ethical industrial design, influencing everything from Apple’s minimalist interfaces to sustainable furniture movements.",
+                "bio": "Dieter Rams (b. 1932) is the stoic philosopher-king of German design. As the head of design at **Braun** from 1961 to 1995, he oversaw a golden age of consumer electronics. Rams originally trained as an architect, and he brought an architectural stillness to radios, shavers, and calculators. His aesthetic—matte white, geometric, unobtrusive—became the visual language of 'High Fidelity'. He is widely cited as the primary inspiration for Apple's design language under Jony Ive.",
+                "philosophy": "Rams is famous for his **'Ten Principles for Good Design'**, the first of which is 'Good design is innovative.' But the most important is **'Good design is as little design as possible'** (Weniger, aber besser - Less, but better). He hates 'visual pollution' and 'chaos'. He believes objects should be **'Silent Butlers'**—unobtrusive, waiting in the background until needed. He rejects fashion and obsolescence, aiming instead for longevity and timelessness.",
+                "integration": "Rams integrated **Order and Function**. He cleared the clutter of knobs and dials, organizing control surfaces with strict grid logic. He integrated the device into the home environment by making it neutral. His **SK 4 Record Player** (the 'Snow White's Coffin') integrated a clear acrylic lid, turning the mechanics of the turntable into a visible, celebrated element, forever changing how electronics were displayed in the home.",
                 "images": [
                     "images/rams/Braun_ABW30_%28schwarz%29.jpg",
                     "images/rams/braun_razor.jpg",
@@ -3755,9 +3800,9 @@
                 "birth": "1960",
                 "death": null,
                 "peakYear": "2002",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Karim Rashid (b. 1960) is the self-proclaimed 'Prince of Plastic'. Dressed always in white or pink, he is a walking brand. He has over 3000 designs in production. He hates the past, nostalgia, and 'rustic' aesthetics. He loves the digital, the artificial, and the synthetic.",
+                "philosophy": "He calls for **'Sensual Minimalism'** or 'Blobjects'. He rejects the straight lines of modernism for fluid, digital curves. He believes in **'Karimanifesto'**—that design is about shaping the future, not repeating history. He champions the use of pink and cyan as the colors of the digital age. He wants to 'soften' the world.",
+                "integration": "Rashid integrated **Digital Tools** into **Physical Reality**. He proved that cheap plastic could be poetic, democratic, and high-design (Garbo trash can). He integrated the 'avatar' personality into the design profession. He integrates the blob aesthetic into everything from radiators to subway stations, creating a seamless, liquid world.",
                 "images": [
                     "images/rashid/rashid_.jpg",
                     "images/rashid/rashid_bern_city_designed_by_karim_rashid_2.jpg",
@@ -3771,9 +3816,9 @@
                 "birth": "1932",
                 "death": "2015",
                 "peakYear": "1972",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Richard Sapper (1932–2015) was a German designer who found his spiritual home in Milan. He combined German engineering precision with Italian flair and chaos. He worked for Mercedes-Benz, Gio Ponti, and IBM. Sapper was a master of the complex mechanism hidden inside a simple shell. He was fascinated by movement and balance. His **Tizio Lamp** (1972) for Artemide remains the best-selling lamp in modern history, a marvel of counterweighted equilibrium.",
+                "philosophy": "Sapper focused on **'Technical Innovation as Aesthetics'**. He didn't just style a box; he reinvented the mechanism. He believed objects should have a 'life'. He famously said, 'I want to make objects that have the intelligence of a machine but the soul of a living thing.' His designs often feature surprise or humor—a kettle that whistles a harmonic chord (Alessi 9091) instead of a shriek.",
+                "integration": "Sapper integrated **Conductivity and Structure**. In the Tizio lamp, the arms *are* the wires, conducting the electricity to the bulb, eliminating cables entirely. He integrated the 'Black Box' aesthetic into the corporate world with the **IBM ThinkPad** (1992). He looked to the Japanese bento box for inspiration, integrating a simple black exterior with a surprise red 'TrackPoint' inside, defining the look of business computing.",
                 "images": [
                     "images/sapper/sapper_.jpg",
                     "images/sapper/sapper_a_musicassette_a_transistor_museo_scienza_tecnologia_milano_10088_dia.jpg",
@@ -3790,9 +3835,9 @@
                 "birth": "1917",
                 "death": "2007",
                 "peakYear": "1981",
-                "bio": "Ettore Sottsass was an Italian architect and designer who founded the Memphis Group in 1981. He rebelled against the rigour of Modernism, believing that design should be sensual and exciting.",
-                "philosophy": "**\"Form follows Emotion.\"** Sottsass believed objects should have personality and challenge the status quo. He used kitsch materials and garish colors to disrupt the \"good taste\" of the bourgeoise establishment.",
-                "integration": "Sottsass transformed furniture from functional equipment into **totems**. His work redefined the relationship between user and object, suggesting that our possessions should be companions that provoke an emotional response rather than just silent servants.",
+                "bio": "Ettore Sottsass (1917–2007) was the rock star of Italian anti-design. After decades of designing tasteful office machines for Olivetti (like the Valentine typewriter), he rebelled. In 1981, in his 60s, he founded **Memphis**, a design collective that exploded the rules of 'Good Taste'. They used plastic laminate, clashing colors, and animal prints. Sottsass was a spiritual traveler (spending time in India) who saw design as a way to ward off the existential darkness.",
+                "philosophy": "Sottsass believed design should be **'Sensorial'** and **'Ritualistic'**. He rejected Functionalism as a straitjacket. He wanted objects to be 'presences' in the room—totems that demanded attention. He championed **'Bad Taste'** as a way to liberate creativity from the bourgeois constraints of modernism. His **Carlton Bookcase** is less a place to store books and more a statue of a god made of plastic.",
+                "integration": "Sottsass integrated **Spirituality with Consumerism**. He tried to give mass-produced objects the aura of ancient artifacts. He integrated the 'low culture' of suburban diners (Formica patterns) into 'high culture' museum pieces. He fundamentally broke the narrative of Modernism, integrating emotion, memory, and chaos into the clean white room of design history.",
                 "images": [
                     "images/sottsass/carlton_bookshelf.jpg",
                     "images/sottsass/casablanca_sideboard.jpg",
@@ -3810,9 +3855,9 @@
                 "birth": "1949",
                 "death": null,
                 "peakYear": "1990",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Philippe Starck (b. 1949) is the French 'enfant terrible' of design. He is prolific, designing hotels, yachts, wind turbines, and toothbrushes. He famously designed the **Juicy Salif** (lemon squeezer) on a placemat while eating calamari. Starck sees himself not as a designer but as a 'subversive'. He uses design to provoke, amuse, and question.",
+                "philosophy": "Starck champions **'Democratic Design'**. He collaborated with Target to bring high design to the masses. However, he also believes in **'The Stage'**. He argues that function is secondary to emotion. The Juicy Salif doesn't work very well, but it starts conversations. He believes objects should have 'ghosts' or 'humor'. His philosophy is to upgrade the 'service' the object provides to a 'friendship'.",
+                "integration": "Starck integrated **Entertainment with Utility**. He turned the hotel lobby into a theater (Royalton, Delano). He integrated the concept of the 'blobject' with transparency (Ghost Chair). He integrated the surrealism of Dali into mass production, proving that a plastic chair could be a piece of high-status art.",
                 "images": [
                     "images/starck/starck_alhondiga.jpg",
                     "images/starck/starck_bubble_club_sofa.jpg",
@@ -3827,9 +3872,9 @@
                 "birth": "1900",
                 "death": "1990",
                 "peakYear": "1924",
-                "bio": "",
-                "philosophy": "",
-                "integration": "",
+                "bio": "Wilhelm Wagenfeld (1900–1990) was the ideal Bauhaus student who successfully made the leap to industrial mass production. He is immortalized by the **WA 24** 'Bauhaus Lamp' (1924), a glass and metal table lamp that looks as modern today as it did a century ago. Unlike many of his peers who fled the Nazis, Wagenfeld stayed in Germany, navigating the difficult political landscape to continue working in the glass and porcelain industries, striving to bring good design to the proletariat.",
+                "philosophy": "Wagenfeld championed **'Cheap Beauty'** (billige Schönheit) or **'The Moral Object'**. He believed that everyday household goods—butter dishes, salt shakers, stacking glass containers—should be designed with the same care as luxury items. He rejected the idea that quality was reserved for the rich. His philosophy was 'organic functionality'; his glass containers (Kubus, 1938) were modular, stackable, and transparent, solving the problem of storage and visibility in the modern kitchen.",
+                "integration": "Wagenfeld integrated **Craft Proficiency** with **Industrial Scale**. He worked directly with manufacturers like WMF and Jenaer Glas to optimize designs for the molding process. He proved that standard pressed glass could be refined and elegant. He integrated the 'social responsibility' of the designer into the product, insisting that a well-designed cup made the coffee taste better and the worker's life slightly more dignified.",
                 "images": [
                     "images/wagenfeld/wagenfeld_am_wall_209_in_bremen.jpg",
                     "images/wagenfeld/wagenfeld_aus_feuerfestem_jenaer_glas_l_szl_moholy_nagy_1933.jpg",
@@ -4245,6 +4290,21 @@
             <div class="mov-dates" id="mov-modal-dates">Dates</div>
             <div class="mov-quote-box" id="mov-modal-quote">Quote</div>
             <p class="mov-desc" id="mov-modal-desc">Description goes here.</p>
+
+            <div class="mov-section">
+                <h3>Philosophy</h3>
+                <p id="mov-modal-phil">Philosophy text...</p>
+            </div>
+
+            <div class="mov-section">
+                <h3>Impact</h3>
+                <p id="mov-modal-impact">Impact text...</p>
+            </div>
+
+            <div class="mov-section large-context">
+                <h3>Sociopolitical Context</h3>
+                <p id="mov-modal-context">Context text...</p>
+            </div>
             <div class="mov-features" id="mov-modal-features">
                 <!-- Features pills -->
             </div>
