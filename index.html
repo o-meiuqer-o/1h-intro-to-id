@@ -19,6 +19,8 @@
             --border: #eeeeee;
             --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
             --nav-height: 80px;
+            --bubble-offset: 80px;
+            /* Default desktop offset (half bubble width + margin) */
         }
 
         * {
@@ -885,7 +887,7 @@
         /* Level 2: Work Detail */
         .v-work-hero {
             width: 100%;
-            height: 50vh;
+            height: 15vh;
             border-radius: 20px;
             background-size: cover;
             background-position: center;
@@ -1231,6 +1233,12 @@
            MOBILE PHONES (< 768px)
            ────────────────────────────────────────────────────────── */
         @media (max-width: 767px) {
+            :root {
+                --year-height: 20px !important;
+                /* Compels tighter vertical spacing on mobile */
+                --bubble-offset: 35px;
+                /* Tighter horizontal layout for smaller bubbles */
+            }
 
             /* Navigation */
             nav {
@@ -1332,6 +1340,14 @@
                 gap: 2rem;
                 margin-top: 3rem;
             }
+
+            .v-pillars-grid,
+            .v-analysis-grid,
+            .gallery-wrap {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+
 
             .pillar-card {
                 padding: 2rem;
@@ -1809,6 +1825,7 @@
             origErr.apply(console, args);
         };
     </script>
+    <script src="gallery_meta.js"></script>
     <!-- NAVIGATION -->
     <nav id="main-nav">
         <a href="#hero" class="nav-logo">The Vertical Thread</a>
@@ -2803,23 +2820,146 @@
             return `linear-gradient(to right, ${stops})`;
         }
 
+        // UNIFIED: Multi-Movement Gradient Generator
+        function getMultiMovementGradient(movements, startYear, endYear, productivity = null, direction = 'to bottom') {
+            // Mapping Helper to ensure consistency
+            const getPaletteKey = (mName) => {
+                let key = mName.toLowerCase();
+                if (key.includes('art nouveau')) return 'an';
+                if (key.includes('arts') || key.includes('crafts')) return 'ac';
+                if (key.includes('bauhaus')) return 'bh';
+                if (key.includes('modernism')) return 'modernism';
+                if (key.includes('functionalism') || key.includes('rationalism')) return 'sm';
+                if (key.includes('memphis')) return 'mem';
+                if (key.includes('digital') || key.includes('postmodern')) return 'pm';
+                if (key.includes('streamline')) return 'ad';
+                if (key.includes('minimal')) return 'minimalism';
+                if (key.includes('midcentury')) return 'midcentury';
+                if (key.includes('biomorphism')) return 'biomorphism';
+                if (key.includes('wedge')) return 'wedge';
+                return key;
+            };
+
+            // 1. GRANULAR MODE: If productivity has movement data
+            if (productivity && Object.keys(productivity).some(y => productivity[y].movement)) {
+                const stops = [];
+                const duration = endYear - startYear;
+                const years = Object.keys(productivity).map(y => parseInt(y)).sort((a, b) => a - b);
+
+                if (years.length === 0) return 'rgba(100,100,100,0.2)';
+
+                years.forEach(year => {
+                    const entry = productivity[year];
+                    if (!entry.movement) return;
+
+                    const key = getPaletteKey(entry.movement);
+                    const p = MOVEMENT_PALETTE[key] || { hex: '#888', alpha: 0.5 };
+                    const color = hexToRgba(p.hex, p.alpha);
+
+                    let y = Math.max(startYear, Math.min(year, endYear));
+                    const pct = Math.round(((y - startYear) / duration) * 100);
+                    stops.push(`${color} ${pct}%`);
+                });
+
+                if (stops.length < 2) stops.push(`${stops[0]}`);
+                return `linear-gradient(${direction}, ${stops.join(', ')})`;
+            }
+
+            // 2. FALLBACK MODE: Use simple movements array
+            if (!movements || movements.length === 0) return 'rgba(100,100,100,0.2)';
+
+            // Sort movements by year
+            const sortedMovements = [...movements].sort((a, b) => a.year - b.year);
+            const stops = [];
+            const duration = endYear - startYear;
+
+            sortedMovements.forEach((m) => {
+                const key = getPaletteKey(m.name);
+                const p = MOVEMENT_PALETTE[key] || { hex: '#888', alpha: 0.5 };
+                const color = hexToRgba(p.hex, p.alpha);
+
+                let year = Math.max(startYear, Math.min(m.year, endYear));
+                const pct = Math.round(((year - startYear) / duration) * 100);
+                stops.push(`${color} ${pct}%`);
+            });
+
+            if (stops.length === 0) return 'rgba(100,100,100,0.2)';
+            if (stops.length === 1) return stops[0].split(' ')[0];
+
+            return `linear-gradient(${direction}, ${stops.join(', ')})`;
+        }
+
+        // NEW: Productivity Shape Generator (Polygon Clip Path)
+        // UNIFIED: Productivity Shape Generator (Polygon Clip Path)
+        function getProductivityPath(productivity, startYear, endYear, totalDimension, isHorizontal = false, maxVal = 10) {
+            if (!productivity || Object.keys(productivity).length === 0) {
+                return isHorizontal
+                    ? 'polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%)'
+                    : 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)';
+            }
+
+            const pointsSideA = []; // Right side for vertical, Bottom side for horizontal
+            const pointsSideB = []; // Left side for vertical, Top side for horizontal
+
+            const steps = 30; // Increased resolution
+            const yearSpan = endYear - startYear;
+
+            for (let i = 0; i <= steps; i++) {
+                const pct = i / steps;
+                const currentYear = startYear + Math.round(pct * yearSpan);
+
+                let val = 0;
+                let minDiff = 100;
+                for (const [yStr, v] of Object.entries(productivity)) {
+                    const y = parseInt(yStr);
+                    const diff = Math.abs(y - currentYear);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        if (minDiff < 5) val = (typeof v === 'object') ? v.count : v;
+                    }
+                }
+
+                let widthPct = (val / Math.max(maxVal, 5)) * 45;
+                if (widthPct < 3) widthPct = 3;
+                if (widthPct > 50) widthPct = 50;
+
+                const mainPos = pct * 100;
+
+                if (isHorizontal) {
+                    // X = mainPos, Y = 50 +/- width
+                    pointsSideA.push(`${mainPos}% ${50 + widthPct}%`);
+                    pointsSideB.unshift(`${mainPos}% ${50 - widthPct}%`);
+                } else {
+                    // Y = mainPos, X = 50 +/- width
+                    pointsSideA.push(`${50 + widthPct}% ${mainPos}%`);
+                    pointsSideB.unshift(`${50 - widthPct}% ${mainPos}%`);
+                }
+            }
+
+            return `polygon(${pointsSideA.join(', ')}, ${pointsSideB.join(', ')})`;
+        }
+
         function getYearTop(year) {
+            const container = document.querySelector('.timeline-v-container');
+            // Default to 40 if var not found or 0
+            const baseHeight = (container) ? (parseFloat(getComputedStyle(container).getPropertyValue('--year-height')) || 40) : 40;
+
             const startYear = 1830;
             const y = parseInt(year);
             if (isNaN(y)) return 0;
 
             let top = 0;
-            // Scale definition:
-            // 1830-1900: 20px / year
-            // 1900-1945: 40px / year
-            // 1945-2024: 60px / year
+            // Ratios: 20/40 = 0.5, 40/40 = 1, 60/40 = 1.5
+            const r1 = baseHeight * 0.5;
+            const r2 = baseHeight * 1.0;
+            const r3 = baseHeight * 1.5;
 
             if (y <= 1900) {
-                top = (y - 1830) * 20;
+                top = (y - 1830) * r1;
             } else if (y <= 1945) {
-                top = (1900 - 1830) * 20 + (y - 1900) * 40;
+                top = (1900 - 1830) * r1 + (y - 1900) * r2;
             } else {
-                top = (1900 - 1830) * 20 + (1945 - 1900) * 40 + (y - 1945) * 60;
+                top = (1900 - 1830) * r1 + (1945 - 1900) * r2 + (y - 1945) * r3;
             }
             return top;
         }
@@ -2837,10 +2977,27 @@
             modals.forEach(modal => {
                 const patch = modal.querySelector('.v-frequency-patch');
                 if (!patch) return;
+
                 const key = getDesignerKey(modal.id);
-                const bg = getMovementBg(key);
-                console.log(`Applying color to modal ${modal.id} (key: ${key}): ${bg}`);
-                patch.style.background = bg;
+                const designerData = GALLERY_DATA[key];
+
+                if (designerData) {
+                    const careerStart = parseInt(designerData.birth) + 15;
+                    const careerEnd = designerData.death ? parseInt(designerData.death) : 2024;
+                    const movements = designerData.movements || [];
+                    const productivity = designerData.productivity || {};
+
+                    // Updated Gradient
+                    patch.style.background = getMultiMovementGradient(movements, careerStart, careerEnd, productivity, 'to right');
+
+                    // Updated Shape
+                    patch.style.clipPath = getProductivityPath(productivity, careerStart, careerEnd, 0, true);
+                    console.log(`Applied unified graph to modal ${modal.id}`);
+                } else {
+                    // Fallback to simpler method if no detailed data
+                    const bg = getMovementBg(key);
+                    patch.style.background = bg;
+                }
             });
         }
 
@@ -3515,39 +3672,26 @@
         };
 
 
-        async function applyMovementColors() {
-            console.log('Applying movement colors...');
-            // Placeholder for movement coloring logic
-        }
+        // Duplicate functions removed
 
-        function openFullModal(modalId, movementClass) {
-            const modal = document.getElementById(modalId);
-            if (!modal) {
-                console.error('Modal not found:', modalId);
-                return;
-            }
-
-            // Reset levels
-            const level1 = modal.querySelector('.v-level-1');
-            const level2 = modal.querySelector('.v-level-2');
-            if (level1) level1.classList.add('active');
-            if (level2) level2.classList.remove('active');
-
-            // Show modal
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            // Apply gradient if hero exists (optional enhancement based on previous tasks)
-            const hero = modal.querySelector('.modal-hero');
-            // Logic for dynamic gradient could go here if needed
-        }
-        window.openFullModal = openFullModal;
 
         // DEBUG: On-screen logger
         // logToScreen('SCRIPT STARTED: Debugging missing timeline (v10 - Mobile MinWidth)...');
 
         async function loadGallery() {
             try {
+                // Merge external metadata if available
+                if (typeof DESIGNER_META !== 'undefined') {
+                    console.log('Merging external designer metadata...');
+                    for (const [key, data] of Object.entries(GALLERY_DATA)) {
+                        if (DESIGNER_META[key]) {
+                            data.movements = DESIGNER_META[key].movements || [];
+                            data.productivity = DESIGNER_META[key].productivity || {};
+                            // logToScreen(`Merged meta for ${key}: ${data.movements.length} movements`);
+                        }
+                    }
+                }
+
                 // Local data for file:// access
                 const data = GALLERY_DATA;
                 // logToScreen(`GALLERY_DATA keys: ${Object.keys(data).length}`);
@@ -3698,7 +3842,8 @@
                             // Graph is centered, so its left edge is at (50% - width/2)
                             // Bubble has transform: translate(-50%), so we add 80px (half width) to align its left edge
                             // USING PERCENTAGE NOW (Relative to container, not viewport)
-                            bubble.style.left = `calc(50% - ${graphWidthPercent / 2}% + 80px)`;
+                            // Use CSS variable for offset so it can be adjusted via media queries
+                            bubble.style.left = `calc(50% - ${graphWidthPercent / 2}% + var(--bubble-offset, 80px))`;
 
                             // Set background image
                             if (designerData.images.length > 0) {
@@ -3764,16 +3909,30 @@
                                 }, 500);
                                 */
 
-                                // Calculate peak position relative to graph top as percentage
-                                const peakRel = getYearTop(peakYear) - graphTop;
-                                const peakPct = (peakRel / totalGraphHeight) * 100;
+                                // APPLY UNIFIED LOGIC
+                                const productivityData = designerData.productivity || {};
 
-                                // Apply movement color
-                                const bg = getMovementBg(key);
-                                graph.style.background = bg;
+                                // 1. Gradient
+                                const movements = designerData.movements && designerData.movements.length > 0
+                                    ? designerData.movements
+                                    : [{ name: key, year: parseInt(designerData.birth) }];
 
-                                // Diamond/Mountain shape via clip-path
-                                graph.style.clipPath = `polygon(50% 0%, 100% ${peakPct}%, 50% 100%, 0% ${peakPct}%)`;
+                                graph.style.background = getMultiMovementGradient(
+                                    movements,
+                                    careerStart,
+                                    careerEnd,
+                                    productivityData,
+                                    'to bottom'
+                                );
+
+                                // 2. Shape
+                                graph.style.clipPath = getProductivityPath(
+                                    productivityData,
+                                    careerStart,
+                                    careerEnd,
+                                    totalGraphHeight,
+                                    false
+                                );
 
                                 timelineContainer.appendChild(graph);
                             }
