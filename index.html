@@ -1379,9 +1379,7 @@
                 width: 80px;
                 height: 80px;
                 border-width: 4px;
-                left: 50% !important;
-                transform: translateX(-50%) !important;
-                margin-left: 0 !important;
+                /* Removed centered override to allow JS positioning */
             }
 
             .v-designer-bubble:hover {
@@ -1401,10 +1399,8 @@
             }
 
             .v-designer-graph {
-                width: 100% !important;
-                left: 0 !important;
+                /* Removed full-width override to allow JS positioning */
                 opacity: 0.05;
-                clip-path: none !important;
             }
 
             .v-demise-marker {
@@ -1592,6 +1588,49 @@
             .pillar-card:active {
                 transform: translateY(-5px);
             }
+
+            /* Visual Polish: Mobile Adjustments */
+            .site-footer {
+                padding: 2rem 1.5rem !important;
+            }
+
+            .modal-hero-content {
+                padding: 20px !important;
+            }
+
+            .modal-hero-title {
+                font-size: 2.5rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           VISUAL POLISH CLASSES
+           ────────────────────────────────────────────────────────── */
+        .site-footer {
+            padding: 5rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+
+        .modal-hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+        }
+
+        .modal-hero-title {
+            color: white;
+            font-size: 4rem;
+            margin: 0 0 1rem 0;
+            line-height: 1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
         }
 
         /* ──────────────────────────────────────────────────────────
@@ -3580,8 +3619,8 @@
                                      <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-image:url('${portraitUrl}'); background-size:cover; background-position:center; filter:grayscale(100%); opacity:0.5; z-index:0;"></div>
                                      
                                      <!-- Content -->
-                                     <div style="position:relative; z-index:1; width:100%; height:100%; display:flex; flex-direction:column; justify-content:flex-end; padding:40px;">
-                                          <h1 style="color:white; font-size:4rem; margin:0 0 1rem 0; line-height:1; text-shadow:0 2px 20px rgba(0,0,0,0.8);">${designerData.name}</h1>
+                                     <div class="modal-hero-content">
+                                          <h1 class="modal-hero-title">${designerData.name}</h1>
                                           <div class="v-frequency-container" style="position:relative; width:100%; height:80px; margin:0; background:transparent; border-radius:0; pointer-events:none;">
                                                <div class="v-frequency-patch" style="bottom:0; height:100%;"></div>
                                                <div style="position:absolute; bottom:2px; left:0; font-size:0.8rem; color:rgba(255,255,255,0.7); font-weight:700;">${designerData.birth}</div>
@@ -3845,7 +3884,7 @@
         // Initialize Gallery
         document.addEventListener('DOMContentLoaded', loadGallery);
     </script>
-    <footer style="padding: 5rem; text-align: center; border-top: 1px solid #eee; background: #fff;">
+    <footer class="site-footer">
         <div class="nav-logo" style="margin-bottom: 2rem; display: block;">The Vertical Thread</div>
         <p style="color: var(--text-muted); font-size: 0.9rem;">Produced for the 1h Intro to ID Course. <br> All rights
             reserved &copy; 2026.</p>
@@ -3853,10 +3892,7 @@
             style="margin-top: 2rem; display: inline-block; color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Back
             to Top</a>
     </footer>
-    <script>
-        // STABILITY HOTFIX: Ensure critical functions and cleanup run regardless of main script errors
-        // Stability modifications have been integrated into the main script.
-    </script>
+
 </body>
 
 </html>
