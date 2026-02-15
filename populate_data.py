@@ -81,20 +81,30 @@ def extract_movements():
 def generate_productivity(start_year, end_year, peak_year):
     """Generates a bell-curve productivity dictionary."""
     if not peak_year:
-        peak_year = start_year + 20
+        # Default peak to age 40 (mature career) instead of 20
+        peak_year = start_year + 40
     
-    # Career starts ~20 years after birth, ends at death or ~40 years later
-    career_start = start_year + 20
-    career_end = end_year if end_year else career_start + 45
+    # Career starts at age 22 (post-education), ends at death or age 75
+    career_start = start_year + 22
+    career_end = end_year if end_year else (start_year + 75)
     
     prod = {}
     # Use 3-year intervals for efficiency and smooth visual
     for y in range(career_start, career_end + 1, 3):
         # Gaussian distribution centered at peak_year
-        # std_dev of 15 years for a healthy career spread
-        sigma = 15
+        # std_dev of 12 years for a tighter, more defined peak
+        sigma = 12
         exponent = -0.5 * ((y - peak_year) / sigma) ** 2
-        value = math.exp(exponent) * 35 # scale to ~35 units max
+        
+        # Base multiplier 35, random noise could be added but smooth is better for graph
+        value = math.exp(exponent) * 35 
+        
+        # Ramp-up constraint: Ensure very early years (22-25) aren't too high unless peak is there
+        age = y - start_year
+        if age < 25:
+            value *= 0.3 # Slow start
+        elif age < 30:
+            value *= 0.7 # Building up
         
         if value > 1: # Only include non-zero productivity
             prod[str(y)] = {
@@ -102,6 +112,45 @@ def generate_productivity(start_year, end_year, peak_year):
                 "movement": None # Will be filled later
             }
     return prod
+
+def write_csv(meta_data, designers):
+    """Writes the generated metadata to expanded_designers_v2.csv."""
+    csv_path = r"d:\history of id course\expanded_designers_v2.csv"
+    
+    # Collect all possible year keys for columns
+    all_years = set()
+    for d_data in meta_data.values():
+        all_years.update(d_data['productivity'].keys())
+    sorted_years = sorted([int(y) for y in all_years])
+    
+    header = ["designer_key", "name", "birth", "death", "peak_year", "movements"] + [f"P_{y}" for y in sorted_years]
+    
+    rows = []
+    rows.append(",".join(header))
+    
+    for key, data in meta_data.items():
+        base = designers[key]
+        movements = "|".join([m['name'] for m in data['movements']])
+        
+        row = [
+            key,
+            f'"{base["name"]}"',
+            str(base["birth"]),
+            str(base["death"]) if base["death"] else "",
+            str(base["peakYear"]) if base["peakYear"] else "",
+            movements
+        ]
+        
+        # Add productivity values
+        for y in sorted_years:
+            val = data['productivity'].get(str(y), {}).get('count', 0)
+            row.append(str(val))
+            
+        rows.append(",".join(row))
+        
+    with open(csv_path, 'w', encoding='utf-8') as f:
+        f.write("\n".join(rows))
+    print(f"Successfully wrote CSV to {csv_path}")
 
 def main():
     designers = extract_designers()
@@ -135,10 +184,13 @@ def main():
             "productivity": prod
         }
 
-    # Write to file
+    # Write to JS file
     js_content = f"const DESIGNER_META = {json.dumps(meta_data, indent=4)};"
     with open(OUTPUT_JS_PATH, 'w', encoding='utf-8') as f:
         f.write(js_content)
+    
+    # Write to CSV file (User Request)
+    write_csv(meta_data, designers)
     
     print(f"Successfully generated exhaustive metadata for {len(meta_data)} designers.")
 

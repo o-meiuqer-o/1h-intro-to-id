@@ -15,76 +15,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1918": {
-                "count": 22.6,
+            "1920": {
+                "count": 6.4,
                 "movement": "modernism"
             },
-            "1921": {
-                "count": 26.7,
+            "1923": {
+                "count": 18.5,
                 "movement": "modernism"
             },
-            "1924": {
-                "count": 30.4,
+            "1926": {
+                "count": 21.6,
                 "movement": "modernism"
             },
-            "1927": {
-                "count": 33.1,
+            "1929": {
+                "count": 33.9,
                 "movement": "modernism"
             },
-            "1930": {
-                "count": 34.7,
+            "1932": {
+                "count": 35.0,
                 "movement": "modernism"
             },
-            "1933": {
-                "count": 34.9,
-                "movement": "modernism"
-            },
-            "1936": {
-                "count": 33.8,
+            "1935": {
+                "count": 33.9,
                 "movement": "midcentury"
             },
-            "1939": {
-                "count": 31.4,
+            "1938": {
+                "count": 30.9,
                 "movement": "midcentury"
             },
-            "1942": {
-                "count": 28.0,
+            "1941": {
+                "count": 26.4,
                 "movement": "midcentury"
             },
-            "1945": {
-                "count": 24.0,
+            "1944": {
+                "count": 21.2,
                 "movement": "midcentury"
             },
-            "1948": {
-                "count": 19.8,
+            "1947": {
+                "count": 16.0,
                 "movement": "midcentury"
             },
-            "1951": {
-                "count": 15.7,
-                "movement": "midcentury"
-            },
-            "1954": {
-                "count": 11.9,
+            "1950": {
+                "count": 11.4,
                 "movement": "biomorphism"
             },
-            "1957": {
-                "count": 8.7,
+            "1953": {
+                "count": 7.6,
                 "movement": "biomorphism"
             },
-            "1960": {
-                "count": 6.1,
+            "1956": {
+                "count": 4.7,
                 "movement": "biomorphism"
             },
-            "1963": {
-                "count": 4.1,
+            "1959": {
+                "count": 2.8,
                 "movement": "biomorphism"
             },
-            "1966": {
-                "count": 2.7,
-                "movement": "biomorphism"
-            },
-            "1969": {
-                "count": 1.7,
+            "1962": {
+                "count": 1.5,
                 "movement": "biomorphism"
             }
         }
@@ -97,76 +85,72 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1888": {
-                "count": 15.7,
+            "1890": {
+                "count": 3.8,
                 "movement": "modernism"
             },
-            "1891": {
-                "count": 19.8,
+            "1893": {
+                "count": 12.4,
                 "movement": "modernism"
             },
-            "1894": {
-                "count": 24.0,
+            "1896": {
+                "count": 16.1,
                 "movement": "modernism"
             },
-            "1897": {
+            "1899": {
                 "count": 28.0,
                 "movement": "modernism"
             },
-            "1900": {
-                "count": 31.4,
+            "1902": {
+                "count": 32.1,
                 "movement": "modernism"
             },
-            "1903": {
-                "count": 33.8,
+            "1905": {
+                "count": 34.5,
                 "movement": "modernism"
             },
-            "1906": {
+            "1908": {
                 "count": 34.9,
                 "movement": "modernism"
             },
-            "1909": {
-                "count": 34.7,
-                "movement": "modernism"
-            },
-            "1912": {
+            "1911": {
                 "count": 33.1,
                 "movement": "modernism"
             },
-            "1915": {
-                "count": 30.4,
+            "1914": {
+                "count": 29.5,
                 "movement": "modernism"
             },
-            "1918": {
-                "count": 26.7,
+            "1917": {
+                "count": 24.7,
                 "movement": "modernism"
             },
-            "1921": {
-                "count": 22.6,
+            "1920": {
+                "count": 19.5,
                 "movement": "modernism"
             },
-            "1924": {
-                "count": 18.4,
-                "movement": "modernism"
-            },
-            "1927": {
+            "1923": {
                 "count": 14.4,
                 "movement": "modernism"
             },
-            "1930": {
-                "count": 10.8,
+            "1926": {
+                "count": 10.0,
                 "movement": "modernism"
             },
-            "1933": {
-                "count": 7.8,
+            "1929": {
+                "count": 6.5,
                 "movement": "modernism"
             },
-            "1936": {
-                "count": 5.4,
+            "1932": {
+                "count": 4.0,
                 "movement": "modernism"
             },
-            "1939": {
-                "count": 3.6,
+            "1935": {
+                "count": 2.3,
+                "movement": "modernism"
+            },
+            "1938": {
+                "count": 1.2,
                 "movement": "modernism"
             }
         }
@@ -183,68 +167,68 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1955": {
-                "count": 18.4,
+            "1957": {
+                "count": 4.8,
                 "movement": "modernism"
             },
-            "1958": {
-                "count": 22.6,
+            "1960": {
+                "count": 14.9,
                 "movement": "modernism"
             },
-            "1961": {
-                "count": 26.7,
+            "1963": {
+                "count": 18.5,
                 "movement": "modernism"
             },
-            "1964": {
-                "count": 30.4,
+            "1966": {
+                "count": 30.9,
                 "movement": "modernism"
             },
-            "1967": {
-                "count": 33.1,
+            "1969": {
+                "count": 33.9,
                 "movement": "modernism"
             },
-            "1970": {
-                "count": 34.7,
+            "1972": {
+                "count": 35.0,
                 "movement": "modernism"
             },
-            "1973": {
-                "count": 34.9,
+            "1975": {
+                "count": 33.9,
                 "movement": "modernism"
             },
-            "1976": {
-                "count": 33.8,
+            "1978": {
+                "count": 30.9,
                 "movement": "modernism"
             },
-            "1979": {
-                "count": 31.4,
+            "1981": {
+                "count": 26.4,
                 "movement": "italian_rationalism"
             },
-            "1982": {
-                "count": 28.0,
+            "1984": {
+                "count": 21.2,
                 "movement": "italian_rationalism"
             },
-            "1985": {
-                "count": 24.0,
+            "1987": {
+                "count": 16.0,
                 "movement": "italian_rationalism"
             },
-            "1988": {
-                "count": 19.8,
+            "1990": {
+                "count": 11.4,
                 "movement": "italian_rationalism"
             },
-            "1991": {
-                "count": 15.7,
+            "1993": {
+                "count": 7.6,
                 "movement": "italian_rationalism"
             },
-            "1994": {
-                "count": 11.9,
+            "1996": {
+                "count": 4.7,
                 "movement": "italian_rationalism"
             },
-            "1997": {
-                "count": 8.7,
+            "1999": {
+                "count": 2.8,
                 "movement": "italian_rationalism"
             },
-            "2000": {
-                "count": 6.1,
+            "2002": {
+                "count": 1.5,
                 "movement": "italian_rationalism"
             }
         }
@@ -261,92 +245,80 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1928": {
-                "count": 8.7,
+            "1930": {
+                "count": 1.7,
                 "movement": "bauhaus"
             },
-            "1931": {
-                "count": 11.9,
+            "1933": {
+                "count": 6.1,
                 "movement": "bauhaus"
             },
-            "1934": {
-                "count": 15.7,
+            "1936": {
+                "count": 9.0,
                 "movement": "bauhaus"
             },
-            "1937": {
-                "count": 19.8,
+            "1939": {
+                "count": 17.7,
                 "movement": "bauhaus"
             },
-            "1940": {
-                "count": 24.0,
+            "1942": {
+                "count": 23.0,
                 "movement": "bauhaus"
             },
-            "1943": {
+            "1945": {
                 "count": 28.0,
                 "movement": "bauhaus"
             },
-            "1946": {
-                "count": 31.4,
+            "1948": {
+                "count": 32.1,
                 "movement": "bauhaus"
             },
-            "1949": {
-                "count": 33.8,
+            "1951": {
+                "count": 34.5,
                 "movement": "bauhaus"
             },
-            "1952": {
+            "1954": {
                 "count": 34.9,
                 "movement": "bauhaus"
             },
-            "1955": {
-                "count": 34.7,
-                "movement": "bauhaus"
-            },
-            "1958": {
+            "1957": {
                 "count": 33.1,
                 "movement": "bauhaus"
             },
-            "1961": {
-                "count": 30.4,
+            "1960": {
+                "count": 29.5,
                 "movement": "ulm"
             },
-            "1964": {
-                "count": 26.7,
+            "1963": {
+                "count": 24.7,
                 "movement": "ulm"
             },
-            "1967": {
-                "count": 22.6,
+            "1966": {
+                "count": 19.5,
                 "movement": "ulm"
             },
-            "1970": {
-                "count": 18.4,
-                "movement": "ulm"
-            },
-            "1973": {
+            "1969": {
                 "count": 14.4,
                 "movement": "ulm"
             },
-            "1976": {
-                "count": 10.8,
+            "1972": {
+                "count": 10.0,
                 "movement": "ulm"
             },
-            "1979": {
-                "count": 7.8,
+            "1975": {
+                "count": 6.5,
                 "movement": "ulm"
             },
-            "1982": {
-                "count": 5.4,
+            "1978": {
+                "count": 4.0,
                 "movement": "ulm"
             },
-            "1985": {
-                "count": 3.6,
-                "movement": "ulm"
-            },
-            "1988": {
+            "1981": {
                 "count": 2.3,
                 "movement": "ulm"
             },
-            "1991": {
-                "count": 1.4,
+            "1984": {
+                "count": 1.2,
                 "movement": "ulm"
             }
         }
@@ -359,76 +331,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1913": {
-                "count": 24.0,
+            "1915": {
+                "count": 6.9,
                 "movement": "bauhaus"
             },
-            "1916": {
-                "count": 28.0,
+            "1918": {
+                "count": 19.6,
                 "movement": "bauhaus"
             },
-            "1919": {
-                "count": 31.4,
+            "1921": {
+                "count": 22.5,
                 "movement": "bauhaus"
             },
-            "1922": {
-                "count": 33.8,
+            "1924": {
+                "count": 34.5,
                 "movement": "bauhaus"
             },
-            "1925": {
+            "1927": {
                 "count": 34.9,
                 "movement": "bauhaus"
             },
-            "1928": {
-                "count": 34.7,
-                "movement": "bauhaus"
-            },
-            "1931": {
+            "1930": {
                 "count": 33.1,
                 "movement": "bauhaus"
             },
-            "1934": {
-                "count": 30.4,
+            "1933": {
+                "count": 29.5,
                 "movement": "bauhaus"
             },
-            "1937": {
-                "count": 26.7,
+            "1936": {
+                "count": 24.7,
                 "movement": "bauhaus"
             },
-            "1940": {
-                "count": 22.6,
+            "1939": {
+                "count": 19.5,
                 "movement": "bauhaus"
             },
-            "1943": {
-                "count": 18.4,
-                "movement": "bauhaus"
-            },
-            "1946": {
+            "1942": {
                 "count": 14.4,
                 "movement": "bauhaus"
             },
-            "1949": {
-                "count": 10.8,
+            "1945": {
+                "count": 10.0,
                 "movement": "bauhaus"
             },
-            "1952": {
-                "count": 7.8,
+            "1948": {
+                "count": 6.5,
                 "movement": "bauhaus"
             },
-            "1955": {
-                "count": 5.4,
+            "1951": {
+                "count": 4.0,
                 "movement": "bauhaus"
             },
-            "1958": {
-                "count": 3.6,
-                "movement": "bauhaus"
-            },
-            "1961": {
+            "1954": {
                 "count": 2.3,
                 "movement": "bauhaus"
             },
-            "1964": {
-                "count": 1.4,
+            "1957": {
+                "count": 1.2,
                 "movement": "bauhaus"
             }
         }
@@ -445,64 +405,48 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1922": {
-                "count": 34.3,
+            "1924": {
+                "count": 10.5,
                 "movement": "bauhaus"
             },
-            "1925": {
-                "count": 35.0,
+            "1927": {
+                "count": 24.2,
                 "movement": "bauhaus"
             },
-            "1928": {
-                "count": 34.3,
+            "1930": {
+                "count": 22.5,
                 "movement": "bauhaus"
             },
-            "1931": {
-                "count": 32.3,
+            "1933": {
+                "count": 28.0,
                 "movement": "bauhaus"
             },
-            "1934": {
-                "count": 29.2,
+            "1936": {
+                "count": 23.0,
                 "movement": "bauhaus"
             },
-            "1937": {
-                "count": 25.4,
+            "1939": {
+                "count": 17.7,
                 "movement": "bauhaus"
             },
-            "1940": {
-                "count": 21.2,
-                "movement": "bauhaus"
-            },
-            "1943": {
-                "count": 17.0,
-                "movement": "bauhaus"
-            },
-            "1946": {
-                "count": 13.1,
+            "1942": {
+                "count": 12.8,
                 "movement": "modernism"
             },
-            "1949": {
-                "count": 9.7,
+            "1945": {
+                "count": 8.7,
                 "movement": "modernism"
             },
-            "1952": {
-                "count": 6.9,
+            "1948": {
+                "count": 5.6,
                 "movement": "modernism"
             },
-            "1955": {
-                "count": 4.7,
+            "1951": {
+                "count": 3.3,
                 "movement": "modernism"
             },
-            "1958": {
-                "count": 3.1,
-                "movement": "modernism"
-            },
-            "1961": {
-                "count": 2.0,
-                "movement": "modernism"
-            },
-            "1964": {
-                "count": 1.2,
+            "1954": {
+                "count": 1.9,
                 "movement": "modernism"
             }
         }
@@ -515,92 +459,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1938": {
-                "count": 9.7,
-                "movement": "italian_rationalism"
-            },
-            "1941": {
-                "count": 13.1,
-                "movement": "italian_rationalism"
-            },
-            "1944": {
-                "count": 17.0,
-                "movement": "italian_rationalism"
-            },
-            "1947": {
-                "count": 21.2,
-                "movement": "italian_rationalism"
-            },
-            "1950": {
-                "count": 25.4,
-                "movement": "italian_rationalism"
-            },
-            "1953": {
-                "count": 29.2,
-                "movement": "italian_rationalism"
-            },
-            "1956": {
-                "count": 32.3,
-                "movement": "italian_rationalism"
-            },
-            "1959": {
-                "count": 34.3,
-                "movement": "italian_rationalism"
-            },
-            "1962": {
-                "count": 35.0,
-                "movement": "italian_rationalism"
-            },
-            "1965": {
-                "count": 34.3,
-                "movement": "italian_rationalism"
-            },
-            "1968": {
-                "count": 32.3,
-                "movement": "italian_rationalism"
-            },
-            "1971": {
-                "count": 29.2,
-                "movement": "italian_rationalism"
-            },
-            "1974": {
-                "count": 25.4,
-                "movement": "italian_rationalism"
-            },
-            "1977": {
-                "count": 21.2,
-                "movement": "italian_rationalism"
-            },
-            "1980": {
-                "count": 17.0,
-                "movement": "italian_rationalism"
-            },
-            "1983": {
-                "count": 13.1,
-                "movement": "italian_rationalism"
-            },
-            "1986": {
-                "count": 9.7,
-                "movement": "italian_rationalism"
-            },
-            "1989": {
-                "count": 6.9,
-                "movement": "italian_rationalism"
-            },
-            "1992": {
-                "count": 4.7,
-                "movement": "italian_rationalism"
-            },
-            "1995": {
-                "count": 3.1,
-                "movement": "italian_rationalism"
-            },
-            "1998": {
+            "1940": {
                 "count": 2.0,
                 "movement": "italian_rationalism"
             },
-            "2001": {
-                "count": 1.2,
+            "1943": {
+                "count": 7.0,
+                "movement": "italian_rationalism"
+            },
+            "1946": {
+                "count": 10.1,
+                "movement": "italian_rationalism"
+            },
+            "1949": {
+                "count": 19.5,
+                "movement": "italian_rationalism"
+            },
+            "1952": {
+                "count": 24.7,
+                "movement": "italian_rationalism"
+            },
+            "1955": {
+                "count": 29.5,
+                "movement": "italian_rationalism"
+            },
+            "1958": {
+                "count": 33.1,
+                "movement": "italian_rationalism"
+            },
+            "1961": {
+                "count": 34.9,
+                "movement": "italian_rationalism"
+            },
+            "1964": {
+                "count": 34.5,
+                "movement": "italian_rationalism"
+            },
+            "1967": {
+                "count": 32.1,
+                "movement": "italian_rationalism"
+            },
+            "1970": {
+                "count": 28.0,
+                "movement": "italian_rationalism"
+            },
+            "1973": {
+                "count": 23.0,
+                "movement": "italian_rationalism"
+            },
+            "1976": {
+                "count": 17.7,
+                "movement": "italian_rationalism"
+            },
+            "1979": {
+                "count": 12.8,
+                "movement": "italian_rationalism"
+            },
+            "1982": {
+                "count": 8.7,
+                "movement": "italian_rationalism"
+            },
+            "1985": {
+                "count": 5.6,
+                "movement": "italian_rationalism"
+            },
+            "1988": {
+                "count": 3.3,
+                "movement": "italian_rationalism"
+            },
+            "1991": {
+                "count": 1.9,
                 "movement": "italian_rationalism"
             }
         }
@@ -617,72 +545,72 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1854": {
-                "count": 8.7,
+            "1856": {
+                "count": 1.7,
                 "movement": "aesthetic"
             },
-            "1857": {
-                "count": 11.9,
+            "1859": {
+                "count": 6.1,
                 "movement": "aesthetic"
             },
-            "1860": {
-                "count": 15.7,
+            "1862": {
+                "count": 9.0,
                 "movement": "aesthetic"
             },
-            "1863": {
-                "count": 19.8,
+            "1865": {
+                "count": 17.7,
                 "movement": "aesthetic"
             },
-            "1866": {
-                "count": 24.0,
+            "1868": {
+                "count": 23.0,
                 "movement": "aesthetic"
             },
-            "1869": {
+            "1871": {
                 "count": 28.0,
                 "movement": "aesthetic"
             },
-            "1872": {
-                "count": 31.4,
+            "1874": {
+                "count": 32.1,
                 "movement": "aesthetic"
             },
-            "1875": {
-                "count": 33.8,
+            "1877": {
+                "count": 34.5,
                 "movement": "aesthetic"
             },
-            "1878": {
+            "1880": {
                 "count": 34.9,
                 "movement": "aesthetic"
             },
-            "1881": {
-                "count": 34.7,
-                "movement": "streamlining"
-            },
-            "1884": {
+            "1883": {
                 "count": 33.1,
                 "movement": "streamlining"
             },
-            "1887": {
-                "count": 30.4,
+            "1886": {
+                "count": 29.5,
                 "movement": "streamlining"
             },
-            "1890": {
-                "count": 26.7,
+            "1889": {
+                "count": 24.7,
                 "movement": "streamlining"
             },
-            "1893": {
-                "count": 22.6,
+            "1892": {
+                "count": 19.5,
                 "movement": "streamlining"
             },
-            "1896": {
-                "count": 18.4,
-                "movement": "streamlining"
-            },
-            "1899": {
+            "1895": {
                 "count": 14.4,
                 "movement": "streamlining"
             },
-            "1902": {
-                "count": 10.8,
+            "1898": {
+                "count": 10.0,
+                "movement": "streamlining"
+            },
+            "1901": {
+                "count": 6.5,
+                "movement": "streamlining"
+            },
+            "1904": {
+                "count": 4.0,
                 "movement": "streamlining"
             }
         }
@@ -699,72 +627,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1924": {
-                "count": 24.0,
+            "1926": {
+                "count": 6.9,
                 "movement": "streamlining"
             },
-            "1927": {
-                "count": 28.0,
+            "1929": {
+                "count": 19.6,
                 "movement": "streamlining"
             },
-            "1930": {
-                "count": 31.4,
+            "1932": {
+                "count": 22.5,
                 "movement": "streamlining"
             },
-            "1933": {
-                "count": 33.8,
+            "1935": {
+                "count": 34.5,
                 "movement": "streamlining"
             },
-            "1936": {
+            "1938": {
                 "count": 34.9,
                 "movement": "streamlining"
             },
-            "1939": {
-                "count": 34.7,
-                "movement": "streamlining"
-            },
-            "1942": {
+            "1941": {
                 "count": 33.1,
                 "movement": "streamlining"
             },
-            "1945": {
-                "count": 30.4,
+            "1944": {
+                "count": 29.5,
                 "movement": "streamlining"
             },
-            "1948": {
-                "count": 26.7,
+            "1947": {
+                "count": 24.7,
                 "movement": "streamlining"
             },
-            "1951": {
-                "count": 22.6,
+            "1950": {
+                "count": 19.5,
                 "movement": "minimalism"
             },
-            "1954": {
-                "count": 18.4,
-                "movement": "minimalism"
-            },
-            "1957": {
+            "1953": {
                 "count": 14.4,
                 "movement": "minimalism"
             },
-            "1960": {
-                "count": 10.8,
+            "1956": {
+                "count": 10.0,
                 "movement": "minimalism"
             },
-            "1963": {
-                "count": 7.8,
+            "1959": {
+                "count": 6.5,
                 "movement": "minimalism"
             },
-            "1966": {
-                "count": 5.4,
+            "1962": {
+                "count": 4.0,
                 "movement": "minimalism"
             },
-            "1969": {
-                "count": 3.6,
-                "movement": "minimalism"
-            },
-            "1972": {
+            "1965": {
                 "count": 2.3,
+                "movement": "minimalism"
+            },
+            "1968": {
+                "count": 1.2,
                 "movement": "minimalism"
             }
         }
@@ -777,68 +697,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1967": {
-                "count": 7.8,
+            "1969": {
+                "count": 1.4,
                 "movement": "minimalism"
             },
-            "1970": {
-                "count": 10.8,
+            "1972": {
+                "count": 5.3,
                 "movement": "minimalism"
             },
-            "1973": {
-                "count": 14.4,
+            "1975": {
+                "count": 8.0,
                 "movement": "minimalism"
             },
-            "1976": {
-                "count": 18.4,
+            "1978": {
+                "count": 16.0,
                 "movement": "minimalism"
             },
-            "1979": {
-                "count": 22.6,
+            "1981": {
+                "count": 21.2,
                 "movement": "minimalism"
             },
-            "1982": {
-                "count": 26.7,
+            "1984": {
+                "count": 26.4,
                 "movement": "minimalism"
             },
-            "1985": {
-                "count": 30.4,
+            "1987": {
+                "count": 30.9,
                 "movement": "minimalism"
             },
-            "1988": {
-                "count": 33.1,
+            "1990": {
+                "count": 33.9,
                 "movement": "minimalism"
             },
-            "1991": {
-                "count": 34.7,
+            "1993": {
+                "count": 35.0,
                 "movement": "minimalism"
             },
-            "1994": {
-                "count": 34.9,
+            "1996": {
+                "count": 33.9,
                 "movement": "minimalism"
             },
-            "1997": {
-                "count": 33.8,
+            "1999": {
+                "count": 30.9,
                 "movement": "minimalism"
             },
-            "2000": {
-                "count": 31.4,
+            "2002": {
+                "count": 26.4,
                 "movement": "minimalism"
             },
-            "2003": {
-                "count": 28.0,
+            "2005": {
+                "count": 21.2,
                 "movement": "minimalism"
             },
-            "2006": {
-                "count": 24.0,
+            "2008": {
+                "count": 16.0,
                 "movement": "minimalism"
             },
-            "2009": {
-                "count": 19.8,
+            "2011": {
+                "count": 11.4,
                 "movement": "minimalism"
             },
-            "2012": {
-                "count": 15.7,
+            "2014": {
+                "count": 7.6,
+                "movement": "minimalism"
+            },
+            "2017": {
+                "count": 4.7,
+                "movement": "minimalism"
+            },
+            "2020": {
+                "count": 2.8,
                 "movement": "minimalism"
             }
         }
@@ -851,84 +779,72 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1927": {
-                "count": 15.7,
+            "1929": {
+                "count": 3.8,
                 "movement": "midcentury"
             },
-            "1930": {
-                "count": 19.8,
+            "1932": {
+                "count": 12.4,
                 "movement": "midcentury"
             },
-            "1933": {
-                "count": 24.0,
+            "1935": {
+                "count": 16.1,
                 "movement": "midcentury"
             },
-            "1936": {
+            "1938": {
                 "count": 28.0,
                 "movement": "midcentury"
             },
-            "1939": {
-                "count": 31.4,
+            "1941": {
+                "count": 32.1,
                 "movement": "midcentury"
             },
-            "1942": {
-                "count": 33.8,
+            "1944": {
+                "count": 34.5,
                 "movement": "midcentury"
             },
-            "1945": {
+            "1947": {
                 "count": 34.9,
                 "movement": "midcentury"
             },
-            "1948": {
-                "count": 34.7,
-                "movement": "midcentury"
-            },
-            "1951": {
+            "1950": {
                 "count": 33.1,
                 "movement": "midcentury"
             },
-            "1954": {
-                "count": 30.4,
+            "1953": {
+                "count": 29.5,
                 "movement": "midcentury"
             },
-            "1957": {
-                "count": 26.7,
+            "1956": {
+                "count": 24.7,
                 "movement": "midcentury"
             },
-            "1960": {
-                "count": 22.6,
+            "1959": {
+                "count": 19.5,
                 "movement": "midcentury"
             },
-            "1963": {
-                "count": 18.4,
-                "movement": "midcentury"
-            },
-            "1966": {
+            "1962": {
                 "count": 14.4,
                 "movement": "midcentury"
             },
-            "1969": {
-                "count": 10.8,
+            "1965": {
+                "count": 10.0,
                 "movement": "midcentury"
             },
-            "1972": {
-                "count": 7.8,
+            "1968": {
+                "count": 6.5,
                 "movement": "midcentury"
             },
-            "1975": {
-                "count": 5.4,
+            "1971": {
+                "count": 4.0,
                 "movement": "midcentury"
             },
-            "1978": {
-                "count": 3.6,
-                "movement": "midcentury"
-            },
-            "1981": {
+            "1974": {
                 "count": 2.3,
                 "movement": "midcentury"
             },
-            "1984": {
-                "count": 1.4,
+            "1977": {
+                "count": 1.2,
                 "movement": "midcentury"
             }
         }
@@ -941,80 +857,80 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1913": {
-                "count": 8.7,
+            "1915": {
+                "count": 1.7,
                 "movement": "streamlining"
             },
-            "1916": {
-                "count": 11.9,
+            "1918": {
+                "count": 6.1,
                 "movement": "streamlining"
             },
-            "1919": {
-                "count": 15.7,
+            "1921": {
+                "count": 9.0,
                 "movement": "streamlining"
             },
-            "1922": {
-                "count": 19.8,
+            "1924": {
+                "count": 17.7,
                 "movement": "streamlining"
             },
-            "1925": {
-                "count": 24.0,
+            "1927": {
+                "count": 23.0,
                 "movement": "streamlining"
             },
-            "1928": {
+            "1930": {
                 "count": 28.0,
                 "movement": "streamlining"
             },
-            "1931": {
-                "count": 31.4,
+            "1933": {
+                "count": 32.1,
                 "movement": "streamlining"
             },
-            "1934": {
-                "count": 33.8,
+            "1936": {
+                "count": 34.5,
                 "movement": "streamlining"
             },
-            "1937": {
+            "1939": {
                 "count": 34.9,
                 "movement": "streamlining"
             },
-            "1940": {
-                "count": 34.7,
-                "movement": "streamlining"
-            },
-            "1943": {
+            "1942": {
                 "count": 33.1,
                 "movement": "streamlining"
             },
-            "1946": {
-                "count": 30.4,
+            "1945": {
+                "count": 29.5,
                 "movement": "streamlining"
             },
-            "1949": {
-                "count": 26.7,
+            "1948": {
+                "count": 24.7,
                 "movement": "streamlining"
             },
-            "1952": {
-                "count": 22.6,
+            "1951": {
+                "count": 19.5,
                 "movement": "streamlining"
             },
-            "1955": {
-                "count": 18.4,
-                "movement": "streamlining"
-            },
-            "1958": {
+            "1954": {
                 "count": 14.4,
                 "movement": "streamlining"
             },
-            "1961": {
-                "count": 10.8,
+            "1957": {
+                "count": 10.0,
                 "movement": "streamlining"
             },
-            "1964": {
-                "count": 7.8,
+            "1960": {
+                "count": 6.5,
                 "movement": "streamlining"
             },
-            "1967": {
-                "count": 5.4,
+            "1963": {
+                "count": 4.0,
+                "movement": "streamlining"
+            },
+            "1966": {
+                "count": 2.3,
+                "movement": "streamlining"
+            },
+            "1969": {
+                "count": 1.2,
                 "movement": "streamlining"
             }
         }
@@ -1027,68 +943,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1976": {
-                "count": 6.9,
+            "1978": {
+                "count": 1.2,
                 "movement": "minimalism"
             },
-            "1979": {
-                "count": 9.7,
+            "1981": {
+                "count": 4.6,
                 "movement": "minimalism"
             },
-            "1982": {
-                "count": 13.1,
+            "1984": {
+                "count": 7.0,
                 "movement": "minimalism"
             },
-            "1985": {
-                "count": 17.0,
+            "1987": {
+                "count": 14.4,
                 "movement": "minimalism"
             },
-            "1988": {
-                "count": 21.2,
+            "1990": {
+                "count": 19.5,
                 "movement": "minimalism"
             },
-            "1991": {
-                "count": 25.4,
+            "1993": {
+                "count": 24.7,
                 "movement": "minimalism"
             },
-            "1994": {
-                "count": 29.2,
+            "1996": {
+                "count": 29.5,
                 "movement": "minimalism"
             },
-            "1997": {
-                "count": 32.3,
+            "1999": {
+                "count": 33.1,
                 "movement": "minimalism"
             },
-            "2000": {
-                "count": 34.3,
+            "2002": {
+                "count": 34.9,
                 "movement": "minimalism"
             },
-            "2003": {
-                "count": 35.0,
+            "2005": {
+                "count": 34.5,
                 "movement": "minimalism"
             },
-            "2006": {
-                "count": 34.3,
+            "2008": {
+                "count": 32.1,
                 "movement": "minimalism"
             },
-            "2009": {
-                "count": 32.3,
+            "2011": {
+                "count": 28.0,
                 "movement": "minimalism"
             },
-            "2012": {
-                "count": 29.2,
+            "2014": {
+                "count": 23.0,
                 "movement": "minimalism"
             },
-            "2015": {
-                "count": 25.4,
+            "2017": {
+                "count": 17.7,
                 "movement": "minimalism"
             },
-            "2018": {
-                "count": 21.2,
+            "2020": {
+                "count": 12.8,
                 "movement": "minimalism"
             },
-            "2021": {
-                "count": 17.0,
+            "2023": {
+                "count": 8.7,
+                "movement": "minimalism"
+            },
+            "2026": {
+                "count": 5.6,
+                "movement": "minimalism"
+            },
+            "2029": {
+                "count": 3.3,
                 "movement": "minimalism"
             }
         }
@@ -1101,76 +1025,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1958": {
-                "count": 24.0,
+            "1960": {
+                "count": 6.9,
                 "movement": "wedge"
             },
-            "1961": {
-                "count": 28.0,
+            "1963": {
+                "count": 19.6,
                 "movement": "wedge"
             },
-            "1964": {
-                "count": 31.4,
+            "1966": {
+                "count": 22.5,
                 "movement": "wedge"
             },
-            "1967": {
-                "count": 33.8,
+            "1969": {
+                "count": 34.5,
                 "movement": "wedge"
             },
-            "1970": {
+            "1972": {
                 "count": 34.9,
                 "movement": "wedge"
             },
-            "1973": {
-                "count": 34.7,
-                "movement": "wedge"
-            },
-            "1976": {
+            "1975": {
                 "count": 33.1,
                 "movement": "wedge"
             },
-            "1979": {
-                "count": 30.4,
+            "1978": {
+                "count": 29.5,
                 "movement": "wedge"
             },
-            "1982": {
-                "count": 26.7,
+            "1981": {
+                "count": 24.7,
                 "movement": "wedge"
             },
-            "1985": {
-                "count": 22.6,
+            "1984": {
+                "count": 19.5,
                 "movement": "wedge"
             },
-            "1988": {
-                "count": 18.4,
-                "movement": "wedge"
-            },
-            "1991": {
+            "1987": {
                 "count": 14.4,
                 "movement": "wedge"
             },
-            "1994": {
-                "count": 10.8,
+            "1990": {
+                "count": 10.0,
                 "movement": "wedge"
             },
-            "1997": {
-                "count": 7.8,
+            "1993": {
+                "count": 6.5,
                 "movement": "wedge"
             },
-            "2000": {
-                "count": 5.4,
+            "1996": {
+                "count": 4.0,
                 "movement": "wedge"
             },
-            "2003": {
-                "count": 3.6,
-                "movement": "wedge"
-            },
-            "2006": {
+            "1999": {
                 "count": 2.3,
                 "movement": "wedge"
             },
-            "2009": {
-                "count": 1.4,
+            "2002": {
+                "count": 1.2,
                 "movement": "wedge"
             }
         }
@@ -1183,68 +1095,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1913": {
-                "count": 11.9,
+            "1915": {
+                "count": 2.6,
                 "movement": "streamlining"
             },
-            "1916": {
-                "count": 15.7,
+            "1918": {
+                "count": 9.0,
                 "movement": "streamlining"
             },
-            "1919": {
-                "count": 19.8,
+            "1921": {
+                "count": 12.4,
                 "movement": "streamlining"
             },
-            "1922": {
-                "count": 24.0,
+            "1924": {
+                "count": 23.0,
                 "movement": "streamlining"
             },
-            "1925": {
+            "1927": {
                 "count": 28.0,
                 "movement": "streamlining"
             },
-            "1928": {
-                "count": 31.4,
+            "1930": {
+                "count": 32.1,
                 "movement": "streamlining"
             },
-            "1931": {
-                "count": 33.8,
+            "1933": {
+                "count": 34.5,
                 "movement": "streamlining"
             },
-            "1934": {
+            "1936": {
                 "count": 34.9,
                 "movement": "streamlining"
             },
-            "1937": {
-                "count": 34.7,
-                "movement": "streamlining"
-            },
-            "1940": {
+            "1939": {
                 "count": 33.1,
                 "movement": "streamlining"
             },
-            "1943": {
-                "count": 30.4,
+            "1942": {
+                "count": 29.5,
                 "movement": "streamlining"
             },
-            "1946": {
-                "count": 26.7,
+            "1945": {
+                "count": 24.7,
                 "movement": "streamlining"
             },
-            "1949": {
-                "count": 22.6,
+            "1948": {
+                "count": 19.5,
                 "movement": "streamlining"
             },
-            "1952": {
-                "count": 18.4,
-                "movement": "streamlining"
-            },
-            "1955": {
+            "1951": {
                 "count": 14.4,
                 "movement": "streamlining"
             },
-            "1958": {
-                "count": 10.8,
+            "1954": {
+                "count": 10.0,
+                "movement": "streamlining"
+            },
+            "1957": {
+                "count": 6.5,
                 "movement": "streamlining"
             }
         }
@@ -1257,68 +1165,68 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1958": {
-                "count": 19.8,
+            "1960": {
+                "count": 5.3,
                 "movement": "wedge"
             },
-            "1961": {
-                "count": 24.0,
+            "1963": {
+                "count": 16.1,
                 "movement": "wedge"
             },
-            "1964": {
-                "count": 28.0,
+            "1966": {
+                "count": 19.6,
                 "movement": "wedge"
             },
-            "1967": {
-                "count": 31.4,
+            "1969": {
+                "count": 32.1,
                 "movement": "wedge"
             },
-            "1970": {
-                "count": 33.8,
+            "1972": {
+                "count": 34.5,
                 "movement": "wedge"
             },
-            "1973": {
+            "1975": {
                 "count": 34.9,
                 "movement": "wedge"
             },
-            "1976": {
-                "count": 34.7,
-                "movement": "wedge"
-            },
-            "1979": {
+            "1978": {
                 "count": 33.1,
                 "movement": "wedge"
             },
-            "1982": {
-                "count": 30.4,
+            "1981": {
+                "count": 29.5,
                 "movement": "wedge"
             },
-            "1985": {
-                "count": 26.7,
+            "1984": {
+                "count": 24.7,
                 "movement": "wedge"
             },
-            "1988": {
-                "count": 22.6,
+            "1987": {
+                "count": 19.5,
                 "movement": "wedge"
             },
-            "1991": {
-                "count": 18.4,
-                "movement": "wedge"
-            },
-            "1994": {
+            "1990": {
                 "count": 14.4,
                 "movement": "wedge"
             },
-            "1997": {
-                "count": 10.8,
+            "1993": {
+                "count": 10.0,
                 "movement": "wedge"
             },
-            "2000": {
-                "count": 7.8,
+            "1996": {
+                "count": 6.5,
                 "movement": "wedge"
             },
-            "2003": {
-                "count": 5.4,
+            "1999": {
+                "count": 4.0,
+                "movement": "wedge"
+            },
+            "2002": {
+                "count": 2.3,
+                "movement": "wedge"
+            },
+            "2005": {
+                "count": 1.2,
                 "movement": "wedge"
             }
         }
@@ -1335,80 +1243,68 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1903": {
-                "count": 19.8,
+            "1905": {
+                "count": 5.3,
                 "movement": "bauhaus"
             },
-            "1906": {
-                "count": 24.0,
+            "1908": {
+                "count": 16.1,
                 "movement": "bauhaus"
             },
-            "1909": {
-                "count": 28.0,
+            "1911": {
+                "count": 19.6,
                 "movement": "bauhaus"
             },
-            "1912": {
-                "count": 31.4,
+            "1914": {
+                "count": 32.1,
                 "movement": "bauhaus"
             },
-            "1915": {
-                "count": 33.8,
+            "1917": {
+                "count": 34.5,
                 "movement": "bauhaus"
             },
-            "1918": {
+            "1920": {
                 "count": 34.9,
                 "movement": "bauhaus"
             },
-            "1921": {
-                "count": 34.7,
-                "movement": "bauhaus"
-            },
-            "1924": {
+            "1923": {
                 "count": 33.1,
                 "movement": "bauhaus"
             },
-            "1927": {
-                "count": 30.4,
+            "1926": {
+                "count": 29.5,
                 "movement": "bauhaus"
             },
-            "1930": {
-                "count": 26.7,
-                "movement": "bauhaus"
-            },
-            "1933": {
-                "count": 22.6,
+            "1929": {
+                "count": 24.7,
                 "movement": "modernism"
             },
-            "1936": {
-                "count": 18.4,
+            "1932": {
+                "count": 19.5,
                 "movement": "modernism"
             },
-            "1939": {
+            "1935": {
                 "count": 14.4,
                 "movement": "modernism"
             },
-            "1942": {
-                "count": 10.8,
+            "1938": {
+                "count": 10.0,
                 "movement": "modernism"
             },
-            "1945": {
-                "count": 7.8,
+            "1941": {
+                "count": 6.5,
                 "movement": "modernism"
             },
-            "1948": {
-                "count": 5.4,
+            "1944": {
+                "count": 4.0,
                 "movement": "modernism"
             },
-            "1951": {
-                "count": 3.6,
-                "movement": "modernism"
-            },
-            "1954": {
+            "1947": {
                 "count": 2.3,
                 "movement": "modernism"
             },
-            "1957": {
-                "count": 1.4,
+            "1950": {
+                "count": 1.2,
                 "movement": "modernism"
             }
         }
@@ -1421,76 +1317,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1887": {
-                "count": 24.0,
+            "1889": {
+                "count": 6.9,
                 "movement": "art_nouveau"
             },
-            "1890": {
-                "count": 28.0,
+            "1892": {
+                "count": 19.6,
                 "movement": "art_nouveau"
             },
-            "1893": {
-                "count": 31.4,
+            "1895": {
+                "count": 22.5,
                 "movement": "art_nouveau"
             },
-            "1896": {
-                "count": 33.8,
+            "1898": {
+                "count": 34.5,
                 "movement": "art_nouveau"
             },
-            "1899": {
+            "1901": {
                 "count": 34.9,
                 "movement": "art_nouveau"
             },
-            "1902": {
-                "count": 34.7,
-                "movement": "art_nouveau"
-            },
-            "1905": {
+            "1904": {
                 "count": 33.1,
                 "movement": "art_nouveau"
             },
-            "1908": {
-                "count": 30.4,
+            "1907": {
+                "count": 29.5,
                 "movement": "art_nouveau"
             },
-            "1911": {
-                "count": 26.7,
+            "1910": {
+                "count": 24.7,
                 "movement": "art_nouveau"
             },
-            "1914": {
-                "count": 22.6,
+            "1913": {
+                "count": 19.5,
                 "movement": "art_nouveau"
             },
-            "1917": {
-                "count": 18.4,
-                "movement": "art_nouveau"
-            },
-            "1920": {
+            "1916": {
                 "count": 14.4,
                 "movement": "art_nouveau"
             },
-            "1923": {
-                "count": 10.8,
+            "1919": {
+                "count": 10.0,
                 "movement": "art_nouveau"
             },
-            "1926": {
-                "count": 7.8,
+            "1922": {
+                "count": 6.5,
                 "movement": "art_nouveau"
             },
-            "1929": {
-                "count": 5.4,
+            "1925": {
+                "count": 4.0,
                 "movement": "art_nouveau"
             },
-            "1932": {
-                "count": 3.6,
-                "movement": "art_nouveau"
-            },
-            "1935": {
+            "1928": {
                 "count": 2.3,
                 "movement": "art_nouveau"
             },
-            "1938": {
-                "count": 1.4,
+            "1931": {
+                "count": 1.2,
                 "movement": "art_nouveau"
             }
         }
@@ -1503,68 +1387,60 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1987": {
-                "count": 26.7,
+            "1989": {
+                "count": 7.9,
                 "movement": "minimalism"
             },
-            "1990": {
-                "count": 30.4,
+            "1992": {
+                "count": 21.6,
                 "movement": "minimalism"
             },
-            "1993": {
-                "count": 33.1,
+            "1995": {
+                "count": 23.7,
                 "movement": "minimalism"
             },
-            "1996": {
-                "count": 34.7,
+            "1998": {
+                "count": 35.0,
                 "movement": "minimalism"
             },
-            "1999": {
-                "count": 34.9,
+            "2001": {
+                "count": 33.9,
                 "movement": "minimalism"
             },
-            "2002": {
-                "count": 33.8,
+            "2004": {
+                "count": 30.9,
                 "movement": "minimalism"
             },
-            "2005": {
-                "count": 31.4,
+            "2007": {
+                "count": 26.4,
                 "movement": "minimalism"
             },
-            "2008": {
-                "count": 28.0,
+            "2010": {
+                "count": 21.2,
                 "movement": "minimalism"
             },
-            "2011": {
-                "count": 24.0,
+            "2013": {
+                "count": 16.0,
                 "movement": "minimalism"
             },
-            "2014": {
-                "count": 19.8,
+            "2016": {
+                "count": 11.4,
                 "movement": "minimalism"
             },
-            "2017": {
-                "count": 15.7,
+            "2019": {
+                "count": 7.6,
                 "movement": "minimalism"
             },
-            "2020": {
-                "count": 11.9,
+            "2022": {
+                "count": 4.7,
                 "movement": "minimalism"
             },
-            "2023": {
-                "count": 8.7,
+            "2025": {
+                "count": 2.8,
                 "movement": "minimalism"
             },
-            "2026": {
-                "count": 6.1,
-                "movement": "minimalism"
-            },
-            "2029": {
-                "count": 4.1,
-                "movement": "minimalism"
-            },
-            "2032": {
-                "count": 2.7,
+            "2028": {
+                "count": 1.5,
                 "movement": "minimalism"
             }
         }
@@ -1577,72 +1453,64 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1922": {
-                "count": 4.7,
+            "1927": {
+                "count": 2.8,
                 "movement": "midcentury"
             },
-            "1925": {
-                "count": 6.9,
+            "1930": {
+                "count": 4.6,
                 "movement": "midcentury"
             },
-            "1928": {
-                "count": 9.7,
+            "1933": {
+                "count": 10.0,
                 "movement": "midcentury"
             },
-            "1931": {
-                "count": 13.1,
+            "1936": {
+                "count": 14.4,
                 "movement": "midcentury"
             },
-            "1934": {
-                "count": 17.0,
+            "1939": {
+                "count": 19.5,
                 "movement": "midcentury"
             },
-            "1937": {
-                "count": 21.2,
+            "1942": {
+                "count": 24.7,
                 "movement": "midcentury"
             },
-            "1940": {
-                "count": 25.4,
+            "1945": {
+                "count": 29.5,
                 "movement": "midcentury"
             },
-            "1943": {
-                "count": 29.2,
+            "1948": {
+                "count": 33.1,
                 "movement": "midcentury"
             },
-            "1946": {
-                "count": 32.3,
+            "1951": {
+                "count": 34.9,
                 "movement": "midcentury"
             },
-            "1949": {
-                "count": 34.3,
+            "1954": {
+                "count": 34.5,
                 "movement": "midcentury"
             },
-            "1952": {
-                "count": 35.0,
+            "1957": {
+                "count": 32.1,
                 "movement": "midcentury"
             },
-            "1955": {
-                "count": 34.3,
+            "1960": {
+                "count": 28.0,
                 "movement": "midcentury"
             },
-            "1958": {
-                "count": 32.3,
+            "1963": {
+                "count": 23.0,
                 "movement": "midcentury"
             },
-            "1961": {
-                "count": 29.2,
+            "1966": {
+                "count": 17.7,
                 "movement": "midcentury"
             },
-            "1964": {
-                "count": 25.4,
-                "movement": "midcentury"
-            },
-            "1967": {
-                "count": 21.2,
-                "movement": "midcentury"
-            },
-            "1970": {
-                "count": 17.0,
+            "1969": {
+                "count": 12.8,
                 "movement": "midcentury"
             }
         }
@@ -1655,72 +1523,56 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1917": {
-                "count": 29.2,
+            "1919": {
+                "count": 8.9,
                 "movement": "modernism"
             },
-            "1920": {
-                "count": 32.3,
+            "1922": {
+                "count": 23.2,
                 "movement": "modernism"
             },
-            "1923": {
-                "count": 34.3,
+            "1925": {
+                "count": 24.4,
                 "movement": "modernism"
             },
-            "1926": {
-                "count": 35.0,
+            "1928": {
+                "count": 34.5,
                 "movement": "modernism"
             },
-            "1929": {
-                "count": 34.3,
+            "1931": {
+                "count": 32.1,
                 "movement": "modernism"
             },
-            "1932": {
-                "count": 32.3,
+            "1934": {
+                "count": 28.0,
                 "movement": "modernism"
             },
-            "1935": {
-                "count": 29.2,
+            "1937": {
+                "count": 23.0,
                 "movement": "modernism"
             },
-            "1938": {
-                "count": 25.4,
+            "1940": {
+                "count": 17.7,
                 "movement": "modernism"
             },
-            "1941": {
-                "count": 21.2,
+            "1943": {
+                "count": 12.8,
                 "movement": "modernism"
             },
-            "1944": {
-                "count": 17.0,
+            "1946": {
+                "count": 8.7,
                 "movement": "modernism"
             },
-            "1947": {
-                "count": 13.1,
+            "1949": {
+                "count": 5.6,
                 "movement": "modernism"
             },
-            "1950": {
-                "count": 9.7,
+            "1952": {
+                "count": 3.3,
                 "movement": "modernism"
             },
-            "1953": {
-                "count": 6.9,
-                "movement": "modernism"
-            },
-            "1956": {
-                "count": 4.7,
-                "movement": "modernism"
-            },
-            "1959": {
-                "count": 3.1,
-                "movement": "modernism"
-            },
-            "1962": {
-                "count": 2.0,
-                "movement": "modernism"
-            },
-            "1965": {
-                "count": 1.2,
+            "1955": {
+                "count": 1.9,
                 "movement": "modernism"
             }
         }
@@ -1737,88 +1589,72 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1913": {
-                "count": 13.1,
+            "1915": {
+                "count": 3.0,
                 "movement": "streamlining"
             },
-            "1916": {
-                "count": 17.0,
+            "1918": {
+                "count": 10.1,
                 "movement": "streamlining"
             },
-            "1919": {
-                "count": 21.2,
+            "1921": {
+                "count": 13.6,
                 "movement": "streamlining"
             },
-            "1922": {
-                "count": 25.4,
+            "1924": {
+                "count": 24.7,
                 "movement": "streamlining"
             },
-            "1925": {
-                "count": 29.2,
+            "1927": {
+                "count": 29.5,
                 "movement": "streamlining"
             },
-            "1928": {
-                "count": 32.3,
+            "1930": {
+                "count": 33.1,
                 "movement": "streamlining"
             },
-            "1931": {
-                "count": 34.3,
+            "1933": {
+                "count": 34.9,
                 "movement": "streamlining"
             },
-            "1934": {
-                "count": 35.0,
+            "1936": {
+                "count": 34.5,
                 "movement": "streamlining"
             },
-            "1937": {
-                "count": 34.3,
+            "1939": {
+                "count": 32.1,
                 "movement": "streamlining"
             },
-            "1940": {
-                "count": 32.3,
-                "movement": "streamlining"
-            },
-            "1943": {
-                "count": 29.2,
-                "movement": "streamlining"
-            },
-            "1946": {
-                "count": 25.4,
+            "1942": {
+                "count": 28.0,
                 "movement": "aesthetic"
             },
-            "1949": {
-                "count": 21.2,
+            "1945": {
+                "count": 23.0,
                 "movement": "aesthetic"
             },
-            "1952": {
-                "count": 17.0,
+            "1948": {
+                "count": 17.7,
                 "movement": "aesthetic"
             },
-            "1955": {
-                "count": 13.1,
+            "1951": {
+                "count": 12.8,
                 "movement": "aesthetic"
             },
-            "1958": {
-                "count": 9.7,
+            "1954": {
+                "count": 8.7,
                 "movement": "aesthetic"
             },
-            "1961": {
-                "count": 6.9,
+            "1957": {
+                "count": 5.6,
                 "movement": "aesthetic"
             },
-            "1964": {
-                "count": 4.7,
+            "1960": {
+                "count": 3.3,
                 "movement": "aesthetic"
             },
-            "1967": {
-                "count": 3.1,
-                "movement": "aesthetic"
-            },
-            "1970": {
-                "count": 2.0,
-                "movement": "aesthetic"
-            },
-            "1973": {
-                "count": 1.2,
+            "1963": {
+                "count": 1.9,
                 "movement": "aesthetic"
             }
         }
@@ -1831,64 +1667,56 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1854": {
-                "count": 30.4,
+            "1856": {
+                "count": 9.3,
                 "movement": "arts_and_crafts"
             },
-            "1857": {
-                "count": 33.1,
+            "1859": {
+                "count": 23.7,
                 "movement": "arts_and_crafts"
             },
-            "1860": {
-                "count": 34.7,
+            "1862": {
+                "count": 24.5,
                 "movement": "arts_and_crafts"
             },
-            "1863": {
-                "count": 34.9,
+            "1865": {
+                "count": 33.9,
                 "movement": "arts_and_crafts"
             },
-            "1866": {
-                "count": 33.8,
+            "1868": {
+                "count": 30.9,
                 "movement": "arts_and_crafts"
             },
-            "1869": {
-                "count": 31.4,
+            "1871": {
+                "count": 26.4,
                 "movement": "arts_and_crafts"
             },
-            "1872": {
-                "count": 28.0,
+            "1874": {
+                "count": 21.2,
                 "movement": "arts_and_crafts"
             },
-            "1875": {
-                "count": 24.0,
+            "1877": {
+                "count": 16.0,
                 "movement": "arts_and_crafts"
             },
-            "1878": {
-                "count": 19.8,
+            "1880": {
+                "count": 11.4,
                 "movement": "arts_and_crafts"
             },
-            "1881": {
-                "count": 15.7,
+            "1883": {
+                "count": 7.6,
                 "movement": "arts_and_crafts"
             },
-            "1884": {
-                "count": 11.9,
+            "1886": {
+                "count": 4.7,
                 "movement": "arts_and_crafts"
             },
-            "1887": {
-                "count": 8.7,
+            "1889": {
+                "count": 2.8,
                 "movement": "arts_and_crafts"
             },
-            "1890": {
-                "count": 6.1,
-                "movement": "arts_and_crafts"
-            },
-            "1893": {
-                "count": 4.1,
-                "movement": "arts_and_crafts"
-            },
-            "1896": {
-                "count": 2.7,
+            "1892": {
+                "count": 1.5,
                 "movement": "arts_and_crafts"
             }
         }
@@ -1905,84 +1733,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1928": {
-                "count": 9.7,
+            "1930": {
+                "count": 2.0,
                 "movement": "modernism"
             },
-            "1931": {
-                "count": 13.1,
+            "1933": {
+                "count": 7.0,
                 "movement": "modernism"
             },
-            "1934": {
-                "count": 17.0,
+            "1936": {
+                "count": 10.1,
                 "movement": "modernism"
             },
-            "1937": {
-                "count": 21.2,
+            "1939": {
+                "count": 19.5,
                 "movement": "modernism"
             },
-            "1940": {
-                "count": 25.4,
+            "1942": {
+                "count": 24.7,
                 "movement": "modernism"
             },
-            "1943": {
-                "count": 29.2,
+            "1945": {
+                "count": 29.5,
                 "movement": "modernism"
             },
-            "1946": {
-                "count": 32.3,
+            "1948": {
+                "count": 33.1,
                 "movement": "modernism"
             },
-            "1949": {
-                "count": 34.3,
+            "1951": {
+                "count": 34.9,
                 "movement": "modernism"
             },
-            "1952": {
-                "count": 35.0,
+            "1954": {
+                "count": 34.5,
                 "movement": "modernism"
             },
-            "1955": {
-                "count": 34.3,
-                "movement": "modernism"
-            },
-            "1958": {
-                "count": 32.3,
+            "1957": {
+                "count": 32.1,
                 "movement": "midcentury"
             },
-            "1961": {
-                "count": 29.2,
+            "1960": {
+                "count": 28.0,
                 "movement": "midcentury"
             },
-            "1964": {
-                "count": 25.4,
+            "1963": {
+                "count": 23.0,
                 "movement": "midcentury"
             },
-            "1967": {
-                "count": 21.2,
+            "1966": {
+                "count": 17.7,
                 "movement": "midcentury"
             },
-            "1970": {
-                "count": 17.0,
+            "1969": {
+                "count": 12.8,
                 "movement": "midcentury"
             },
-            "1973": {
-                "count": 13.1,
+            "1972": {
+                "count": 8.7,
                 "movement": "midcentury"
             },
-            "1976": {
-                "count": 9.7,
+            "1975": {
+                "count": 5.6,
                 "movement": "midcentury"
             },
-            "1979": {
-                "count": 6.9,
+            "1978": {
+                "count": 3.3,
                 "movement": "midcentury"
             },
-            "1982": {
-                "count": 4.7,
-                "movement": "midcentury"
-            },
-            "1985": {
-                "count": 3.1,
+            "1981": {
+                "count": 1.9,
                 "movement": "midcentury"
             }
         }
@@ -1995,68 +1815,60 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1983": {
-                "count": 25.4,
+            "1985": {
+                "count": 7.4,
                 "movement": "biomorphism"
             },
-            "1986": {
-                "count": 29.2,
+            "1988": {
+                "count": 20.7,
                 "movement": "biomorphism"
             },
-            "1989": {
-                "count": 32.3,
+            "1991": {
+                "count": 23.2,
                 "movement": "biomorphism"
             },
-            "1992": {
-                "count": 34.3,
+            "1994": {
+                "count": 34.9,
                 "movement": "biomorphism"
             },
-            "1995": {
-                "count": 35.0,
+            "1997": {
+                "count": 34.5,
                 "movement": "biomorphism"
             },
-            "1998": {
-                "count": 34.3,
+            "2000": {
+                "count": 32.1,
                 "movement": "biomorphism"
             },
-            "2001": {
-                "count": 32.3,
+            "2003": {
+                "count": 28.0,
                 "movement": "biomorphism"
             },
-            "2004": {
-                "count": 29.2,
+            "2006": {
+                "count": 23.0,
                 "movement": "biomorphism"
             },
-            "2007": {
-                "count": 25.4,
+            "2009": {
+                "count": 17.7,
                 "movement": "biomorphism"
             },
-            "2010": {
-                "count": 21.2,
+            "2012": {
+                "count": 12.8,
                 "movement": "biomorphism"
             },
-            "2013": {
-                "count": 17.0,
+            "2015": {
+                "count": 8.7,
                 "movement": "biomorphism"
             },
-            "2016": {
-                "count": 13.1,
+            "2018": {
+                "count": 5.6,
                 "movement": "biomorphism"
             },
-            "2019": {
-                "count": 9.7,
+            "2021": {
+                "count": 3.3,
                 "movement": "biomorphism"
             },
-            "2022": {
-                "count": 6.9,
-                "movement": "biomorphism"
-            },
-            "2025": {
-                "count": 4.7,
-                "movement": "biomorphism"
-            },
-            "2028": {
-                "count": 3.1,
+            "2024": {
+                "count": 1.9,
                 "movement": "biomorphism"
             }
         }
@@ -2069,84 +1881,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1910": {
-                "count": 1.4,
+            "1918": {
+                "count": 1.5,
                 "movement": "italian_rationalism"
             },
-            "1913": {
-                "count": 2.3,
+            "1921": {
+                "count": 2.8,
                 "movement": "italian_rationalism"
             },
-            "1916": {
-                "count": 3.6,
+            "1924": {
+                "count": 4.7,
                 "movement": "italian_rationalism"
             },
-            "1919": {
-                "count": 5.4,
+            "1927": {
+                "count": 7.6,
                 "movement": "italian_rationalism"
             },
-            "1922": {
-                "count": 7.8,
+            "1930": {
+                "count": 11.4,
                 "movement": "italian_rationalism"
             },
-            "1925": {
-                "count": 10.8,
+            "1933": {
+                "count": 16.0,
                 "movement": "italian_rationalism"
             },
-            "1928": {
-                "count": 14.4,
+            "1936": {
+                "count": 21.2,
                 "movement": "italian_rationalism"
             },
-            "1931": {
-                "count": 18.4,
+            "1939": {
+                "count": 26.4,
                 "movement": "italian_rationalism"
             },
-            "1934": {
-                "count": 22.6,
+            "1942": {
+                "count": 30.9,
                 "movement": "italian_rationalism"
             },
-            "1937": {
-                "count": 26.7,
+            "1945": {
+                "count": 33.9,
                 "movement": "italian_rationalism"
             },
-            "1940": {
-                "count": 30.4,
+            "1948": {
+                "count": 35.0,
                 "movement": "italian_rationalism"
             },
-            "1943": {
-                "count": 33.1,
+            "1951": {
+                "count": 33.9,
                 "movement": "italian_rationalism"
             },
-            "1946": {
-                "count": 34.7,
+            "1954": {
+                "count": 30.9,
                 "movement": "italian_rationalism"
             },
-            "1949": {
-                "count": 34.9,
+            "1957": {
+                "count": 26.4,
                 "movement": "italian_rationalism"
             },
-            "1952": {
-                "count": 33.8,
+            "1960": {
+                "count": 21.2,
                 "movement": "italian_rationalism"
             },
-            "1955": {
-                "count": 31.4,
+            "1963": {
+                "count": 16.0,
                 "movement": "italian_rationalism"
             },
-            "1958": {
-                "count": 28.0,
+            "1966": {
+                "count": 11.4,
                 "movement": "italian_rationalism"
             },
-            "1961": {
-                "count": 24.0,
-                "movement": "italian_rationalism"
-            },
-            "1964": {
-                "count": 19.8,
-                "movement": "italian_rationalism"
-            },
-            "1967": {
-                "count": 15.7,
+            "1969": {
+                "count": 7.6,
                 "movement": "italian_rationalism"
             }
         }
@@ -2159,84 +1963,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1920": {
-                "count": 1.7,
+            "1928": {
+                "count": 1.9,
                 "movement": "modernism"
             },
-            "1923": {
-                "count": 2.7,
+            "1931": {
+                "count": 3.3,
                 "movement": "modernism"
             },
-            "1926": {
-                "count": 4.1,
+            "1934": {
+                "count": 5.6,
                 "movement": "modernism"
             },
-            "1929": {
-                "count": 6.1,
-                "movement": "modernism"
-            },
-            "1932": {
+            "1937": {
                 "count": 8.7,
                 "movement": "modernism"
             },
-            "1935": {
-                "count": 11.9,
+            "1940": {
+                "count": 12.8,
                 "movement": "modernism"
             },
-            "1938": {
-                "count": 15.7,
+            "1943": {
+                "count": 17.7,
                 "movement": "modernism"
             },
-            "1941": {
-                "count": 19.8,
+            "1946": {
+                "count": 23.0,
                 "movement": "modernism"
             },
-            "1944": {
-                "count": 24.0,
-                "movement": "modernism"
-            },
-            "1947": {
+            "1949": {
                 "count": 28.0,
                 "movement": "modernism"
             },
-            "1950": {
-                "count": 31.4,
+            "1952": {
+                "count": 32.1,
                 "movement": "modernism"
             },
-            "1953": {
-                "count": 33.8,
+            "1955": {
+                "count": 34.5,
                 "movement": "modernism"
             },
-            "1956": {
+            "1958": {
                 "count": 34.9,
                 "movement": "modernism"
             },
-            "1959": {
-                "count": 34.7,
-                "movement": "modernism"
-            },
-            "1962": {
+            "1961": {
                 "count": 33.1,
                 "movement": "modernism"
             },
-            "1965": {
-                "count": 30.4,
+            "1964": {
+                "count": 29.5,
                 "movement": "modernism"
             },
-            "1968": {
-                "count": 26.7,
+            "1967": {
+                "count": 24.7,
                 "movement": "modernism"
             },
-            "1971": {
-                "count": 22.6,
+            "1970": {
+                "count": 19.5,
                 "movement": "modernism"
             },
-            "1974": {
-                "count": 18.4,
-                "movement": "modernism"
-            },
-            "1977": {
+            "1973": {
                 "count": 14.4,
+                "movement": "modernism"
+            },
+            "1976": {
+                "count": 10.0,
+                "movement": "modernism"
+            },
+            "1979": {
+                "count": 6.5,
                 "movement": "modernism"
             }
         }
@@ -2253,68 +2049,56 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1952": {
-                "count": 29.2,
+            "1954": {
+                "count": 8.9,
                 "movement": "ulm"
             },
-            "1955": {
-                "count": 32.3,
+            "1957": {
+                "count": 23.2,
                 "movement": "ulm"
             },
-            "1958": {
-                "count": 34.3,
+            "1960": {
+                "count": 24.4,
                 "movement": "ulm"
             },
-            "1961": {
-                "count": 35.0,
+            "1963": {
+                "count": 34.5,
                 "movement": "ulm"
             },
-            "1964": {
-                "count": 34.3,
+            "1966": {
+                "count": 32.1,
                 "movement": "ulm"
             },
-            "1967": {
-                "count": 32.3,
+            "1969": {
+                "count": 28.0,
                 "movement": "ulm"
             },
-            "1970": {
-                "count": 29.2,
+            "1972": {
+                "count": 23.0,
                 "movement": "ulm"
             },
-            "1973": {
-                "count": 25.4,
-                "movement": "ulm"
-            },
-            "1976": {
-                "count": 21.2,
+            "1975": {
+                "count": 17.7,
                 "movement": "minimalism"
             },
-            "1979": {
-                "count": 17.0,
+            "1978": {
+                "count": 12.8,
                 "movement": "minimalism"
             },
-            "1982": {
-                "count": 13.1,
+            "1981": {
+                "count": 8.7,
                 "movement": "minimalism"
             },
-            "1985": {
-                "count": 9.7,
+            "1984": {
+                "count": 5.6,
                 "movement": "minimalism"
             },
-            "1988": {
-                "count": 6.9,
+            "1987": {
+                "count": 3.3,
                 "movement": "minimalism"
             },
-            "1991": {
-                "count": 4.7,
-                "movement": "minimalism"
-            },
-            "1994": {
-                "count": 3.1,
-                "movement": "minimalism"
-            },
-            "1997": {
-                "count": 2.0,
+            "1990": {
+                "count": 1.9,
                 "movement": "minimalism"
             }
         }
@@ -2327,68 +2111,76 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1980": {
-                "count": 11.9,
+            "1982": {
+                "count": 2.6,
                 "movement": "biomorphism"
             },
-            "1983": {
-                "count": 15.7,
+            "1985": {
+                "count": 9.0,
                 "movement": "biomorphism"
             },
-            "1986": {
-                "count": 19.8,
+            "1988": {
+                "count": 12.4,
                 "movement": "biomorphism"
             },
-            "1989": {
-                "count": 24.0,
+            "1991": {
+                "count": 23.0,
                 "movement": "biomorphism"
             },
-            "1992": {
+            "1994": {
                 "count": 28.0,
                 "movement": "biomorphism"
             },
-            "1995": {
-                "count": 31.4,
+            "1997": {
+                "count": 32.1,
                 "movement": "biomorphism"
             },
-            "1998": {
-                "count": 33.8,
+            "2000": {
+                "count": 34.5,
                 "movement": "biomorphism"
             },
-            "2001": {
+            "2003": {
                 "count": 34.9,
                 "movement": "biomorphism"
             },
-            "2004": {
-                "count": 34.7,
-                "movement": "biomorphism"
-            },
-            "2007": {
+            "2006": {
                 "count": 33.1,
                 "movement": "biomorphism"
             },
-            "2010": {
-                "count": 30.4,
+            "2009": {
+                "count": 29.5,
                 "movement": "biomorphism"
             },
-            "2013": {
-                "count": 26.7,
+            "2012": {
+                "count": 24.7,
                 "movement": "biomorphism"
             },
-            "2016": {
-                "count": 22.6,
+            "2015": {
+                "count": 19.5,
                 "movement": "biomorphism"
             },
-            "2019": {
-                "count": 18.4,
-                "movement": "biomorphism"
-            },
-            "2022": {
+            "2018": {
                 "count": 14.4,
                 "movement": "biomorphism"
             },
-            "2025": {
-                "count": 10.8,
+            "2021": {
+                "count": 10.0,
+                "movement": "biomorphism"
+            },
+            "2024": {
+                "count": 6.5,
+                "movement": "biomorphism"
+            },
+            "2027": {
+                "count": 4.0,
+                "movement": "biomorphism"
+            },
+            "2030": {
+                "count": 2.3,
+                "movement": "biomorphism"
+            },
+            "2033": {
+                "count": 1.2,
                 "movement": "biomorphism"
             }
         }
@@ -2405,84 +2197,72 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1952": {
-                "count": 14.4,
+            "1954": {
+                "count": 3.4,
                 "movement": "italian_rationalism"
             },
-            "1955": {
-                "count": 18.4,
+            "1957": {
+                "count": 11.2,
                 "movement": "italian_rationalism"
             },
-            "1958": {
-                "count": 22.6,
+            "1960": {
+                "count": 14.9,
                 "movement": "italian_rationalism"
             },
-            "1961": {
-                "count": 26.7,
+            "1963": {
+                "count": 26.4,
                 "movement": "italian_rationalism"
             },
-            "1964": {
-                "count": 30.4,
+            "1966": {
+                "count": 30.9,
                 "movement": "italian_rationalism"
             },
-            "1967": {
-                "count": 33.1,
+            "1969": {
+                "count": 33.9,
                 "movement": "italian_rationalism"
             },
-            "1970": {
-                "count": 34.7,
+            "1972": {
+                "count": 35.0,
                 "movement": "italian_rationalism"
             },
-            "1973": {
-                "count": 34.9,
+            "1975": {
+                "count": 33.9,
                 "movement": "italian_rationalism"
             },
-            "1976": {
-                "count": 33.8,
+            "1978": {
+                "count": 30.9,
                 "movement": "italian_rationalism"
             },
-            "1979": {
-                "count": 31.4,
-                "movement": "italian_rationalism"
-            },
-            "1982": {
-                "count": 28.0,
+            "1981": {
+                "count": 26.4,
                 "movement": "minimalism"
             },
-            "1985": {
-                "count": 24.0,
+            "1984": {
+                "count": 21.2,
                 "movement": "minimalism"
             },
-            "1988": {
-                "count": 19.8,
+            "1987": {
+                "count": 16.0,
                 "movement": "minimalism"
             },
-            "1991": {
-                "count": 15.7,
+            "1990": {
+                "count": 11.4,
                 "movement": "minimalism"
             },
-            "1994": {
-                "count": 11.9,
+            "1993": {
+                "count": 7.6,
                 "movement": "minimalism"
             },
-            "1997": {
-                "count": 8.7,
+            "1996": {
+                "count": 4.7,
                 "movement": "minimalism"
             },
-            "2000": {
-                "count": 6.1,
+            "1999": {
+                "count": 2.8,
                 "movement": "minimalism"
             },
-            "2003": {
-                "count": 4.1,
-                "movement": "minimalism"
-            },
-            "2006": {
-                "count": 2.7,
-                "movement": "minimalism"
-            },
-            "2009": {
-                "count": 1.7,
+            "2002": {
+                "count": 1.5,
                 "movement": "minimalism"
             }
         }
@@ -2499,92 +2279,80 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1943": {
-                "count": 1.4,
+            "1951": {
+                "count": 1.5,
                 "movement": "postmodernism"
             },
-            "1946": {
-                "count": 2.3,
+            "1954": {
+                "count": 2.8,
                 "movement": "postmodernism"
             },
-            "1949": {
-                "count": 3.6,
+            "1957": {
+                "count": 4.7,
                 "movement": "postmodernism"
             },
-            "1952": {
-                "count": 5.4,
+            "1960": {
+                "count": 7.6,
                 "movement": "postmodernism"
             },
-            "1955": {
-                "count": 7.8,
+            "1963": {
+                "count": 11.4,
                 "movement": "postmodernism"
             },
-            "1958": {
-                "count": 10.8,
+            "1966": {
+                "count": 16.0,
                 "movement": "postmodernism"
             },
-            "1961": {
-                "count": 14.4,
+            "1969": {
+                "count": 21.2,
                 "movement": "postmodernism"
             },
-            "1964": {
-                "count": 18.4,
+            "1972": {
+                "count": 26.4,
                 "movement": "postmodernism"
             },
-            "1967": {
-                "count": 22.6,
+            "1975": {
+                "count": 30.9,
                 "movement": "postmodernism"
             },
-            "1970": {
-                "count": 26.7,
+            "1978": {
+                "count": 33.9,
                 "movement": "postmodernism"
             },
-            "1973": {
-                "count": 30.4,
-                "movement": "postmodernism"
-            },
-            "1976": {
-                "count": 33.1,
+            "1981": {
+                "count": 35.0,
                 "movement": "memphis"
             },
-            "1979": {
-                "count": 34.7,
+            "1984": {
+                "count": 33.9,
                 "movement": "memphis"
             },
-            "1982": {
-                "count": 34.9,
+            "1987": {
+                "count": 30.9,
                 "movement": "memphis"
             },
-            "1985": {
-                "count": 33.8,
+            "1990": {
+                "count": 26.4,
                 "movement": "memphis"
             },
-            "1988": {
-                "count": 31.4,
+            "1993": {
+                "count": 21.2,
                 "movement": "memphis"
             },
-            "1991": {
-                "count": 28.0,
+            "1996": {
+                "count": 16.0,
                 "movement": "memphis"
             },
-            "1994": {
-                "count": 24.0,
+            "1999": {
+                "count": 11.4,
                 "movement": "memphis"
             },
-            "1997": {
-                "count": 19.8,
+            "2002": {
+                "count": 7.6,
                 "movement": "memphis"
             },
-            "2000": {
-                "count": 15.7,
-                "movement": "memphis"
-            },
-            "2003": {
-                "count": 11.9,
-                "movement": "memphis"
-            },
-            "2006": {
-                "count": 8.7,
+            "2005": {
+                "count": 4.7,
                 "movement": "memphis"
             }
         }
@@ -2597,68 +2365,72 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1969": {
-                "count": 13.1,
+            "1971": {
+                "count": 3.0,
                 "movement": "postmodernism"
             },
-            "1972": {
-                "count": 17.0,
+            "1974": {
+                "count": 10.1,
                 "movement": "postmodernism"
             },
-            "1975": {
-                "count": 21.2,
+            "1977": {
+                "count": 13.6,
                 "movement": "postmodernism"
             },
-            "1978": {
-                "count": 25.4,
+            "1980": {
+                "count": 24.7,
                 "movement": "postmodernism"
             },
-            "1981": {
-                "count": 29.2,
+            "1983": {
+                "count": 29.5,
                 "movement": "postmodernism"
             },
-            "1984": {
-                "count": 32.3,
+            "1986": {
+                "count": 33.1,
                 "movement": "postmodernism"
             },
-            "1987": {
-                "count": 34.3,
+            "1989": {
+                "count": 34.9,
                 "movement": "postmodernism"
             },
-            "1990": {
-                "count": 35.0,
+            "1992": {
+                "count": 34.5,
                 "movement": "postmodernism"
             },
-            "1993": {
-                "count": 34.3,
+            "1995": {
+                "count": 32.1,
                 "movement": "postmodernism"
             },
-            "1996": {
-                "count": 32.3,
+            "1998": {
+                "count": 28.0,
                 "movement": "postmodernism"
             },
-            "1999": {
-                "count": 29.2,
+            "2001": {
+                "count": 23.0,
                 "movement": "postmodernism"
             },
-            "2002": {
-                "count": 25.4,
+            "2004": {
+                "count": 17.7,
                 "movement": "postmodernism"
             },
-            "2005": {
-                "count": 21.2,
+            "2007": {
+                "count": 12.8,
                 "movement": "postmodernism"
             },
-            "2008": {
-                "count": 17.0,
+            "2010": {
+                "count": 8.7,
                 "movement": "postmodernism"
             },
-            "2011": {
-                "count": 13.1,
+            "2013": {
+                "count": 5.6,
                 "movement": "postmodernism"
             },
-            "2014": {
-                "count": 9.7,
+            "2016": {
+                "count": 3.3,
+                "movement": "postmodernism"
+            },
+            "2019": {
+                "count": 1.9,
                 "movement": "postmodernism"
             }
         }
@@ -2671,64 +2443,52 @@ const DESIGNER_META = {
             }
         ],
         "productivity": {
-            "1920": {
-                "count": 33.8,
+            "1922": {
+                "count": 10.4,
                 "movement": "bauhaus"
             },
-            "1923": {
-                "count": 34.9,
+            "1925": {
+                "count": 24.4,
                 "movement": "bauhaus"
             },
-            "1926": {
-                "count": 34.7,
+            "1928": {
+                "count": 23.2,
                 "movement": "bauhaus"
             },
-            "1929": {
-                "count": 33.1,
+            "1931": {
+                "count": 29.5,
                 "movement": "bauhaus"
             },
-            "1932": {
-                "count": 30.4,
+            "1934": {
+                "count": 24.7,
                 "movement": "bauhaus"
             },
-            "1935": {
-                "count": 26.7,
+            "1937": {
+                "count": 19.5,
                 "movement": "bauhaus"
             },
-            "1938": {
-                "count": 22.6,
-                "movement": "bauhaus"
-            },
-            "1941": {
-                "count": 18.4,
-                "movement": "bauhaus"
-            },
-            "1944": {
+            "1940": {
                 "count": 14.4,
                 "movement": "bauhaus"
             },
-            "1947": {
-                "count": 10.8,
+            "1943": {
+                "count": 10.0,
                 "movement": "bauhaus"
             },
-            "1950": {
-                "count": 7.8,
+            "1946": {
+                "count": 6.5,
                 "movement": "bauhaus"
             },
-            "1953": {
-                "count": 5.4,
+            "1949": {
+                "count": 4.0,
                 "movement": "bauhaus"
             },
-            "1956": {
-                "count": 3.6,
-                "movement": "bauhaus"
-            },
-            "1959": {
+            "1952": {
                 "count": 2.3,
                 "movement": "bauhaus"
             },
-            "1962": {
-                "count": 1.4,
+            "1955": {
+                "count": 1.2,
                 "movement": "bauhaus"
             }
         }

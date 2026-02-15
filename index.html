@@ -456,7 +456,7 @@
             /* JS sets left and width */
             z-index: 2;
             /* Behind bubbles (z-index 30), behind labels (z-index 5) */
-            opacity: 0.2;
+            opacity: 0.28;
             /* Extra subtle for large area */
             pointer-events: none;
             transition: opacity 0.4s ease;
@@ -465,7 +465,7 @@
         }
 
         .v-designer-bubble:hover+.v-designer-graph {
-            opacity: 0.4;
+            opacity: 0.56;
         }
 
         /* Year Labels on Side */
@@ -1416,7 +1416,7 @@
 
             .v-designer-graph {
                 /* Removed full-width override to allow JS positioning */
-                opacity: 0.05;
+                opacity: 0.07;
             }
 
             .v-demise-marker {
@@ -2717,29 +2717,29 @@
 
         /* ── MOVEMENT COLOR SYSTEM ── */
         const MOVEMENT_PALETTE = {
-            'bauhaus': { hex: '#E6B800', alpha: 0.75 },
-            'ulm': { hex: '#334155', alpha: 0.35 },
-            'modernism': { hex: '#A0CED9', alpha: 0.40 },
-            'midcentury': { hex: '#008080', alpha: 0.50 },
-            'streamlining': { hex: '#4682B4', alpha: 0.50 },
-            'postmodernism': { hex: '#FF4081', alpha: 0.70 },
-            'italian_rationalism': { hex: '#B22222', alpha: 0.50 },
-            'wedge': { hex: '#E65100', alpha: 0.60 },
-            'minimalism': { hex: '#1A1A1A', alpha: 0.15 },
-            'biomorphism': { hex: '#228B22', alpha: 0.45 },
-            'arts_and_crafts': { hex: '#8B4513', alpha: 0.60 },
-            'art_nouveau': { hex: '#2E8B57', alpha: 0.60 },
-            'aesthetic': { hex: '#8B4513', alpha: 0.60 },
-            'memphis': { hex: '#FFD700', alpha: 0.70 }, // Distinguish from PM for spectrum
+            'bauhaus': { hex: '#E6B800', alpha: 1.0 },
+            'ulm': { hex: '#334155', alpha: 0.49 },
+            'modernism': { hex: '#A0CED9', alpha: 0.56 },
+            'midcentury': { hex: '#008080', alpha: 0.70 },
+            'streamlining': { hex: '#4682B4', alpha: 0.70 },
+            'postmodernism': { hex: '#FF4081', alpha: 0.98 },
+            'italian_rationalism': { hex: '#B22222', alpha: 0.70 },
+            'wedge': { hex: '#E65100', alpha: 0.84 },
+            'minimalism': { hex: '#1A1A1A', alpha: 0.21 },
+            'biomorphism': { hex: '#228B22', alpha: 0.63 },
+            'arts_and_crafts': { hex: '#8B4513', alpha: 0.84 },
+            'art_nouveau': { hex: '#2E8B57', alpha: 0.84 },
+            'aesthetic': { hex: '#8B4513', alpha: 0.84 },
+            'memphis': { hex: '#FFD700', alpha: 0.98 }, // Distinguish from PM for spectrum
             // Shorthands
-            'ac': { hex: '#8B4513', alpha: 0.60 },
-            'an': { hex: '#2E8B57', alpha: 0.60 },
-            'bh': { hex: '#E6B800', alpha: 0.75 },
-            'mem': { hex: '#FFD700', alpha: 0.70 },
-            'pm': { hex: '#FF4081', alpha: 0.70 },
-            'func': { hex: '#64748B', alpha: 0.50 },
-            'sm': { hex: '#64748B', alpha: 0.50 },
-            'ad': { hex: '#8B4513', alpha: 0.60 }
+            'ac': { hex: '#8B4513', alpha: 0.84 },
+            'an': { hex: '#2E8B57', alpha: 0.84 },
+            'bh': { hex: '#E6B800', alpha: 1.0 },
+            'mem': { hex: '#FFD700', alpha: 0.98 },
+            'pm': { hex: '#FF4081', alpha: 0.98 },
+            'func': { hex: '#64748B', alpha: 0.70 },
+            'sm': { hex: '#64748B', alpha: 0.70 },
+            'ad': { hex: '#8B4513', alpha: 0.84 }
         };
 
         const DESIGNER_MOVEMENTS = {
