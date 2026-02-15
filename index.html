@@ -3501,7 +3501,7 @@
             if (!logBox) {
                 logBox = document.createElement('div');
                 logBox.id = 'debug-log-box';
-                logBox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:#0f0; font-family:monospace; font-size:10px; z-index:9999; pointer-events:none; padding:5px; display:none;';
+                logBox.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:#0f0; font-family:monospace; font-size:10px; z-index:9999; pointer-events:none; padding:5px;';
                 document.body.appendChild(logBox);
             }
             const line = document.createElement('div');
@@ -3509,6 +3509,8 @@
             logBox.appendChild(line);
             logBox.scrollTop = logBox.scrollHeight;
         }
+
+        logToScreen('SCRIPT STARTED: Debugging missing timeline...');
 
         async function loadGallery() {
             logToScreen('Starting loadGallery...');
