@@ -3650,7 +3650,7 @@
 
                             // Dynamic Width & Horizontal Alignment
                             // Max width = 75vw. Width is proportional to images count.
-                            const widthPercent = (designerData.images.length / maxImages) * 75;
+                            const graphWidthPercent = (designerData.images.length / maxImages) * 75;
 
                             // Align bubble to the left edge of the graph
                             // Graph is centered, so its left edge is at (50% - width/2)
@@ -3701,7 +3701,7 @@
                                 graph.style.height = `${totalGraphHeight}px`;
 
                                 // Set dynamic width based on contribution
-                                const graphWidthPercent = (designerData.images.length / maxImages) * 75;
+                                // graphWidthPercent is calculated above
                                 graph.style.width = `${graphWidthPercent}vw`;
 
                                 // Calculate peak position relative to graph top as percentage
