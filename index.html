@@ -3492,6 +3492,7 @@
             const hero = modal.querySelector('.modal-hero');
             // Logic for dynamic gradient could go here if needed
         }
+        window.openFullModal = openFullModal;
 
         // DEBUG: On-screen logger
         function logToScreen(msg) {
@@ -3836,64 +3837,7 @@
     </footer>
     <script>
         // STABILITY HOTFIX: Ensure critical functions and cleanup run regardless of main script errors
-        window.addEventListener('load', () => {
-            console.log('Running Stability Hotfix...');
-
-            // 1. Remove phantom 'DECEASED' markers
-            const removePhantomMarkers = () => {
-                const markers = document.querySelectorAll('.v-demise-marker');
-                if (markers.length > 0) {
-                    console.log(`Removing ${markers.length} phantom markers.`);
-                    markers.forEach(el => el.remove());
-                }
-                // Also check for red lines in year-side
-                document.querySelectorAll('.v-year-side').forEach(el => {
-                    el.style.borderBottom = 'none';
-                    if (el.innerText === 'DECEASED') el.remove();
-                });
-            };
-            removePhantomMarkers();
-            // Run again after a short delay in case of async loading
-            setTimeout(removePhantomMarkers, 500);
-
-            // 2. Ensure openFullModal is globally available
-            if (typeof window.openFullModal === 'undefined') {
-                console.log('Restoring openFullModal function...');
-                window.openFullModal = function (modalId, movementClass) {
-                    const modal = document.getElementById(modalId);
-                    if (!modal) { console.error('Modal not found:', modalId); return; }
-
-                    // Reset levels
-                    const level1 = modal.querySelector('.v-level-1');
-                    const level2 = modal.querySelector('.v-level-2');
-                    if (level1) level1.classList.add('active');
-                    if (level2) level2.classList.remove('active');
-
-                    // Show modal
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                };
-            }
-
-            // 3. Re-bind clicks for mobile reliability
-            const bubbles = document.querySelectorAll('.v-designer-bubble');
-            bubbles.forEach(b => {
-                b.style.cursor = 'pointer';
-                const onclick = b.getAttribute('onclick');
-                if (onclick && onclick.includes('openFullModal')) {
-                    const match = onclick.match(/'([^']+)'/);
-                    if (match && match[1]) {
-                        const mid = match[1];
-                        b.onclick = () => window.openFullModal(mid, '');
-                        b.ontouchend = (e) => {
-                            // Prevent double-firing but ensure touch works
-                            e.preventDefault();
-                            window.openFullModal(mid, '');
-                        };
-                    }
-                }
-            });
-        });
+        // Stability modifications have been integrated into the main script.
     </script>
 </body>
 
