@@ -3511,7 +3511,7 @@
             logBox.scrollTop = logBox.scrollHeight;
         }
 
-        logToScreen('SCRIPT STARTED: Debugging missing timeline (v3 - Opacity Fix)...');
+        logToScreen('SCRIPT STARTED: Debugging missing timeline (v4 - Force Width)...');
 
         async function loadGallery() {
             logToScreen('Starting loadGallery...');
@@ -3704,7 +3704,9 @@
 
                                 // Set dynamic width based on contribution
                                 // graphWidthPercent is calculated above
-                                graph.style.width = `${graphWidthPercent}vw`;
+                                // FORCE width with !important to prevent overrides
+                                graph.style.cssText += `width: ${graphWidthPercent}vw !important;`;
+                                logToScreen(`Graph ${designerData.name}: Set width to ${graphWidthPercent}vw`);
 
                                 // Calculate peak position relative to graph top as percentage
                                 const peakRel = getYearTop(peakYear) - graphTop;
