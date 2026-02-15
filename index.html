@@ -344,6 +344,9 @@
             height: calc(200 * var(--year-height));
             /* 1830 to 2030 roughly */
             padding-top: 5rem;
+            max-width: 100vw;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         .v-spine {
@@ -454,8 +457,7 @@
             /* Scaled to 75% of screen width */
             z-index: 2;
             /* Behind bubbles (z-index 30), behind labels (z-index 5) */
-            opacity: 0.4;
-            outline: 2px dotted red;
+            opacity: 0.2;
             /* Extra subtle for large area */
             pointer-events: none;
             transition: opacity 0.4s ease;
@@ -3511,7 +3513,7 @@
             logBox.scrollTop = logBox.scrollHeight;
         }
 
-        logToScreen('SCRIPT STARTED: Debugging missing timeline (v6 - Percentage Units)...');
+        logToScreen('SCRIPT STARTED: Debugging missing timeline (v7 - Container Fix)...');
 
         async function loadGallery() {
             logToScreen('Starting loadGallery...');
