@@ -1597,6 +1597,7 @@
                 transform: translate(-50%, -50%) scale(1.15);
             }
 
+
             .gal-cell:active {
                 transform: translateY(-4px);
             }
@@ -1793,6 +1794,173 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 3rem;
             }
+        }
+
+        /* MOVEMENT POPUPS */
+        #movement-popup-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column-reverse;
+            /* Stack upwards */
+            gap: 1rem;
+            z-index: 9000;
+            pointer-events: none;
+            /* Let clicks pass through if not on a chip */
+        }
+
+        .movement-chip {
+            background: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            pointer-events: auto;
+            transform: translateX(120%);
+            /* Hidden by default */
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+        }
+
+        .movement-chip.active {
+            transform: translateX(0);
+        }
+
+        .movement-chip:hover {
+            transform: scale(1.05);
+        }
+
+        .chip-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .chip-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #000;
+        }
+
+        /* MOVEMENT MODAL */
+        #movement-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        #movement-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .movement-content {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.4s;
+        }
+
+        #movement-modal.active .movement-content {
+            transform: translateY(0);
+        }
+
+        .mov-label {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 700;
+        }
+
+        .mov-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .mov-dates {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .mov-quote-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-left: 4px solid #000;
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .mov-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+
+        .mov-features {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .mov-pill {
+            background: #f0f0f0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .close-mov {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #eee;
+            transition: background 0.2s;
+        }
+
+        .close-mov:hover {
+            background: #ddd;
         }
 
         /* ──────────────────────────────────────────────────────────
@@ -4059,6 +4227,28 @@
             style="margin-top: 2rem; display: inline-block; color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Back
             to Top</a>
     </footer>
+
+    <!-- MOVEMENT POPUPS CONTAINER -->
+    <div id="movement-popup-container"></div>
+
+    <!-- MOVEMENT DETAIL MODAL -->
+    <div id="movement-modal">
+        <div class="movement-content">
+            <div class="close-mov">&times;</div>
+            <span class="mov-label" id="mov-modal-label">Movement</span>
+            <h2 class="mov-title" id="mov-modal-title">Title</h2>
+            <div class="mov-dates" id="mov-modal-dates">Dates</div>
+            <div class="mov-quote-box" id="mov-modal-quote">Quote</div>
+            <p class="mov-desc" id="mov-modal-desc">Description goes here.</p>
+            <div class="mov-features" id="mov-modal-features">
+                <!-- Features pills -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MOVEMENT SCRIPTS -->
+    <script src="movement_data.js"></script>
+    <script src="movement_logic.js"></script>
 
 </body>
 
