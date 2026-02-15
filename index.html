@@ -3580,10 +3580,12 @@
                                 ? `${designerData.birth} — ${designerData.death}`
                                 : `${designerData.birth} — PRESENT`;
 
-                            // Helper to parse simple markdown (bold only)
+                            // Helper to parse simple markdown (bold and italic)
                             const parseMd = (text) => {
                                 if (!text) return '';
-                                return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                                return text
+                                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                    .replace(/\*(.*?)\*/g, '<em>$1</em>');
                             };
 
                             // Prepare dynamic content (Bio, Philosophy, Integration)
